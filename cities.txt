@@ -6,3 +6,15 @@ top	left	bottom	right	slug	name
 51.984	-1.115	50.941	0.895	london	London
 52.994	12.260	51.849	14.699	berlin	Berlin
 56.200	36.870	55.285	38.430	moscow	Moscow
+42.702	-71.861	41.951	-70.285	boston	Boston
+39.259	-77.599	38.539	-76.365	washington-dc	Washington D.C.
+42.297	-88.505	41.339	-87.066	chicago	Chicago
+49.178	1.851	48.531	2.911	paris	Paris
+52.629	4.465	52.163	5.347	amsterdam	Amsterdam
+41.687	1.734	41.075	2.496	barcelona	Barcelona
+42.130	12.109	41.578	12.845	rome	Rome
+43.983	10.982	43.601	11.504	florence	Florence
+36.558	138.779	34.867	141.152	tokyo	Tokyo
+40.426	115.686	39.414	117.119	beijing	Beijing
+23.488	112.780	21.591	114.675	hong-kong	Hong Kong
+-33.637	150.628	-34.189	151.647	sydney	Sydney
