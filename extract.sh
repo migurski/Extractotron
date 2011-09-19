@@ -63,7 +63,9 @@ from os import stat
 from glob import glob
 from sys import stderr
 from os.path import basename
+from urllib import urlopen
 
+from boto.ec2 import EC2Connection
 from boto.s3.connection import S3Connection
 from boto.s3.bucket import Bucket
 
@@ -83,5 +85,8 @@ for file in sorted(glob('ex/*.osm.???')):
 log.close()
 key = bucket.new_key('log.txt')
 key.set_contents_from_file(open('log.txt'), policy='public-read', headers={'Content-Type': 'text/plain'})
+
+instance = urlopen('http://169.254.169.254/latest/meta-data/instance-id').read().strip()
+EC2Connection('$KEY', '$SECRET').terminate_instances(instance)
 
 CODE
