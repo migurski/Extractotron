@@ -9,6 +9,8 @@
 # curl -s $U | KEY=$K SECRET=$S BUCKET=$B sh > /mnt/progress.txt 2>&1
 #
 
+cd /mnt
+
 echo '# begin', `date` > log.txt
 echo 'Installing, see install.txt'
 
@@ -20,8 +22,6 @@ apt-get install -y \
 
 rm -rfv /var/www
 ln -sfv /mnt /var/www
-
-cd /mnt
 
 curl -sOL http://dev.openstreetmap.org/~bretth/osmosis-build/osmosis-latest.tgz
 tar -xzf osmosis-latest.tgz
@@ -60,13 +60,13 @@ bucket = Bucket(S3Connection('$KEY', '$SECRET'), '$BUCKET')
 log = open('log.txt', 'a')
 
 for file in glob('ex/*.osm.???'):
-    print >> stderr, file
-    print >> log, name, stat(file).st_size
-
     name = basename(file)
     type = types[name[-3:]]
     key = bucket.new_key(name)
     key.set_contents_from_file(open(file), policy='public-read', headers={'Content-Type': type})
+
+    print >> stderr, file
+    print >> log, name, stat(file).st_size
 
 log.close()
 key = bucket.new_key('log.txt')
