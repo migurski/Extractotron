@@ -41,9 +41,9 @@ bunzip2 -c california.osm.bz2 | osmosis-*/bin/osmosis --rx file=- \
     --tee outputCount=2 \
     \
     --bb top=37.9203 left=-122.8244 bottom=37.5489 right=-121.7752 \
-        --tee outputCount=2 --wx file=san-francisco.osm.bz2 --wb file=san-francisco.osm.pbf \
+        --tee outputCount=2 --wx file=ex/san-francisco.osm.bz2 --wb file=ex/san-francisco.osm.pbf \
     --bb top=34.14477 left=-118.5438 bottom=33.9262 right=-118.1346 \
-        --tee outputCount=2 --wx file=los-angeles.osm.bz2 --wb file=los-angeles.osm.pbf
+        --tee outputCount=2 --wx file=ex/los-angeles.osm.bz2 --wb file=ex/los-angeles.osm.pbf
 
 echo '------------------------------------------------------------------------------'
 
