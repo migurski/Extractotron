@@ -1,5 +1,12 @@
 #!/bin/sh
 
+#
+# #!/bin/sh
+# K=<your AWS access key>
+# S=<your AWS access secret>
+# curl -s https://raw.github.com/migurski/Extractotron/master/extract.sh | KEY=$K SECRET=$S sh > progress.txt 2>&1
+#
+
 apt-get install -y \
     apache2-mpm-worker \
     openjdk-6-jre-headless \
@@ -15,7 +22,8 @@ tar -xzf osmosis-latest.tgz
 
 echo '------------------------------------------------------------------------------'
 
-curl -OL "http://download.geofabrik.de/osm/north-america/us/connecticut.osm.bz2"
+echo 'Downloading, see download.txt'
+curl -OL "http://download.geofabrik.de/osm/north-america/us/connecticut.osm.bz2" > download.txt 2>&1
 
 echo '------------------------------------------------------------------------------'
 
