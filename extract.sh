@@ -29,19 +29,21 @@ tar -xzf osmosis-latest.tgz
 echo '------------------------------------------------------------------------------'
 
 echo 'Downloading, see download.txt'
-curl -OL "http://download.geofabrik.de/osm/north-america/us/connecticut.osm.bz2" > download.txt 2>&1
+curl -OL "http://download.geofabrik.de/osm/north-america/us/california.osm.bz2" > download.txt 2>&1
 
 echo '------------------------------------------------------------------------------'
 
 echo '# extract', `date` >> log.txt
 mkdir ex
 
-bunzip2 -c connecticut.osm.bz2 | osmosis-*/bin/osmosis --rx file=- --log-progress interval=60 \
+bunzip2 -c california.osm.bz2 | osmosis-*/bin/osmosis --rx file=- \
+    --log-progress interval=60 \
     --tee outputCount=2 \
-    --bb left=-72.97016 top=41.33918 right=-72.88501 bottom=41.27858 \
-        --tee outputCount=2 --wx ex/newhaven.osm.bz2 --wb ex/newhaven.osm.pbf \
-    --bb left=-73.22181 top=41.20836 right=-73.15349 bottom=41.13677 \
-        --tee outputCount=2 --wx ex/bridgeport.osm.bz2 --wb ex/bridgeport.osm.pbf
+    \
+    --bb top=37.9203 left=-122.8244 bottom=37.5489 right=-121.7752 \
+        --tee outputCount=2 --wx file=san-francisco.osm.bz2 --wb file=san-francisco.osm.pbf \
+    --bb top=34.14477 left=-118.5438 bottom=33.9262 right=-118.1346 \
+        --tee outputCount=2 --wx file=los-angeles.osm.bz2 --wb file=los-angeles.osm.pbf
 
 echo '------------------------------------------------------------------------------'
 
@@ -59,7 +61,7 @@ types = dict(bz2='application/x-bzip2', pbf='application/octet-stream')
 bucket = Bucket(S3Connection('$KEY', '$SECRET'), '$BUCKET')
 log = open('log.txt', 'a')
 
-for file in glob('ex/*.osm.???'):
+for file in sorted(glob('ex/*.osm.???')):
     name = basename(file)
     type = types[name[-3:]]
     key = bucket.new_key(name)
