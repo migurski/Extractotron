@@ -13,9 +13,12 @@ cd /mnt
 curl -sOL http://dev.openstreetmap.org/~bretth/osmosis-build/osmosis-latest.tgz
 tar -xzf osmosis-latest.tgz
 
-echo '--------------------------------------------------------------------------'
+echo '------------------------------------------------------------------------------'
 
-curl -sOL "http://download.geofabrik.de/osm/north-america/us/connecticut.osm.bz2"
+curl -OL "http://download.geofabrik.de/osm/north-america/us/connecticut.osm.bz2"
+
+echo '------------------------------------------------------------------------------'
+
 mkdir ex
 
 bunzip2 -c connecticut.osm.bz2 | osmosis-*/bin/osmosis --rx file=- --log-progress interval=60 \
@@ -25,7 +28,7 @@ bunzip2 -c connecticut.osm.bz2 | osmosis-*/bin/osmosis --rx file=- --log-progres
     --bb left=-73.22181 top=41.20836 right=-73.15349 bottom=41.13677 \
         --tee outputCount=2 --wx ex/bridgeport.osm.bz2 --wb ex/bridgeport.osm.pbf
 
-echo '--------------------------------------------------------------------------'
+echo '------------------------------------------------------------------------------'
 
 python <<CODE
 
