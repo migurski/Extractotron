@@ -1,0 +1,36 @@
+body
+{
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 2em;
+}
+
+ul
+{
+    margin: 0;
+    padding: 0;
+}
+
+li.city
+{
+    width: 320px;
+    height: 300px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+ul li.city a img
+{
+	border: none;
+}
+
+h3, li.city ul
+{
+    margin: 0.5em 0 0 0;
+}
+
+li.file
+{
+    list-style-type: none;
+}
