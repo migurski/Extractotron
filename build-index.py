@@ -5,6 +5,8 @@ from re import compile
 from csv import DictReader
 from sys import argv, stderr
 
+from dateutil import parser
+
 from ModestMaps import mapByExtent
 from ModestMaps.Core import Point
 from ModestMaps.Geo import Location
@@ -15,6 +17,7 @@ dimensions = Point(960, 600)
 
 base_url = 'http://osm-metro-extracts.s3.amazonaws.com/log.txt'
 extract_pat = compile(r'^((\S+)\.osm\.(bz2|pbf))\s+(\d+)$')
+months = '- Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split()
 
 def nice_size(size):
     KB = 1024.
@@ -59,12 +62,16 @@ if __name__ == '__main__':
     (index, ) = argv[1:]
     index = open(index, 'w')
     
-    log = urlopen(base_url)
-    log = (line for line in log if extract_pat.match(line))
+    log = list(urlopen(base_url))
+    start = parser.parse(log[0][len('# begin, '):])
+    start = '%s %d, %s' % (months[start.month], start.day, start.year)
     
     files = dict()
     
     for line in log:
+        if not extract_pat.match(line):
+            continue
+    
         match = extract_pat.match(line)
         file, slug, ext, size = (match.group(g) for g in (1, 2, 3, 4))
         
@@ -84,7 +91,15 @@ if __name__ == '__main__':
     <link rel="stylesheet" href="style.css" type="text/css" media="all">
 </head>
 <body>
-    <ul>"""
+    <h1>Metro Extracts</h1>
+    <p>
+        Parts of the <a href="http://www.openstreetmap.org/">OpenStreetMap database</a>
+        for major world cities and their surrounding areas. The goal of these
+        extracts is to make it easy to make maps for major world cities, even if
+        they cross state or national boundaries.
+    </p>
+    <h2>Updated From <a href="http://planet.openstreetmap.org/">Planet</a> %(start)s</h2>
+    <ul class="links">""" % locals()
 
     cities = list(DictReader(open('cities.txt'), dialect='excel-tab'))
     cities.sort(key=itemgetter('slug'))
@@ -93,7 +108,16 @@ if __name__ == '__main__':
         if city['slug'] in files:
             print >> index, '<li class="link"><a href="#%(slug)s">%(name)s</a></li>' % city
     
-    print >> index, """</ul><ul>"""
+    print >> index, """</ul>
+    <p>
+        Provided by <a href="http://mike.teczno.com">Michal Migurski</a> on an expected
+        monthly basis <a href="https://github.com/migurski/Extractotron/">via extractotron</a>.
+        Contact me <a href="https://github.com/migurski">via Github</a> to request new cities,
+        or add them directly to
+        <a href="https://github.com/migurski/Extractotron/blob/master/cities.txt">cities.txt</a>
+        with a <a href="http://help.github.com/fork-a-repo/">fork</a>-and-<a href="http://help.github.com/send-pull-requests/">pull-request</a>.
+    </p>
+    <ul>"""
     
     for city in cities:
         slug = city['slug']

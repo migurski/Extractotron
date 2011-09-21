@@ -4,9 +4,15 @@ body
     margin: 2em;
 }
 
+body>p, body>ul.links
+{
+    width: 630px;
+    margin-bottom: 1em;
+}
+
 ul
 {
-    margin: 0 0 2em 0;
+    margin: 0;
     padding: 0;
 }
 
@@ -15,6 +21,11 @@ li.link
     margin-right: .5em;
     list-style-type: none;
     display: inline;
+}
+
+li.link a
+{
+    white-space: nowrap;
 }
 
 li.city
