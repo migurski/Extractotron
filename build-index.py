@@ -90,6 +90,12 @@ if __name__ == '__main__':
     cities.sort(key=itemgetter('slug'))
     
     for city in cities:
+        if city['slug'] in files:
+            print >> index, '<li class="link"><a href="#%(slug)s">%(name)s</a></li>' % city
+    
+    print >> index, """</ul><ul>"""
+    
+    for city in cities:
         slug = city['slug']
         name = city['name']
     
@@ -110,7 +116,7 @@ if __name__ == '__main__':
             
             print >> index, """
                 <li class="city">
-                    <a href="%(href)s"><img src="previews/%(slug)s.jpg"></a>
+                    <a name="%(slug)s" href="%(href)s"><img src="previews/%(slug)s.jpg"></a>
                     <h3>%(name)s</h3>
                     <ul>%(list)s</ul>
                 </li>""" % locals()

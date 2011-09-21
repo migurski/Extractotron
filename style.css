@@ -6,14 +6,21 @@ body
 
 ul
 {
-    margin: 0;
+    margin: 0 0 2em 0;
     padding: 0;
+}
+
+li.link
+{
+    margin-right: .5em;
+    list-style-type: none;
+    display: inline;
 }
 
 li.city
 {
     width: 320px;
-    height: 300px;
+    height: 260px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -25,9 +32,14 @@ ul li.city a img
 	border: none;
 }
 
-h3, li.city ul
+li.city h3, li.city ul
 {
-    margin: 0.5em 0 0 0;
+    margin: 0.5em 0 0 .2em;
+}
+
+li.city h3
+{
+    margin-top: -1.35em;
 }
 
 li.file
