@@ -17,4 +17,5 @@ top	left	bottom	right	slug	name
 36.558	138.779	34.867	141.152	tokyo	Tokyo
 40.426	115.686	39.414	117.119	beijing	Beijing
 23.488	112.780	21.591	114.675	hong-kong	Hong Kong
--33.637	150.628	-34.189	151.647	sydney	Sydney
+45.238	-93.535	44.716	-92.913	mpls-stpaul-area	Minneapolis St. Paul Area
+45.058	-93.330	44.878	-93.192	minneapolis	Minneapolis
