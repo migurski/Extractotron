@@ -19,3 +19,6 @@ top	left	bottom	right	slug	name
 23.488	112.780	21.591	114.675	hong-kong	Hong Kong
 -33.637	150.628	-34.189	151.647	sydney	Sydney
 45.410	-94.064	44.496	-92.543	mpls-stpaul	Minneapolis, St. Paul
+-36.410	174.223-37.348	175.314	auckland	Auckland
+33.715	43.786	32.9671	44.862	baghdad	Baghdad
+28.969	76.692	28.183	77.733	new-delhi	New Delhi
