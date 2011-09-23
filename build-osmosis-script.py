@@ -23,6 +23,6 @@ for city in cities:
     print >> osmosis, '    --bb top=%(top)s left=%(left)s bottom=%(bottom)s right=%(right)s \\' % city
     print >> osmosis, '        --tee outputCount=2 --wx file=ex/%(slug)s.osm.bz2 --wb file=ex/%(slug)s.osm.pbf \\' % city
 
-print >> osmosis, '    ;'
+print >> osmosis, '> osmosis.txt 2>&1;'
 
 osmosis.close()

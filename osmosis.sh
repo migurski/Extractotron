@@ -83,4 +83,4 @@ bunzip2 -c planet-latest.osm.bz2 | osmosis-*/bin/osmosis --rx file=- \
         --tee outputCount=2 --wx file=ex/tokyo.osm.bz2 --wb file=ex/tokyo.osm.pbf \
     --bb top=39.259 left=-77.599 bottom=38.539 right=-76.365 \
         --tee outputCount=2 --wx file=ex/washington-dc.osm.bz2 --wb file=ex/washington-dc.osm.pbf \
-    ;
+> osmosis.txt 2>&1;
