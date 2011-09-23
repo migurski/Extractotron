@@ -5,7 +5,7 @@ from boto.ec2 import EC2Connection
 
 parser = OptionParser(usage="%prog [options] <aws key> <aws secret> <s3 bucket>")
 
-defaults = dict(ami_id='ami-e2af508b', type='m1.small')
+defaults = dict(ami_id='ami-68ad5201', type='m1.large')
 
 parser.set_defaults(**defaults)
 

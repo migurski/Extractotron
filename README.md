@@ -9,14 +9,13 @@ and EC2 to do the extracting. ```extract.sh``` is a script that performs the
 actual work with [Osmosis](http://wiki.openstreetmap.org/wiki/Osmosis) and
 terminates its host machine upon completion.
 
-To use Extractotron yourself, put this brief shell script in your EC2 user-data:
+To use Extractotron yourself, use run-instance.py:
 
-    #!/bin/sh
-    K=<your AWS access key>
-    S=<your AWS access secret>
-    B=<your bucket name>
-    U=https://raw.github.com/migurski/Extractotron/master/extract.sh
-    curl -s $U | KEY=$K SECRET=$S BUCKET=$B sh > /mnt/progress.txt 2>&1
+    python run-instance.py <your AWS access key> <your AWS secret> <your bucket name>
+    
+By default, run-instance.py instantiates an m1.large instance with Alestic's
+Ubuntu 11.04 Natty instance-store AMI ami-68ad5201. You can change the instance
+type or AMI, see ```python run-instance.py --help``` for details.
 
 Currently, the cities list is very short. Help me expand it by modifying
 ```cities.txt``` and sending a pull request via Github.
