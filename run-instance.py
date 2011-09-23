@@ -23,14 +23,11 @@ if __name__ == '__main__':
         parser.print_usage()
         exit(1)
 
+    user_data = open('extract.sh').read()
+    user_data = user_data.replace('osmosis.sh;\n', open('osmosis.sh').read())
+    user_data = user_data.replace('$KEY', aws_key)
+    user_data = user_data.replace('$SECRET', aws_secret)
+    user_data = user_data.replace('$BUCKET', s3_bucket)
+    
     conn = EC2Connection(aws_key, aws_secret)
-    
-    user_data = """#!/bin/sh
-K=%(aws_key)s
-S=%(aws_secret)s
-B=%(s3_bucket)s
-U=https://raw.github.com/migurski/Extractotron/master/extract.sh
-curl -s $U | KEY=$K SECRET=$S BUCKET=$B sh > /mnt/progress.txt 2>&1
-""" % locals()
-    
     print conn.run_instances(options.ami_id, instance_type=options.type, user_data=user_data)
