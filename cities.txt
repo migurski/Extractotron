@@ -1,24 +1,34 @@
 top	left	bottom	right	slug	name
-37.955	-122.737	37.449	-122.011	san-francisco	San Francisco
-38.719	-123.640	36.791	-121.025	sf-bay-area	San Francisco Bay Area
-34.583	-119.437	33.298	-116.724	los-angeles	Los Angeles
-41.097	-74.501	40.345	-73.226	new-york	New York City
-51.984	-1.115	50.941	0.895	london	London
-52.994	12.260	51.849	14.699	berlin	Berlin
-56.200	36.870	55.285	38.430	moscow	Moscow
-42.702	-71.861	41.951	-70.285	boston	Boston
-39.259	-77.599	38.539	-76.365	washington-dc	Washington D.C.
-42.297	-88.505	41.339	-87.066	chicago	Chicago
-49.178	1.851	48.531	2.911	paris	Paris
 52.629	4.465	52.163	5.347	amsterdam	Amsterdam
-41.687	1.734	41.075	2.496	barcelona	Barcelona
-42.130	12.109	41.578	12.845	rome	Rome
-43.983	10.982	43.601	11.504	florence	Florence
-36.558	138.779	34.867	141.152	tokyo	Tokyo
-40.426	115.686	39.414	117.119	beijing	Beijing
-23.488	112.780	21.591	114.675	hong-kong	Hong Kong
--33.637	150.628	-34.189	151.647	sydney	Sydney
-45.410	-94.064	44.496	-92.543	mpls-stpaul	Minneapolis, St. Paul
 -36.410	174.223-37.348	175.314	auckland	Auckland
 33.715	43.786	32.9671	44.862	baghdad	Baghdad
+41.687	1.734	41.075	2.496	barcelona	Barcelona
+40.426	115.686	39.414	117.119	beijing	Beijing
+52.994	12.260	51.849	14.699	berlin	Berlin
+42.702	-71.861	41.951	-70.285	boston	Boston
+-34.293	-58.899	-34.966	-57.992	buenos-aires	Buenos Aires
+30.564	30.897	29.761	31.710	cairo	Cairo
+42.297	-88.505	41.339	-87.066	chicago	Chicago
+43.983	10.982	43.601	11.504	florence	Florence
+23.488	112.780	21.591	114.675	hong-kong	Hong Kong
+51.984	-1.115	50.941	0.895	london	London
+34.583	-119.437	33.298	-116.724	los-angeles	Los Angeles
+14.757	120.787	14.420	121.195	manila	Manila
+19.921	-99.597	18.992	-98.606	mexico-city	Mexico City
+56.200	36.870	55.285	38.430	moscow	Moscow
+45.410	-94.064	44.496	-92.543	mpls-stpaul	Minneapolis, St. Paul
+19.331	72.415	18.466	73.516	mumbai	Mumbai
 28.969	76.692	28.183	77.733	new-delhi	New Delhi
+41.097	-74.501	40.345	-73.226	new-york	New York City
+35.031	135.057	34.355	135.892	osaka	Osaka
+49.178	1.851	48.531	2.911	paris	Paris
+-22.510	-43.553	-23.231	-42.850	rio-de-janeiro	Rio de Janeiro
+42.130	12.109	41.578	12.845	rome	Rome
+37.955	-122.737	37.449	-122.011	san-francisco	San Francisco
+-23.125	-47.357	-24.317	-45.863	sao-paulo	Sao Paulo
+47.843	-122.538	47.380	-121.868	seattle	Seattle
+38.719	-123.640	36.791	-121.025	sf-bay-area	San Francisco Bay Area
+32.472	118.887	29.477	123.787	shanghai	Shanghai
+-33.637	150.628	-34.189	151.647	sydney	Sydney
+36.558	138.779	34.867	141.152	tokyo	Tokyo
+39.259	-77.599	38.539	-76.365	washington-dc	Washington D.C.
