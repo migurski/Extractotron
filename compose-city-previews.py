@@ -25,6 +25,9 @@ except ValueError:
     exit(1)
 
 for city in cities:
+    if not city['name']:
+        raise Exception('Need a name for ' + str(city))
+
     print >> stderr, city['name'], '...',
 
     north, west = float(city['top']), float(city['left'])

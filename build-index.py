@@ -122,10 +122,15 @@ if __name__ == '__main__':
     for city in cities:
         slug = city['slug']
         name = city['name']
-    
-        ul = Location(float(city['top']), float(city['left']))
-        lr = Location(float(city['bottom']), float(city['right']))
-        mmap = mapByExtent(provider, ul, lr, dimensions)
+        
+        try:
+            ul = Location(float(city['top']), float(city['left']))
+            lr = Location(float(city['bottom']), float(city['right']))
+        except ValueError:
+            print >> stderr, 'Failed on %(name)s (%(slug)s)' % city
+            raise
+        else:
+            mmap = mapByExtent(provider, ul, lr, dimensions)
         
         if slug in files:
             list = ['<li class="file"><a href="%s">%s</a> (%s)</li>' % (href, file, nice_size(size))

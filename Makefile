@@ -12,4 +12,4 @@ previews: cities.txt
 
 clean:
 	rm -f osmosis.sh
-	rm -f previews/*.png
+	rm -f previews/*.jpg
