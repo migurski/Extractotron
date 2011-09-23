@@ -18,7 +18,7 @@ top	left	bottom	right	slug	name
 51.984	-1.115	50.941	0.895	london	London
 34.583	-119.437	33.298	-116.724	los-angeles	Los Angeles
 53.672	-2.588	53.237	-1.877	manchester	Manchester
-14.757	120.787	14.420	121.195	manila	Manila
+14.900	120.885	14.327	121.200 manila	Manila
 19.921	-99.597	18.992	-98.606	mexico-city	Mexico City
 56.200	36.870	55.285	38.430	moscow	Moscow
 45.410	-94.064	44.496	-92.543	mpls-stpaul	Minneapolis, St. Paul
