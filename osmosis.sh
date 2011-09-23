@@ -1,6 +1,9 @@
-osmosis-*/bin/osmosis --rx file=- \
+bunzip2 -c planet-latest.osm.bz2 | osmosis-*/bin/osmosis --rx file=- \
     --log-progress interval=60 \
-    --tee outputCount=38 \
+    --tee outputCount=2 \
+    --tag-filter accept-ways natural=coastline --used-node \
+    --wx coastline.osm.bz2 \
+    --tee outputCount=39 \
     \
     --bb top=52.629 left=4.465 bottom=52.163 right=5.347 \
         --tee outputCount=2 --wx file=ex/amsterdam.osm.bz2 --wb file=ex/amsterdam.osm.pbf \
@@ -38,6 +41,8 @@ osmosis-*/bin/osmosis --rx file=- \
         --tee outputCount=2 --wx file=ex/london.osm.bz2 --wb file=ex/london.osm.pbf \
     --bb top=34.583 left=-119.437 bottom=33.298 right=-116.724 \
         --tee outputCount=2 --wx file=ex/los-angeles.osm.bz2 --wb file=ex/los-angeles.osm.pbf \
+    --bb top=40.839 left=-4.293 bottom=39.889 right=-3.057 \
+        --tee outputCount=2 --wx file=ex/madrid.osm.bz2 --wb file=ex/madrid.osm.pbf \
     --bb top=53.672 left=-2.588 bottom=53.237 right=-1.877 \
         --tee outputCount=2 --wx file=ex/manchester.osm.bz2 --wb file=ex/manchester.osm.pbf \
     --bb top=14.900 left=120.885 bottom=14.327 right=121.200 \
