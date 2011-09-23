@@ -5,19 +5,19 @@ top	left	bottom	right	slug	name
 41.687	1.734	41.075	2.496	barcelona	Barcelona
 40.426	115.686	39.414	117.119	beijing	Beijing
 52.994	12.260	51.849	14.699	berlin	Berlin
-52.794  -2.536  52.214  -1.267  birmingham  Birmingham
+52.794	-2.536	52.214	-1.267	birmingham  Birmingham
 42.702	-71.861	41.951	-70.285	boston	Boston
 -34.293	-58.899	-34.966	-57.992	buenos-aires	Buenos Aires
 30.564	30.897	29.761	31.710	cairo	Cairo
 42.297	-88.505	41.339	-87.066	chicago	Chicago
-56.132  -3.585  55.783  -2.835  edinburgh Edinburgh
+56.132	-3.585	55.783	-2.835	edinburgh	Edinburgh
 43.983	10.982	43.601	11.504	florence	Florence
-56.034  -4.613  55.668  -3.935  glasgow Glasgow
+56.034	-4.613	55.668	-3.935	glasgow	Glasgow
 23.488	112.780	21.591	114.675	hong-kong	Hong Kong
-53.921  -1.717  53.697  -1.33 leeds Leeds
+53.921	-1.717	53.697	-1.33	leeds	Leeds
 51.984	-1.115	50.941	0.895	london	London
 34.583	-119.437	33.298	-116.724	los-angeles	Los Angeles
-53.672  -2.588  53.237  -1.877  manchester  Manchester
+53.672	-2.588	53.237	-1.877	manchester	Manchester
 14.757	120.787	14.420	121.195	manila	Manila
 19.921	-99.597	18.992	-98.606	mexico-city	Mexico City
 56.200	36.870	55.285	38.430	moscow	Moscow
