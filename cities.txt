@@ -13,7 +13,7 @@ top	left	bottom	right	slug	name
 23.488	112.780	21.591	114.675	hong-kong	Hong Kong
 51.984	-1.115	50.941	0.895	london	London
 34.583	-119.437	33.298	-116.724	los-angeles	Los Angeles
-14.778	120.885	14.427	121.125 metro_manila	Greater Metro Manila 
+14.900	120.885	14.327	121.200 metro_manila	Greater Metro Manila 
 19.921	-99.597	18.992	-98.606	mexico-city	Mexico City
 56.200	36.870	55.285	38.430	moscow	Moscow
 45.410	-94.064	44.496	-92.543	mpls-stpaul	Minneapolis, St. Paul
