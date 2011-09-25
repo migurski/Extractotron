@@ -1,6 +1,5 @@
 from urllib import urlopen
 from urlparse import urljoin
-from operator import itemgetter
 from re import compile
 from csv import DictReader
 from sys import argv, stderr
@@ -102,10 +101,15 @@ if __name__ == '__main__':
     <ul class="links">""" % locals()
 
     cities = list(DictReader(open('cities.txt'), dialect='excel-tab'))
-    cities.sort(key=itemgetter('name'))
+
+    cities.sort(key=lambda city: (city['group'], city['name']))
+    last_group = None
     
     for city in cities:
         if city['slug'] in files:
+            if city['group'] != last_group:
+                print >> index, '<li class="group">%(group)s:</li>' % city
+                last_group = city['group']
             print >> index, '<li class="link"><a href="#%(slug)s">%(name)s</a></li>' % city
     
     print >> index, """</ul>
@@ -119,6 +123,8 @@ if __name__ == '__main__':
     </p>
     <ul>"""
     
+    cities.sort(key=lambda city: city['name'])
+
     for city in cities:
         slug = city['slug']
         name = city['name']
