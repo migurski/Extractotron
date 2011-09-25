@@ -1,5 +1,6 @@
 top	left	bottom	right	slug	name
 52.629	4.465	52.163	5.347	amsterdam	Amsterdam
+38.365	22.949	37.514	24.421	athens	Athens
 -36.410	174.223	-37.348	175.314	auckland	Auckland
 33.715	43.786	32.9671	44.862	baghdad	Baghdad
 41.687	1.734	41.075	2.496	barcelona	Barcelona
@@ -38,4 +39,3 @@ top	left	bottom	right	slug	name
 -33.637	150.628	-34.189	151.647	sydney	Sydney
 36.558	138.779	34.867	141.152	tokyo	Tokyo
 39.259	-77.599	38.539	-76.365	washington-dc	Washington D.C.
-38.121  23.538  37.795  23.899  athens  Athens, Greece
