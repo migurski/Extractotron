@@ -102,7 +102,7 @@ if __name__ == '__main__':
     <ul class="links">""" % locals()
 
     cities = list(DictReader(open('cities.txt'), dialect='excel-tab'))
-    cities.sort(key=itemgetter('slug'))
+    cities.sort(key=itemgetter('name'))
     
     for city in cities:
         if city['slug'] in files:
