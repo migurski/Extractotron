@@ -38,3 +38,4 @@ top	left	bottom	right	slug	name
 -33.637	150.628	-34.189	151.647	sydney	Sydney
 36.558	138.779	34.867	141.152	tokyo	Tokyo
 39.259	-77.599	38.539	-76.365	washington-dc	Washington D.C.
+38.121  23.538  37.795  23.899  athens  Athens, Greece
