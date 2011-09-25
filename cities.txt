@@ -1,6 +1,7 @@
 top	left	bottom	right	slug	name
 52.629	4.465	52.163	5.347	amsterdam	Amsterdam
 38.365	22.949	37.514	24.421	athens	Athens
+34.090	-84.857	33.414	-83.890	atlanta	Atlanta
 -36.410	174.223	-37.348	175.314	auckland	Auckland
 33.715	43.786	32.9671	44.862	baghdad	Baghdad
 41.687	1.734	41.075	2.496	barcelona	Barcelona
@@ -9,13 +10,17 @@ top	left	bottom	right	slug	name
 52.794	-2.536	52.214	-1.267	birmingham	Birmingham
 42.702	-71.861	41.951	-70.285	boston	Boston
 -34.293	-58.899	-34.966	-57.992	buenos-aires	Buenos Aires
+51.053	3.981	50.645	4.761	brussels	Brussels
 30.564	30.897	29.761	31.710	cairo	Cairo
 42.297	-88.505	41.339	-87.066	chicago	Chicago
+55.950	11.894	55.491	13.147	copenhagen	Copenhagen
 56.132	-3.585	55.783	-2.835	edinburgh	Edinburgh
 43.983	10.982	43.601	11.504	florence	Florence
 56.034	-4.613	55.668	-3.935	glasgow	Glasgow
 23.488	112.780	21.591	114.675	hong-kong	Hong Kong
+41.421	28.313	40.738	29.678	istanbul	Istanbul
 53.921	-1.717	53.697	-1.33	leeds	Leeds
+39.150	-9.634	38.358	-8.458	lisbon	Lisbon
 51.984	-1.115	50.941	0.895	london	London
 34.583	-119.437	33.298	-116.724	los-angeles	Los Angeles
 40.839	-4.293	39.889	-3.057	madrid	Madrid
@@ -35,6 +40,7 @@ top	left	bottom	right	slug	name
 -23.125	-47.357	-24.317	-45.863	sao-paulo	Sao Paulo
 47.843	-122.538	47.380	-121.868	seattle	Seattle
 38.719	-123.640	36.791	-121.025	sf-bay-area	San Francisco Bay Area
+37.980	126.064	37.019	127.525	seoul	Seoul
 32.472	118.887	29.477	123.787	shanghai	Shanghai
 -33.637	150.628	-34.189	151.647	sydney	Sydney
 36.558	138.779	34.867	141.152	tokyo	Tokyo
