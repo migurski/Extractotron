@@ -1,5 +1,8 @@
 group	top	left	bottom	right	slug	name
 Africa	30.564	30.897	29.761	31.710	cairo	Cairo
+Africa	-25.834	27.537	-26.563	28.542	johannesburg	Johannesburg
+Africa	6.910	2.889	6.320	3.834	lagos	Lagos
+Asia	15.019	99.569	12.661	101.337	bangkok	Bangkok
 Asia	40.426	115.686	39.414	117.119	beijing	Beijing
 Asia	23.488	112.780	21.591	114.675	hong-kong	Hong Kong
 Asia	14.900	120.885	14.327	121.200	manila	Manila
@@ -8,6 +11,7 @@ Asia	28.969	76.692	28.183	77.733	new-delhi	New Delhi
 Asia	35.031	135.057	34.355	135.892	osaka	Osaka
 Asia	37.980	126.064	37.019	127.525	seoul	Seoul
 Asia	32.472	118.887	29.477	123.787	shanghai	Shanghai
+Asia	1.823	103.062	0.807	104.545	singapore	Singapore
 Asia	36.558	138.779	34.867	141.152	tokyo	Tokyo
 Europe	52.629	4.465	52.163	5.347	amsterdam	Amsterdam
 Europe	38.365	22.949	37.514	24.421	athens	Athens
@@ -29,19 +33,26 @@ Europe	56.200	36.870	55.285	38.430	moscow	Moscow
 Europe	49.178	1.851	48.531	2.911	paris	Paris
 Europe	42.130	12.109	41.578	12.845	rome	Rome
 Middle East	33.715	43.786	32.9671	44.862	baghdad	Baghdad
+Middle East	25.098	46.227	24.292	47.202	riyadh	Riyadh
 North America	34.090	-84.857	33.414	-83.890	atlanta	Atlanta
 North America	42.702	-71.861	41.951	-70.285	boston	Boston
 North America	42.297	-88.505	41.339	-87.066	chicago	Chicago
 North America	34.583	-119.437	33.298	-116.724	los-angeles	Los Angeles
 North America	19.921	-99.597	18.992	-98.606	mexico-city	Mexico City
+North America	26.912	-80.683	25.291	-79.774	miami	Miami
 North America	45.410	-94.064	44.496	-92.543	mpls-stpaul	Minneapolis, St. Paul
 North America	41.097	-74.501	40.345	-73.226	new-york	New York City
 North America	37.955	-122.737	37.449	-122.011	san-francisco	San Francisco
 North America	38.719	-123.640	36.791	-121.025	sf-bay-area	San Francisco Bay Area
 North America	47.843	-122.538	47.380	-121.868	seattle	Seattle
+North America	44.182	-80.161	43.201	-78.717	toronto	Toronto
 North America	39.259	-77.599	38.539	-76.365	washington-dc	Washington D.C.
 Oceania	-36.410	174.223	-37.348	175.314	auckland	Auckland
+Oceania	-5.881	106.435	-6.615	107.160	jakarta	Jakarta
+Oceania	-37.365	144.266	-38.552	145.810	melbourne	Melbourne
 Oceania	-33.637	150.628	-34.189	151.647	sydney	Sydney
+South America	5.022	-74.421	4.291	-73.767	bogota	Bogota
 South America	-34.293	-58.899	-34.966	-57.992	buenos-aires	Buenos Aires
 South America	-22.510	-43.553	-23.231	-42.850	rio-de-janeiro	Rio de Janeiro
 South America	-23.125	-47.357	-24.317	-45.863	sao-paulo	Sao Paulo
+South America	-33.151	-71.043	-33.824	-70.353	santiago	Santiago
