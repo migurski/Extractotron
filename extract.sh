@@ -51,12 +51,12 @@ shapeindex coast/coastline_c coast/coastline_i coast/coastline_p coast/processed
 mkdir ex/merc
 mkdir ex/wgs84
 
-for NAME in processed_p processed_i coastline_i; do
+for NAME in processed_p processed_i coastline_p coastline_i; do
     ogr2ogr -a_srs "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" ex/merc/$NAME.shp coast/$NAME.shp
-    tar -C ex/merc -cvf - ex/merc/$NAME.dbf ex/merc/$NAME.prj ex/merc/$NAME.shp ex/merc/$NAME.shx | bzip2 > ex/$NAME-merc.tar.bz2
+    tar -C ex/merc -cvf - $NAME.dbf $NAME.prj $NAME.shp $NAME.shx | bzip2 > ex/$NAME-merc.tar.bz2
 
     ogr2ogr -t_srs EPSG:4326 ex/wgs84/$NAME.shp ex/merc/$NAME.shp
-    tar -C ex/wgs84 -cvf - ex/wgs84/$NAME.dbf ex/wgs84/$NAME.prj ex/wgs84/$NAME.shp ex/wgs84/$NAME.shx | bzip2 > ex/$NAME-latlon.tar.bz2
+    tar -C ex/wgs84 -cvf - $NAME.dbf $NAME.prj $NAME.shp $NAME.shx | bzip2 > ex/$NAME-latlon.tar.bz2
 done
 
 python <<SEND
