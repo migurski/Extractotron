@@ -4,7 +4,7 @@ Africa	-25.834	27.537	-26.563	28.542	johannesburg	Johannesburg
 Africa	6.910	2.889	6.320	3.834	lagos	Lagos
 Asia	15.019	99.569	12.661	101.337	bangkok	Bangkok
 Asia	40.426	115.686	39.414	117.119	beijing	Beijing
-Asia	23.488	112.780	21.591	114.675	hong-kong	Hong Kong
+Asia	23.488	112.780	21.591	115.125	hong-kong	Hong Kong
 Asia	14.900	120.885	14.327	121.200	manila	Manila
 Asia	19.331	72.415	18.466	73.516	mumbai	Mumbai
 Asia	28.969	76.692	28.183	77.733	new-delhi	New Delhi
