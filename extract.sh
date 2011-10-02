@@ -1,14 +1,5 @@
 #!/bin/sh -ex
 
-# Make it possible to watch on port 80
-rm -rfv /var/www
-ln -sfv /mnt /var/www
-
-# Osmosis uses a lot of /tmp so put it on the EBS volume
-mv -v /tmp /mnt/
-ln -sv /mnt/tmp /tmp
-
-
 cd /mnt
 
 echo '# begin', `date` > log.txt
@@ -27,6 +18,15 @@ svn co http://svn.openstreetmap.org/applications/utils/coastcheck cc >> install.
 cd cc
 make >> install.txt 2>&1
 cd ..
+
+
+# Make it possible to watch on port 80
+rm -rfv /var/www
+ln -sfv /mnt /var/www
+
+# Osmosis uses a lot of /tmp so put it on the EBS volume
+mv -v /tmp /mnt/
+ln -sv /mnt/tmp /tmp
 
 
 curl -sOL http://dev.openstreetmap.org/~bretth/osmosis-build/osmosis-latest.tgz
@@ -87,6 +87,8 @@ key = bucket.new_key('log.txt')
 key.set_contents_from_file(open('log.txt'), policy='public-read', headers={'Content-Type': 'text/plain'})
 
 SEND
+
+false
 
 python <<KILL
 
