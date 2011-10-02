@@ -6,7 +6,7 @@ body
     margin: 2em;
 }
 
-body>p, body>ul.links
+body>p, body>ul.links, body>ul.coast
 {
     width: 630px;
     margin-bottom: 1em;
@@ -36,6 +36,12 @@ li.group,
 li.link
 {
     white-space: nowrap;
+}
+
+ul.coast li
+{
+    margin-left: 1em;
+    margin-bottom: 1em;
 }
 
 li.city

@@ -16,6 +16,7 @@ dimensions = Point(960, 600)
 
 base_url = 'http://osm-metro-extracts.s3.amazonaws.com/log.txt'
 extract_pat = compile(r'^((\S+)\.osm\.(bz2|pbf))\s+(\d+)$')
+coastline_pat = compile(r'^((\w+)-(latlon|merc)\.tar\.bz2)\s+(\d+)$')
 months = '- Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split()
 
 def nice_size(size):
@@ -66,19 +67,30 @@ if __name__ == '__main__':
     start = '%s %d, %s' % (months[start.month], start.day, start.year)
     
     files = dict()
+    coast = dict()
     
     for line in log:
-        if not extract_pat.match(line):
-            continue
-    
-        match = extract_pat.match(line)
-        file, slug, ext, size = (match.group(g) for g in (1, 2, 3, 4))
-        
-        if slug not in files:
-            files[slug] = dict()
-        
-        href = urljoin(base_url, file)
-        files[slug][ext] = (file, int(size), href)
+        if coastline_pat.match(line):
+
+            match = coastline_pat.match(line)
+            file, slug, prj, size = (match.group(g) for g in (1, 2, 3, 4))
+            
+            if slug not in coast:
+                coast[slug] = dict()
+            
+            href = urljoin(base_url, file)
+            coast[slug][prj] = (file, int(size), href)
+            
+        elif extract_pat.match(line):
+
+            match = extract_pat.match(line)
+            file, slug, ext, size = (match.group(g) for g in (1, 2, 3, 4))
+            
+            if slug not in files:
+                files[slug] = dict()
+            
+            href = urljoin(base_url, file)
+            files[slug][ext] = (file, int(size), href)
     
     #
     
@@ -112,8 +124,37 @@ if __name__ == '__main__':
                 last_group = city['group']
             print >> index, '<li class="link"><a href="#%(slug)s">%(name)s</a></li>' % city
     
-    print >> index, """</ul>
-    <p>
+    print >> index, """</ul>"""
+    
+    if 'processed_p' in coast:
+        print >> index, """<h2>Coastline Shapefiles</h2>
+        <p>
+            <a href="http://wiki.openstreetmap.org/wiki/Coastline">Coastline</a> objects
+            in OpenStreetMap are not directly usable for rendering. They must first be
+            joined into continent-sized polygons by the
+            <a href="http://wiki.openstreetmap.org/wiki/Coastline_error_checker">coastline error checker</a>
+            and converted to shapefiles. The files available below are up-to-date,
+            error-corrected versions of the worldwide coastline generated using the code available from
+            <a href="http://svn.openstreetmap.org/applications/utils/coastcheck/">Subversion</a>.
+        </p>
+        <ul class="coast">
+            <li><a href="%s">Coastline polygons</a>: closed areas, divided into 100km squares.<br><a href="%s">Mercator</a> (%s) and <a href="%s">unprojected</a> (%s) shapefiles.</li>
+            <li><a href="%s">Incomplete lines</a>: incomplete coastlines, joined into linestrings.<br><a href="%s">Mercator</a> (%s) and <a href="%s">unprojected</a> (%s) shapefiles.</li>
+            <li><a href="%s">Error points</a>: points where there are errors.<br><a href="%s">Mercator</a> (%s) and <a href="%s">unprojected</a> (%s) shapefiles.</li>
+        </ul>""" \
+        % (
+            coast['processed_p']['merc'][2],
+            coast['processed_p']['merc'][2], nice_size(coast['processed_p']['merc'][1]),
+            coast['processed_p']['latlon'][2], nice_size(coast['processed_p']['latlon'][1]),
+            coast['processed_i']['merc'][2],
+            coast['processed_i']['merc'][2], nice_size(coast['processed_i']['merc'][1]),
+            coast['processed_i']['latlon'][2], nice_size(coast['processed_i']['latlon'][1]),
+            coast['coastline_p']['merc'][2],
+            coast['coastline_p']['merc'][2], nice_size(coast['coastline_p']['merc'][1]),
+            coast['coastline_p']['latlon'][2], nice_size(coast['coastline_p']['latlon'][1])
+        )
+    
+    print >> index, """<p>
         Provided by <a href="http://mike.teczno.com">Michal Migurski</a> on an expected
         monthly basis <a href="https://github.com/migurski/Extractotron/">via extractotron</a>.
         Contact me <a href="https://github.com/migurski">via Github</a> to request new cities,
