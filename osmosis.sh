@@ -3,7 +3,7 @@ bunzip2 -c planet-latest.osm.bz2 | osmosis-*/bin/osmosis --rx file=- \
     --tee outputCount=2 \
     --tag-filter accept-ways natural=coastline --used-node \
     --wx coastline.osm.bz2 \
-    --tee outputCount=57 \
+    --tee outputCount=58 \
     \
     --bb top=30.564 left=30.897 bottom=29.761 right=31.710 \
         --tee outputCount=2 --wx file=ex/cairo.osm.bz2 --wb file=ex/cairo.osm.pbf \
@@ -15,7 +15,7 @@ bunzip2 -c planet-latest.osm.bz2 | osmosis-*/bin/osmosis --rx file=- \
         --tee outputCount=2 --wx file=ex/bangkok.osm.bz2 --wb file=ex/bangkok.osm.pbf \
     --bb top=40.426 left=115.686 bottom=39.414 right=117.119 \
         --tee outputCount=2 --wx file=ex/beijing.osm.bz2 --wb file=ex/beijing.osm.pbf \
-    --bb top=23.488 left=112.780 bottom=21.591 right=114.675 \
+    --bb top=23.488 left=112.780 bottom=21.591 right=115.125 \
         --tee outputCount=2 --wx file=ex/hong-kong.osm.bz2 --wb file=ex/hong-kong.osm.pbf \
     --bb top=14.900 left=120.885 bottom=14.327 right=121.200 \
         --tee outputCount=2 --wx file=ex/manila.osm.bz2 --wb file=ex/manila.osm.pbf \
@@ -111,6 +111,8 @@ bunzip2 -c planet-latest.osm.bz2 | osmosis-*/bin/osmosis --rx file=- \
         --tee outputCount=2 --wx file=ex/sydney.osm.bz2 --wb file=ex/sydney.osm.pbf \
     --bb top=5.022 left=-74.421 bottom=4.291 right=-73.767 \
         --tee outputCount=2 --wx file=ex/bogota.osm.bz2 --wb file=ex/bogota.osm.pbf \
+    --bb top=10.572 left=-75.627 bottom=10.251 right=-75.337 \
+        --tee outputCount=2 --wx file=ex/cartagena.osm.bz2 --wb file=ex/cartagena.osm.pbf \
     --bb top=-34.293 left=-58.899 bottom=-34.966 right=-57.992 \
         --tee outputCount=2 --wx file=ex/buenos-aires.osm.bz2 --wb file=ex/buenos-aires.osm.pbf \
     --bb top=-22.510 left=-43.553 bottom=-23.231 right=-42.850 \

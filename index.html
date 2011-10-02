@@ -13,28 +13,38 @@
         extracts is to make it easy to make maps for major world cities, even if
         they cross state or national boundaries.
     </p>
-    <h2>Updated From <a href="http://planet.openstreetmap.org/">Planet</a> Sep 24, 2011</h2>
+    <h2>Updated From <a href="http://planet.openstreetmap.org/">Planet</a> Oct 1, 2011</h2>
     <ul class="links">
 <li class="group">Africa:</li>
 <li class="link"><a href="#cairo">Cairo</a></li>
+<li class="link"><a href="#johannesburg">Johannesburg</a></li>
+<li class="link"><a href="#lagos">Lagos</a></li>
 <li class="group">Asia:</li>
+<li class="link"><a href="#bangkok">Bangkok</a></li>
 <li class="link"><a href="#beijing">Beijing</a></li>
 <li class="link"><a href="#hong-kong">Hong Kong</a></li>
 <li class="link"><a href="#manila">Manila</a></li>
 <li class="link"><a href="#mumbai">Mumbai</a></li>
 <li class="link"><a href="#new-delhi">New Delhi</a></li>
 <li class="link"><a href="#osaka">Osaka</a></li>
+<li class="link"><a href="#seoul">Seoul</a></li>
 <li class="link"><a href="#shanghai">Shanghai</a></li>
+<li class="link"><a href="#singapore">Singapore</a></li>
 <li class="link"><a href="#tokyo">Tokyo</a></li>
 <li class="group">Europe:</li>
 <li class="link"><a href="#amsterdam">Amsterdam</a></li>
+<li class="link"><a href="#athens">Athens</a></li>
 <li class="link"><a href="#barcelona">Barcelona</a></li>
 <li class="link"><a href="#berlin">Berlin</a></li>
 <li class="link"><a href="#birmingham">Birmingham</a></li>
+<li class="link"><a href="#brussels">Brussels</a></li>
+<li class="link"><a href="#copenhagen">Copenhagen</a></li>
 <li class="link"><a href="#edinburgh">Edinburgh</a></li>
 <li class="link"><a href="#florence">Florence</a></li>
 <li class="link"><a href="#glasgow">Glasgow</a></li>
+<li class="link"><a href="#istanbul">Istanbul</a></li>
 <li class="link"><a href="#leeds">Leeds</a></li>
+<li class="link"><a href="#lisbon">Lisbon</a></li>
 <li class="link"><a href="#london">London</a></li>
 <li class="link"><a href="#madrid">Madrid</a></li>
 <li class="link"><a href="#manchester">Manchester</a></li>
@@ -43,26 +53,49 @@
 <li class="link"><a href="#rome">Rome</a></li>
 <li class="group">Middle East:</li>
 <li class="link"><a href="#baghdad">Baghdad</a></li>
+<li class="link"><a href="#riyadh">Riyadh</a></li>
 <li class="group">North America:</li>
+<li class="link"><a href="#atlanta">Atlanta</a></li>
 <li class="link"><a href="#boston">Boston</a></li>
 <li class="link"><a href="#chicago">Chicago</a></li>
 <li class="link"><a href="#los-angeles">Los Angeles</a></li>
 <li class="link"><a href="#mexico-city">Mexico City</a></li>
+<li class="link"><a href="#miami">Miami</a></li>
 <li class="link"><a href="#mpls-stpaul">Minneapolis, St. Paul</a></li>
 <li class="link"><a href="#new-york">New York City</a></li>
 <li class="link"><a href="#san-francisco">San Francisco</a></li>
 <li class="link"><a href="#sf-bay-area">San Francisco Bay Area</a></li>
 <li class="link"><a href="#seattle">Seattle</a></li>
+<li class="link"><a href="#toronto">Toronto</a></li>
 <li class="link"><a href="#washington-dc">Washington D.C.</a></li>
 <li class="group">Oceania:</li>
 <li class="link"><a href="#auckland">Auckland</a></li>
+<li class="link"><a href="#jakarta">Jakarta</a></li>
+<li class="link"><a href="#melbourne">Melbourne</a></li>
 <li class="link"><a href="#sydney">Sydney</a></li>
 <li class="group">South America:</li>
+<li class="link"><a href="#bogota">Bogota</a></li>
 <li class="link"><a href="#buenos-aires">Buenos Aires</a></li>
 <li class="link"><a href="#rio-de-janeiro">Rio de Janeiro</a></li>
+<li class="link"><a href="#santiago">Santiago</a></li>
 <li class="link"><a href="#sao-paulo">Sao Paulo</a></li>
 </ul>
-    <p>
+<h2>Coastline Shapefiles</h2>
+        <p>
+            <a href="http://wiki.openstreetmap.org/wiki/Coastline">Coastline</a> objects
+            in OpenStreetMap are not directly usable for rendering. They must first be
+            joined into continent-sized polygons by the
+            <a href="http://wiki.openstreetmap.org/wiki/Coastline_error_checker">coastline error checker</a>
+            and converted to shapefiles. The files available below are up-to-date,
+            error-corrected versions of the worldwide coastline generated using the code available from
+            <a href="http://svn.openstreetmap.org/applications/utils/coastcheck/">Subversion</a>.
+        </p>
+        <ul class="coast">
+            <li><a href="http://osm-metro-extracts.s3.amazonaws.com/processed_p-merc.tar.bz2">Coastline polygons</a>: closed areas, divided into 100km squares.<br><a href="http://osm-metro-extracts.s3.amazonaws.com/processed_p-merc.tar.bz2">Mercator</a> (367 MB) and <a href="http://osm-metro-extracts.s3.amazonaws.com/processed_p-latlon.tar.bz2">unprojected</a> (262 MB) shapefiles.</li>
+            <li><a href="http://osm-metro-extracts.s3.amazonaws.com/processed_i-merc.tar.bz2">Incomplete lines</a>: incomplete coastlines, joined into linestrings.<br><a href="http://osm-metro-extracts.s3.amazonaws.com/processed_i-merc.tar.bz2">Mercator</a> (4.6 MB) and <a href="http://osm-metro-extracts.s3.amazonaws.com/processed_i-latlon.tar.bz2">unprojected</a> (3.3 MB) shapefiles.</li>
+            <li><a href="http://osm-metro-extracts.s3.amazonaws.com/coastline_p-merc.tar.bz2">Error points</a>: points where there are errors.<br><a href="http://osm-metro-extracts.s3.amazonaws.com/coastline_p-merc.tar.bz2">Mercator</a> (4.2 KB) and <a href="http://osm-metro-extracts.s3.amazonaws.com/coastline_p-latlon.tar.bz2">unprojected</a> (4.1 KB) shapefiles.</li>
+        </ul>
+<p>
         Provided by <a href="http://mike.teczno.com">Michal Migurski</a> on an expected
         monthly basis <a href="https://github.com/migurski/Extractotron/">via extractotron</a>.
         Contact me <a href="https://github.com/migurski">via Github</a> to request new cities,
@@ -79,9 +112,21 @@
                 </li>
 
                 <li class="city">
+                    <a name="athens" href="http://www.openstreetmap.org/?lat=37.940&amp;lon=23.684&amp;zoom=9&amp;layers=M"><img src="previews/athens.jpg"></a>
+                    <h3>Athens</h3>
+                    <ul><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/athens.osm.bz2">athens.osm.bz2</a> (8.7 MB)</li><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/athens.osm.pbf">athens.osm.pbf</a> (5.1 MB)</li></ul>
+                </li>
+
+                <li class="city">
+                    <a name="atlanta" href="http://www.openstreetmap.org/?lat=33.753&amp;lon=-84.374&amp;zoom=10&amp;layers=M"><img src="previews/atlanta.jpg"></a>
+                    <h3>Atlanta</h3>
+                    <ul><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/atlanta.osm.bz2">atlanta.osm.bz2</a> (33 MB)</li><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/atlanta.osm.pbf">atlanta.osm.pbf</a> (18 MB)</li></ul>
+                </li>
+
+                <li class="city">
                     <a name="auckland" href="http://www.openstreetmap.org/?lat=-36.880&amp;lon=174.768&amp;zoom=9&amp;layers=M"><img src="previews/auckland.jpg"></a>
                     <h3>Auckland</h3>
-                    <ul><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/auckland.osm.bz2">auckland.osm.bz2</a> (7.2 MB)</li><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/auckland.osm.pbf">auckland.osm.pbf</a> (4.4 MB)</li></ul>
+                    <ul><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/auckland.osm.bz2">auckland.osm.bz2</a> (7.3 MB)</li><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/auckland.osm.pbf">auckland.osm.pbf</a> (4.5 MB)</li></ul>
                 </li>
 
                 <li class="city">
@@ -91,9 +136,15 @@
                 </li>
 
                 <li class="city">
+                    <a name="bangkok" href="http://www.openstreetmap.org/?lat=13.843&amp;lon=100.453&amp;zoom=8&amp;layers=M"><img src="previews/bangkok.jpg"></a>
+                    <h3>Bangkok</h3>
+                    <ul><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/bangkok.osm.bz2">bangkok.osm.bz2</a> (5.5 MB)</li><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/bangkok.osm.pbf">bangkok.osm.pbf</a> (3.4 MB)</li></ul>
+                </li>
+
+                <li class="city">
                     <a name="barcelona" href="http://www.openstreetmap.org/?lat=41.382&amp;lon=2.115&amp;zoom=10&amp;layers=M"><img src="previews/barcelona.jpg"></a>
                     <h3>Barcelona</h3>
-                    <ul><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/barcelona.osm.bz2">barcelona.osm.bz2</a> (10 MB)</li><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/barcelona.osm.pbf">barcelona.osm.pbf</a> (6.9 MB)</li></ul>
+                    <ul><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/barcelona.osm.bz2">barcelona.osm.bz2</a> (10 MB)</li><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/barcelona.osm.pbf">barcelona.osm.pbf</a> (7.0 MB)</li></ul>
                 </li>
 
                 <li class="city">
@@ -115,9 +166,21 @@
                 </li>
 
                 <li class="city">
+                    <a name="bogota" href="http://www.openstreetmap.org/?lat=4.657&amp;lon=-74.095&amp;zoom=10&amp;layers=M"><img src="previews/bogota.jpg"></a>
+                    <h3>Bogota</h3>
+                    <ul><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/bogota.osm.bz2">bogota.osm.bz2</a> (5.5 MB)</li><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/bogota.osm.pbf">bogota.osm.pbf</a> (4.2 MB)</li></ul>
+                </li>
+
+                <li class="city">
                     <a name="boston" href="http://www.openstreetmap.org/?lat=42.328&amp;lon=-71.073&amp;zoom=9&amp;layers=M"><img src="previews/boston.jpg"></a>
                     <h3>Boston</h3>
                     <ul><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/boston.osm.bz2">boston.osm.bz2</a> (82 MB)</li><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/boston.osm.pbf">boston.osm.pbf</a> (58 MB)</li></ul>
+                </li>
+
+                <li class="city">
+                    <a name="brussels" href="http://www.openstreetmap.org/?lat=50.849&amp;lon=4.371&amp;zoom=10&amp;layers=M"><img src="previews/brussels.jpg"></a>
+                    <h3>Brussels</h3>
+                    <ul><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/brussels.osm.bz2">brussels.osm.bz2</a> (22 MB)</li><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/brussels.osm.pbf">brussels.osm.pbf</a> (14 MB)</li></ul>
                 </li>
 
                 <li class="city">
@@ -139,6 +202,12 @@
                 </li>
 
                 <li class="city">
+                    <a name="copenhagen" href="http://www.openstreetmap.org/?lat=55.721&amp;lon=12.520&amp;zoom=10&amp;layers=M"><img src="previews/copenhagen.jpg"></a>
+                    <h3>Copenhagen</h3>
+                    <ul><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/copenhagen.osm.bz2">copenhagen.osm.bz2</a> (20 MB)</li><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/copenhagen.osm.pbf">copenhagen.osm.pbf</a> (14 MB)</li></ul>
+                </li>
+
+                <li class="city">
                     <a name="edinburgh" href="http://www.openstreetmap.org/?lat=55.958&amp;lon=-3.209&amp;zoom=10&amp;layers=M"><img src="previews/edinburgh.jpg"></a>
                     <h3>Edinburgh</h3>
                     <ul><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/edinburgh.osm.bz2">edinburgh.osm.bz2</a> (6.6 MB)</li><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/edinburgh.osm.pbf">edinburgh.osm.pbf</a> (4.4 MB)</li></ul>
@@ -153,19 +222,49 @@
                 <li class="city">
                     <a name="glasgow" href="http://www.openstreetmap.org/?lat=55.851&amp;lon=-4.274&amp;zoom=10&amp;layers=M"><img src="previews/glasgow.jpg"></a>
                     <h3>Glasgow</h3>
-                    <ul><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/glasgow.osm.bz2">glasgow.osm.bz2</a> (7.0 MB)</li><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/glasgow.osm.pbf">glasgow.osm.pbf</a> (4.7 MB)</li></ul>
+                    <ul><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/glasgow.osm.bz2">glasgow.osm.bz2</a> (7.0 MB)</li><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/glasgow.osm.pbf">glasgow.osm.pbf</a> (4.8 MB)</li></ul>
                 </li>
 
                 <li class="city">
-                    <a name="hong-kong" href="http://www.openstreetmap.org/?lat=22.543&amp;lon=113.725&amp;zoom=8&amp;layers=M"><img src="previews/hong-kong.jpg"></a>
+                    <a name="hong-kong" href="http://www.openstreetmap.org/?lat=22.543&amp;lon=113.950&amp;zoom=8&amp;layers=M"><img src="previews/hong-kong.jpg"></a>
                     <h3>Hong Kong</h3>
-                    <ul><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/hong-kong.osm.bz2">hong-kong.osm.bz2</a> (8.1 MB)</li><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/hong-kong.osm.pbf">hong-kong.osm.pbf</a> (5.5 MB)</li></ul>
+                    <ul><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/hong-kong.osm.bz2">hong-kong.osm.bz2</a> (8.2 MB)</li><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/hong-kong.osm.pbf">hong-kong.osm.pbf</a> (5.6 MB)</li></ul>
+                </li>
+
+                <li class="city">
+                    <a name="istanbul" href="http://www.openstreetmap.org/?lat=41.081&amp;lon=28.996&amp;zoom=9&amp;layers=M"><img src="previews/istanbul.jpg"></a>
+                    <h3>Istanbul</h3>
+                    <ul><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/istanbul.osm.bz2">istanbul.osm.bz2</a> (4.1 MB)</li><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/istanbul.osm.pbf">istanbul.osm.pbf</a> (2.3 MB)</li></ul>
+                </li>
+
+                <li class="city">
+                    <a name="jakarta" href="http://www.openstreetmap.org/?lat=-6.248&amp;lon=106.798&amp;zoom=10&amp;layers=M"><img src="previews/jakarta.jpg"></a>
+                    <h3>Jakarta</h3>
+                    <ul><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/jakarta.osm.bz2">jakarta.osm.bz2</a> (2.9 MB)</li><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/jakarta.osm.pbf">jakarta.osm.pbf</a> (1.8 MB)</li></ul>
+                </li>
+
+                <li class="city">
+                    <a name="johannesburg" href="http://www.openstreetmap.org/?lat=-26.199&amp;lon=28.040&amp;zoom=10&amp;layers=M"><img src="previews/johannesburg.jpg"></a>
+                    <h3>Johannesburg</h3>
+                    <ul><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/johannesburg.osm.bz2">johannesburg.osm.bz2</a> (5.2 MB)</li><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/johannesburg.osm.pbf">johannesburg.osm.pbf</a> (3.5 MB)</li></ul>
+                </li>
+
+                <li class="city">
+                    <a name="lagos" href="http://www.openstreetmap.org/?lat=6.616&amp;lon=3.362&amp;zoom=10&amp;layers=M"><img src="previews/lagos.jpg"></a>
+                    <h3>Lagos</h3>
+                    <ul><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/lagos.osm.bz2">lagos.osm.bz2</a> (561 KB)</li><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/lagos.osm.pbf">lagos.osm.pbf</a> (333 KB)</li></ul>
                 </li>
 
                 <li class="city">
                     <a name="leeds" href="http://www.openstreetmap.org/?lat=53.809&amp;lon=-1.524&amp;zoom=11&amp;layers=M"><img src="previews/leeds.jpg"></a>
                     <h3>Leeds</h3>
                     <ul><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/leeds.osm.bz2">leeds.osm.bz2</a> (4.5 MB)</li><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/leeds.osm.pbf">leeds.osm.pbf</a> (3.3 MB)</li></ul>
+                </li>
+
+                <li class="city">
+                    <a name="lisbon" href="http://www.openstreetmap.org/?lat=38.754&amp;lon=-9.047&amp;zoom=9&amp;layers=M"><img src="previews/lisbon.jpg"></a>
+                    <h3>Lisbon</h3>
+                    <ul><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/lisbon.osm.bz2">lisbon.osm.bz2</a> (5.2 MB)</li><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/lisbon.osm.pbf">lisbon.osm.pbf</a> (3.3 MB)</li></ul>
                 </li>
 
                 <li class="city">
@@ -195,13 +294,25 @@
                 <li class="city">
                     <a name="manila" href="http://www.openstreetmap.org/?lat=14.614&amp;lon=121.042&amp;zoom=10&amp;layers=M"><img src="previews/manila.jpg"></a>
                     <h3>Manila</h3>
-                    <ul><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/manila.osm.bz2">manila.osm.bz2</a> (8.5 MB)</li><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/manila.osm.pbf">manila.osm.pbf</a> (6.0 MB)</li></ul>
+                    <ul><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/manila.osm.bz2">manila.osm.bz2</a> (8.6 MB)</li><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/manila.osm.pbf">manila.osm.pbf</a> (6.0 MB)</li></ul>
+                </li>
+
+                <li class="city">
+                    <a name="melbourne" href="http://www.openstreetmap.org/?lat=-37.962&amp;lon=145.039&amp;zoom=9&amp;layers=M"><img src="previews/melbourne.jpg"></a>
+                    <h3>Melbourne</h3>
+                    <ul><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/melbourne.osm.bz2">melbourne.osm.bz2</a> (23 MB)</li><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/melbourne.osm.pbf">melbourne.osm.pbf</a> (14 MB)</li></ul>
                 </li>
 
                 <li class="city">
                     <a name="mexico-city" href="http://www.openstreetmap.org/?lat=19.456&amp;lon=-99.102&amp;zoom=9&amp;layers=M"><img src="previews/mexico-city.jpg"></a>
                     <h3>Mexico City</h3>
-                    <ul><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/mexico-city.osm.bz2">mexico-city.osm.bz2</a> (3.8 MB)</li><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/mexico-city.osm.pbf">mexico-city.osm.pbf</a> (2.5 MB)</li></ul>
+                    <ul><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/mexico-city.osm.bz2">mexico-city.osm.bz2</a> (3.8 MB)</li><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/mexico-city.osm.pbf">mexico-city.osm.pbf</a> (2.6 MB)</li></ul>
+                </li>
+
+                <li class="city">
+                    <a name="miami" href="http://www.openstreetmap.org/?lat=26.106&amp;lon=-80.228&amp;zoom=8&amp;layers=M"><img src="previews/miami.jpg"></a>
+                    <h3>Miami</h3>
+                    <ul><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/miami.osm.bz2">miami.osm.bz2</a> (13 MB)</li><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/miami.osm.pbf">miami.osm.pbf</a> (9.6 MB)</li></ul>
                 </li>
 
                 <li class="city">
@@ -243,7 +354,7 @@
                 <li class="city">
                     <a name="paris" href="http://www.openstreetmap.org/?lat=48.856&amp;lon=2.381&amp;zoom=9&amp;layers=M"><img src="previews/paris.jpg"></a>
                     <h3>Paris</h3>
-                    <ul><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/paris.osm.bz2">paris.osm.bz2</a> (162 MB)</li><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/paris.osm.pbf">paris.osm.pbf</a> (117 MB)</li></ul>
+                    <ul><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/paris.osm.bz2">paris.osm.bz2</a> (165 MB)</li><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/paris.osm.pbf">paris.osm.pbf</a> (119 MB)</li></ul>
                 </li>
 
                 <li class="city">
@@ -253,9 +364,15 @@
                 </li>
 
                 <li class="city">
+                    <a name="riyadh" href="http://www.openstreetmap.org/?lat=24.694&amp;lon=46.714&amp;zoom=9&amp;layers=M"><img src="previews/riyadh.jpg"></a>
+                    <h3>Riyadh</h3>
+                    <ul><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/riyadh.osm.bz2">riyadh.osm.bz2</a> (1.0 MB)</li><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/riyadh.osm.pbf">riyadh.osm.pbf</a> (667 KB)</li></ul>
+                </li>
+
+                <li class="city">
                     <a name="rome" href="http://www.openstreetmap.org/?lat=41.854&amp;lon=12.476&amp;zoom=10&amp;layers=M"><img src="previews/rome.jpg"></a>
                     <h3>Rome</h3>
-                    <ul><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/rome.osm.bz2">rome.osm.bz2</a> (10 MB)</li><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/rome.osm.pbf">rome.osm.pbf</a> (6.8 MB)</li></ul>
+                    <ul><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/rome.osm.bz2">rome.osm.bz2</a> (10 MB)</li><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/rome.osm.pbf">rome.osm.pbf</a> (6.9 MB)</li></ul>
                 </li>
 
                 <li class="city">
@@ -271,9 +388,15 @@
                 </li>
 
                 <li class="city">
+                    <a name="santiago" href="http://www.openstreetmap.org/?lat=-33.489&amp;lon=-70.698&amp;zoom=10&amp;layers=M"><img src="previews/santiago.jpg"></a>
+                    <h3>Santiago</h3>
+                    <ul><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/santiago.osm.bz2">santiago.osm.bz2</a> (9.7 MB)</li><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/santiago.osm.pbf">santiago.osm.pbf</a> (7.4 MB)</li></ul>
+                </li>
+
+                <li class="city">
                     <a name="sao-paulo" href="http://www.openstreetmap.org/?lat=-23.722&amp;lon=-46.609&amp;zoom=9&amp;layers=M"><img src="previews/sao-paulo.jpg"></a>
                     <h3>Sao Paulo</h3>
-                    <ul><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/sao-paulo.osm.bz2">sao-paulo.osm.bz2</a> (6.0 MB)</li><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/sao-paulo.osm.pbf">sao-paulo.osm.pbf</a> (3.7 MB)</li></ul>
+                    <ul><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/sao-paulo.osm.bz2">sao-paulo.osm.bz2</a> (6.0 MB)</li><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/sao-paulo.osm.pbf">sao-paulo.osm.pbf</a> (3.8 MB)</li></ul>
                 </li>
 
                 <li class="city">
@@ -283,9 +406,21 @@
                 </li>
 
                 <li class="city">
+                    <a name="seoul" href="http://www.openstreetmap.org/?lat=37.501&amp;lon=126.793&amp;zoom=9&amp;layers=M"><img src="previews/seoul.jpg"></a>
+                    <h3>Seoul</h3>
+                    <ul><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/seoul.osm.bz2">seoul.osm.bz2</a> (5.1 MB)</li><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/seoul.osm.pbf">seoul.osm.pbf</a> (3.8 MB)</li></ul>
+                </li>
+
+                <li class="city">
                     <a name="shanghai" href="http://www.openstreetmap.org/?lat=30.987&amp;lon=121.333&amp;zoom=7&amp;layers=M"><img src="previews/shanghai.jpg"></a>
                     <h3>Shanghai</h3>
-                    <ul><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/shanghai.osm.bz2">shanghai.osm.bz2</a> (8.1 MB)</li><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/shanghai.osm.pbf">shanghai.osm.pbf</a> (4.8 MB)</li></ul>
+                    <ul><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/shanghai.osm.bz2">shanghai.osm.bz2</a> (8.2 MB)</li><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/shanghai.osm.pbf">shanghai.osm.pbf</a> (4.9 MB)</li></ul>
+                </li>
+
+                <li class="city">
+                    <a name="singapore" href="http://www.openstreetmap.org/?lat=1.315&amp;lon=103.804&amp;zoom=9&amp;layers=M"><img src="previews/singapore.jpg"></a>
+                    <h3>Singapore</h3>
+                    <ul><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/singapore.osm.bz2">singapore.osm.bz2</a> (4.0 MB)</li><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/singapore.osm.pbf">singapore.osm.pbf</a> (2.6 MB)</li></ul>
                 </li>
 
                 <li class="city">
@@ -298,6 +433,12 @@
                     <a name="tokyo" href="http://www.openstreetmap.org/?lat=35.715&amp;lon=139.966&amp;zoom=8&amp;layers=M"><img src="previews/tokyo.jpg"></a>
                     <h3>Tokyo</h3>
                     <ul><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/tokyo.osm.bz2">tokyo.osm.bz2</a> (90 MB)</li><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/tokyo.osm.pbf">tokyo.osm.pbf</a> (67 MB)</li></ul>
+                </li>
+
+                <li class="city">
+                    <a name="toronto" href="http://www.openstreetmap.org/?lat=43.694&amp;lon=-79.439&amp;zoom=9&amp;layers=M"><img src="previews/toronto.jpg"></a>
+                    <h3>Toronto</h3>
+                    <ul><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/toronto.osm.bz2">toronto.osm.bz2</a> (50 MB)</li><li class="file"><a href="http://osm-metro-extracts.s3.amazonaws.com/toronto.osm.pbf">toronto.osm.pbf</a> (35 MB)</li></ul>
                 </li>
 
                 <li class="city">
