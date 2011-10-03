@@ -6,7 +6,7 @@ cities = list(DictReader(open('cities.txt'), dialect='excel-tab'))
 try:
     (osmosis, ) = argv[1:]
 except ValueError:
-    print >> stderr, 'Usage: show-cities.py <osmosis command file>'
+    print >> stderr, 'Usage: build-osmosis-script.py <osmosis command file>'
     exit(1)
 
 osmosis = open(osmosis, 'w')
