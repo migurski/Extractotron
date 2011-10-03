@@ -28,6 +28,7 @@ if __name__ == '__main__':
 
     user_data = open('extract.sh').read()
     user_data = user_data.replace('osmosis.sh\n', open('osmosis.sh').read())
+    user_data = user_data.replace('coastshapes.sh\n', open('coastshapes.sh').read())
     user_data = user_data.replace('$KEY', aws_key)
     user_data = user_data.replace('$SECRET', aws_secret)
     user_data = user_data.replace('$BUCKET', s3_bucket)

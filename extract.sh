@@ -59,6 +59,9 @@ for NAME in processed_p processed_i coastline_p coastline_i; do
     tar -C ex/wgs84 -cvf - $NAME.dbf $NAME.prj $NAME.shp $NAME.shx | bzip2 > ex/$NAME-latlon.tar.bz2
 done
 
+coastshapes.sh
+
+
 python <<SEND
 
 from os import stat
@@ -69,11 +72,11 @@ from os.path import basename
 from boto.s3.connection import S3Connection
 from boto.s3.bucket import Bucket
 
-types = dict(bz2='application/x-bzip2', pbf='application/octet-stream')
+types = dict(bz2='application/x-bzip2', pbf='application/octet-stream', zip='application/zip')
 bucket = Bucket(S3Connection('$KEY', '$SECRET'), '$BUCKET')
 log = open('log.txt', 'a')
 
-for file in sorted(glob('ex/*.osm.???')) + sorted(glob('ex/*.tar.bz2')):
+for file in sorted(glob('ex/*.osm.???') + glob('ex/*.shp.zip')) + sorted(glob('ex/*.tar.bz2')):
     name = basename(file)
     type = types[name[-3:]]
     key = bucket.new_key(name)
