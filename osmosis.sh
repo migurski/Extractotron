@@ -3,7 +3,7 @@ bunzip2 -c planet-latest.osm.bz2 | osmosis-*/bin/osmosis --rx file=- \
     --tee outputCount=2 \
     --tag-filter accept-ways natural=coastline --used-node \
     --wx coastline.osm.bz2 \
-    --tee outputCount=58 \
+    --tee outputCount=74 \
     \
     --bb top=30.564 left=30.897 bottom=29.761 right=31.710 \
         --tee outputCount=2 --wx file=ex/cairo.osm.bz2 --wb file=ex/cairo.osm.pbf \
@@ -77,10 +77,26 @@ bunzip2 -c planet-latest.osm.bz2 | osmosis-*/bin/osmosis --rx file=- \
         --tee outputCount=2 --wx file=ex/riyadh.osm.bz2 --wb file=ex/riyadh.osm.pbf \
     --bb top=34.090 left=-84.857 bottom=33.414 right=-83.890 \
         --tee outputCount=2 --wx file=ex/atlanta.osm.bz2 --wb file=ex/atlanta.osm.pbf \
+    --bb top=30.670 left=-98.212 bottom=29.931 right=-97.234 \
+        --tee outputCount=2 --wx file=ex/austin.osm.bz2 --wb file=ex/austin.osm.pbf \
+    --bb top=39.631 left=-77.200 bottom=38.779 right=-76.058 \
+        --tee outputCount=2 --wx file=ex/baltimore.osm.bz2 --wb file=ex/baltimore.osm.pbf \
     --bb top=42.702 left=-71.861 bottom=41.951 right=-70.285 \
         --tee outputCount=2 --wx file=ex/boston.osm.bz2 --wb file=ex/boston.osm.pbf \
     --bb top=42.297 left=-88.505 bottom=41.339 right=-87.066 \
         --tee outputCount=2 --wx file=ex/chicago.osm.bz2 --wb file=ex/chicago.osm.pbf \
+    --bb top=41.918 left=-82.485 bottom=40.730 right=-80.798 \
+        --tee outputCount=2 --wx file=ex/cleveland.osm.bz2 --wb file=ex/cleveland.osm.pbf \
+    --bb top=33.431 left=-97.789 bottom=32.166 right=-96.113 \
+        --tee outputCount=2 --wx file=ex/dallas.osm.bz2 --wb file=ex/dallas.osm.pbf \
+    --bb top=40.204 left=-105.746 bottom=39.323 right=-104.334 \
+        --tee outputCount=2 --wx file=ex/denver.osm.bz2 --wb file=ex/denver.osm.pbf \
+    --bb top=42.811 left=-83.875 bottom=41.836 right=-82.375 \
+        --tee outputCount=2 --wx file=ex/detroit.osm.bz2 --wb file=ex/detroit.osm.pbf \
+    --bb top=30.261 left=-96.064 bottom=28.856 right=-94.378 \
+        --tee outputCount=2 --wx file=ex/houston.osm.bz2 --wb file=ex/houston.osm.pbf \
+    --bb top=36.615 left=-115.581 bottom=35.757 right=-114.211 \
+        --tee outputCount=2 --wx file=ex/las-vegas.osm.bz2 --wb file=ex/las-vegas.osm.pbf \
     --bb top=34.583 left=-119.437 bottom=33.298 right=-116.724 \
         --tee outputCount=2 --wx file=ex/los-angeles.osm.bz2 --wb file=ex/los-angeles.osm.pbf \
     --bb top=19.921 left=-99.597 bottom=18.992 right=-98.606 \
@@ -89,16 +105,32 @@ bunzip2 -c planet-latest.osm.bz2 | osmosis-*/bin/osmosis --rx file=- \
         --tee outputCount=2 --wx file=ex/miami.osm.bz2 --wb file=ex/miami.osm.pbf \
     --bb top=45.410 left=-94.064 bottom=44.496 right=-92.543 \
         --tee outputCount=2 --wx file=ex/mpls-stpaul.osm.bz2 --wb file=ex/mpls-stpaul.osm.pbf \
+    --bb top=30.510 left=-90.653 bottom=28.887 right=-89.110 \
+        --tee outputCount=2 --wx file=ex/new-orleans.osm.bz2 --wb file=ex/new-orleans.osm.pbf \
     --bb top=41.097 left=-74.501 bottom=40.345 right=-73.226 \
         --tee outputCount=2 --wx file=ex/new-york.osm.bz2 --wb file=ex/new-york.osm.pbf \
+    --bb top=34.070 left=-112.821 bottom=32.796 right=-111.211 \
+        --tee outputCount=2 --wx file=ex/phoenix.osm.bz2 --wb file=ex/phoenix.osm.pbf \
+    --bb top=40.880 left=-80.711 bottom=40.023 right=-79.249 \
+        --tee outputCount=2 --wx file=ex/pittsburgh.osm.bz2 --wb file=ex/pittsburgh.osm.pbf \
+    --bb top=45.897 left=-123.211 bottom=45.096 right=-122.113 \
+        --tee outputCount=2 --wx file=ex/portland.osm.bz2 --wb file=ex/portland.osm.pbf \
+    --bb top=39.151 left=-91.010 bottom=38.069 right=-89.533 \
+        --tee outputCount=2 --wx file=ex/st-louis.osm.bz2 --wb file=ex/st-louis.osm.pbf \
+    --bb top=33.078 left=-117.376 bottom=32.312 right=-116.588 \
+        --tee outputCount=2 --wx file=ex/san-diego-tijuana.osm.bz2 --wb file=ex/san-diego-tijuana.osm.pbf \
     --bb top=37.955 left=-122.737 bottom=37.449 right=-122.011 \
         --tee outputCount=2 --wx file=ex/san-francisco.osm.bz2 --wb file=ex/san-francisco.osm.pbf \
     --bb top=38.719 left=-123.640 bottom=36.791 right=-121.025 \
         --tee outputCount=2 --wx file=ex/sf-bay-area.osm.bz2 --wb file=ex/sf-bay-area.osm.pbf \
     --bb top=47.843 left=-122.538 bottom=47.380 right=-121.868 \
         --tee outputCount=2 --wx file=ex/seattle.osm.bz2 --wb file=ex/seattle.osm.pbf \
+    --bb top=28.376 left=-82.935 bottom=27.279 right=-82.012 \
+        --tee outputCount=2 --wx file=ex/tampa.osm.bz2 --wb file=ex/tampa.osm.pbf \
     --bb top=44.182 left=-80.161 bottom=43.201 right=-78.717 \
         --tee outputCount=2 --wx file=ex/toronto.osm.bz2 --wb file=ex/toronto.osm.pbf \
+    --bb top=49.475 left=-123.513 bottom=48.669 right=-121.777 \
+        --tee outputCount=2 --wx file=ex/vancouver.osm.bz2 --wb file=ex/vancouver.osm.pbf \
     --bb top=39.259 left=-77.599 bottom=38.539 right=-76.365 \
         --tee outputCount=2 --wx file=ex/washington-dc.osm.bz2 --wb file=ex/washington-dc.osm.pbf \
     --bb top=-36.410 left=174.223 bottom=-37.348 right=175.314 \

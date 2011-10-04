@@ -35,17 +35,33 @@ Europe	42.130	12.109	41.578	12.845	rome	Rome
 Middle East	33.715	43.786	32.9671	44.862	baghdad	Baghdad
 Middle East	25.098	46.227	24.292	47.202	riyadh	Riyadh
 North America	34.090	-84.857	33.414	-83.890	atlanta	Atlanta
+North America	30.670	-98.212	29.931	-97.234	austin	Austin
+North America	39.631	-77.200	38.779	-76.058	baltimore	Baltimore
 North America	42.702	-71.861	41.951	-70.285	boston	Boston
 North America	42.297	-88.505	41.339	-87.066	chicago	Chicago
+North America	41.918	-82.485	40.730	-80.798	cleveland	Cleveland
+North America	33.431	-97.789	32.166	-96.113	dallas	Dallas
+North America	40.204	-105.746	39.323	-104.334	denver	Denver
+North America	42.811	-83.875	41.836	-82.375	detroit	Detroit
+North America	30.261	-96.064	28.856	-94.378	houston	Houston
+North America	36.615	-115.581	35.757	-114.211	las-vegas	Las Vegas
 North America	34.583	-119.437	33.298	-116.724	los-angeles	Los Angeles
 North America	19.921	-99.597	18.992	-98.606	mexico-city	Mexico City
 North America	26.912	-80.683	25.291	-79.774	miami	Miami
 North America	45.410	-94.064	44.496	-92.543	mpls-stpaul	Minneapolis, St. Paul
+North America	30.510	-90.653	28.887	-89.110	new-orleans	New Orleans
 North America	41.097	-74.501	40.345	-73.226	new-york	New York City
+North America	34.070	-112.821	32.796	-111.211	phoenix	Phoenix
+North America	40.880	-80.711	40.023	-79.249	pittsburgh	Pittsburgh
+North America	45.897	-123.211	45.096	-122.113	portland	Portland
+North America	39.151	-91.010	38.069	-89.533	st-louis	St. Louis
+North America	33.078	-117.376	32.312	-116.588	san-diego-tijuana	San Diego, Tijuana
 North America	37.955	-122.737	37.449	-122.011	san-francisco	San Francisco
 North America	38.719	-123.640	36.791	-121.025	sf-bay-area	San Francisco Bay Area
 North America	47.843	-122.538	47.380	-121.868	seattle	Seattle
+North America	28.376	-82.935	27.279	-82.012	tampa	Tampa
 North America	44.182	-80.161	43.201	-78.717	toronto	Toronto
+North America	49.475	-123.513	48.669	-121.777	vancouver	Vancouver
 North America	39.259	-77.599	38.539	-76.365	washington-dc	Washington D.C.
 Oceania	-36.410	174.223	-37.348	175.314	auckland	Auckland
 Oceania	-5.881	106.435	-6.615	107.160	jakarta	Jakarta

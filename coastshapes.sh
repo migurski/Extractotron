@@ -106,11 +106,35 @@ zip -j - ex/merc/riyadh.??? > ex/riyadh.shp.zip
 ogr2ogr -spat -84.857 33.414 -83.890 34.090 -t_srs EPSG:900913 ex/merc/atlanta.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/atlanta.??? > ex/atlanta.shp.zip
 
+ogr2ogr -spat -98.212 29.931 -97.234 30.670 -t_srs EPSG:900913 ex/merc/austin.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/austin.??? > ex/austin.shp.zip
+
+ogr2ogr -spat -77.200 38.779 -76.058 39.631 -t_srs EPSG:900913 ex/merc/baltimore.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/baltimore.??? > ex/baltimore.shp.zip
+
 ogr2ogr -spat -71.861 41.951 -70.285 42.702 -t_srs EPSG:900913 ex/merc/boston.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/boston.??? > ex/boston.shp.zip
 
 ogr2ogr -spat -88.505 41.339 -87.066 42.297 -t_srs EPSG:900913 ex/merc/chicago.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/chicago.??? > ex/chicago.shp.zip
+
+ogr2ogr -spat -82.485 40.730 -80.798 41.918 -t_srs EPSG:900913 ex/merc/cleveland.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/cleveland.??? > ex/cleveland.shp.zip
+
+ogr2ogr -spat -97.789 32.166 -96.113 33.431 -t_srs EPSG:900913 ex/merc/dallas.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/dallas.??? > ex/dallas.shp.zip
+
+ogr2ogr -spat -105.746 39.323 -104.334 40.204 -t_srs EPSG:900913 ex/merc/denver.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/denver.??? > ex/denver.shp.zip
+
+ogr2ogr -spat -83.875 41.836 -82.375 42.811 -t_srs EPSG:900913 ex/merc/detroit.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/detroit.??? > ex/detroit.shp.zip
+
+ogr2ogr -spat -96.064 28.856 -94.378 30.261 -t_srs EPSG:900913 ex/merc/houston.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/houston.??? > ex/houston.shp.zip
+
+ogr2ogr -spat -115.581 35.757 -114.211 36.615 -t_srs EPSG:900913 ex/merc/las-vegas.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/las-vegas.??? > ex/las-vegas.shp.zip
 
 ogr2ogr -spat -119.437 33.298 -116.724 34.583 -t_srs EPSG:900913 ex/merc/los-angeles.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/los-angeles.??? > ex/los-angeles.shp.zip
@@ -124,8 +148,26 @@ zip -j - ex/merc/miami.??? > ex/miami.shp.zip
 ogr2ogr -spat -94.064 44.496 -92.543 45.410 -t_srs EPSG:900913 ex/merc/mpls-stpaul.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/mpls-stpaul.??? > ex/mpls-stpaul.shp.zip
 
+ogr2ogr -spat -90.653 28.887 -89.110 30.510 -t_srs EPSG:900913 ex/merc/new-orleans.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/new-orleans.??? > ex/new-orleans.shp.zip
+
 ogr2ogr -spat -74.501 40.345 -73.226 41.097 -t_srs EPSG:900913 ex/merc/new-york.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/new-york.??? > ex/new-york.shp.zip
+
+ogr2ogr -spat -112.821 32.796 -111.211 34.070 -t_srs EPSG:900913 ex/merc/phoenix.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/phoenix.??? > ex/phoenix.shp.zip
+
+ogr2ogr -spat -80.711 40.023 -79.249 40.880 -t_srs EPSG:900913 ex/merc/pittsburgh.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/pittsburgh.??? > ex/pittsburgh.shp.zip
+
+ogr2ogr -spat -123.211 45.096 -122.113 45.897 -t_srs EPSG:900913 ex/merc/portland.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/portland.??? > ex/portland.shp.zip
+
+ogr2ogr -spat -91.010 38.069 -89.533 39.151 -t_srs EPSG:900913 ex/merc/st-louis.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/st-louis.??? > ex/st-louis.shp.zip
+
+ogr2ogr -spat -117.376 32.312 -116.588 33.078 -t_srs EPSG:900913 ex/merc/san-diego-tijuana.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/san-diego-tijuana.??? > ex/san-diego-tijuana.shp.zip
 
 ogr2ogr -spat -122.737 37.449 -122.011 37.955 -t_srs EPSG:900913 ex/merc/san-francisco.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/san-francisco.??? > ex/san-francisco.shp.zip
@@ -136,8 +178,14 @@ zip -j - ex/merc/sf-bay-area.??? > ex/sf-bay-area.shp.zip
 ogr2ogr -spat -122.538 47.380 -121.868 47.843 -t_srs EPSG:900913 ex/merc/seattle.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/seattle.??? > ex/seattle.shp.zip
 
+ogr2ogr -spat -82.935 27.279 -82.012 28.376 -t_srs EPSG:900913 ex/merc/tampa.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/tampa.??? > ex/tampa.shp.zip
+
 ogr2ogr -spat -80.161 43.201 -78.717 44.182 -t_srs EPSG:900913 ex/merc/toronto.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/toronto.??? > ex/toronto.shp.zip
+
+ogr2ogr -spat -123.513 48.669 -121.777 49.475 -t_srs EPSG:900913 ex/merc/vancouver.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/vancouver.??? > ex/vancouver.shp.zip
 
 ogr2ogr -spat -77.599 38.539 -76.365 39.259 -t_srs EPSG:900913 ex/merc/washington-dc.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/washington-dc.??? > ex/washington-dc.shp.zip
