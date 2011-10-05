@@ -29,6 +29,10 @@ mv -v /tmp /mnt/
 ln -sv /mnt/tmp /tmp
 
 
+curl -s $OSMOSIS_HREF > osmosis.sh
+curl -s $COASTSHAPES_HREF > coastshapes.sh
+
+
 curl -sOL http://dev.openstreetmap.org/~bretth/osmosis-build/osmosis-latest.tgz
 tar -xzf osmosis-latest.tgz
 
@@ -37,7 +41,7 @@ curl -OL "http://planet.openstreetmap.org/planet-latest.osm.bz2" > download.txt 
 echo '# extract', `date` >> log.txt
 mkdir ex
 
-osmosis.sh
+sh osmosis.sh
 
 
 mkdir coast
@@ -59,7 +63,7 @@ for NAME in processed_p processed_i coastline_p coastline_i; do
     tar -C ex/wgs84 -cvf - $NAME.dbf $NAME.prj $NAME.shp $NAME.shx | bzip2 > ex/$NAME-latlon.tar.bz2
 done
 
-coastshapes.sh
+sh coastshapes.sh
 
 
 python <<SEND
