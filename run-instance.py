@@ -8,6 +8,7 @@ from urllib import urlencode
 
 parser = OptionParser(usage="%prog [options] <aws key> <aws secret> <s3 bucket>")
 
+ramlimits = {'m1.large': '4G', 'm1.small': '1G', 'm1.xlarge': '12G'}
 defaults = dict(ami_id='ami-68ad5201', type='m1.large', run=True)
 
 parser.set_defaults(**defaults)
@@ -60,6 +61,7 @@ if __name__ == '__main__':
     user_data = user_data.replace('$BUCKET', s3_bucket)
     user_data = user_data.replace('$OSMOSIS_HREF', post_script('osmosis.sh'))
     user_data = user_data.replace('$COASTSHAPES_HREF', post_script('coastshapes.sh'))
+    user_data = user_data.replace('$RAMLIMIT', ramlimits[options.type])
     
     if options.run:
         conn = EC2Connection(aws_key, aws_secret)

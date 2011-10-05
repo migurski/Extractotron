@@ -36,6 +36,8 @@ curl -s $COASTSHAPES_HREF > coastshapes.sh
 curl -sOL http://dev.openstreetmap.org/~bretth/osmosis-build/osmosis-latest.tgz
 tar -xzf osmosis-latest.tgz
 
+echo 'JAVACMD_OPTIONS=-Xmx$RAMLIMIT' > ~/.osmosis
+
 curl -OL "http://planet.openstreetmap.org/planet-latest.osm.bz2" > download.txt 2>&1
 
 echo '# extract', `date` >> log.txt
