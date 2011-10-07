@@ -1,8 +1,5 @@
 bunzip2 -c planet-latest.osm.bz2 | osmosis-*/bin/osmosis --rx file=- \
     --log-progress interval=60 \
-    --tee outputCount=2 \
-    --tag-filter accept-ways natural=coastline --used-node \
-    --wx coastline.osm.bz2 \
     --tee outputCount=74 \
     \
     --bb top=30.564 left=30.897 bottom=29.761 right=31.710 \
