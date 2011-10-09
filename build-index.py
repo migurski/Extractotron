@@ -126,34 +126,6 @@ if __name__ == '__main__':
     
     print >> index, """</ul>"""
     
-    if 'processed_p' in coast:
-        print >> index, """<h2>Coastline Shapefiles</h2>
-        <p>
-            <a href="http://wiki.openstreetmap.org/wiki/Coastline">Coastline</a> objects
-            in OpenStreetMap are not directly usable for rendering. They must first be
-            joined into continent-sized polygons by the
-            <a href="http://wiki.openstreetmap.org/wiki/Coastline_error_checker">coastline error checker</a>
-            and converted to shapefiles. The files available below are up-to-date,
-            error-corrected versions of the worldwide coastline generated using the code available from
-            <a href="http://svn.openstreetmap.org/applications/utils/coastcheck/">Subversion</a>.
-        </p>
-        <ul class="coast">
-            <li><a href="%s">Coastline polygons</a>: closed areas, divided into 100km squares.<br><a href="%s">Mercator</a> (%s) and <a href="%s">unprojected</a> (%s) shapefiles.</li>
-            <li><a href="%s">Incomplete lines</a>: incomplete coastlines, joined into linestrings.<br><a href="%s">Mercator</a> (%s) and <a href="%s">unprojected</a> (%s) shapefiles.</li>
-            <li><a href="%s">Error points</a>: points where there are errors.<br><a href="%s">Mercator</a> (%s) and <a href="%s">unprojected</a> (%s) shapefiles.</li>
-        </ul>""" \
-        % (
-            coast['processed_p']['merc'][2],
-            coast['processed_p']['merc'][2], nice_size(coast['processed_p']['merc'][1]),
-            coast['processed_p']['latlon'][2], nice_size(coast['processed_p']['latlon'][1]),
-            coast['processed_i']['merc'][2],
-            coast['processed_i']['merc'][2], nice_size(coast['processed_i']['merc'][1]),
-            coast['processed_i']['latlon'][2], nice_size(coast['processed_i']['latlon'][1]),
-            coast['coastline_p']['merc'][2],
-            coast['coastline_p']['merc'][2], nice_size(coast['coastline_p']['merc'][1]),
-            coast['coastline_p']['latlon'][2], nice_size(coast['coastline_p']['latlon'][1])
-        )
-    
     print >> index, """<p>
         Provided by <a href="http://mike.teczno.com">Michal Migurski</a> on an expected
         monthly basis <a href="https://github.com/migurski/Extractotron/">via extractotron</a>.
@@ -197,6 +169,34 @@ if __name__ == '__main__':
                     <ul>%(list)s</ul>
                 </li>""" % locals()
 
-    print >> index, """<ul>
-</body>
-</html>"""
+    print >> index, """</ul>"""
+
+    if 'processed_p' in coast:
+        print >> index, """<h2>Coastline Shapefiles</h2>
+        <p>
+            <a href="http://wiki.openstreetmap.org/wiki/Coastline">Coastline</a> objects
+            in OpenStreetMap are not directly usable for rendering. They must first be
+            joined into continent-sized polygons by the
+            <a href="http://wiki.openstreetmap.org/wiki/Coastline_error_checker">coastline error checker</a>
+            and converted to shapefiles. The files available below are up-to-date,
+            error-corrected versions of the worldwide coastline generated using the code available from
+            <a href="http://svn.openstreetmap.org/applications/utils/coastcheck/">Subversion</a>.
+        </p>
+        <ul class="coast">
+            <li><a href="%s">Coastline polygons</a>: closed areas, divided into 100km squares.<br><a href="%s">Mercator</a> (%s) and <a href="%s">unprojected</a> (%s) shapefiles.</li>
+            <li><a href="%s">Incomplete lines</a>: incomplete coastlines, joined into linestrings.<br><a href="%s">Mercator</a> (%s) and <a href="%s">unprojected</a> (%s) shapefiles.</li>
+            <li><a href="%s">Error points</a>: points where there are errors.<br><a href="%s">Mercator</a> (%s) and <a href="%s">unprojected</a> (%s) shapefiles.</li>
+        </ul>""" \
+        % (
+            coast['processed_p']['merc'][2],
+            coast['processed_p']['merc'][2], nice_size(coast['processed_p']['merc'][1]),
+            coast['processed_p']['latlon'][2], nice_size(coast['processed_p']['latlon'][1]),
+            coast['processed_i']['merc'][2],
+            coast['processed_i']['merc'][2], nice_size(coast['processed_i']['merc'][1]),
+            coast['processed_i']['latlon'][2], nice_size(coast['processed_i']['latlon'][1]),
+            coast['coastline_p']['merc'][2],
+            coast['coastline_p']['merc'][2], nice_size(coast['coastline_p']['merc'][1]),
+            coast['coastline_p']['latlon'][2], nice_size(coast['coastline_p']['latlon'][1])
+        )
+    
+    print >> index, """</body></html>"""

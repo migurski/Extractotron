@@ -54,6 +54,8 @@ li.city
     float: left;
 }
 
+h2 { clear: left; }
+
 ul li.city a img
 {
 	border: none;
