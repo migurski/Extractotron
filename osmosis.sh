@@ -150,4 +150,4 @@ bunzip2 -c planet-latest.osm.bz2 | osmosis-*/bin/osmosis --rx file=- \
         --tee outputCount=2 --wx file=ex/sao-paulo.osm.bz2 --wb file=ex/sao-paulo.osm.pbf \
     --bb top=-33.151 left=-71.043 bottom=-33.824 right=-70.353 \
         --tee outputCount=2 --wx file=ex/santiago.osm.bz2 --wb file=ex/santiago.osm.pbf \
-> osmosis.txt 2>&1;
+;
