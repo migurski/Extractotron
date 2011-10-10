@@ -1,75 +1,75 @@
-group	top	left	bottom	right	slug	name
-Africa	30.564	30.897	29.761	31.710	cairo	Cairo
-Africa	-25.834	27.537	-26.563	28.542	johannesburg	Johannesburg
-Africa	6.910	2.889	6.320	3.834	lagos	Lagos
-Asia	15.019	99.569	12.661	101.337	bangkok	Bangkok
-Asia	40.426	115.686	39.414	117.119	beijing	Beijing
-Asia	23.488	112.780	21.591	115.125	hong-kong	Hong Kong
-Asia	14.900	120.885	14.327	121.200	manila	Manila
-Asia	19.331	72.415	18.466	73.516	mumbai	Mumbai
-Asia	28.969	76.692	28.183	77.733	new-delhi	New Delhi
-Asia	35.031	135.057	34.355	135.892	osaka	Osaka
-Asia	37.980	126.064	37.019	127.525	seoul	Seoul
-Asia	32.472	118.887	29.477	123.787	shanghai	Shanghai
-Asia	1.823	103.062	0.807	104.545	singapore	Singapore
-Asia	36.558	138.779	34.867	141.152	tokyo	Tokyo
-Europe	52.629	4.465	52.163	5.347	amsterdam	Amsterdam
-Europe	38.365	22.949	37.514	24.421	athens	Athens
-Europe	41.687	1.734	41.075	2.496	barcelona	Barcelona
-Europe	52.994	12.260	51.849	14.699	berlin	Berlin
-Europe	52.794	-2.536	52.214	-1.267	birmingham	Birmingham
-Europe	51.053	3.981	50.645	4.761	brussels	Brussels
-Europe	55.950	11.894	55.491	13.147	copenhagen	Copenhagen
-Europe	56.132	-3.585	55.783	-2.835	edinburgh	Edinburgh
-Europe	43.983	10.982	43.601	11.504	florence	Florence
-Europe	56.034	-4.613	55.668	-3.935	glasgow	Glasgow
-Europe	41.421	28.313	40.738	29.678	istanbul	Istanbul
-Europe	53.921	-1.717	53.697	-1.33	leeds	Leeds
-Europe	39.150	-9.634	38.358	-8.458	lisbon	Lisbon
-Europe	51.984	-1.115	50.941	0.895	london	London
-Europe	40.839	-4.293	39.889	-3.057	madrid	Madrid
-Europe	53.672	-2.588	53.237	-1.877	manchester	Manchester
-Europe	56.200	36.870	55.285	38.430	moscow	Moscow
-Europe	49.178	1.851	48.531	2.911	paris	Paris
-Europe	42.130	12.109	41.578	12.845	rome	Rome
-Middle East	33.715	43.786	32.9671	44.862	baghdad	Baghdad
-Middle East	25.098	46.227	24.292	47.202	riyadh	Riyadh
-North America	34.090	-84.857	33.414	-83.890	atlanta	Atlanta
-North America	30.670	-98.212	29.931	-97.234	austin	Austin
-North America	39.631	-77.200	38.779	-76.058	baltimore	Baltimore
-North America	42.702	-71.861	41.951	-70.285	boston	Boston
-North America	42.297	-88.505	41.339	-87.066	chicago	Chicago
-North America	41.918	-82.485	40.730	-80.798	cleveland	Cleveland
-North America	33.431	-97.789	32.166	-96.113	dallas	Dallas
-North America	40.204	-105.746	39.323	-104.334	denver	Denver
-North America	42.811	-83.875	41.836	-82.375	detroit	Detroit
-North America	30.261	-96.064	28.856	-94.378	houston	Houston
-North America	36.615	-115.581	35.757	-114.211	las-vegas	Las Vegas
-North America	34.583	-119.437	33.298	-116.724	los-angeles	Los Angeles
-North America	19.921	-99.597	18.992	-98.606	mexico-city	Mexico City
-North America	26.912	-80.683	25.291	-79.774	miami	Miami
-North America	45.410	-94.064	44.496	-92.543	mpls-stpaul	Minneapolis, St. Paul
-North America	30.510	-90.653	28.887	-89.110	new-orleans	New Orleans
-North America	41.097	-74.501	40.345	-73.226	new-york	New York City
-North America	34.070	-112.821	32.796	-111.211	phoenix	Phoenix
-North America	40.880	-80.711	40.023	-79.249	pittsburgh	Pittsburgh
-North America	45.897	-123.211	45.096	-122.113	portland	Portland
-North America	39.151	-91.010	38.069	-89.533	st-louis	St. Louis
-North America	33.078	-117.376	32.312	-116.588	san-diego-tijuana	San Diego, Tijuana
-North America	37.955	-122.737	37.449	-122.011	san-francisco	San Francisco
-North America	38.719	-123.640	36.791	-121.025	sf-bay-area	San Francisco Bay Area
-North America	47.843	-122.538	47.380	-121.868	seattle	Seattle
-North America	28.376	-82.935	27.279	-82.012	tampa	Tampa
-North America	44.182	-80.161	43.201	-78.717	toronto	Toronto
-North America	49.475	-123.513	48.669	-121.777	vancouver	Vancouver
-North America	39.259	-77.599	38.539	-76.365	washington-dc	Washington D.C.
-Oceania	-36.410	174.223	-37.348	175.314	auckland	Auckland
-Oceania	-5.881	106.435	-6.615	107.160	jakarta	Jakarta
-Oceania	-37.365	144.266	-38.552	145.810	melbourne	Melbourne
-Oceania	-33.637	150.628	-34.189	151.647	sydney	Sydney
-South America	5.022	-74.421	4.291	-73.767	bogota	Bogota
-South America	10.572	-75.627	10.251	-75.337	cartagena	Cartagena de Indias
-South America	-34.293	-58.899	-34.966	-57.992	buenos-aires	Buenos Aires
-South America	-22.510	-43.553	-23.231	-42.850	rio-de-janeiro	Rio de Janeiro
-South America	-23.125	-47.357	-24.317	-45.863	sao-paulo	Sao Paulo
-South America	-33.151	-71.043	-33.824	-70.353	santiago	Santiago
+group	geonameid	top	left	bottom	right	slug	name
+Africa	360630	30.564	30.897	29.761	31.710	cairo	Cairo
+Africa	993800	-25.834	27.537	-26.563	28.542	johannesburg	Johannesburg
+Africa	2332459	6.910	2.889	6.320	3.834	lagos	Lagos
+Asia	1609350	15.019	99.569	12.661	101.337	bangkok	Bangkok
+Asia	1816670	40.426	115.686	39.414	117.119	beijing	Beijing
+Asia	1819729	23.488	112.780	21.591	115.125	hong-kong	Hong Kong
+Asia	1701668	14.900	120.885	14.327	121.200	manila	Manila
+Asia	1275339	19.331	72.415	18.466	73.516	mumbai	Mumbai
+Asia	1261481	28.969	76.692	28.183	77.733	new-delhi	New Delhi
+Asia	1853909	35.031	135.057	34.355	135.892	osaka	Osaka
+Asia	1835848	37.980	126.064	37.019	127.525	seoul	Seoul
+Asia	1796236	32.472	118.887	29.477	123.787	shanghai	Shanghai
+Asia	1880252	1.823	103.062	0.807	104.545	singapore	Singapore
+Asia	1850147	36.558	138.779	34.867	141.152	tokyo	Tokyo
+Europe	2759794	52.629	4.465	52.163	5.347	amsterdam	Amsterdam
+Europe	2759794	38.365	22.949	37.514	24.421	athens	Athens
+Europe	3128760	41.687	1.734	41.075	2.496	barcelona	Barcelona
+Europe	2950159	52.994	12.260	51.849	14.699	berlin	Berlin
+Europe	2655603	52.794	-2.536	52.214	-1.267	birmingham	Birmingham
+Europe	2800866	51.053	3.981	50.645	4.761	brussels	Brussels
+Europe	2618425	55.950	11.894	55.491	13.147	copenhagen	Copenhagen
+Europe	2650225	56.132	-3.585	55.783	-2.835	edinburgh	Edinburgh
+Europe	3176959	43.983	10.982	43.601	11.504	florence	Florence
+Europe	2648579	56.034	-4.613	55.668	-3.935	glasgow	Glasgow
+Europe	745044	41.421	28.313	40.738	29.678	istanbul	Istanbul
+Europe	2644688	53.921	-1.717	53.697	-1.33	leeds	Leeds
+Europe	2267057	39.150	-9.634	38.358	-8.458	lisbon	Lisbon
+Europe	2643743	51.984	-1.115	50.941	0.895	london	London
+Europe	3117735	40.839	-4.293	39.889	-3.057	madrid	Madrid
+Europe	2643123	53.672	-2.588	53.237	-1.877	manchester	Manchester
+Europe	524901	56.200	36.870	55.285	38.430	moscow	Moscow
+Europe	2988507	49.178	1.851	48.531	2.911	paris	Paris
+Europe	3169070	42.130	12.109	41.578	12.845	rome	Rome
+Middle East	98182	33.715	43.786	32.9671	44.862	baghdad	Baghdad
+Middle East	108410	25.098	46.227	24.292	47.202	riyadh	Riyadh
+North America	4180439	34.090	-84.857	33.414	-83.890	atlanta	Atlanta
+North America	4671654	30.670	-98.212	29.931	-97.234	austin	Austin
+North America	4347778	39.631	-77.200	38.779	-76.058	baltimore	Baltimore
+North America	4930956	42.702	-71.861	41.951	-70.285	boston	Boston
+North America	4887398	42.297	-88.505	41.339	-87.066	chicago	Chicago
+North America	5150529	41.918	-82.485	40.730	-80.798	cleveland	Cleveland
+North America	4684888	33.431	-97.789	32.166	-96.113	dallas	Dallas
+North America	5419384	40.204	-105.746	39.323	-104.334	denver	Denver
+North America	4990729	42.811	-83.875	41.836	-82.375	detroit	Detroit
+North America	4699066	30.261	-96.064	28.856	-94.378	houston	Houston
+North America	5506956	36.615	-115.581	35.757	-114.211	las-vegas	Las Vegas
+North America	5368361	34.583	-119.437	33.298	-116.724	los-angeles	Los Angeles
+North America	3530597	19.921	-99.597	18.992	-98.606	mexico-city	Mexico City
+North America	4164138	26.912	-80.683	25.291	-79.774	miami	Miami
+North America	5037649;5045360	45.410	-94.064	44.496	-92.543	mpls-stpaul	Minneapolis, St. Paul
+North America	4335045	30.510	-90.653	28.887	-89.110	new-orleans	New Orleans
+North America	5128581	41.097	-74.501	40.345	-73.226	new-york	New York City
+North America	5308655	34.070	-112.821	32.796	-111.211	phoenix	Phoenix
+North America	5206379	40.880	-80.711	40.023	-79.249	pittsburgh	Pittsburgh
+North America	5746545	45.897	-123.211	45.096	-122.113	portland	Portland
+North America	4407066	39.151	-91.010	38.069	-89.533	st-louis	St. Louis
+North America	5391811;3981609	33.078	-117.376	32.312	-116.588	san-diego-tijuana	San Diego, Tijuana
+North America	5391959	37.955	-122.737	37.449	-122.011	san-francisco	San Francisco
+North America		38.719	-123.640	36.791	-121.025	sf-bay-area	San Francisco Bay Area	
+North America	5809844	47.843	-122.538	47.380	-121.868	seattle	Seattle
+North America	4174757	28.376	-82.935	27.279	-82.012	tampa	Tampa
+North America	6167865	44.182	-80.161	43.201	-78.717	toronto	Toronto
+North America	6173331	49.475	-123.513	48.669	-121.777	vancouver	Vancouver
+North America	4140963	39.259	-77.599	38.539	-76.365	washington-dc	Washington D.C.
+Oceania	2193733	-36.410	174.223	-37.348	175.314	auckland	Auckland
+Oceania	1642911	-5.881	106.435	-6.615	107.160	jakarta	Jakarta
+Oceania	2158177	-37.365	144.266	-38.552	145.810	melbourne	Melbourne
+Oceania	2147714	-33.637	150.628	-34.189	151.647	sydney	Sydney
+South America	3688689	5.022	-74.421	4.291	-73.767	bogota	Bogota
+South America	3687238	10.572	-75.627	10.251	-75.337	cartagena	Cartagena de Indias
+South America	3435910	-34.293	-58.899	-34.966	-57.992	buenos-aires	Buenos Aires
+South America	3451190	-22.510	-43.553	-23.231	-42.850	rio-de-janeiro	Rio de Janeiro
+South America	3448439	-23.125	-47.357	-24.317	-45.863	sao-paulo	Sao Paulo
+South America	3871336	-33.151	-71.043	-33.824	-70.353	santiago	Santiago
