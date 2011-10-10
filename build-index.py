@@ -1,4 +1,4 @@
-from urllib import urlopen
+﻿from urllib import urlopen
 from urlparse import urljoin
 from re import compile
 from csv import DictReader
@@ -121,6 +121,22 @@ if __name__ == '__main__':
         extracts is to make it easy to make maps for major world cities, even if
         they cross state or national boundaries.
     </p>
+    <p>
+        Each city includes:
+    </p>
+    <ol>
+        <li>Bzip’ed OpenStreetMap <a href="http://wiki.openstreetmap.org/wiki/.osm">XML data</a> in an <tt>.osm.bz2</tt> file.</li>
+        <li>Compressed OpenStreetMap <a href="http://wiki.openstreetmap.org/wiki/PBF">binary PBF data</a> in an <tt>.osm.pbf</tt> file.</li>
+        <li><a href="#coastline">Coastline shapefile</a> extracts of the immediate area in a <tt>.shp.zip</tt> file.</li>
+    </ol>
+    <p>
+        Provided by <a href="http://mike.teczno.com">Michal Migurski</a> on an expected
+        monthly basis <a href="https://github.com/migurski/Extractotron/">via extractotron</a>.
+        Contact me <a href="https://github.com/migurski">via Github</a> to request new cities,
+        or add them directly to
+        <a href="https://github.com/migurski/Extractotron/blob/master/cities.txt">cities.txt</a>
+        with a <a href="http://help.github.com/fork-a-repo/">fork</a>-and-<a href="http://help.github.com/send-pull-requests/">pull-request</a>.
+    </p>
     <h2>Updated From <a href="http://planet.openstreetmap.org/">Planet</a> %(start)s</h2>
     <ul class="links">""" % locals()
 
@@ -138,15 +154,7 @@ if __name__ == '__main__':
     
     print >> index, """</ul>"""
     
-    print >> index, """<p>
-        Provided by <a href="http://mike.teczno.com">Michal Migurski</a> on an expected
-        monthly basis <a href="https://github.com/migurski/Extractotron/">via extractotron</a>.
-        Contact me <a href="https://github.com/migurski">via Github</a> to request new cities,
-        or add them directly to
-        <a href="https://github.com/migurski/Extractotron/blob/master/cities.txt">cities.txt</a>
-        with a <a href="http://help.github.com/fork-a-repo/">fork</a>-and-<a href="http://help.github.com/send-pull-requests/">pull-request</a>.
-    </p>
-    <ul>"""
+    print >> index, """<ul>"""
     
     cities.sort(key=lambda city: city['name'])
 
@@ -188,7 +196,7 @@ if __name__ == '__main__':
     print >> index, """</ul>"""
 
     if 'processed_p' in coast:
-        print >> index, """<h2>Coastline Shapefiles</h2>
+        print >> index, """<h2><a name="coastline">Coastline Shapefiles</a></h2>
         <p>
             <a href="http://wiki.openstreetmap.org/wiki/Coastline">Coastline</a> objects
             in OpenStreetMap are not directly usable for rendering. They must first be
