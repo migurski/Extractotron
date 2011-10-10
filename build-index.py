@@ -16,6 +16,7 @@ dimensions = Point(960, 600)
 
 base_url = 'http://osm-metro-extracts.s3.amazonaws.com/log.txt'
 extract_pat = compile(r'^((\S+)\.osm\.(bz2|pbf))\s+(\d+)$')
+coastshape_pat = compile(r'^((\S+)\.shp\.zip)\s+(\d+)$')
 coastline_pat = compile(r'^((\w+)-(latlon|merc)\.tar\.bz2)\s+(\d+)$')
 months = '- Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split()
 
@@ -78,19 +79,30 @@ if __name__ == '__main__':
             if slug not in coast:
                 coast[slug] = dict()
             
-            href = urljoin(base_url, file)
-            coast[slug][prj] = (file, int(size), href)
+            coast[slug][prj] = (file, int(size), urljoin(base_url, file))
+            continue
             
         elif extract_pat.match(line):
 
             match = extract_pat.match(line)
             file, slug, ext, size = (match.group(g) for g in (1, 2, 3, 4))
             
-            if slug not in files:
-                files[slug] = dict()
+            key, slug_file = ext, (file, int(size), urljoin(base_url, file))
             
-            href = urljoin(base_url, file)
-            files[slug][ext] = (file, int(size), href)
+        elif coastshape_pat.match(line):
+
+            match = coastshape_pat.match(line)
+            file, slug, size = (match.group(g) for g in (1, 2, 3))
+
+            key, slug_file = 'coastline', (file, int(size), urljoin(base_url, file))
+        
+        else:
+            continue
+        
+        if slug not in files:
+            files[slug] = dict()
+        
+        files[slug][key] = slug_file
     
     #
     
@@ -126,6 +138,55 @@ if __name__ == '__main__':
     
     print >> index, """</ul>"""
     
+    print >> index, """<p>
+        Provided by <a href="http://mike.teczno.com">Michal Migurski</a> on an expected
+        monthly basis <a href="https://github.com/migurski/Extractotron/">via extractotron</a>.
+        Contact me <a href="https://github.com/migurski">via Github</a> to request new cities,
+        or add them directly to
+        <a href="https://github.com/migurski/Extractotron/blob/master/cities.txt">cities.txt</a>
+        with a <a href="http://help.github.com/fork-a-repo/">fork</a>-and-<a href="http://help.github.com/send-pull-requests/">pull-request</a>.
+    </p>
+    <ul>"""
+    
+    cities.sort(key=lambda city: city['name'])
+
+    for city in cities:
+        slug = city['slug']
+        name = city['name']
+        
+        try:
+            ul = Location(float(city['top']), float(city['left']))
+            lr = Location(float(city['bottom']), float(city['right']))
+        except ValueError:
+            print >> stderr, 'Failed on %(name)s (%(slug)s)' % city
+            raise
+        else:
+            mmap = mapByExtent(provider, ul, lr, dimensions)
+        
+        if slug in files:
+            bz2_file, bz2_size, bz2_href = files[slug]['bz2']
+            pbf_file, pbf_size, pbf_href = files[slug]['pbf']
+            
+            list = ('<li class="file"><a href="%s">%s</a> (%s OSM data)</li>' * 2) \
+                 % (bz2_href, bz2_file, nice_size(bz2_size),
+                    pbf_href, pbf_file, nice_size(pbf_size))
+            
+            coast_file, coast_size, coast_href = files[slug]['coastline']
+            list += '<li class="file"><a href="%s">%s</a> (%s coastline)</li>' % (coast_href, coast_file, nice_size(coast_size))
+
+            center = mmap.pointLocation(Point(dimensions.x/2, dimensions.y/2))
+            zoom = mmap.coordinate.zoom
+            href = 'http://www.openstreetmap.org/?lat=%.3f&amp;lon=%.3f&amp;zoom=%d&amp;layers=M' % (center.lat, center.lon, zoom)
+            
+            print >> index, """
+                <li class="city">
+                    <a name="%(slug)s" href="%(href)s"><img src="previews/%(slug)s.jpg"></a>
+                    <h3>%(name)s</h3>
+                    <ul>%(list)s</ul>
+                </li>""" % locals()
+
+    print >> index, """</ul>"""
+
     if 'processed_p' in coast:
         print >> index, """<h2>Coastline Shapefiles</h2>
         <p>
@@ -154,49 +215,4 @@ if __name__ == '__main__':
             coast['coastline_p']['latlon'][2], nice_size(coast['coastline_p']['latlon'][1])
         )
     
-    print >> index, """<p>
-        Provided by <a href="http://mike.teczno.com">Michal Migurski</a> on an expected
-        monthly basis <a href="https://github.com/migurski/Extractotron/">via extractotron</a>.
-        Contact me <a href="https://github.com/migurski">via Github</a> to request new cities,
-        or add them directly to
-        <a href="https://github.com/migurski/Extractotron/blob/master/cities.txt">cities.txt</a>
-        with a <a href="http://help.github.com/fork-a-repo/">fork</a>-and-<a href="http://help.github.com/send-pull-requests/">pull-request</a>.
-    </p>
-    <ul>"""
-    
-    cities.sort(key=lambda city: city['name'])
-
-    for city in cities:
-        slug = city['slug']
-        name = city['name']
-        
-        try:
-            ul = Location(float(city['top']), float(city['left']))
-            lr = Location(float(city['bottom']), float(city['right']))
-        except ValueError:
-            print >> stderr, 'Failed on %(name)s (%(slug)s)' % city
-            raise
-        else:
-            mmap = mapByExtent(provider, ul, lr, dimensions)
-        
-        if slug in files:
-            list = ['<li class="file"><a href="%s">%s</a> (%s)</li>' % (href, file, nice_size(size))
-                    for (ext, (file, size, href))
-                    in sorted(files[slug].items())]
-        
-            list = ''.join(list)
-            
-            center = mmap.pointLocation(Point(dimensions.x/2, dimensions.y/2))
-            zoom = mmap.coordinate.zoom
-            href = 'http://www.openstreetmap.org/?lat=%.3f&amp;lon=%.3f&amp;zoom=%d&amp;layers=M' % (center.lat, center.lon, zoom)
-            
-            print >> index, """
-                <li class="city">
-                    <a name="%(slug)s" href="%(href)s"><img src="previews/%(slug)s.jpg"></a>
-                    <h3>%(name)s</h3>
-                    <ul>%(list)s</ul>
-                </li>""" % locals()
-
-    print >> index, """<ul>
-</body>
-</html>"""
+    print >> index, """</body></html>"""

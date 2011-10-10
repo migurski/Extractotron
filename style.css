@@ -47,12 +47,14 @@ ul.coast li
 li.city
 {
     width: 320px;
-    height: 260px;
+    height: 268px;
     list-style: none;
     margin: 0;
     padding: 0;
     float: left;
 }
+
+h2 { clear: left; }
 
 ul li.city a img
 {
