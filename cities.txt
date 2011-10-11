@@ -36,7 +36,6 @@ Middle East	98182	33.715	43.786	32.9671	44.862	baghdad	Baghdad
 Middle East	108410	25.098	46.227	24.292	47.202	riyadh	Riyadh
 North America	4180439	34.090	-84.857	33.414	-83.890	atlanta	Atlanta
 North America	4671654	30.670	-98.212	29.931	-97.234	austin	Austin
-North America	4347778	39.631	-77.200	38.779	-76.058	baltimore	Baltimore
 North America	4930956	42.702	-71.861	41.951	-70.285	boston	Boston
 North America	4887398	42.297	-88.505	41.339	-87.066	chicago	Chicago
 North America	5150529	41.918	-82.485	40.730	-80.798	cleveland	Cleveland
@@ -44,11 +43,13 @@ North America	4684888	33.431	-97.789	32.166	-96.113	dallas	Dallas
 North America	5419384	40.204	-105.746	39.323	-104.334	denver	Denver
 North America	4990729	42.811	-83.875	41.836	-82.375	detroit	Detroit
 North America	4699066	30.261	-96.064	28.856	-94.378	houston	Houston
+North America	5989045	51.003	-121.437	50.011	-119.514	kamloops	Kamloops
 North America	5506956	36.615	-115.581	35.757	-114.211	las-vegas	Las Vegas
 North America	5368361	34.583	-119.437	33.298	-116.724	los-angeles	Los Angeles
 North America	3530597	19.921	-99.597	18.992	-98.606	mexico-city	Mexico City
 North America	4164138	26.912	-80.683	25.291	-79.774	miami	Miami
 North America	5037649;5045360	45.410	-94.064	44.496	-92.543	mpls-stpaul	Minneapolis, St. Paul
+North America	6077243	46.057	-74.734	44.968	-72.723	montreal	Montreal
 North America	4335045	30.510	-90.653	28.887	-89.110	new-orleans	New Orleans
 North America	5128581	41.097	-74.501	40.345	-73.226	new-york	New York City
 North America	5308655	34.070	-112.821	32.796	-111.211	phoenix	Phoenix
@@ -57,12 +58,13 @@ North America	5746545	45.897	-123.211	45.096	-122.113	portland	Portland
 North America	4407066	39.151	-91.010	38.069	-89.533	st-louis	St. Louis
 North America	5391811;3981609	33.078	-117.376	32.312	-116.588	san-diego-tijuana	San Diego, Tijuana
 North America	5391959	37.955	-122.737	37.449	-122.011	san-francisco	San Francisco
-North America		38.719	-123.640	36.791	-121.025	sf-bay-area	San Francisco Bay Area	
+North America		38.719	-123.640	36.791	-121.025	sf-bay-area	San Francisco Bay Area
 North America	5809844	47.843	-122.538	47.380	-121.868	seattle	Seattle
 North America	4174757	28.376	-82.935	27.279	-82.012	tampa	Tampa
 North America	6167865	44.182	-80.161	43.201	-78.717	toronto	Toronto
 North America	6173331	49.475	-123.513	48.669	-121.777	vancouver	Vancouver
-North America	4140963	39.259	-77.599	38.539	-76.365	washington-dc	Washington D.C.
+North America	6174041	48.871	-124.063	48.054	-122.568	victoria	Victoria
+North America	4140963;4347778	39.631	-77.599	38.539	-76.058	dc-baltimore	Washington D.C., Baltimore
 Oceania	2193733	-36.410	174.223	-37.348	175.314	auckland	Auckland
 Oceania	1642911	-5.881	106.435	-6.615	107.160	jakarta	Jakarta
 Oceania	2158177	-37.365	144.266	-38.552	145.810	melbourne	Melbourne
