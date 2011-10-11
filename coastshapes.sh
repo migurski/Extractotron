@@ -58,6 +58,9 @@ zip -j - ex/merc/birmingham.??? > ex/birmingham.shp.zip
 ogr2ogr -spat 3.981 50.645 4.761 51.053 -t_srs EPSG:900913 ex/merc/brussels.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/brussels.??? > ex/brussels.shp.zip
 
+ogr2ogr -spat 18.347 47.025 19.780 47.861 -t_srs EPSG:900913 ex/merc/budapest.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/budapest.??? > ex/budapest.shp.zip
+
 ogr2ogr -spat 11.894 55.491 13.147 55.950 -t_srs EPSG:900913 ex/merc/copenhagen.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/copenhagen.??? > ex/copenhagen.shp.zip
 
@@ -67,8 +70,14 @@ zip -j - ex/merc/edinburgh.??? > ex/edinburgh.shp.zip
 ogr2ogr -spat 10.982 43.601 11.504 43.983 -t_srs EPSG:900913 ex/merc/florence.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/florence.??? > ex/florence.shp.zip
 
+ogr2ogr -spat 7.811 49.632 9.442 50.447 -t_srs EPSG:900913 ex/merc/frankfurt.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/frankfurt.??? > ex/frankfurt.shp.zip
+
 ogr2ogr -spat -4.613 55.668 -3.935 56.034 -t_srs EPSG:900913 ex/merc/glasgow.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/glasgow.??? > ex/glasgow.shp.zip
+
+ogr2ogr -spat 9.376 53.159 10.678 53.833 -t_srs EPSG:900913 ex/merc/hamburg.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/hamburg.??? > ex/hamburg.shp.zip
 
 ogr2ogr -spat 28.313 40.738 29.678 41.421 -t_srs EPSG:900913 ex/merc/istanbul.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/istanbul.??? > ex/istanbul.shp.zip
@@ -91,11 +100,26 @@ zip -j - ex/merc/manchester.??? > ex/manchester.shp.zip
 ogr2ogr -spat 36.870 55.285 38.430 56.200 -t_srs EPSG:900913 ex/merc/moscow.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/moscow.??? > ex/moscow.shp.zip
 
+ogr2ogr -spat 10.799 47.717 12.178 48.523 -t_srs EPSG:900913 ex/merc/munich.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/munich.??? > ex/munich.shp.zip
+
 ogr2ogr -spat 1.851 48.531 2.911 49.178 -t_srs EPSG:900913 ex/merc/paris.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/paris.??? > ex/paris.shp.zip
 
+ogr2ogr -spat 13.842 49.763 15.012 50.408 -t_srs EPSG:900913 ex/merc/prague.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/prague.??? > ex/prague.shp.zip
+
 ogr2ogr -spat 12.109 41.578 12.845 42.130 -t_srs EPSG:900913 ex/merc/rome.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/rome.??? > ex/rome.shp.zip
+
+ogr2ogr -spat 17.061 58.850 19.055 59.908 -t_srs EPSG:900913 ex/merc/stockholm.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/stockholm.??? > ex/stockholm.shp.zip
+
+ogr2ogr -spat 29.168 59.556 31.173 60.345 -t_srs EPSG:900913 ex/merc/st-petersburg.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/st-petersburg.??? > ex/st-petersburg.shp.zip
+
+ogr2ogr -spat 20.341 51.845 21.692 52.623 -t_srs EPSG:900913 ex/merc/warsaw.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/warsaw.??? > ex/warsaw.shp.zip
 
 ogr2ogr -spat 43.786 32.9671 44.862 33.715 -t_srs EPSG:900913 ex/merc/baghdad.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/baghdad.??? > ex/baghdad.shp.zip
@@ -157,6 +181,9 @@ zip -j - ex/merc/new-orleans.??? > ex/new-orleans.shp.zip
 ogr2ogr -spat -74.501 40.345 -73.226 41.097 -t_srs EPSG:900913 ex/merc/new-york.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/new-york.??? > ex/new-york.shp.zip
 
+ogr2ogr -spat -75.572 39.641 -74.641 40.308 -t_srs EPSG:900913 ex/merc/philadelphia.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/philadelphia.??? > ex/philadelphia.shp.zip
+
 ogr2ogr -spat -112.821 32.796 -111.211 34.070 -t_srs EPSG:900913 ex/merc/phoenix.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/phoenix.??? > ex/phoenix.shp.zip
 
@@ -216,6 +243,9 @@ zip -j - ex/merc/cartagena.??? > ex/cartagena.shp.zip
 
 ogr2ogr -spat -58.899 -34.966 -57.992 -34.293 -t_srs EPSG:900913 ex/merc/buenos-aires.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/buenos-aires.??? > ex/buenos-aires.shp.zip
+
+ogr2ogr -spat -77.294 -12.358 -76.701 -11.644 -t_srs EPSG:900913 ex/merc/lima.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/lima.??? > ex/lima.shp.zip
 
 ogr2ogr -spat -43.553 -23.231 -42.850 -22.510 -t_srs EPSG:900913 ex/merc/rio-de-janeiro.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/rio-de-janeiro.??? > ex/rio-de-janeiro.shp.zip
