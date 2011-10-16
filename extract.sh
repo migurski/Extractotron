@@ -101,8 +101,6 @@ key.set_contents_from_file(open('log.txt'), policy='public-read', headers={'Cont
 
 SEND
 
-false
-
 python <<KILL
 
 from urllib import urlopen
