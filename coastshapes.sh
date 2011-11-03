@@ -13,13 +13,19 @@ zip -j - ex/merc/bangkok.??? > ex/bangkok.shp.zip
 ogr2ogr -spat 115.686 39.414 117.119 40.426 -t_srs EPSG:900913 ex/merc/beijing.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/beijing.??? > ex/beijing.shp.zip
 
+ogr2ogr -spat 77.35 12.75 77.85 13.23 -t_srs EPSG:900913 ex/merc/bengaluru.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/bengaluru.??? > ex/bengaluru.shp.zip
+
+ogr2ogr -spat 79.9 12.7 80.4 13.3 -t_srs EPSG:900913 ex/merc/chennai.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/chennai.??? > ex/chennai.shp.zip
+
 ogr2ogr -spat 112.780 21.591 115.125 23.488 -t_srs EPSG:900913 ex/merc/hong-kong.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/hong-kong.??? > ex/hong-kong.shp.zip
 
 ogr2ogr -spat 120.885 14.327 121.200 14.900 -t_srs EPSG:900913 ex/merc/manila.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/manila.??? > ex/manila.shp.zip
 
-ogr2ogr -spat 72.415 18.466 73.516 19.331 -t_srs EPSG:900913 ex/merc/mumbai.shp ex/wgs84/processed_p.shp
+ogr2ogr -spat 72.415 18.466 73.516 19.500 -t_srs EPSG:900913 ex/merc/mumbai.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/mumbai.??? > ex/mumbai.shp.zip
 
 ogr2ogr -spat 76.692 28.183 77.733 28.969 -t_srs EPSG:900913 ex/merc/new-delhi.shp ex/wgs84/processed_p.shp
@@ -36,6 +42,9 @@ zip -j - ex/merc/shanghai.??? > ex/shanghai.shp.zip
 
 ogr2ogr -spat 103.062 0.807 104.545 1.823 -t_srs EPSG:900913 ex/merc/singapore.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/singapore.??? > ex/singapore.shp.zip
+
+ogr2ogr -spat 50.87 35.383 51.648 35.917 -t_srs EPSG:900913 ex/merc/tehran.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/tehran.??? > ex/tehran.shp.zip
 
 ogr2ogr -spat 138.779 34.867 141.152 36.558 -t_srs EPSG:900913 ex/merc/tokyo.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/tokyo.??? > ex/tokyo.shp.zip
@@ -111,6 +120,9 @@ zip -j - ex/merc/prague.??? > ex/prague.shp.zip
 
 ogr2ogr -spat 12.109 41.578 12.845 42.130 -t_srs EPSG:900913 ex/merc/rome.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/rome.??? > ex/rome.shp.zip
+
+ogr2ogr -spat 3.911 51.737 4.784 52.109 -t_srs EPSG:900913 ex/merc/rotterdam.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/rotterdam.??? > ex/rotterdam.shp.zip
 
 ogr2ogr -spat 17.061 58.850 19.055 59.908 -t_srs EPSG:900913 ex/merc/stockholm.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/stockholm.??? > ex/stockholm.shp.zip
