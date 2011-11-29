@@ -1,6 +1,6 @@
 bunzip2 -c planet-latest.osm.bz2 | osmosis-*/bin/osmosis --rx file=- \
     --log-progress interval=60 \
-    --tee outputCount=90 \
+    --tee outputCount=94 \
     \
     --bb top=30.564 left=30.897 bottom=29.761 right=31.710 \
         --tee outputCount=2 --wx file=ex/cairo.osm.bz2 --wb file=ex/cairo.osm.pbf \
@@ -66,14 +66,20 @@ bunzip2 -c planet-latest.osm.bz2 | osmosis-*/bin/osmosis --rx file=- \
         --tee outputCount=2 --wx file=ex/istanbul.osm.bz2 --wb file=ex/istanbul.osm.pbf \
     --bb top=53.921 left=-1.717 bottom=53.697 right=-1.33 \
         --tee outputCount=2 --wx file=ex/leeds.osm.bz2 --wb file=ex/leeds.osm.pbf \
+    --bb top=50.800 left=2.823 bottom=50.469 right=3.389 \
+        --tee outputCount=2 --wx file=ex/lille.osm.bz2 --wb file=ex/lille.osm.pbf \
     --bb top=39.150 left=-9.634 bottom=38.358 right=-8.458 \
         --tee outputCount=2 --wx file=ex/lisbon.osm.bz2 --wb file=ex/lisbon.osm.pbf \
+    --bb top=46.191 left=4.136 bottom=45.305 right=5.517 \
+        --tee outputCount=2 --wx file=ex/lyon.osm.bz2 --wb file=ex/lyon.osm.pbf \
     --bb top=51.984 left=-1.115 bottom=50.941 right=0.895 \
         --tee outputCount=2 --wx file=ex/london.osm.bz2 --wb file=ex/london.osm.pbf \
     --bb top=40.839 left=-4.293 bottom=39.889 right=-3.057 \
         --tee outputCount=2 --wx file=ex/madrid.osm.bz2 --wb file=ex/madrid.osm.pbf \
     --bb top=53.672 left=-2.588 bottom=53.237 right=-1.877 \
         --tee outputCount=2 --wx file=ex/manchester.osm.bz2 --wb file=ex/manchester.osm.pbf \
+    --bb top=43.554 left=4.905 bottom=43.038 right=5.776 \
+        --tee outputCount=2 --wx file=ex/marseille.osm.bz2 --wb file=ex/marseille.osm.pbf \
     --bb top=56.200 left=36.870 bottom=55.285 right=38.430 \
         --tee outputCount=2 --wx file=ex/moscow.osm.bz2 --wb file=ex/moscow.osm.pbf \
     --bb top=48.523 left=10.799 bottom=47.717 right=12.178 \
@@ -90,6 +96,8 @@ bunzip2 -c planet-latest.osm.bz2 | osmosis-*/bin/osmosis --rx file=- \
         --tee outputCount=2 --wx file=ex/stockholm.osm.bz2 --wb file=ex/stockholm.osm.pbf \
     --bb top=60.345 left=29.168 bottom=59.556 right=31.173 \
         --tee outputCount=2 --wx file=ex/st-petersburg.osm.bz2 --wb file=ex/st-petersburg.osm.pbf \
+    --bb top=43.838 left=1.062 bottom=43.327 right=1.779 \
+        --tee outputCount=2 --wx file=ex/toulouse.osm.bz2 --wb file=ex/toulouse.osm.pbf \
     --bb top=52.623 left=20.341 bottom=51.845 right=21.692 \
         --tee outputCount=2 --wx file=ex/warsaw.osm.bz2 --wb file=ex/warsaw.osm.pbf \
     --bb top=33.715 left=43.786 bottom=32.9671 right=44.862 \

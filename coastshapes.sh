@@ -94,8 +94,14 @@ zip -j - ex/merc/istanbul.??? > ex/istanbul.shp.zip
 ogr2ogr -spat -1.717 53.697 -1.33 53.921 -t_srs EPSG:900913 ex/merc/leeds.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/leeds.??? > ex/leeds.shp.zip
 
+ogr2ogr -spat 2.823 50.469 3.389 50.800 -t_srs EPSG:900913 ex/merc/lille.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/lille.??? > ex/lille.shp.zip
+
 ogr2ogr -spat -9.634 38.358 -8.458 39.150 -t_srs EPSG:900913 ex/merc/lisbon.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/lisbon.??? > ex/lisbon.shp.zip
+
+ogr2ogr -spat 4.136 45.305 5.517 46.191 -t_srs EPSG:900913 ex/merc/lyon.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/lyon.??? > ex/lyon.shp.zip
 
 ogr2ogr -spat -1.115 50.941 0.895 51.984 -t_srs EPSG:900913 ex/merc/london.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/london.??? > ex/london.shp.zip
@@ -105,6 +111,9 @@ zip -j - ex/merc/madrid.??? > ex/madrid.shp.zip
 
 ogr2ogr -spat -2.588 53.237 -1.877 53.672 -t_srs EPSG:900913 ex/merc/manchester.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/manchester.??? > ex/manchester.shp.zip
+
+ogr2ogr -spat 4.905 43.038 5.776 43.554 -t_srs EPSG:900913 ex/merc/marseille.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/marseille.??? > ex/marseille.shp.zip
 
 ogr2ogr -spat 36.870 55.285 38.430 56.200 -t_srs EPSG:900913 ex/merc/moscow.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/moscow.??? > ex/moscow.shp.zip
@@ -129,6 +138,9 @@ zip -j - ex/merc/stockholm.??? > ex/stockholm.shp.zip
 
 ogr2ogr -spat 29.168 59.556 31.173 60.345 -t_srs EPSG:900913 ex/merc/st-petersburg.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/st-petersburg.??? > ex/st-petersburg.shp.zip
+
+ogr2ogr -spat 1.062 43.327 1.779 43.838 -t_srs EPSG:900913 ex/merc/toulouse.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/toulouse.??? > ex/toulouse.shp.zip
 
 ogr2ogr -spat 20.341 51.845 21.692 52.623 -t_srs EPSG:900913 ex/merc/warsaw.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/warsaw.??? > ex/warsaw.shp.zip
