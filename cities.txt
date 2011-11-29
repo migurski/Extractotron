@@ -31,10 +31,13 @@ Europe	2648579	56.034	-4.613	55.668	-3.935	glasgow	Glasgow
 Europe	2911298	53.833	9.376	53.159	10.678	hamburg	Hamburg
 Europe	745044	41.421	28.313	40.738	29.678	istanbul	Istanbul
 Europe	2644688	53.921	-1.717	53.697	-1.33	leeds	Leeds
+Europe	2998324	50.800	2.823	50.469	3.389	lille	Lille
 Europe	2267057	39.150	-9.634	38.358	-8.458	lisbon	Lisbon
+Europe	2996944	46.191	4.136	45.305	5.517	lyon	Lyon
 Europe	2643743	51.984	-1.115	50.941	0.895	london	London
 Europe	3117735	40.839	-4.293	39.889	-3.057	madrid	Madrid
 Europe	2643123	53.672	-2.588	53.237	-1.877	manchester	Manchester
+Europe	2995469	43.554	4.905	43.038	5.776	marseille	Marseille
 Europe	524901	56.200	36.870	55.285	38.430	moscow	Moscow
 Europe	2867714	48.523	10.799	47.717	12.178	munich	Munich
 Europe	2988507	49.178	1.851	48.531	2.911	paris	Paris
@@ -43,6 +46,7 @@ Europe	3169070	42.130	12.109	41.578	12.845	rome	Rome
 Europe	2747891	52.109	3.911	51.737	4.784	rotterdam	Rotterdam
 Europe	2673730	59.908	17.061	58.850	19.055	stockholm	Stockholm
 Europe	498817	60.345	29.168	59.556	31.173	st-petersburg	Saint Petersburg
+Europe	2972315	43.838	1.062	43.327	1.779	toulouse	Toulouse
 Europe	756135	52.623	20.341	51.845	21.692	warsaw	Warsaw
 Middle East	98182	33.715	43.786	32.9671	44.862	baghdad	Baghdad
 Middle East	108410	25.098	46.227	24.292	47.202	riyadh	Riyadh
