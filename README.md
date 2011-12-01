@@ -18,27 +18,27 @@ in Github.
 
 cities.txt is a tab-delimited file, and has eight fields:
 
-- **group**
+-   **group**
 
-  One of "Africa", "Asia", "Europe", "Middle East", "North America", "South America", or Oceania.
+    One of "Africa", "Asia", "Europe", "Middle East", "North America", "South America", or Oceania.
 
-- **geonameid**
+-   **geonameid**
 
-  It's nice to have a link back to the [Geonames dataset](http://geonames.org).
+    It's nice to have a link back to the [Geonames dataset](http://geonames.org).
 
-- **top, left, bottom, right**
+-   **top, left, bottom, right**
 
-  Geographic bounding box of the metropolitan area. These should be larger rather
-  than smaller to surrounding countryside wherever possible. For example of coverage
-  area, see [Moscow](http://metro.teczno.com/previews/moscow.jpg).
+    Geographic bounding box of the metropolitan area. These should be larger rather
+    than smaller to surrounding countryside wherever possible. For example of coverage
+    area, see [Moscow](http://metro.teczno.com/previews/moscow.jpg).
 
-- **slug**
+-   **slug**
 
-  Short, lowercase version of the name with dashes for spaces that's used for files.
+    Short, lowercase version of the name with dashes for spaces that's used for files.
 
-- **name**
+-   **name**
 
-  Full name of the city.
+    Full name of the city.
 
 Rolling Your Own
 ----------------
