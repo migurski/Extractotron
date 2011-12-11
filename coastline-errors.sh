@@ -1,15 +1,20 @@
 #!/bin/sh -x
 
-shp2pgsql -dID -s 900913 coast/processed_p.shp coast | psql coast
+createdb coast > postgis.txt 2>&1
+createlang plpgsql coast >> postgis.txt 2>&1
+psql -f /usr/share/postgresql/8.4/contrib/postgis-1.5/postgis.sql coast >> postgis.txt 2>&1
+psql -f /usr/share/postgresql/8.4/contrib/postgis-1.5/spatial_ref_sys.sql coast >> postgis.txt 2>&1
 
-psql -c "DELETE FROM coast WHERE ST_IsValid(the_geom)" coast;
-psql -c "SELECT gid FROM coast ORDER BY gid" -tA -F ' ' coast > /tmp/gids;
-psql -c "SELECT gid, tile_x, tile_y FROM coast ORDER BY gid" -tA -F ' ' coast > /tmp/tiles;
+shp2pgsql -dID -s 900913 coast/processed_p.shp coast | psql coast >> postgis.txt 2>&1
+
+psql -c "DELETE FROM coast WHERE ST_IsValid(the_geom)" coast
+psql -c "SELECT gid FROM coast ORDER BY gid" -tA -F ' ' coast > /tmp/gids
+psql -c "SELECT gid, tile_x, tile_y FROM coast ORDER BY gid" -tA -F ' ' coast > /tmp/tiles
 
 rm -f /tmp/reasons
 
 for GID in `cat /tmp/gids`; do
-    psql -tA -F ' ' -c "SELECT gid, ST_IsValidReason(the_geom) FROM coast WHERE gid=$GID" coast >> /tmp/reasons;
+    psql -tA -F ' ' -c "SELECT gid, ST_IsValidReason(the_geom) FROM coast WHERE gid=$GID" coast >> /tmp/reasons
 done
 
 
@@ -64,10 +69,10 @@ for (gid, (x, y)) in tiles.items():
         continue
 
     # Also borrowed from closeshp.c:
-    left   = -merc_max + (x * merc_block) - tile_overlap;
-    right  = -merc_max + ((x + 1) * merc_block) + tile_overlap;
-    bottom = -merc_max + (y * merc_block) - tile_overlap;
-    top    = -merc_max + ((y + 1) * merc_block) + tile_overlap;
+    left   = -merc_max + (x * merc_block) - tile_overlap
+    right  = -merc_max + ((x + 1) * merc_block) + tile_overlap
+    bottom = -merc_max + (y * merc_block) - tile_overlap
+    top    = -merc_max + ((y + 1) * merc_block) + tile_overlap
     
     reason = 'Bad geometry'
     geometry = dict(type='Polygon', coordinates=[[(left, top), (right, top), (right, bottom), (left, bottom), (left, top)]])

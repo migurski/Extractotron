@@ -20,11 +20,6 @@ cd cc
 make >> install.txt 2>&1
 cd ..
 
-sudo -u postgres createdb coast > postgis.txt 2>&1
-sudo -u postgres createlang plpgsql coast >> postgis.txt 2>&1
-sudo -u postgres psql -f /usr/share/postgresql/8.4/contrib/postgis-1.5/postgis.sql coast >> postgis.txt 2>&1
-sudo -u postgres psql -f /usr/share/postgresql/8.4/contrib/postgis-1.5/spatial_ref_sys.sql coast >> postgis.txt 2>&1
-
 
 # Make it possible to watch on port 80
 rm -rfv /var/www
