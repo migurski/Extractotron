@@ -62,7 +62,7 @@ mkdir ex
     shapeindex coast/coastline_c coast/coastline_i coast/coastline_p coast/processed_p coast/processed_i
     
     # this creates /tmp/coastline-errors.json and /tmp/coastline-missing.json
-    ./coastline-errors.sh > coastline-errors.txt 2>&1
+    sudo -u postgres ./coastline-errors.sh > coastline-errors.txt 2>&1
     
     ogr2ogr coast/post_errors.shp /tmp/coastline-errors.json
     ogr2ogr coast/post_missing.shp /tmp/coastline-missing.json
