@@ -9,6 +9,7 @@ apt-get update > install.txt 2>&1
 apt-get install -y \
     apache2-mpm-worker openjdk-6-jre-headless python-boto libshp-dev libxml2-dev \
     libproj-dev zlib1g-dev libbz2-dev mapnik-utils gdal-bin subversion make zip \
+    postgresql-8.4-postgis postgresql-contrib-8.4 \
  >> install.txt 2>&1
 
 PERL_MM_USE_DEFAULT=1 perl -MCPAN -e 'install Tree::R' >> install.txt 2>&1
@@ -18,6 +19,11 @@ svn co http://svn.openstreetmap.org/applications/utils/coastcheck cc >> install.
 cd cc
 make >> install.txt 2>&1
 cd ..
+
+sudo -u postgres createdb coast > postgis.txt 2>&1
+sudo -u postgres createlang plpgsql coast >> postgis.txt 2>&1
+sudo -u postgres psql -f /usr/share/postgresql/8.4/contrib/postgis-1.5/postgis.sql coast >> postgis.txt 2>&1
+sudo -u postgres psql -f /usr/share/postgresql/8.4/contrib/postgis-1.5/spatial_ref_sys.sql coast >> postgis.txt 2>&1
 
 
 # Make it possible to watch on port 80
@@ -31,9 +37,11 @@ ln -sv /mnt/tmp /tmp
 
 curl -s $OSMOSIS_HREF > osmosis.sh
 curl -s $COASTSHAPES_HREF > coastshapes.sh
+curl -s $COASTERRORS_HREF > coastline-errors.sh
 
 chmod u+x osmosis.sh
 chmod u+x coastshapes.sh
+chmod u+x coastline-errors.sh
 
 
 curl -sOL http://dev.openstreetmap.org/~bretth/osmosis-build/osmosis-latest.tgz
@@ -52,6 +60,12 @@ mkdir ex
     cc/coast2shp coast/coast-merged.txt coast/coastline.osm.gz coast/coastline > /dev/null
     cc/closeshp coast/coastline_c coast/coastline_i coast/processed > /dev/null
     shapeindex coast/coastline_c coast/coastline_i coast/coastline_p coast/processed_p coast/processed_i
+    
+    # this creates /tmp/coastline-errors.json and /tmp/coastline-missing.json
+    ./coastline-errors.sh > coastline-errors.txt 2>&1
+    
+    ogr2ogr coast/post_errors.shp /tmp/coastline-errors.json
+    ogr2ogr coast/post_missing.shp /tmp/coastline-missing.json
 ) &
 
 ./osmosis.sh > osmosis.txt 2>&1
@@ -61,7 +75,7 @@ wait
 mkdir ex/merc
 mkdir ex/wgs84
 
-for NAME in processed_p processed_i coastline_p coastline_i; do
+for NAME in processed_p processed_i coastline_p coastline_i post_errors post_missing; do
     ogr2ogr -a_srs "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" ex/merc/$NAME.shp coast/$NAME.shp
     tar -C ex/merc -cvf - $NAME.dbf $NAME.prj $NAME.shp $NAME.shx | bzip2 > ex/$NAME-merc.tar.bz2
 
