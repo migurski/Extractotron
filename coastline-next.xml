@@ -27,7 +27,7 @@
         <CssParameter name="fill">#cccccc</CssParameter>
       </PolygonSymbolizer>
       <LineSymbolizer>
-        <CssParameter name="stroke">#cccccc</CssParameter>
+        <CssParameter name="stroke">#c6c6c6</CssParameter>
         <CssParameter name="stroke-width">1</CssParameter>
       </LineSymbolizer>
     </Rule>
@@ -65,6 +65,7 @@
 
   <Style name="tile-labels">
     <Rule>
+      <MaxScaleDenominator>6500000</MaxScaleDenominator>
       <TextSymbolizer name="label" face_name="DejaVu Sans Book" size="10" fill="#999999" placement="point" allow_overlap="false" />
     </Rule>
   </Style>

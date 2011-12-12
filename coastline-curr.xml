@@ -11,12 +11,15 @@
   <Style name="black-land">
     <Rule>
       <PolygonSymbolizer>
-        <CssParameter name="fill">black</CssParameter>
+        <CssParameter name="fill">#000000</CssParameter>
       </PolygonSymbolizer>
       <LineSymbolizer>
-        <CssParameter name="stroke">black</CssParameter>
+        <CssParameter name="stroke">#222222</CssParameter>
         <CssParameter name="stroke-width">1</CssParameter>
       </LineSymbolizer>
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>3000000</MaxScaleDenominator>
       <TextSymbolizer name="source" face_name="DejaVu Sans Book" size="10" fill="white" placement="point" allow_overlap="false" />
     </Rule>
   </Style>
