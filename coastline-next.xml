@@ -45,19 +45,55 @@
     </Datasource>
   </Layer>
 
-  <Style name="error-points">
+  <Style name="error-points-coastcheck">
     <Rule>
-      <PointSymbolizer file="/home/migurski/osm/coastline_dec1/purple-point.png" width="8" height="8" type="png" allow_overlap="false" />
+      <MaxScaleDenominator>750000</MaxScaleDenominator>
+      <Filter>[type] = 1</Filter>
+      <PointSymbolizer file="type-1.png" width="15" height="15" type="png" allow_overlap="true" />
+    </Rule>
+    <Rule>
+      <!--
+      <MaxScaleDenominator>6500000</MaxScaleDenominator>
+      -->
+      <Filter>[type] = 2</Filter>
+      <PointSymbolizer file="type-2.png" width="15" height="15" type="png" allow_overlap="true" />
     </Rule>
   </Style>
 
-  <Layer name="error" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null" status="on">
-    <StyleName>error-points</StyleName>
+  <Layer name="error-points-coastcheck" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null" status="on">
+    <StyleName>error-points-coastcheck</StyleName>
     <Datasource>
       <Parameter name="type">postgis</Parameter>
       <Parameter name="dbname">planet_osm</Parameter>
       <Parameter name="user">osm</Parameter>
-      <Parameter name="table">coastline_p</Parameter>
+      <Parameter name="table">(SELECT type, the_geom FROM coastline_p ORDER BY type) AS errors</Parameter>
+      <Parameter name="estimate_extent">false</Parameter>
+      <Parameter name="extent">-20037508,-20037508,20037508,20037508</Parameter>
+    </Datasource>
+  </Layer>
+
+  <Style name="error-points-postcheck">
+    <Rule>
+      <MaxScaleDenominator>750000</MaxScaleDenominator>
+      <Filter>[reason] = 'Holes are nested'</Filter>
+      <PointSymbolizer file="hole.png" width="15" height="15" type="png" allow_overlap="true" />
+    </Rule>
+    <Rule>
+      <!--
+      <MaxScaleDenominator>6500000</MaxScaleDenominator>
+      -->
+      <Filter>[reason] = 'Self-intersection' or [reason] = 'Ring Self-intersection'</Filter>
+      <PointSymbolizer file="intersection.png" width="15" height="15" type="png" allow_overlap="true" />
+    </Rule>
+  </Style>
+
+  <Layer name="error-points-postcheck" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null" status="on">
+    <StyleName>error-points-postcheck</StyleName>
+    <Datasource>
+      <Parameter name="type">postgis</Parameter>
+      <Parameter name="dbname">planet_osm</Parameter>
+      <Parameter name="user">osm</Parameter>
+      <Parameter name="table">(SELECT reason, the_geom FROM post_errors ORDER BY reason) AS errors</Parameter>
       <Parameter name="estimate_extent">false</Parameter>
       <Parameter name="extent">-20037508,-20037508,20037508,20037508</Parameter>
     </Datasource>
