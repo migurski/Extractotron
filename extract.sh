@@ -34,9 +34,9 @@ curl -s $OSMOSIS_HREF > osmosis.sh
 curl -s $COASTSHAPES_HREF > coastshapes.sh
 curl -s $COASTERRORS_HREF > coastline-errors.sh
 
-chmod u+x osmosis.sh
-chmod u+x coastshapes.sh
-chmod u+x coastline-errors.sh
+chmod +x osmosis.sh
+chmod +x coastshapes.sh
+chmod +x coastline-errors.sh
 
 
 curl -sOL http://dev.openstreetmap.org/~bretth/osmosis-build/osmosis-latest.tgz
