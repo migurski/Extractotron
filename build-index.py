@@ -206,10 +206,19 @@ if __name__ == '__main__':
             error-corrected versions of the worldwide coastline generated using the code available from
             <a href="http://svn.openstreetmap.org/applications/utils/coastcheck/">Subversion</a>.
         </p>
+        <p class="coast">
+            <a href="%s">Coastline polygons</a>: closed areas, divided into 100km squares.<br><a href="%s">Mercator</a> (%s) and <a href="%s">unprojected</a> (%s) shapefiles.
+        </p>
+        <p>
+            The coastline usually has errors in it. These files help show where
+            those errors might be lurking, so that you can fix OpenStreetMap for
+            the next time the coastline polygons are rendered:
+        </p>
         <ul class="coast">
-            <li><a href="%s">Coastline polygons</a>: closed areas, divided into 100km squares.<br><a href="%s">Mercator</a> (%s) and <a href="%s">unprojected</a> (%s) shapefiles.</li>
             <li><a href="%s">Incomplete lines</a>: incomplete coastlines, joined into linestrings.<br><a href="%s">Mercator</a> (%s) and <a href="%s">unprojected</a> (%s) shapefiles.</li>
-            <li><a href="%s">Error points</a>: points where there are errors.<br><a href="%s">Mercator</a> (%s) and <a href="%s">unprojected</a> (%s) shapefiles.</li>
+            <li><a href="%s">Error points</a>: points where the coastline checker found errors.<br><a href="%s">Mercator</a> (%s) and <a href="%s">unprojected</a> (%s) shapefiles.</li>
+            <li><a href="%s">PostGIS error points</a>: points where PostGIS found topology errors.<br><a href="%s">Mercator</a> (%s) and <a href="%s">unprojected</a> (%s) shapefiles.</li>
+            <li><a href="%s">PostGIS missing tiles</a>: areas where PostGIS was unable to parse a geometry.<br><a href="%s">Mercator</a> (%s) and <a href="%s">unprojected</a> (%s) shapefiles.</li>
         </ul>""" \
         % (
             coast['processed_p']['merc'][2],
@@ -220,7 +229,13 @@ if __name__ == '__main__':
             coast['processed_i']['latlon'][2], nice_size(coast['processed_i']['latlon'][1]),
             coast['coastline_p']['merc'][2],
             coast['coastline_p']['merc'][2], nice_size(coast['coastline_p']['merc'][1]),
-            coast['coastline_p']['latlon'][2], nice_size(coast['coastline_p']['latlon'][1])
+            coast['coastline_p']['latlon'][2], nice_size(coast['coastline_p']['latlon'][1]),
+            coast['post_errors']['merc'][2],
+            coast['post_errors']['merc'][2], nice_size(coast['post_errors']['merc'][1]),
+            coast['post_errors']['latlon'][2], nice_size(coast['post_errors']['latlon'][1]),
+            coast['post_missing']['merc'][2],
+            coast['post_missing']['merc'][2], nice_size(coast['post_missing']['merc'][1]),
+            coast['post_missing']['latlon'][2], nice_size(coast['post_missing']['latlon'][1])
         )
     
     print >> index, """</body></html>"""

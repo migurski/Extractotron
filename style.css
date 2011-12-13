@@ -38,6 +38,7 @@ li.link
     white-space: nowrap;
 }
 
+p.coast,
 ul.coast li
 {
     margin-left: 1em;
