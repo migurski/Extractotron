@@ -108,7 +108,7 @@ if __name__ == '__main__':
     coast['coastline-good'] = {}
     
     for prj in ('merc', 'latlon'):
-        file = 'coastline-good-%s.tar.gz' % prj
+        file = 'coastline-good-%s.tar.bz2' % prj
         href = urljoin(base_url, file)
         
         url = urlparse(href)
