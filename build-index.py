@@ -1,5 +1,6 @@
 ﻿from urllib import urlopen
-from urlparse import urljoin
+from urlparse import urljoin, urlparse
+from httplib import HTTPConnection
 from re import compile
 from csv import DictReader
 from sys import argv, stderr
@@ -104,6 +105,22 @@ if __name__ == '__main__':
         
         files[slug][key] = slug_file
     
+    coast['coastline-good'] = {}
+    
+    for prj in ('merc', 'latlon'):
+        file = 'coastline-good-%s.tar.gz' % prj
+        href = urljoin(base_url, file)
+        
+        url = urlparse(href)
+        conn = HTTPConnection(url.netloc)
+        conn.request('HEAD', url.path)
+        resp = conn.getresponse()
+        size = resp.getheader('content-length')
+        date = parser.parse(resp.getheader('last-modified'))
+        date = '%s %d, %s' % (months[date.month], date.day, date.year)
+
+        coast['coastline-good'][prj] = (file, int(size), href, date)
+    
     #
     
     print >> index, """<!DOCTYPE html>
@@ -206,9 +223,10 @@ if __name__ == '__main__':
             error-corrected versions of the worldwide coastline generated using the code available from
             <a href="http://svn.openstreetmap.org/applications/utils/coastcheck/">Subversion</a>.
         </p>
-        <p class="coast">
-            <a href="%s">Coastline polygons</a>: closed areas, divided into 100km squares.<br><a href="%s">Mercator</a> (%s) and <a href="%s">unprojected</a> (%s) shapefiles.
-        </p>
+        <ul class="coast">
+            <li><a href="%s">Coastline polygons</a>: automatically generated areas, divided into 100km squares.<br><a href="%s">Mercator</a> (%s) and <a href="%s">unprojected</a> (%s) shapefiles.<br>Updated from <a href="http://planet.openstreetmap.org/">Planet</a> %s.</li>
+            <li><a href="%s">Good coastline polygons</a>: coastline polygons chosen to fill gaps in new data with old data.<br><a href="%s">Mercator</a> (%s) and <a href="%s">unprojected</a> (%s) shapefiles.<br>Last manually selected %s.</li>
+        </ul>
         <p>
             The coastline usually has errors in it. These files help show where
             those errors might be lurking, so that you can fix OpenStreetMap for
@@ -224,6 +242,11 @@ if __name__ == '__main__':
             coast['processed_p']['merc'][2],
             coast['processed_p']['merc'][2], nice_size(coast['processed_p']['merc'][1]),
             coast['processed_p']['latlon'][2], nice_size(coast['processed_p']['latlon'][1]),
+            start,
+            coast['coastline-good']['merc'][2],
+            coast['coastline-good']['merc'][2], nice_size(coast['coastline-good']['merc'][1]),
+            coast['coastline-good']['latlon'][2], nice_size(coast['coastline-good']['latlon'][1]),
+            coast['coastline-good']['merc'][3],
             coast['processed_i']['merc'][2],
             coast['processed_i']['merc'][2], nice_size(coast['processed_i']['merc'][1]),
             coast['processed_i']['latlon'][2], nice_size(coast['processed_i']['latlon'][1]),
