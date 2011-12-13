@@ -54,7 +54,7 @@
     <StyleName>black-land</StyleName>
     <Datasource>
       <Parameter name="type">postgis</Parameter>
-      <Parameter name="dbname">planet_osm</Parameter>
+      <Parameter name="dbname">coastline</Parameter>
       <Parameter name="user">osm</Parameter>
       <Parameter name="table">(SELECT source, CAST(tile_x as text)||' '||CAST(tile_y as text) AS tile_xy, the_geom FROM coastline) AS foo</Parameter>
       <Parameter name="estimate_extent">false</Parameter>
@@ -66,7 +66,7 @@
     <StyleName>white-water</StyleName>
     <Datasource>
       <Parameter name="type">postgis</Parameter>
-      <Parameter name="dbname">planet_osm</Parameter>
+      <Parameter name="dbname">coastline</Parameter>
       <Parameter name="user">osm</Parameter>
       <Parameter name="table">(SELECT way FROM planet_osm_polygon WHERE "natural" IN ('water', 'bay') OR waterway = 'riverbank') AS foo</Parameter>
       <Parameter name="estimate_extent">false</Parameter>
@@ -77,7 +77,7 @@
     <StyleName>white-river</StyleName>
     <Datasource>
       <Parameter name="type">postgis</Parameter>
-      <Parameter name="dbname">planet_osm</Parameter>
+      <Parameter name="dbname">coastline</Parameter>
       <Parameter name="user">osm</Parameter>
       <Parameter name="table">(SELECT way FROM planet_osm_line  WHERE waterway IS NOT NULL) AS foo</Parameter>
       <Parameter name="estimate_extent">false</Parameter>

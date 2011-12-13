@@ -13,7 +13,7 @@
     <StyleName>error-lines</StyleName>
     <Datasource>
       <Parameter name="type">postgis</Parameter>
-      <Parameter name="dbname">planet_osm</Parameter>
+      <Parameter name="dbname">coastline</Parameter>
       <Parameter name="user">osm</Parameter>
       <Parameter name="table">processed_i</Parameter>
       <Parameter name="estimate_extent">false</Parameter>
@@ -37,7 +37,7 @@
     <StyleName>dark-land</StyleName>
     <Datasource>
       <Parameter name="type">postgis</Parameter>
-      <Parameter name="dbname">planet_osm</Parameter>
+      <Parameter name="dbname">coastline</Parameter>
       <Parameter name="user">osm</Parameter>
       <Parameter name="table">processed_p</Parameter>
       <Parameter name="estimate_extent">false</Parameter>
@@ -66,7 +66,7 @@
     <StyleName>missing-tiles</StyleName>
     <Datasource>
       <Parameter name="type">postgis</Parameter>
-      <Parameter name="dbname">planet_osm</Parameter>
+      <Parameter name="dbname">coastline</Parameter>
       <Parameter name="user">osm</Parameter>
       <Parameter name="table">post_missing</Parameter>
       <Parameter name="estimate_extent">false</Parameter>
@@ -93,7 +93,7 @@
     <StyleName>error-points-coastcheck</StyleName>
     <Datasource>
       <Parameter name="type">postgis</Parameter>
-      <Parameter name="dbname">planet_osm</Parameter>
+      <Parameter name="dbname">coastline</Parameter>
       <Parameter name="user">osm</Parameter>
       <Parameter name="table">(SELECT type, the_geom FROM coastline_p ORDER BY type) AS errors</Parameter>
       <Parameter name="estimate_extent">false</Parameter>
@@ -120,7 +120,7 @@
     <StyleName>error-points-postcheck</StyleName>
     <Datasource>
       <Parameter name="type">postgis</Parameter>
-      <Parameter name="dbname">planet_osm</Parameter>
+      <Parameter name="dbname">coastline</Parameter>
       <Parameter name="user">osm</Parameter>
       <Parameter name="table">(SELECT reason, the_geom FROM post_errors ORDER BY reason) AS errors</Parameter>
       <Parameter name="estimate_extent">false</Parameter>
@@ -139,7 +139,7 @@
     <StyleName>tile-labels</StyleName>
     <Datasource>
       <Parameter name="type">postgis</Parameter>
-      <Parameter name="dbname">planet_osm</Parameter>
+      <Parameter name="dbname">coastline</Parameter>
       <Parameter name="user">osm</Parameter>
       <Parameter name="table">(SELECT CAST(tile_x as text)||' '||CAST(tile_y as text) AS label, the_geom FROM processed_p) AS foo</Parameter>
       <Parameter name="estimate_extent">false</Parameter>
