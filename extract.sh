@@ -1,6 +1,7 @@
 #!/bin/sh -ex
 
 cd /mnt
+chmod a+rwx .
 
 echo '# begin', `date` > log.txt
 
