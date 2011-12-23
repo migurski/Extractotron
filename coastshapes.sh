@@ -82,6 +82,9 @@ zip -j - ex/merc/florence.??? > ex/florence.shp.zip
 ogr2ogr -spat 7.811 49.632 9.442 50.447 -t_srs EPSG:900913 ex/merc/frankfurt.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/frankfurt.??? > ex/frankfurt.shp.zip
 
+ogr2ogr -spat 18.174 54.007 19.113 54.870 -t_srs EPSG:900913 ex/merc/gdansk.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/gdansk.??? > ex/gdansk.shp.zip
+
 ogr2ogr -spat -4.613 55.668 -3.935 56.034 -t_srs EPSG:900913 ex/merc/glasgow.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/glasgow.??? > ex/glasgow.shp.zip
 
@@ -90,6 +93,9 @@ zip -j - ex/merc/hamburg.??? > ex/hamburg.shp.zip
 
 ogr2ogr -spat 28.313 40.738 29.678 41.421 -t_srs EPSG:900913 ex/merc/istanbul.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/istanbul.??? > ex/istanbul.shp.zip
+
+ogr2ogr -spat 19.594 49.850 20.275 50.240 -t_srs EPSG:900913 ex/merc/krakow.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/krakow.??? > ex/krakow.shp.zip
 
 ogr2ogr -spat -1.717 53.697 -1.33 53.921 -t_srs EPSG:900913 ex/merc/leeds.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/leeds.??? > ex/leeds.shp.zip
@@ -145,6 +151,9 @@ zip -j - ex/merc/toulouse.??? > ex/toulouse.shp.zip
 ogr2ogr -spat 20.341 51.845 21.692 52.623 -t_srs EPSG:900913 ex/merc/warsaw.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/warsaw.??? > ex/warsaw.shp.zip
 
+ogr2ogr -spat 16.652 50.877 17.363 51.311 -t_srs EPSG:900913 ex/merc/wroclaw.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/wroclaw.??? > ex/wroclaw.shp.zip
+
 ogr2ogr -spat 43.786 32.9671 44.862 33.715 -t_srs EPSG:900913 ex/merc/baghdad.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/baghdad.??? > ex/baghdad.shp.zip
 
@@ -186,6 +195,9 @@ zip -j - ex/merc/las-vegas.??? > ex/las-vegas.shp.zip
 
 ogr2ogr -spat -119.437 33.298 -116.724 34.583 -t_srs EPSG:900913 ex/merc/los-angeles.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/los-angeles.??? > ex/los-angeles.shp.zip
+
+ogr2ogr -spat -89.854 42.801 -88.992 43.343 -t_srs EPSG:900913 ex/merc/madison.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/madison.??? > ex/madison.shp.zip
 
 ogr2ogr -spat -99.597 18.992 -98.606 19.921 -t_srs EPSG:900913 ex/merc/mexico-city.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/mexico-city.??? > ex/mexico-city.shp.zip
