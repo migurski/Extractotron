@@ -1,6 +1,6 @@
 bunzip2 -c planet-latest.osm.bz2 | osmosis-*/bin/osmosis --rx file=- \
     --log-progress interval=60 \
-    --tee outputCount=98 \
+    --tee outputCount=101 \
     \
     --bb top=30.564 left=30.897 bottom=29.761 right=31.710 \
         --tee outputCount=2 --wx file=ex/cairo.osm.bz2 --wb file=ex/cairo.osm.pbf \
@@ -8,6 +8,8 @@ bunzip2 -c planet-latest.osm.bz2 | osmosis-*/bin/osmosis --rx file=- \
         --tee outputCount=2 --wx file=ex/johannesburg.osm.bz2 --wb file=ex/johannesburg.osm.pbf \
     --bb top=6.910 left=2.889 bottom=6.320 right=3.834 \
         --tee outputCount=2 --wx file=ex/lagos.osm.bz2 --wb file=ex/lagos.osm.pbf \
+    --bb top=39.439 left=32.105 bottom=40.372 right=33.509 \
+        --tee outputCount=2 --wx file=ex/ankara.osm.bz2 --wb file=ex/ankara.osm.pbf \
     --bb top=15.019 left=99.569 bottom=12.661 right=101.337 \
         --tee outputCount=2 --wx file=ex/bangkok.osm.bz2 --wb file=ex/bangkok.osm.pbf \
     --bb top=40.426 left=115.686 bottom=39.414 right=117.119 \
@@ -96,6 +98,8 @@ bunzip2 -c planet-latest.osm.bz2 | osmosis-*/bin/osmosis --rx file=- \
         --tee outputCount=2 --wx file=ex/rome.osm.bz2 --wb file=ex/rome.osm.pbf \
     --bb top=52.109 left=3.911 bottom=51.737 right=4.784 \
         --tee outputCount=2 --wx file=ex/rotterdam.osm.bz2 --wb file=ex/rotterdam.osm.pbf \
+    --bb top=42.380 left=22.870 bottom=43.040 right=23.830 \
+        --tee outputCount=2 --wx file=ex/sofia.osm.bz2 --wb file=ex/sofia.osm.pbf \
     --bb top=59.908 left=17.061 bottom=58.850 right=19.055 \
         --tee outputCount=2 --wx file=ex/stockholm.osm.bz2 --wb file=ex/stockholm.osm.pbf \
     --bb top=60.345 left=29.168 bottom=59.556 right=31.173 \
@@ -110,6 +114,8 @@ bunzip2 -c planet-latest.osm.bz2 | osmosis-*/bin/osmosis --rx file=- \
         --tee outputCount=2 --wx file=ex/baghdad.osm.bz2 --wb file=ex/baghdad.osm.pbf \
     --bb top=25.098 left=46.227 bottom=24.292 right=47.202 \
         --tee outputCount=2 --wx file=ex/riyadh.osm.bz2 --wb file=ex/riyadh.osm.pbf \
+    --bb top=34.081 left=68.48 bottom=34.95 right=69.86 \
+        --tee outputCount=2 --wx file=ex/kabul.osm.bz2 --wb file=ex/kabul.osm.pbf \
     --bb top=34.090 left=-84.857 bottom=33.414 right=-83.890 \
         --tee outputCount=2 --wx file=ex/atlanta.osm.bz2 --wb file=ex/atlanta.osm.pbf \
     --bb top=30.670 left=-98.212 bottom=29.931 right=-97.234 \
