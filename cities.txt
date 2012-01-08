@@ -55,6 +55,7 @@ Europe	756135	52.623	20.341	51.845	21.692	warsaw	Warsaw
 Europe	3081368	51.311	16.652	50.877	17.363	wroclaw	Wroclaw
 Middle East	98182	33.715	43.786	32.9671	44.862	baghdad	Baghdad
 Middle East	108410	25.098	46.227	24.292	47.202	riyadh	Riyadh
+Middle East	1124990	34.371	68.939	34.657	69.4	kabul	Kabul
 North America	4180439	34.090	-84.857	33.414	-83.890	atlanta	Atlanta
 North America	4671654	30.670	-98.212	29.931	-97.234	austin	Austin
 North America	4930956	42.702	-71.861	41.951	-70.285	boston	Boston
