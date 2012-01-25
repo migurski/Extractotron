@@ -7,7 +7,7 @@ zip -j - ex/merc/johannesburg.??? > ex/johannesburg.shp.zip
 ogr2ogr -spat 2.889 6.320 3.834 6.910 -t_srs EPSG:900913 ex/merc/lagos.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/lagos.??? > ex/lagos.shp.zip
 
-ogr2ogr -spat 32.105 40.372 33.509 39.439 -t_srs EPSG:900913 ex/merc/ankara.shp ex/wgs84/processed_p.shp
+ogr2ogr -spat 32.105 39.439 33.509 40.372 -t_srs EPSG:900913 ex/merc/ankara.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/ankara.??? > ex/ankara.shp.zip
 
 ogr2ogr -spat 99.569 12.661 101.337 15.019 -t_srs EPSG:900913 ex/merc/bangkok.shp ex/wgs84/processed_p.shp
@@ -142,7 +142,7 @@ zip -j - ex/merc/rome.??? > ex/rome.shp.zip
 ogr2ogr -spat 3.911 51.737 4.784 52.109 -t_srs EPSG:900913 ex/merc/rotterdam.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/rotterdam.??? > ex/rotterdam.shp.zip
 
-ogr2ogr -spat 22.870 43.040 23.830 42.380 -t_srs EPSG:900913 ex/merc/sofia.shp ex/wgs84/processed_p.shp
+ogr2ogr -spat 22.870 42.380 23.830 43.040 -t_srs EPSG:900913 ex/merc/sofia.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/sofia.??? > ex/sofia.shp.zip
 
 ogr2ogr -spat 17.061 58.850 19.055 59.908 -t_srs EPSG:900913 ex/merc/stockholm.shp ex/wgs84/processed_p.shp
@@ -166,7 +166,7 @@ zip -j - ex/merc/baghdad.??? > ex/baghdad.shp.zip
 ogr2ogr -spat 46.227 24.292 47.202 25.098 -t_srs EPSG:900913 ex/merc/riyadh.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/riyadh.??? > ex/riyadh.shp.zip
 
-ogr2ogr -spat 68.48 34.95 69.86 34.081 -t_srs EPSG:900913 ex/merc/kabul.shp ex/wgs84/processed_p.shp
+ogr2ogr -spat 68.48 34.081 69.86 34.95 -t_srs EPSG:900913 ex/merc/kabul.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/kabul.??? > ex/kabul.shp.zip
 
 ogr2ogr -spat -84.857 33.414 -83.890 34.090 -t_srs EPSG:900913 ex/merc/atlanta.shp ex/wgs84/processed_p.shp

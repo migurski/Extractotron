@@ -8,7 +8,7 @@ bunzip2 -c planet-latest.osm.bz2 | osmosis-*/bin/osmosis --rx file=- \
         --tee outputCount=2 --wx file=ex/johannesburg.osm.bz2 --wb file=ex/johannesburg.osm.pbf \
     --bb top=6.910 left=2.889 bottom=6.320 right=3.834 \
         --tee outputCount=2 --wx file=ex/lagos.osm.bz2 --wb file=ex/lagos.osm.pbf \
-    --bb top=39.439 left=32.105 bottom=40.372 right=33.509 \
+    --bb top=40.372 left=32.105 bottom=39.439 right=33.509 \
         --tee outputCount=2 --wx file=ex/ankara.osm.bz2 --wb file=ex/ankara.osm.pbf \
     --bb top=15.019 left=99.569 bottom=12.661 right=101.337 \
         --tee outputCount=2 --wx file=ex/bangkok.osm.bz2 --wb file=ex/bangkok.osm.pbf \
@@ -98,7 +98,7 @@ bunzip2 -c planet-latest.osm.bz2 | osmosis-*/bin/osmosis --rx file=- \
         --tee outputCount=2 --wx file=ex/rome.osm.bz2 --wb file=ex/rome.osm.pbf \
     --bb top=52.109 left=3.911 bottom=51.737 right=4.784 \
         --tee outputCount=2 --wx file=ex/rotterdam.osm.bz2 --wb file=ex/rotterdam.osm.pbf \
-    --bb top=42.380 left=22.870 bottom=43.040 right=23.830 \
+    --bb top=43.040 left=22.870 bottom=42.380 right=23.830 \
         --tee outputCount=2 --wx file=ex/sofia.osm.bz2 --wb file=ex/sofia.osm.pbf \
     --bb top=59.908 left=17.061 bottom=58.850 right=19.055 \
         --tee outputCount=2 --wx file=ex/stockholm.osm.bz2 --wb file=ex/stockholm.osm.pbf \
@@ -114,7 +114,7 @@ bunzip2 -c planet-latest.osm.bz2 | osmosis-*/bin/osmosis --rx file=- \
         --tee outputCount=2 --wx file=ex/baghdad.osm.bz2 --wb file=ex/baghdad.osm.pbf \
     --bb top=25.098 left=46.227 bottom=24.292 right=47.202 \
         --tee outputCount=2 --wx file=ex/riyadh.osm.bz2 --wb file=ex/riyadh.osm.pbf \
-    --bb top=34.081 left=68.48 bottom=34.95 right=69.86 \
+    --bb top=34.95 left=68.48 bottom=34.081 right=69.86 \
         --tee outputCount=2 --wx file=ex/kabul.osm.bz2 --wb file=ex/kabul.osm.pbf \
     --bb top=34.090 left=-84.857 bottom=33.414 right=-83.890 \
         --tee outputCount=2 --wx file=ex/atlanta.osm.bz2 --wb file=ex/atlanta.osm.pbf \
