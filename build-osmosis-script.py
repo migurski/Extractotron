@@ -20,7 +20,9 @@ print >> osmosis, '    --tee outputCount=%d \\' % len(cities)
 print >> osmosis, '    \\'
 
 for city in cities:
-    print >> osmosis, '    --bb top=%(top)s left=%(left)s bottom=%(bottom)s right=%(right)s \\' % city
+    xmin, xmax = min(float(city['left']), float(city['right'])), max(float(city['left']), float(city['right']))
+    ymin, ymax = min(float(city['bottom']), float(city['top'])), max(float(city['bottom']), float(city['top']))
+    print >> osmosis, '    --bb top=%(ymax).3f left=%(xmin).3f bottom=%(ymin).3f right=%(xmax).3f \\' % locals()
     print >> osmosis, '        --tee outputCount=2 --wx file=ex/%(slug)s.osm.bz2 --wb file=ex/%(slug)s.osm.pbf \\' % city
 
 print >> osmosis, ';'
