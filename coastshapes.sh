@@ -67,6 +67,12 @@ zip -j - ex/merc/berlin.??? > ex/berlin.shp.zip
 ogr2ogr -spat -2.536 52.214 -1.267 52.794 -t_srs EPSG:900913 ex/merc/birmingham.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/birmingham.??? > ex/birmingham.shp.zip
 
+ogr2ogr -spat -0.900 44.569 -0.162 45.065 -t_srs EPSG:900913 ex/merc/bordeaux.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/bordeaux.??? > ex/bordeaux.shp.zip
+
+ogr2ogr -spat 16.268 48.951 16.940 49.357 -t_srs EPSG:900913 ex/merc/brno.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/brno.??? > ex/brno.shp.zip
+
 ogr2ogr -spat 3.981 50.645 4.761 51.053 -t_srs EPSG:900913 ex/merc/brussels.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/brussels.??? > ex/brussels.shp.zip
 
