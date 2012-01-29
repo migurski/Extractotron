@@ -65,6 +65,7 @@ if __name__ == '__main__':
     user_data = user_data.replace('$SECRET', aws_secret)
     user_data = user_data.replace('$BUCKET', s3_bucket)
     user_data = user_data.replace('$OSMOSIS_HREF', post_script('osmosis.sh'))
+    user_data = user_data.replace('$OSM2PGSQL_HREF', post_script('osm2pgsql.sh'))
     user_data = user_data.replace('$COASTSHAPES_HREF', post_script('coastshapes.sh'))
     user_data = user_data.replace('$COASTERRORS_HREF', post_script('coastline-errors.sh'))
     

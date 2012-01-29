@@ -10,7 +10,7 @@ apt-get update > install.txt 2>&1
 apt-get install -y \
     apache2-mpm-worker openjdk-6-jre-headless python-boto libshp-dev libxml2-dev \
     libproj-dev zlib1g-dev libbz2-dev mapnik-utils gdal-bin subversion make zip \
-    postgresql-8.4-postgis postgresql-contrib-8.4 \
+    postgresql-8.4-postgis postgresql-contrib-8.4 osm2pgsql \
  >> install.txt 2>&1
 
 PERL_MM_USE_DEFAULT=1 perl -MCPAN -e 'install Tree::R' >> install.txt 2>&1
@@ -32,10 +32,12 @@ ln -sv /mnt/tmp /tmp
 
 
 curl -s $OSMOSIS_HREF > osmosis.sh
+curl -s $OSM2PGSQL_HREF > osm2pgsql.sh
 curl -s $COASTSHAPES_HREF > coastshapes.sh
 curl -s $COASTERRORS_HREF > coastline-errors.sh
 
 chmod +x osmosis.sh
+chmod +x osm2pgsql.sh
 chmod +x coastshapes.sh
 chmod +x coastline-errors.sh
 
@@ -65,6 +67,10 @@ mkdir ex
 ) &
 
 ./osmosis.sh > osmosis.txt 2>&1
+
+# makes .zip files in tmp
+sudo -u postgres ./osm2pgsql.sh > osm2pgsql.txt 2>&1
+cp tmp/*.shapefiles.zip tmp/*.geojson.zip tmp/*.kml.zip ex/
 
 wait
 
@@ -96,7 +102,7 @@ types = dict(bz2='application/x-bzip2', pbf='application/octet-stream', zip='app
 bucket = Bucket(S3Connection('$KEY', '$SECRET'), '$BUCKET')
 log = open('log.txt', 'a')
 
-for file in sorted(glob('ex/*.osm.???') + glob('ex/*.shp.zip')) + sorted(glob('ex/*.tar.bz2')):
+for file in sorted(glob('ex/*.osm.???') + glob('ex/*.zip')) + sorted(glob('ex/*.tar.bz2')):
     name = basename(file)
     type = types[name[-3:]]
     key = bucket.new_key(name)
