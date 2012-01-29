@@ -110,13 +110,3 @@ key = bucket.new_key('log.txt')
 key.set_contents_from_file(open('log.txt'), policy='public-read', headers={'Content-Type': 'text/plain'})
 
 SEND
-
-python <<KILL
-
-from urllib import urlopen
-from boto.ec2 import EC2Connection
-
-instance = urlopen('http://169.254.169.254/latest/meta-data/instance-id').read().strip()
-EC2Connection('$KEY', '$SECRET').terminate_instances(instance)
-
-KILL
