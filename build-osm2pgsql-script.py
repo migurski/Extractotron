@@ -1,4 +1,17 @@
-#!/bin/bash -x
+from sys import argv, stderr
+from csv import DictReader
+
+cities = list(DictReader(open('cities.txt'), dialect='excel-tab'))
+
+try:
+    (osm2pgsql, ) = argv[1:]
+except ValueError:
+    print >> stderr, 'Usage: build-osm2pgsql-script.py <osm2pgsql command file>'
+    exit(1)
+
+osm2pgsql = open(osm2pgsql, 'w')
+
+print >> osm2pgsql, """#!/bin/bash -x
 
 # 
 # This script expects to be run as the postgres user.
@@ -32,9 +45,11 @@ function osm2geodata
     echo "DROP TABLE ${slug}_osm_roads" | psql osm
     echo "DROP TABLE ${slug}_osm_ways" | psql osm
 }
+"""
 
-osm2geodata cairo &
-osm2geodata johannesburg &
-wait
-osm2geodata lagos &
-wait
+for offset in range(0, len(cities), 2):
+    for city in cities[offset:offset+2]:
+        print >> osm2pgsql, 'osm2geodata %(slug)s &' % city
+    print >> osm2pgsql, 'wait'
+
+osm2pgsql.close()

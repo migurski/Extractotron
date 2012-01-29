@@ -68,9 +68,9 @@ mkdir ex
 
 ./osmosis.sh > osmosis.txt 2>&1
 
-# makes .zip files in tmp
+# makes *.shapefiles.zip files in tmp
 sudo -u postgres ./osm2pgsql.sh > osm2pgsql.txt 2>&1
-cp tmp/*.shapefiles.zip tmp/*.geojson.zip tmp/*.kml.zip ex/
+cp tmp/*.shapefiles.zip ex/
 
 wait
 
