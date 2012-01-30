@@ -14,6 +14,7 @@ coastshapes = open(coastshapes, 'w')
 for city in cities:
     print >> coastshapes, 'ogr2ogr -spat %(left)s %(bottom)s %(right)s %(top)s -t_srs EPSG:900913 ex/merc/%(slug)s.shp ex/wgs84/processed_p.shp' % city
     print >> coastshapes, 'zip -j - ex/merc/%(slug)s.??? > ex/%(slug)s.shp.zip' % city
+    print >> coastshapes, 'cp ex/%(slug)s.shp.zip ex/%(slug)s.coastline.zip' % city
     print >> coastshapes, '' % city
 
 coastshapes.close()
