@@ -15,9 +15,3 @@ index.html: cities.txt
 previews: cities.txt
 	python compose-city-previews.py $@
 	touch previews
-
-clean:
-	rm -f osmosis.sh
-	rm -f osm2pgsql.sh
-	rm -f coastshapes.sh
-	rm -f previews/*.jpg
