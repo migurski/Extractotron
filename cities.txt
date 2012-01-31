@@ -63,16 +63,20 @@ North America	4671654	30.670	-98.212	29.931	-97.234	austin	Austin
 North America	4930956	42.702	-71.861	41.951	-70.285	boston	Boston
 North America	4887398	42.297	-88.505	41.339	-87.066	chicago	Chicago
 North America	5150529	41.918	-82.485	40.730	-80.798	cleveland	Cleveland
+North America	4509177;5151891	40.459	-83.482	39.542	-82.479	columbus-oh	Columbus and Delaware, OH
 North America	4684888	33.431	-97.789	32.166	-96.113	dallas	Dallas
 North America	5419384	40.204	-105.746	39.323	-104.334	denver	Denver
 North America	4990729	42.811	-83.875	41.836	-82.375	detroit	Detroit
 North America	4699066	30.261	-96.064	28.856	-94.378	houston	Houston
+North America	5565500	41.553	-124.744	39.988	-122.802	humboldt-ca	Humboldt, CA
 North America	5989045	51.003	-121.437	50.011	-119.514	kamloops	Kamloops
 North America	5506956	36.615	-115.581	35.757	-114.211	las-vegas	Las Vegas
+North America	4393217;4274277;4280539	39.419	-95.946	38.599	-94.048	kansas-city-lawrence-topeka	Kansas City, Lawrence, Topeka
 North America	5368361	34.583	-119.437	33.298	-116.724	los-angeles	Los Angeles
 North America	5261457	43.343	-89.854	42.801	-88.992	madison	Madison
 North America	3530597	19.921	-99.597	18.992	-98.606	mexico-city	Mexico City
 North America	4164138	26.912	-80.683	25.291	-79.774	miami	Miami
+North America	5263045	43.389	-88.511	42.656	-87.522	milwaukee	Milwaukee
 North America	5037649;5045360	45.410	-94.064	44.496	-92.543	mpls-stpaul	Minneapolis, St. Paul
 North America	6077243	46.057	-74.734	44.968	-72.723	montreal	Montreal
 North America	4335045	30.510	-90.653	28.887	-89.110	new-orleans	New Orleans
@@ -81,11 +85,14 @@ North America	4560349	40.308	-75.572	39.641	-74.641	philadelphia	Philadelphia
 North America	5308655	34.070	-112.821	32.796	-111.211	phoenix	Phoenix
 North America	5206379	40.880	-80.711	40.023	-79.249	pittsburgh	Pittsburgh
 North America	5746545	45.897	-123.211	45.096	-122.113	portland	Portland
+North America	5511077	39.769	-120.094	39.309	-119.506	reno	Reno
 North America	4407066	39.151	-91.010	38.069	-89.533	st-louis	St. Louis
+North America	5389489	38.955	-121.821	38.395	-120.995	sacramento	Sacramento
 North America	5391811;3981609	33.078	-117.376	32.312	-116.588	san-diego-tijuana	San Diego, Tijuana
 North America	5391959	37.955	-122.737	37.449	-122.011	san-francisco	San Francisco
 North America		38.719	-123.640	36.791	-121.025	sf-bay-area	San Francisco Bay Area
-North America	5809844	47.843	-122.538	47.380	-121.868	seattle	Seattle
+North America	5809844	47.843	-122.860	47.380	-121.868	seattle	Seattle
+North America	5213681	41.106	-78.280	40.572	-77.302	state-college-pa	State College, PA
 North America	4174757	28.376	-82.935	27.279	-82.012	tampa	Tampa
 North America	6167865	44.182	-80.161	43.201	-78.717	toronto	Toronto
 North America	6173331	49.475	-123.513	48.669	-121.777	vancouver	Vancouver

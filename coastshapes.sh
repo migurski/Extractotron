@@ -254,6 +254,10 @@ ogr2ogr -spat -82.485 40.730 -80.798 41.918 -t_srs EPSG:900913 ex/merc/cleveland
 zip -j - ex/merc/cleveland.??? > ex/cleveland.shp.zip
 cp ex/cleveland.shp.zip ex/cleveland.coastline.zip
 
+ogr2ogr -spat -83.482 39.542 -82.479 40.459 -t_srs EPSG:900913 ex/merc/columbus-oh.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/columbus-oh.??? > ex/columbus-oh.shp.zip
+cp ex/columbus-oh.shp.zip ex/columbus-oh.coastline.zip
+
 ogr2ogr -spat -97.789 32.166 -96.113 33.431 -t_srs EPSG:900913 ex/merc/dallas.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/dallas.??? > ex/dallas.shp.zip
 cp ex/dallas.shp.zip ex/dallas.coastline.zip
@@ -270,6 +274,10 @@ ogr2ogr -spat -96.064 28.856 -94.378 30.261 -t_srs EPSG:900913 ex/merc/houston.s
 zip -j - ex/merc/houston.??? > ex/houston.shp.zip
 cp ex/houston.shp.zip ex/houston.coastline.zip
 
+ogr2ogr -spat -124.744 39.988 -122.802 41.553 -t_srs EPSG:900913 ex/merc/humboldt-ca.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/humboldt-ca.??? > ex/humboldt-ca.shp.zip
+cp ex/humboldt-ca.shp.zip ex/humboldt-ca.coastline.zip
+
 ogr2ogr -spat -121.437 50.011 -119.514 51.003 -t_srs EPSG:900913 ex/merc/kamloops.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/kamloops.??? > ex/kamloops.shp.zip
 cp ex/kamloops.shp.zip ex/kamloops.coastline.zip
@@ -277,6 +285,10 @@ cp ex/kamloops.shp.zip ex/kamloops.coastline.zip
 ogr2ogr -spat -115.581 35.757 -114.211 36.615 -t_srs EPSG:900913 ex/merc/las-vegas.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/las-vegas.??? > ex/las-vegas.shp.zip
 cp ex/las-vegas.shp.zip ex/las-vegas.coastline.zip
+
+ogr2ogr -spat -95.946 38.599 -94.048 39.419 -t_srs EPSG:900913 ex/merc/kansas-city-lawrence-topeka.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/kansas-city-lawrence-topeka.??? > ex/kansas-city-lawrence-topeka.shp.zip
+cp ex/kansas-city-lawrence-topeka.shp.zip ex/kansas-city-lawrence-topeka.coastline.zip
 
 ogr2ogr -spat -119.437 33.298 -116.724 34.583 -t_srs EPSG:900913 ex/merc/los-angeles.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/los-angeles.??? > ex/los-angeles.shp.zip
@@ -293,6 +305,10 @@ cp ex/mexico-city.shp.zip ex/mexico-city.coastline.zip
 ogr2ogr -spat -80.683 25.291 -79.774 26.912 -t_srs EPSG:900913 ex/merc/miami.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/miami.??? > ex/miami.shp.zip
 cp ex/miami.shp.zip ex/miami.coastline.zip
+
+ogr2ogr -spat -88.511 42.656 -87.522 43.389 -t_srs EPSG:900913 ex/merc/milwaukee.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/milwaukee.??? > ex/milwaukee.shp.zip
+cp ex/milwaukee.shp.zip ex/milwaukee.coastline.zip
 
 ogr2ogr -spat -94.064 44.496 -92.543 45.410 -t_srs EPSG:900913 ex/merc/mpls-stpaul.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/mpls-stpaul.??? > ex/mpls-stpaul.shp.zip
@@ -326,9 +342,17 @@ ogr2ogr -spat -123.211 45.096 -122.113 45.897 -t_srs EPSG:900913 ex/merc/portlan
 zip -j - ex/merc/portland.??? > ex/portland.shp.zip
 cp ex/portland.shp.zip ex/portland.coastline.zip
 
+ogr2ogr -spat -120.094 39.309 -119.506 39.769 -t_srs EPSG:900913 ex/merc/reno.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/reno.??? > ex/reno.shp.zip
+cp ex/reno.shp.zip ex/reno.coastline.zip
+
 ogr2ogr -spat -91.010 38.069 -89.533 39.151 -t_srs EPSG:900913 ex/merc/st-louis.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/st-louis.??? > ex/st-louis.shp.zip
 cp ex/st-louis.shp.zip ex/st-louis.coastline.zip
+
+ogr2ogr -spat -121.821 38.395 -120.995 38.955 -t_srs EPSG:900913 ex/merc/sacramento.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/sacramento.??? > ex/sacramento.shp.zip
+cp ex/sacramento.shp.zip ex/sacramento.coastline.zip
 
 ogr2ogr -spat -117.376 32.312 -116.588 33.078 -t_srs EPSG:900913 ex/merc/san-diego-tijuana.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/san-diego-tijuana.??? > ex/san-diego-tijuana.shp.zip
@@ -342,9 +366,13 @@ ogr2ogr -spat -123.640 36.791 -121.025 38.719 -t_srs EPSG:900913 ex/merc/sf-bay-
 zip -j - ex/merc/sf-bay-area.??? > ex/sf-bay-area.shp.zip
 cp ex/sf-bay-area.shp.zip ex/sf-bay-area.coastline.zip
 
-ogr2ogr -spat -122.538 47.380 -121.868 47.843 -t_srs EPSG:900913 ex/merc/seattle.shp ex/wgs84/processed_p.shp
+ogr2ogr -spat -122.860 47.380 -121.868 47.843 -t_srs EPSG:900913 ex/merc/seattle.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/seattle.??? > ex/seattle.shp.zip
 cp ex/seattle.shp.zip ex/seattle.coastline.zip
+
+ogr2ogr -spat -78.280 40.572 -77.302 41.106 -t_srs EPSG:900913 ex/merc/state-college-pa.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/state-college-pa.??? > ex/state-college-pa.shp.zip
+cp ex/state-college-pa.shp.zip ex/state-college-pa.coastline.zip
 
 ogr2ogr -spat -82.935 27.279 -82.012 28.376 -t_srs EPSG:900913 ex/merc/tampa.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/tampa.??? > ex/tampa.shp.zip
