@@ -15,6 +15,7 @@ Asia	1853909	35.031	135.057	34.355	135.892	osaka	Osaka
 Asia	1835848	37.980	126.064	37.019	127.525	seoul	Seoul
 Asia	1796236	32.472	118.887	29.477	123.787	shanghai	Shanghai
 Asia	1880252	1.823	103.062	0.807	104.545	singapore	Singapore
+Asia	1668341	25.129	121.401	24.947	121.667	taipei		Taipei
 Asia	112931	35.917	50.87	35.383	51.648	tehran	Tehran
 Asia	1850147	36.558	138.779	34.867	141.152	tokyo	Tokyo
 Europe	2759794	52.629	4.465	52.163	5.347	amsterdam	Amsterdam
@@ -57,7 +58,8 @@ Europe	756135	52.623	20.341	51.845	21.692	warsaw	Warsaw
 Europe	3081368	51.311	16.652	50.877	17.363	wroclaw	Wroclaw
 Middle East	98182	33.715	43.786	32.9671	44.862	baghdad	Baghdad
 Middle East	108410	25.098	46.227	24.292	47.202	riyadh	Riyadh
-Middle East	1124990	34.95	68.48	34.081	69.86	kabul	Kabul
+Middle East	1138958	34.95	68.48	34.081	69.86	kabul	Kabul
+Middle East	170654  33.698	36.066	33.394	36.527	damascus	Damascus
 North America	4180439	34.090	-84.857	33.414	-83.890	atlanta	Atlanta
 North America	4671654	30.670	-98.212	29.931	-97.234	austin	Austin
 North America	4930956	42.702	-71.861	41.951	-70.285	boston	Boston
