@@ -58,47 +58,50 @@ wait
 osm2geodata shanghai &
 osm2geodata singapore &
 wait
+osm2geodata taipei &
 osm2geodata tehran &
+wait
 osm2geodata tokyo &
-wait
 osm2geodata amsterdam &
+wait
 osm2geodata athens &
-wait
 osm2geodata barcelona &
+wait
 osm2geodata berlin &
-wait
 osm2geodata birmingham &
+wait
 osm2geodata bordeaux &
-wait
 osm2geodata brno &
+wait
 osm2geodata brussels &
-wait
 osm2geodata budapest &
+wait
 osm2geodata copenhagen &
-wait
 osm2geodata edinburgh &
+wait
 osm2geodata florence &
-wait
 osm2geodata frankfurt &
+wait
 osm2geodata gdansk &
-wait
 osm2geodata glasgow &
+wait
 osm2geodata hamburg &
-wait
 osm2geodata istanbul &
+wait
 osm2geodata krakow &
-wait
 osm2geodata leeds &
+wait
 osm2geodata lille &
-wait
 osm2geodata lisbon &
+wait
 osm2geodata lyon &
-wait
 osm2geodata london &
-osm2geodata madrid &
 wait
+osm2geodata madrid &
 osm2geodata manchester &
+wait
 osm2geodata marseille &
+osm2geodata monaco &
 wait
 osm2geodata moscow &
 osm2geodata munich &
@@ -119,9 +122,12 @@ osm2geodata warsaw &
 osm2geodata wroclaw &
 wait
 osm2geodata baghdad &
-osm2geodata riyadh &
+osm2geodata damascus &
 wait
+osm2geodata dubai-abu-dhabi &
 osm2geodata kabul &
+wait
+osm2geodata riyadh &
 osm2geodata atlanta &
 wait
 osm2geodata austin &

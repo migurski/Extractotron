@@ -1,6 +1,6 @@
 bunzip2 -c planet-latest.osm.bz2 | osmosis-*/bin/osmosis --rx file=- \
     --log-progress interval=60 \
-    --tee outputCount=110 \
+    --tee outputCount=114 \
     \
     --bb top=30.564 left=30.897 bottom=29.761 right=31.710 \
         --tee outputCount=2 --wx file=ex/cairo.osm.bz2 --wb file=ex/cairo.osm.pbf \
@@ -34,6 +34,8 @@ bunzip2 -c planet-latest.osm.bz2 | osmosis-*/bin/osmosis --rx file=- \
         --tee outputCount=2 --wx file=ex/shanghai.osm.bz2 --wb file=ex/shanghai.osm.pbf \
     --bb top=1.823 left=103.062 bottom=0.807 right=104.545 \
         --tee outputCount=2 --wx file=ex/singapore.osm.bz2 --wb file=ex/singapore.osm.pbf \
+    --bb top=25.386 left=120.995 bottom=24.779 right=122.025 \
+        --tee outputCount=2 --wx file=ex/taipei.osm.bz2 --wb file=ex/taipei.osm.pbf \
     --bb top=35.917 left=50.870 bottom=35.383 right=51.648 \
         --tee outputCount=2 --wx file=ex/tehran.osm.bz2 --wb file=ex/tehran.osm.pbf \
     --bb top=36.558 left=138.779 bottom=34.867 right=141.152 \
@@ -90,6 +92,8 @@ bunzip2 -c planet-latest.osm.bz2 | osmosis-*/bin/osmosis --rx file=- \
         --tee outputCount=2 --wx file=ex/manchester.osm.bz2 --wb file=ex/manchester.osm.pbf \
     --bb top=43.554 left=4.905 bottom=43.038 right=5.776 \
         --tee outputCount=2 --wx file=ex/marseille.osm.bz2 --wb file=ex/marseille.osm.pbf \
+    --bb top=43.770 left=7.349 bottom=43.710 right=7.491 \
+        --tee outputCount=2 --wx file=ex/monaco.osm.bz2 --wb file=ex/monaco.osm.pbf \
     --bb top=56.200 left=36.870 bottom=55.285 right=38.430 \
         --tee outputCount=2 --wx file=ex/moscow.osm.bz2 --wb file=ex/moscow.osm.pbf \
     --bb top=48.523 left=10.799 bottom=47.717 right=12.178 \
@@ -116,10 +120,14 @@ bunzip2 -c planet-latest.osm.bz2 | osmosis-*/bin/osmosis --rx file=- \
         --tee outputCount=2 --wx file=ex/wroclaw.osm.bz2 --wb file=ex/wroclaw.osm.pbf \
     --bb top=33.715 left=43.786 bottom=32.967 right=44.862 \
         --tee outputCount=2 --wx file=ex/baghdad.osm.bz2 --wb file=ex/baghdad.osm.pbf \
-    --bb top=25.098 left=46.227 bottom=24.292 right=47.202 \
-        --tee outputCount=2 --wx file=ex/riyadh.osm.bz2 --wb file=ex/riyadh.osm.pbf \
+    --bb top=33.805 left=35.841 bottom=33.112 right=36.730 \
+        --tee outputCount=2 --wx file=ex/damascus.osm.bz2 --wb file=ex/damascus.osm.pbf \
+    --bb top=26.539 left=53.580 bottom=23.735 right=56.887 \
+        --tee outputCount=2 --wx file=ex/dubai-abu-dhabi.osm.bz2 --wb file=ex/dubai-abu-dhabi.osm.pbf \
     --bb top=34.950 left=68.480 bottom=34.081 right=69.860 \
         --tee outputCount=2 --wx file=ex/kabul.osm.bz2 --wb file=ex/kabul.osm.pbf \
+    --bb top=25.098 left=46.227 bottom=24.292 right=47.202 \
+        --tee outputCount=2 --wx file=ex/riyadh.osm.bz2 --wb file=ex/riyadh.osm.pbf \
     --bb top=34.090 left=-84.857 bottom=33.414 right=-83.890 \
         --tee outputCount=2 --wx file=ex/atlanta.osm.bz2 --wb file=ex/atlanta.osm.pbf \
     --bb top=30.670 left=-98.212 bottom=29.931 right=-97.234 \

@@ -62,6 +62,10 @@ ogr2ogr -spat 103.062 0.807 104.545 1.823 -t_srs EPSG:900913 ex/merc/singapore.s
 zip -j - ex/merc/singapore.??? > ex/singapore.shp.zip
 cp ex/singapore.shp.zip ex/singapore.coastline.zip
 
+ogr2ogr -spat 120.995 24.779 122.025 25.386 -t_srs EPSG:900913 ex/merc/taipei.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/taipei.??? > ex/taipei.shp.zip
+cp ex/taipei.shp.zip ex/taipei.coastline.zip
+
 ogr2ogr -spat 50.87 35.383 51.648 35.917 -t_srs EPSG:900913 ex/merc/tehran.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/tehran.??? > ex/tehran.shp.zip
 cp ex/tehran.shp.zip ex/tehran.coastline.zip
@@ -174,6 +178,10 @@ ogr2ogr -spat 4.905 43.038 5.776 43.554 -t_srs EPSG:900913 ex/merc/marseille.shp
 zip -j - ex/merc/marseille.??? > ex/marseille.shp.zip
 cp ex/marseille.shp.zip ex/marseille.coastline.zip
 
+ogr2ogr -spat 7.349 43.710 7.491 43.770 -t_srs EPSG:900913 ex/merc/monaco.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/monaco.??? > ex/monaco.shp.zip
+cp ex/monaco.shp.zip ex/monaco.coastline.zip
+
 ogr2ogr -spat 36.870 55.285 38.430 56.200 -t_srs EPSG:900913 ex/merc/moscow.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/moscow.??? > ex/moscow.shp.zip
 cp ex/moscow.shp.zip ex/moscow.coastline.zip
@@ -226,13 +234,21 @@ ogr2ogr -spat 43.786 32.9671 44.862 33.715 -t_srs EPSG:900913 ex/merc/baghdad.sh
 zip -j - ex/merc/baghdad.??? > ex/baghdad.shp.zip
 cp ex/baghdad.shp.zip ex/baghdad.coastline.zip
 
-ogr2ogr -spat 46.227 24.292 47.202 25.098 -t_srs EPSG:900913 ex/merc/riyadh.shp ex/wgs84/processed_p.shp
-zip -j - ex/merc/riyadh.??? > ex/riyadh.shp.zip
-cp ex/riyadh.shp.zip ex/riyadh.coastline.zip
+ogr2ogr -spat 35.841 33.112 36.730 33.805 -t_srs EPSG:900913 ex/merc/damascus.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/damascus.??? > ex/damascus.shp.zip
+cp ex/damascus.shp.zip ex/damascus.coastline.zip
+
+ogr2ogr -spat 53.580 23.735 56.887 26.539 -t_srs EPSG:900913 ex/merc/dubai-abu-dhabi.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/dubai-abu-dhabi.??? > ex/dubai-abu-dhabi.shp.zip
+cp ex/dubai-abu-dhabi.shp.zip ex/dubai-abu-dhabi.coastline.zip
 
 ogr2ogr -spat 68.48 34.081 69.86 34.95 -t_srs EPSG:900913 ex/merc/kabul.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/kabul.??? > ex/kabul.shp.zip
 cp ex/kabul.shp.zip ex/kabul.coastline.zip
+
+ogr2ogr -spat 46.227 24.292 47.202 25.098 -t_srs EPSG:900913 ex/merc/riyadh.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/riyadh.??? > ex/riyadh.shp.zip
+cp ex/riyadh.shp.zip ex/riyadh.coastline.zip
 
 ogr2ogr -spat -84.857 33.414 -83.890 34.090 -t_srs EPSG:900913 ex/merc/atlanta.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/atlanta.??? > ex/atlanta.shp.zip
