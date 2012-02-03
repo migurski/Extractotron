@@ -14,23 +14,24 @@ curl -o tmp/default.style http://svn.openstreetmap.org/applications/utils/export
 function osm2geodata
 {
     slug=$1
+    prefix=${slug/-/_}_osm
 
-    osm2pgsql -sluc -C 1024 -d osm -S tmp/default.style -p ${slug}_osm ex/$slug.osm.bz2 > /dev/null 2>&1
+    osm2pgsql -sluc -C 1024 -d osm -S tmp/default.style -p ${prefix} ex/$slug.osm.bz2 > /dev/null 2>&1
     
-    pgsql2shp -rk -f tmp/$slug.osm-point.shp osm ${slug}_osm_point
-    pgsql2shp -rk -f tmp/$slug.osm-polygon.shp osm ${slug}_osm_polygon
-    pgsql2shp -rk -f tmp/$slug.osm-line.shp osm ${slug}_osm_line
+    pgsql2shp -rk -f tmp/$slug.osm-point.shp osm ${prefix}_point
+    pgsql2shp -rk -f tmp/$slug.osm-polygon.shp osm ${prefix}_polygon
+    pgsql2shp -rk -f tmp/$slug.osm-line.shp osm ${prefix}_line
     zip -j tmp/$slug.shapefiles.zip tmp/$slug.osm-*.shp tmp/$slug.osm-*.prj tmp/$slug.osm-*.dbf tmp/$slug.osm-*.shx
 
     rm tmp/$slug.osm-*.*
     
-    echo "DROP TABLE ${slug}_osm_line" | psql osm
-    echo "DROP TABLE ${slug}_osm_nodes" | psql osm
-    echo "DROP TABLE ${slug}_osm_point" | psql osm
-    echo "DROP TABLE ${slug}_osm_polygon" | psql osm
-    echo "DROP TABLE ${slug}_osm_rels" | psql osm
-    echo "DROP TABLE ${slug}_osm_roads" | psql osm
-    echo "DROP TABLE ${slug}_osm_ways" | psql osm
+    echo "DROP TABLE ${prefix}_line" | psql osm
+    echo "DROP TABLE ${prefix}_nodes" | psql osm
+    echo "DROP TABLE ${prefix}_point" | psql osm
+    echo "DROP TABLE ${prefix}_polygon" | psql osm
+    echo "DROP TABLE ${prefix}_rels" | psql osm
+    echo "DROP TABLE ${prefix}_roads" | psql osm
+    echo "DROP TABLE ${prefix}_ways" | psql osm
 }
 
 osm2geodata cairo &
