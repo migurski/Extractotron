@@ -17,7 +17,8 @@ dimensions = Point(960, 600)
 
 base_url = 'http://osm-metro-extracts.s3.amazonaws.com/log.txt'
 extract_pat = compile(r'^((\S+)\.osm\.(bz2|pbf))\s+(\d+)$')
-coastshape_pat = compile(r'^((\S+)\.shp\.zip)\s+(\d+)$')
+coastshape_pat = compile(r'^((\S+)\.coastline\.zip)\s+(\d+)$')
+shapefiles_pat = compile(r'^((\S+)\.shapefiles\.zip)\s+(\d+)$')
 coastline_pat = compile(r'^((\w+)-(latlon|merc)\.tar\.bz2)\s+(\d+)$')
 months = '- Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split()
 
@@ -97,6 +98,13 @@ if __name__ == '__main__':
 
             key, slug_file = 'coastline', (file, int(size), urljoin(base_url, file))
         
+        elif shapefiles_pat.match(line):
+
+            match = shapefiles_pat.match(line)
+            file, slug, size = (match.group(g) for g in (1, 2, 3))
+
+            key, slug_file = 'shapefiles', (file, int(size), urljoin(base_url, file))
+        
         else:
             continue
         
@@ -144,7 +152,8 @@ if __name__ == '__main__':
     <ol>
         <li>Bzip’ed OpenStreetMap <a href="http://wiki.openstreetmap.org/wiki/.osm">XML data</a> in an <tt>.osm.bz2</tt> file.</li>
         <li>Compressed OpenStreetMap <a href="http://wiki.openstreetmap.org/wiki/PBF">binary PBF data</a> in an <tt>.osm.pbf</tt> file.</li>
-        <li><a href="#coastline">Coastline shapefile</a> extracts of the immediate area in a <tt>.shp.zip</tt> file.</li>
+        <li><a href="#coastline">Coastline shapefile</a> extracts of the immediate area in a <tt>.zip</tt> file.</li>
+        <li>Point, line and polygon shapefiles from <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql">Osm2pgsql</a> in a <tt>.zip</tt> file.</li>
     </ol>
     <p>
         Provided by <a href="http://mike.teczno.com">Michal Migurski</a> on an expected
@@ -192,12 +201,17 @@ if __name__ == '__main__':
             bz2_file, bz2_size, bz2_href = files[slug]['bz2']
             pbf_file, pbf_size, pbf_href = files[slug]['pbf']
             
-            list = ('<li class="file"><a href="%s">%s</a> (%s OSM data)</li>' * 2) \
-                 % (bz2_href, bz2_file, nice_size(bz2_size),
-                    pbf_href, pbf_file, nice_size(pbf_size))
+            list = ('<li class="file"><a href="%s">%s %s OSM data</a></li>' * 2) \
+                 % (bz2_href, nice_size(bz2_size), 'bzip’ed XML',
+                    pbf_href, nice_size(pbf_size), 'binary PBF')
             
-            coast_file, coast_size, coast_href = files[slug]['coastline']
-            list += '<li class="file"><a href="%s">%s</a> (%s coastline)</li>' % (coast_href, coast_file, nice_size(coast_size))
+            if 'coastline' in files[slug]:
+                coast_file, coast_size, coast_href = files[slug]['coastline']
+                list += '<li class="file"><a href="%s">%s coastline shapefile</a></li>' % (coast_href, nice_size(coast_size))
+
+            if 'shapefiles' in files[slug]:
+                shape_file, shape_size, shape_href = files[slug]['shapefiles']
+                list += '<li class="file"><a href="%s">%s osm2pgsql shapefiles</a></li>' % (shape_href, nice_size(shape_size))
 
             center = mmap.pointLocation(Point(dimensions.x/2, dimensions.y/2))
             zoom = mmap.coordinate.zoom
