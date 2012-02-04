@@ -262,6 +262,10 @@ ogr2ogr -spat -71.861 41.951 -70.285 42.702 -t_srs EPSG:900913 ex/merc/boston.sh
 zip -j - ex/merc/boston.??? > ex/boston.shp.zip
 cp ex/boston.shp.zip ex/boston.coastline.zip
 
+ogr2ogr -spat -81.307 34.919 -80.396 35.476 -t_srs EPSG:900913 ex/merc/charlotte.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/charlotte.??? > ex/charlotte.shp.zip
+cp ex/charlotte.shp.zip ex/charlotte.coastline.zip
+
 ogr2ogr -spat -88.505 41.339 -87.066 42.297 -t_srs EPSG:900913 ex/merc/chicago.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/chicago.??? > ex/chicago.shp.zip
 cp ex/chicago.shp.zip ex/chicago.coastline.zip

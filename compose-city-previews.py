@@ -19,7 +19,7 @@ dimensions = Point(310, 200)
 cities = list(DictReader(open('cities.txt'), dialect='excel-tab'))
 
 try:
-    (previews, ) = argv[1:]
+    previews, wanted = argv[1], argv[2:]
 except ValueError:
     print >> stderr, 'Usage: compose-city-previews.py <previews directory>'
     exit(1)
@@ -27,6 +27,9 @@ except ValueError:
 for city in cities:
     if not city['name']:
         raise Exception('Need a name for ' + str(city))
+
+    if wanted and city['slug'] not in wanted:
+        continue
 
     print >> stderr, city['name'], '...',
 
