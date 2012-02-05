@@ -1,6 +1,6 @@
 bunzip2 -c planet-latest.osm.bz2 | osmosis-*/bin/osmosis --rx file=- \
     --log-progress interval=60 \
-    --tee outputCount=115 \
+    --tee outputCount=116 \
     \
     --bb top=30.564 left=30.897 bottom=29.761 right=31.710 \
         --tee outputCount=2 --wx file=ex/cairo.osm.bz2 --wb file=ex/cairo.osm.pbf \
@@ -74,6 +74,8 @@ bunzip2 -c planet-latest.osm.bz2 | osmosis-*/bin/osmosis --rx file=- \
         --tee outputCount=2 --wx file=ex/hamburg.osm.bz2 --wb file=ex/hamburg.osm.pbf \
     --bb top=41.421 left=28.313 bottom=40.738 right=29.678 \
         --tee outputCount=2 --wx file=ex/istanbul.osm.bz2 --wb file=ex/istanbul.osm.pbf \
+    --bb top=49.246 left=7.893 bottom=48.730 right=8.816 \
+        --tee outputCount=2 --wx file=ex/karlsruhe.osm.bz2 --wb file=ex/karlsruhe.osm.pbf \
     --bb top=50.240 left=19.594 bottom=49.850 right=20.275 \
         --tee outputCount=2 --wx file=ex/krakow.osm.bz2 --wb file=ex/krakow.osm.pbf \
     --bb top=53.921 left=-1.717 bottom=53.697 right=-1.330 \

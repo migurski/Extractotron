@@ -35,6 +35,7 @@ Europe	3099434	54.870	18.174	54.007	19.113	gdansk	Gdansk
 Europe	2648579	56.034	-4.613	55.668	-3.935	glasgow	Glasgow
 Europe	2911298	53.833	9.376	53.159	10.678	hamburg	Hamburg
 Europe	745044	41.421	28.313	40.738	29.678	istanbul	Istanbul
+Europe	2892794	49.246	7.893	48.730	8.816	karlsruhe	Karlsruhe
 Europe	3094802	50.240	19.594	49.850	20.275	krakow	Krakow
 Europe	2644688	53.921	-1.717	53.697	-1.33	leeds	Leeds
 Europe	2998324	50.800	2.823	50.469	3.389	lille	Lille

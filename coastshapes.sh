@@ -142,6 +142,10 @@ ogr2ogr -spat 28.313 40.738 29.678 41.421 -t_srs EPSG:900913 ex/merc/istanbul.sh
 zip -j - ex/merc/istanbul.??? > ex/istanbul.shp.zip
 cp ex/istanbul.shp.zip ex/istanbul.coastline.zip
 
+ogr2ogr -spat 7.893 48.730 8.816 49.246 -t_srs EPSG:900913 ex/merc/karlsruhe.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/karlsruhe.??? > ex/karlsruhe.shp.zip
+cp ex/karlsruhe.shp.zip ex/karlsruhe.coastline.zip
+
 ogr2ogr -spat 19.594 49.850 20.275 50.240 -t_srs EPSG:900913 ex/merc/krakow.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/krakow.??? > ex/krakow.shp.zip
 cp ex/krakow.shp.zip ex/krakow.coastline.zip
