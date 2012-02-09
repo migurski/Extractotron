@@ -104,6 +104,7 @@ North America	6167865	44.182	-80.161	43.201	-78.717	toronto	Toronto
 North America	6173331	49.475	-123.513	48.669	-121.777	vancouver	Vancouver
 North America	6174041	48.871	-124.063	48.054	-122.568	victoria	Victoria
 North America	4140963;4347778	39.631	-77.599	38.539	-76.058	dc-baltimore	Washington D.C., Baltimore
+North America 4207400 32.969 -83.907 32.660 -83.482 macon-ga Macon, GA
 Oceania	2193733	-36.410	174.223	-37.348	175.314	auckland	Auckland
 Oceania	1642911	-5.881	106.435	-6.615	107.160	jakarta	Jakarta
 Oceania	2158177	-37.365	144.266	-38.552	145.810	melbourne	Melbourne
