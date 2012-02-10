@@ -79,6 +79,7 @@ North America	5989045	51.003	-121.437	50.011	-119.514	kamloops	Kamloops
 North America	5506956	36.615	-115.581	35.757	-114.211	las-vegas	Las Vegas
 North America	4393217;4274277;4280539	39.419	-95.946	38.599	-94.048	kansas-city-lawrence-topeka	Kansas City, Lawrence, Topeka
 North America	5368361	34.583	-119.437	33.298	-116.724	los-angeles	Los Angeles
+North America	4207400	32.969	-83.907	32.660	-83.482	macon-ga	Macon, GA
 North America	5261457	43.343	-89.854	42.801	-88.992	madison	Madison
 North America	3530597	19.921	-99.597	18.992	-98.606	mexico-city	Mexico City
 North America	4164138	26.912	-80.683	25.291	-79.774	miami	Miami
@@ -104,7 +105,6 @@ North America	6167865	44.182	-80.161	43.201	-78.717	toronto	Toronto
 North America	6173331	49.475	-123.513	48.669	-121.777	vancouver	Vancouver
 North America	6174041	48.871	-124.063	48.054	-122.568	victoria	Victoria
 North America	4140963;4347778	39.631	-77.599	38.539	-76.058	dc-baltimore	Washington D.C., Baltimore
-North America 4207400 32.969 -83.907 32.660 -83.482 macon-ga Macon, GA
 Oceania	2193733	-36.410	174.223	-37.348	175.314	auckland	Auckland
 Oceania	1642911	-5.881	106.435	-6.615	107.160	jakarta	Jakarta
 Oceania	2158177	-37.365	144.266	-38.552	145.810	melbourne	Melbourne

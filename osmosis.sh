@@ -1,6 +1,6 @@
 bunzip2 -c planet-latest.osm.bz2 | osmosis-*/bin/osmosis --rx file=- \
     --log-progress interval=60 \
-    --tee outputCount=116 \
+    --tee outputCount=117 \
     \
     --bb top=30.564 left=30.897 bottom=29.761 right=31.710 \
         --tee outputCount=2 --wx file=ex/cairo.osm.bz2 --wb file=ex/cairo.osm.pbf \
@@ -162,6 +162,8 @@ bunzip2 -c planet-latest.osm.bz2 | osmosis-*/bin/osmosis --rx file=- \
         --tee outputCount=2 --wx file=ex/kansas-city-lawrence-topeka.osm.bz2 --wb file=ex/kansas-city-lawrence-topeka.osm.pbf \
     --bb top=34.583 left=-119.437 bottom=33.298 right=-116.724 \
         --tee outputCount=2 --wx file=ex/los-angeles.osm.bz2 --wb file=ex/los-angeles.osm.pbf \
+    --bb top=32.969 left=-83.907 bottom=32.660 right=-83.482 \
+        --tee outputCount=2 --wx file=ex/macon-ga.osm.bz2 --wb file=ex/macon-ga.osm.pbf \
     --bb top=43.343 left=-89.854 bottom=42.801 right=-88.992 \
         --tee outputCount=2 --wx file=ex/madison.osm.bz2 --wb file=ex/madison.osm.pbf \
     --bb top=19.921 left=-99.597 bottom=18.992 right=-98.606 \

@@ -318,6 +318,10 @@ ogr2ogr -spat -119.437 33.298 -116.724 34.583 -t_srs EPSG:900913 ex/merc/los-ang
 zip -j - ex/merc/los-angeles.??? > ex/los-angeles.shp.zip
 cp ex/los-angeles.shp.zip ex/los-angeles.coastline.zip
 
+ogr2ogr -spat -83.907 32.660 -83.482 32.969 -t_srs EPSG:900913 ex/merc/macon-ga.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/macon-ga.??? > ex/macon-ga.shp.zip
+cp ex/macon-ga.shp.zip ex/macon-ga.coastline.zip
+
 ogr2ogr -spat -89.854 42.801 -88.992 43.343 -t_srs EPSG:900913 ex/merc/madison.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/madison.??? > ex/madison.shp.zip
 cp ex/madison.shp.zip ex/madison.coastline.zip
