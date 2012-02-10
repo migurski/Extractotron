@@ -35,6 +35,7 @@ curl -s $OSMOSIS_HREF > osmosis.sh
 curl -s $OSM2PGSQL_HREF > osm2pgsql.sh
 curl -s $COASTSHAPES_HREF > coastshapes.sh
 curl -s $COASTERRORS_HREF > coastline-errors.sh
+curl -s $OSM2STYLE_HREF > osm2pgsql.style
 
 chmod +x osmosis.sh
 chmod +x osm2pgsql.sh

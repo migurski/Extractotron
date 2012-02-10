@@ -9,14 +9,12 @@ createlang plpgsql osm
 psql -f /usr/share/postgresql/8.4/contrib/postgis-1.5/postgis.sql osm
 psql -f /usr/share/postgresql/8.4/contrib/postgis-1.5/spatial_ref_sys.sql osm
 
-curl -o tmp/default.style http://svn.openstreetmap.org/applications/utils/export/osm2pgsql/default.style
-
 function osm2geodata
 {
     slug=$1
     prefix=${slug/-/_}_osm
 
-    osm2pgsql -sluc -C 1024 -d osm -S tmp/default.style -p ${prefix} ex/$slug.osm.bz2 > /dev/null 2>&1
+    osm2pgsql -sluc -C 1024 -d osm -S osm2pgsql.style -p ${prefix} ex/$slug.osm.bz2 > /dev/null 2>&1
     
     pgsql2shp -rk -f tmp/$slug.osm-point.shp osm ${prefix}_point
     pgsql2shp -rk -f tmp/$slug.osm-polygon.shp osm ${prefix}_polygon

@@ -68,6 +68,7 @@ if __name__ == '__main__':
     user_data = user_data.replace('$OSM2PGSQL_HREF', post_script('osm2pgsql.sh'))
     user_data = user_data.replace('$COASTSHAPES_HREF', post_script('coastshapes.sh'))
     user_data = user_data.replace('$COASTERRORS_HREF', post_script('coastline-errors.sh'))
+    user_data = user_data.replace('$OSM2STYLE_HREF', post_script('osm2pgsql.style'))
     
     if options.run:
         conn = EC2Connection(aws_key, aws_secret)
