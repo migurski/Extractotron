@@ -29,10 +29,6 @@ node,way   source       text         delete   # This indicates that we shouldn't
 node,way   created_by   text         delete
 
 node,way   access       text         linear
-node,way   addr:housename      text  linear
-node,way   addr:housenumber    text  linear
-node,way   addr:interpolation  text  linear 
-node,way   admin_level  text         linear
 node,way   aerialway    text         linear
 node,way   aeroway      text         polygon
 node,way   amenity      text         nocache,polygon
@@ -44,21 +40,17 @@ node,way   bridge       text         linear
 node,way   boundary     text         linear
 node,way   building     text         polygon
 node       capital      text         linear
-node,way   construction text         linear
 node,way   covered      text         linear
 node,way   culvert      text         linear
 node,way   cutting      text         linear
-node,way   denomination text         linear
 node,way   disused      text         linear
 node       ele          text         linear
 node,way   embankment   text         linear
 node,way   foot         text         linear
-node,way   generator:source    text  linear
 node,way   harbour      text         polygon
 node,way   highway      text         linear
 node,way   historic     text         polygon
 node,way   horse        text         linear
-node,way   intermittent text         linear
 node,way   junction     text         linear
 node,way   landuse      text         polygon
 node,way   layer        text         linear
@@ -74,7 +66,6 @@ node,way   operator     text         linear
 node       poi          text
 node,way   population   text         linear
 node,way   power        text         polygon
-node,way   power_source text         linear
 node,way   place        text         polygon
 node,way   railway      text         linear
 node,way   ref          text         linear
