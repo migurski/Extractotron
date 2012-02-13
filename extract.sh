@@ -10,8 +10,12 @@ apt-get update > install.txt 2>&1
 apt-get install -y \
     apache2-mpm-worker openjdk-6-jre-headless python-boto libshp-dev libxml2-dev \
     libproj-dev zlib1g-dev libbz2-dev mapnik-utils gdal-bin subversion make zip \
-    postgresql-8.4-postgis postgresql-contrib-8.4 osm2pgsql \
+    postgresql-8.4-postgis postgresql-contrib-8.4 osm2pgsql build-essential \
+    libprotobuf-dev libtokyocabinet-dev libgeos-c1 libgeos-dev \
+    protobuf-compiler python-dev python-pip python-psycopg2 \
  >> install.txt 2>&1
+
+pip install shapely imposm.parser imposm
 
 PERL_MM_USE_DEFAULT=1 perl -MCPAN -e 'install Tree::R' >> install.txt 2>&1
 PERL_MM_USE_DEFAULT=1 perl -MCPAN -e 'install Bit::Vector' >> install.txt 2>&1
