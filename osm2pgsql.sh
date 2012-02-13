@@ -12,7 +12,7 @@ psql -f /usr/share/postgresql/8.4/contrib/postgis-1.5/spatial_ref_sys.sql osm
 function osm2geodata
 {
     slug=$1
-    prefix=${slug/-/_}_osm
+    prefix=${slug//-/_}_osm
 
     osm2pgsql -sluc -C 1024 -d osm -S osm2pgsql.style -p ${prefix} ex/$slug.osm.bz2 > /dev/null 2>&1
     
