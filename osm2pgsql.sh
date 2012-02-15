@@ -9,12 +9,14 @@ createlang plpgsql osm
 psql -f /usr/share/postgresql/8.4/contrib/postgis-1.5/postgis.sql osm
 psql -f /usr/share/postgresql/8.4/contrib/postgis-1.5/spatial_ref_sys.sql osm
 
+curl -o tmp/default.style http://svn.openstreetmap.org/applications/utils/export/osm2pgsql/default.style
+
 function osm2geodata
 {
     slug=$1
-    prefix=${slug//-/_}_osm
+    prefix=${slug/-/_}_osm
 
-    osm2pgsql -sluc -C 1024 -d osm -S osm2pgsql.style -p ${prefix} ex/$slug.osm.bz2 > /dev/null 2>&1
+    osm2pgsql -sluc -C 1024 -d osm -S tmp/default.style -p ${prefix} ex/$slug.osm.bz2 > /dev/null 2>&1
     
     pgsql2shp -rk -f tmp/$slug.osm-point.shp osm ${prefix}_point
     pgsql2shp -rk -f tmp/$slug.osm-polygon.shp osm ${prefix}_polygon
@@ -117,94 +119,95 @@ osm2geodata stockholm &
 osm2geodata st-petersburg &
 wait
 osm2geodata toulouse &
+osm2geodata venice &
+wait
 osm2geodata warsaw &
-wait
 osm2geodata wroclaw &
+wait
 osm2geodata baghdad &
-wait
 osm2geodata damascus &
+wait
 osm2geodata dubai-abu-dhabi &
-wait
 osm2geodata kabul &
+wait
 osm2geodata riyadh &
-wait
 osm2geodata atlanta &
+wait
 osm2geodata austin &
-wait
 osm2geodata boston &
+wait
 osm2geodata charlotte &
-wait
 osm2geodata chicago &
+wait
 osm2geodata cleveland &
-wait
 osm2geodata columbus-oh &
+wait
 osm2geodata dallas &
-wait
 osm2geodata denver &
+wait
 osm2geodata detroit &
-wait
 osm2geodata houston &
+wait
 osm2geodata humboldt-ca &
-wait
 osm2geodata kamloops &
+wait
 osm2geodata las-vegas &
-wait
 osm2geodata kansas-city-lawrence-topeka &
+wait
 osm2geodata los-angeles &
-wait
 osm2geodata macon-ga &
+wait
 osm2geodata madison &
-wait
 osm2geodata mexico-city &
+wait
 osm2geodata miami &
-wait
 osm2geodata milwaukee &
+wait
 osm2geodata mpls-stpaul &
-wait
 osm2geodata montreal &
+wait
 osm2geodata new-orleans &
-wait
 osm2geodata new-york &
+wait
 osm2geodata philadelphia &
-wait
 osm2geodata phoenix &
+wait
 osm2geodata pittsburgh &
-wait
 osm2geodata portland &
+wait
 osm2geodata reno &
-wait
 osm2geodata st-louis &
+wait
 osm2geodata sacramento &
-wait
 osm2geodata san-diego-tijuana &
+wait
 osm2geodata san-francisco &
-wait
 osm2geodata sf-bay-area &
+wait
 osm2geodata seattle &
-wait
 osm2geodata state-college-pa &
+wait
 osm2geodata tampa &
-wait
 osm2geodata toronto &
+wait
 osm2geodata vancouver &
-wait
 osm2geodata victoria &
+wait
 osm2geodata dc-baltimore &
-wait
 osm2geodata auckland &
+wait
 osm2geodata jakarta &
-wait
 osm2geodata melbourne &
+wait
 osm2geodata sydney &
-wait
 osm2geodata bogota &
+wait
 osm2geodata cartagena &
-wait
 osm2geodata buenos-aires &
+wait
 osm2geodata lima &
-wait
 osm2geodata rio-de-janeiro &
-osm2geodata sao-paulo &
 wait
+osm2geodata sao-paulo &
 osm2geodata santiago &
 wait

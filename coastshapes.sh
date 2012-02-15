@@ -226,6 +226,10 @@ ogr2ogr -spat 1.062 43.327 1.779 43.838 -t_srs EPSG:900913 ex/merc/toulouse.shp 
 zip -j - ex/merc/toulouse.??? > ex/toulouse.shp.zip
 cp ex/toulouse.shp.zip ex/toulouse.coastline.zip
 
+ogr2ogr -spat 11.629 45.123 12.735 45.811 -t_srs EPSG:900913 ex/merc/venice.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/venice.??? > ex/venice.shp.zip
+cp ex/venice.shp.zip ex/venice.coastline.zip
+
 ogr2ogr -spat 20.341 51.845 21.692 52.623 -t_srs EPSG:900913 ex/merc/warsaw.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/warsaw.??? > ex/warsaw.shp.zip
 cp ex/warsaw.shp.zip ex/warsaw.coastline.zip
