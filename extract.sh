@@ -20,6 +20,10 @@ pip install shapely imposm.parser imposm
 PERL_MM_USE_DEFAULT=1 perl -MCPAN -e 'install Tree::R' >> install.txt 2>&1
 PERL_MM_USE_DEFAULT=1 perl -MCPAN -e 'install Bit::Vector' >> install.txt 2>&1
 
+echo 'local all postgres              ident' > /etc/postgresql/8.4/main/pg_hba.conf
+echo 'host  all all      127.0.0.1/32 trust' >> /etc/postgresql/8.4/main/pg_hba.conf
+/etc/init.d/postgresql restart
+
 svn co http://svn.openstreetmap.org/applications/utils/coastcheck cc >> install.txt 2>&1
 cd cc
 make >> install.txt 2>&1
@@ -73,9 +77,9 @@ mkdir ex
 
 ./osmosis.sh > osmosis.txt 2>&1
 
-# makes *.shapefiles.zip files in tmp
+# makes *-shapefiles.zip files in tmp
 sudo -u postgres ./osm2pgsql.sh > osm2pgsql.txt 2>&1
-cp tmp/*.shapefiles.zip ex/
+cp tmp/*-shapefiles.zip ex/
 
 wait
 
