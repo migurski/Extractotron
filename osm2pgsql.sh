@@ -4,12 +4,14 @@
 # This script expects to be run as the postgres user.
 # 
 
-createdb osm
+createdb -E utf8 -T template0 osm
 createlang plpgsql osm
 psql -f /usr/share/postgresql/8.4/contrib/postgis-1.5/postgis.sql osm
 psql -f /usr/share/postgresql/8.4/contrib/postgis-1.5/spatial_ref_sys.sql osm
 
-function osm2geodata
+curl -o tmp/default.style http://svn.openstreetmap.org/applications/utils/export/osm2pgsql/default.style
+
+function osm2pgsql_shapefiles
 {
     slug=$1
     prefix=${slug//-/_}_osm
@@ -19,7 +21,7 @@ function osm2geodata
     pgsql2shp -rk -f tmp/$slug.osm-point.shp osm ${prefix}_point
     pgsql2shp -rk -f tmp/$slug.osm-polygon.shp osm ${prefix}_polygon
     pgsql2shp -rk -f tmp/$slug.osm-line.shp osm ${prefix}_line
-    zip -j tmp/$slug.shapefiles.zip tmp/$slug.osm-*.shp tmp/$slug.osm-*.prj tmp/$slug.osm-*.dbf tmp/$slug.osm-*.shx
+    zip -j tmp/$slug.osm2pgsql-shapefiles.zip tmp/$slug.osm-*.shp tmp/$slug.osm-*.prj tmp/$slug.osm-*.dbf tmp/$slug.osm-*.shx
 
     rm tmp/$slug.osm-*.*
     
@@ -32,179 +34,424 @@ function osm2geodata
     echo "DROP TABLE ${prefix}_ways" | psql osm
 }
 
-osm2geodata cairo &
-osm2geodata johannesburg &
+function imposm_shapefiles
+{
+    slug=$1
+    prefix=${slug//-/_}
+    
+    mkdir tmp/$slug-imposm
+    
+    imposm --read --cache-dir tmp/$slug-imposm --write --table-prefix=${prefix}_ --connect postgis://postgres:@127.0.0.1/osm ex/$slug.osm.pbf
+
+    pgsql2shp -rk -f tmp/$slug-imposm/$slug.osm-admin.shp osm ${prefix}_admin
+    pgsql2shp -rk -f tmp/$slug-imposm/$slug.osm-aeroways.shp osm ${prefix}_aeroways
+    pgsql2shp -rk -f tmp/$slug-imposm/$slug.osm-amenities.shp osm ${prefix}_amenities
+    pgsql2shp -rk -f tmp/$slug-imposm/$slug.osm-buildings.shp osm ${prefix}_buildings
+    pgsql2shp -rk -f tmp/$slug-imposm/$slug.osm-landusages.shp osm ${prefix}_landusages
+    pgsql2shp -rk -f tmp/$slug-imposm/$slug.osm-landusages_gen0.shp osm ${prefix}_landusages_gen0
+    pgsql2shp -rk -f tmp/$slug-imposm/$slug.osm-landusages_gen1.shp osm ${prefix}_landusages_gen1
+    pgsql2shp -rk -f tmp/$slug-imposm/$slug.osm-mainroads.shp osm ${prefix}_mainroads
+    pgsql2shp -rk -f tmp/$slug-imposm/$slug.osm-mainroads_gen0.shp osm ${prefix}_mainroads_gen0
+    pgsql2shp -rk -f tmp/$slug-imposm/$slug.osm-mainroads_gen1.shp osm ${prefix}_mainroads_gen1
+    pgsql2shp -rk -f tmp/$slug-imposm/$slug.osm-minorroads.shp osm ${prefix}_minorroads
+    pgsql2shp -rk -f tmp/$slug-imposm/$slug.osm-motorways.shp osm ${prefix}_motorways
+    pgsql2shp -rk -f tmp/$slug-imposm/$slug.osm-motorways_gen0.shp osm ${prefix}_motorways_gen0
+    pgsql2shp -rk -f tmp/$slug-imposm/$slug.osm-motorways_gen1.shp osm ${prefix}_motorways_gen1
+    pgsql2shp -rk -f tmp/$slug-imposm/$slug.osm-places.shp osm ${prefix}_places
+    pgsql2shp -rk -f tmp/$slug-imposm/$slug.osm-railways.shp osm ${prefix}_railways
+    pgsql2shp -rk -f tmp/$slug-imposm/$slug.osm-railways_gen0.shp osm ${prefix}_railways_gen0
+    pgsql2shp -rk -f tmp/$slug-imposm/$slug.osm-railways_gen1.shp osm ${prefix}_railways_gen1
+    pgsql2shp -rk -f tmp/$slug-imposm/$slug.osm-roads.shp osm ${prefix}_roads
+    pgsql2shp -rk -f tmp/$slug-imposm/$slug.osm-roads_gen0.shp osm ${prefix}_roads_gen0
+    pgsql2shp -rk -f tmp/$slug-imposm/$slug.osm-roads_gen1.shp osm ${prefix}_roads_gen1
+    pgsql2shp -rk -f tmp/$slug-imposm/$slug.osm-transport_areas.shp osm ${prefix}_transport_areas
+    pgsql2shp -rk -f tmp/$slug-imposm/$slug.osm-transport_points.shp osm ${prefix}_transport_points
+    pgsql2shp -rk -f tmp/$slug-imposm/$slug.osm-waterareas.shp osm ${prefix}_waterareas
+    pgsql2shp -rk -f tmp/$slug-imposm/$slug.osm-waterareas_gen0.shp osm ${prefix}_waterareas_gen0
+    pgsql2shp -rk -f tmp/$slug-imposm/$slug.osm-waterareas_gen1.shp osm ${prefix}_waterareas_gen1
+    pgsql2shp -rk -f tmp/$slug-imposm/$slug.osm-waterways.shp osm ${prefix}_waterways
+
+    zip -j tmp/$slug.imposm-shapefiles.zip tmp/$slug-imposm/$slug.osm-*.shp tmp/$slug-imposm/$slug.osm-*.prj tmp/$slug-imposm/$slug.osm-*.dbf tmp/$slug-imposm/$slug.osm-*.shx
+
+    rm -r tmp/$slug-imposm
+    
+    echo "DROP VIEW ${prefix}_roads" | psql osm
+    echo "DROP VIEW ${prefix}_roads_gen0" | psql osm
+    echo "DROP VIEW ${prefix}_roads_gen1" | psql osm
+    echo "DROP TABLE ${prefix}_admin" | psql osm
+    echo "DROP TABLE ${prefix}_aeroways" | psql osm
+    echo "DROP TABLE ${prefix}_amenities" | psql osm
+    echo "DROP TABLE ${prefix}_buildings" | psql osm
+    echo "DROP TABLE ${prefix}_landusages" | psql osm
+    echo "DROP TABLE ${prefix}_landusages_gen0" | psql osm
+    echo "DROP TABLE ${prefix}_landusages_gen1" | psql osm
+    echo "DROP TABLE ${prefix}_mainroads" | psql osm
+    echo "DROP TABLE ${prefix}_mainroads_gen0" | psql osm
+    echo "DROP TABLE ${prefix}_mainroads_gen1" | psql osm
+    echo "DROP TABLE ${prefix}_minorroads" | psql osm
+    echo "DROP TABLE ${prefix}_motorways" | psql osm
+    echo "DROP TABLE ${prefix}_motorways_gen0" | psql osm
+    echo "DROP TABLE ${prefix}_motorways_gen1" | psql osm
+    echo "DROP TABLE ${prefix}_places" | psql osm
+    echo "DROP TABLE ${prefix}_railways" | psql osm
+    echo "DROP TABLE ${prefix}_railways_gen0" | psql osm
+    echo "DROP TABLE ${prefix}_railways_gen1" | psql osm
+    echo "DROP TABLE ${prefix}_transport_areas" | psql osm
+    echo "DROP TABLE ${prefix}_transport_points" | psql osm
+    echo "DROP TABLE ${prefix}_waterareas" | psql osm
+    echo "DROP TABLE ${prefix}_waterareas_gen0" | psql osm
+    echo "DROP TABLE ${prefix}_waterareas_gen1" | psql osm
+    echo "DROP TABLE ${prefix}_waterways" | psql osm
+}
+
+osm2pgsql_shapefiles cairo &
+imposm_shapefiles cairo &
 wait
-osm2geodata lagos &
-osm2geodata ankara &
+osm2pgsql_shapefiles johannesburg &
+imposm_shapefiles johannesburg &
 wait
-osm2geodata bangkok &
-osm2geodata beijing &
+osm2pgsql_shapefiles lagos &
+imposm_shapefiles lagos &
 wait
-osm2geodata bengaluru &
-osm2geodata chennai &
+osm2pgsql_shapefiles ankara &
+imposm_shapefiles ankara &
 wait
-osm2geodata hong-kong &
-osm2geodata manila &
+osm2pgsql_shapefiles bangkok &
+imposm_shapefiles bangkok &
 wait
-osm2geodata mumbai &
-osm2geodata new-delhi &
+osm2pgsql_shapefiles beijing &
+imposm_shapefiles beijing &
 wait
-osm2geodata osaka &
-osm2geodata seoul &
+osm2pgsql_shapefiles bengaluru &
+imposm_shapefiles bengaluru &
 wait
-osm2geodata shanghai &
-osm2geodata singapore &
+osm2pgsql_shapefiles chennai &
+imposm_shapefiles chennai &
 wait
-osm2geodata taipei &
-osm2geodata tehran &
+osm2pgsql_shapefiles hong-kong &
+imposm_shapefiles hong-kong &
 wait
-osm2geodata tokyo &
-osm2geodata amsterdam &
+osm2pgsql_shapefiles manila &
+imposm_shapefiles manila &
 wait
-osm2geodata athens &
-osm2geodata barcelona &
+osm2pgsql_shapefiles mumbai &
+imposm_shapefiles mumbai &
 wait
-osm2geodata berlin &
-osm2geodata birmingham &
+osm2pgsql_shapefiles new-delhi &
+imposm_shapefiles new-delhi &
 wait
-osm2geodata bordeaux &
-osm2geodata brno &
+osm2pgsql_shapefiles osaka &
+imposm_shapefiles osaka &
 wait
-osm2geodata brussels &
-osm2geodata budapest &
+osm2pgsql_shapefiles seoul &
+imposm_shapefiles seoul &
 wait
-osm2geodata copenhagen &
-osm2geodata edinburgh &
+osm2pgsql_shapefiles shanghai &
+imposm_shapefiles shanghai &
 wait
-osm2geodata florence &
-osm2geodata frankfurt &
+osm2pgsql_shapefiles singapore &
+imposm_shapefiles singapore &
 wait
-osm2geodata gdansk &
-osm2geodata glasgow &
+osm2pgsql_shapefiles taipei &
+imposm_shapefiles taipei &
 wait
-osm2geodata hamburg &
-osm2geodata istanbul &
+osm2pgsql_shapefiles tehran &
+imposm_shapefiles tehran &
 wait
-osm2geodata karlsruhe &
-osm2geodata krakow &
+osm2pgsql_shapefiles tokyo &
+imposm_shapefiles tokyo &
 wait
-osm2geodata leeds &
-osm2geodata lille &
+osm2pgsql_shapefiles amsterdam &
+imposm_shapefiles amsterdam &
 wait
-osm2geodata lisbon &
-osm2geodata lyon &
+osm2pgsql_shapefiles athens &
+imposm_shapefiles athens &
 wait
-osm2geodata london &
-osm2geodata madrid &
+osm2pgsql_shapefiles barcelona &
+imposm_shapefiles barcelona &
 wait
-osm2geodata manchester &
-osm2geodata marseille &
+osm2pgsql_shapefiles berlin &
+imposm_shapefiles berlin &
 wait
-osm2geodata monaco &
-osm2geodata moscow &
+osm2pgsql_shapefiles birmingham &
+imposm_shapefiles birmingham &
 wait
-osm2geodata munich &
-osm2geodata paris &
+osm2pgsql_shapefiles bordeaux &
+imposm_shapefiles bordeaux &
 wait
-osm2geodata prague &
-osm2geodata rome &
+osm2pgsql_shapefiles brno &
+imposm_shapefiles brno &
 wait
-osm2geodata rotterdam &
-osm2geodata sofia &
+osm2pgsql_shapefiles brussels &
+imposm_shapefiles brussels &
 wait
-osm2geodata stockholm &
-osm2geodata st-petersburg &
+osm2pgsql_shapefiles budapest &
+imposm_shapefiles budapest &
 wait
-osm2geodata toulouse &
-osm2geodata warsaw &
+osm2pgsql_shapefiles copenhagen &
+imposm_shapefiles copenhagen &
 wait
-osm2geodata wroclaw &
-osm2geodata baghdad &
+osm2pgsql_shapefiles edinburgh &
+imposm_shapefiles edinburgh &
 wait
-osm2geodata damascus &
-osm2geodata dubai-abu-dhabi &
+osm2pgsql_shapefiles florence &
+imposm_shapefiles florence &
 wait
-osm2geodata kabul &
-osm2geodata riyadh &
+osm2pgsql_shapefiles frankfurt &
+imposm_shapefiles frankfurt &
 wait
-osm2geodata atlanta &
-osm2geodata austin &
+osm2pgsql_shapefiles gdansk &
+imposm_shapefiles gdansk &
 wait
-osm2geodata boston &
-osm2geodata charlotte &
+osm2pgsql_shapefiles glasgow &
+imposm_shapefiles glasgow &
 wait
-osm2geodata chicago &
-osm2geodata cleveland &
+osm2pgsql_shapefiles hamburg &
+imposm_shapefiles hamburg &
 wait
-osm2geodata columbus-oh &
-osm2geodata dallas &
+osm2pgsql_shapefiles istanbul &
+imposm_shapefiles istanbul &
 wait
-osm2geodata denver &
-osm2geodata detroit &
+osm2pgsql_shapefiles karlsruhe &
+imposm_shapefiles karlsruhe &
 wait
-osm2geodata houston &
-osm2geodata humboldt-ca &
+osm2pgsql_shapefiles krakow &
+imposm_shapefiles krakow &
 wait
-osm2geodata kamloops &
-osm2geodata las-vegas &
+osm2pgsql_shapefiles leeds &
+imposm_shapefiles leeds &
 wait
-osm2geodata kansas-city-lawrence-topeka &
-osm2geodata los-angeles &
+osm2pgsql_shapefiles lille &
+imposm_shapefiles lille &
 wait
-osm2geodata macon-ga &
-osm2geodata madison &
+osm2pgsql_shapefiles lisbon &
+imposm_shapefiles lisbon &
 wait
-osm2geodata mexico-city &
-osm2geodata miami &
+osm2pgsql_shapefiles lyon &
+imposm_shapefiles lyon &
 wait
-osm2geodata milwaukee &
-osm2geodata mpls-stpaul &
+osm2pgsql_shapefiles london &
+imposm_shapefiles london &
 wait
-osm2geodata montreal &
-osm2geodata new-orleans &
+osm2pgsql_shapefiles madrid &
+imposm_shapefiles madrid &
 wait
-osm2geodata new-york &
-osm2geodata philadelphia &
+osm2pgsql_shapefiles manchester &
+imposm_shapefiles manchester &
 wait
-osm2geodata phoenix &
-osm2geodata pittsburgh &
+osm2pgsql_shapefiles marseille &
+imposm_shapefiles marseille &
 wait
-osm2geodata portland &
-osm2geodata reno &
+osm2pgsql_shapefiles monaco &
+imposm_shapefiles monaco &
 wait
-osm2geodata st-louis &
-osm2geodata sacramento &
+osm2pgsql_shapefiles moscow &
+imposm_shapefiles moscow &
 wait
-osm2geodata san-diego-tijuana &
-osm2geodata san-francisco &
+osm2pgsql_shapefiles munich &
+imposm_shapefiles munich &
 wait
-osm2geodata sf-bay-area &
-osm2geodata seattle &
+osm2pgsql_shapefiles paris &
+imposm_shapefiles paris &
 wait
-osm2geodata state-college-pa &
-osm2geodata tampa &
+osm2pgsql_shapefiles prague &
+imposm_shapefiles prague &
 wait
-osm2geodata toronto &
-osm2geodata vancouver &
+osm2pgsql_shapefiles rome &
+imposm_shapefiles rome &
 wait
-osm2geodata victoria &
-osm2geodata dc-baltimore &
+osm2pgsql_shapefiles rotterdam &
+imposm_shapefiles rotterdam &
 wait
-osm2geodata auckland &
-osm2geodata jakarta &
+osm2pgsql_shapefiles sofia &
+imposm_shapefiles sofia &
 wait
-osm2geodata melbourne &
-osm2geodata sydney &
+osm2pgsql_shapefiles stockholm &
+imposm_shapefiles stockholm &
 wait
-osm2geodata bogota &
-osm2geodata cartagena &
+osm2pgsql_shapefiles st-petersburg &
+imposm_shapefiles st-petersburg &
 wait
-osm2geodata buenos-aires &
-osm2geodata lima &
+osm2pgsql_shapefiles toulouse &
+imposm_shapefiles toulouse &
 wait
-osm2geodata rio-de-janeiro &
-osm2geodata sao-paulo &
+osm2pgsql_shapefiles warsaw &
+imposm_shapefiles warsaw &
 wait
-osm2geodata santiago &
+osm2pgsql_shapefiles wroclaw &
+imposm_shapefiles wroclaw &
+wait
+osm2pgsql_shapefiles baghdad &
+imposm_shapefiles baghdad &
+wait
+osm2pgsql_shapefiles damascus &
+imposm_shapefiles damascus &
+wait
+osm2pgsql_shapefiles dubai-abu-dhabi &
+imposm_shapefiles dubai-abu-dhabi &
+wait
+osm2pgsql_shapefiles kabul &
+imposm_shapefiles kabul &
+wait
+osm2pgsql_shapefiles riyadh &
+imposm_shapefiles riyadh &
+wait
+osm2pgsql_shapefiles atlanta &
+imposm_shapefiles atlanta &
+wait
+osm2pgsql_shapefiles austin &
+imposm_shapefiles austin &
+wait
+osm2pgsql_shapefiles boston &
+imposm_shapefiles boston &
+wait
+osm2pgsql_shapefiles charlotte &
+imposm_shapefiles charlotte &
+wait
+osm2pgsql_shapefiles chicago &
+imposm_shapefiles chicago &
+wait
+osm2pgsql_shapefiles cleveland &
+imposm_shapefiles cleveland &
+wait
+osm2pgsql_shapefiles columbus-oh &
+imposm_shapefiles columbus-oh &
+wait
+osm2pgsql_shapefiles dallas &
+imposm_shapefiles dallas &
+wait
+osm2pgsql_shapefiles denver &
+imposm_shapefiles denver &
+wait
+osm2pgsql_shapefiles detroit &
+imposm_shapefiles detroit &
+wait
+osm2pgsql_shapefiles houston &
+imposm_shapefiles houston &
+wait
+osm2pgsql_shapefiles humboldt-ca &
+imposm_shapefiles humboldt-ca &
+wait
+osm2pgsql_shapefiles kamloops &
+imposm_shapefiles kamloops &
+wait
+osm2pgsql_shapefiles las-vegas &
+imposm_shapefiles las-vegas &
+wait
+osm2pgsql_shapefiles kansas-city-lawrence-topeka &
+imposm_shapefiles kansas-city-lawrence-topeka &
+wait
+osm2pgsql_shapefiles los-angeles &
+imposm_shapefiles los-angeles &
+wait
+osm2pgsql_shapefiles macon-ga &
+imposm_shapefiles macon-ga &
+wait
+osm2pgsql_shapefiles madison &
+imposm_shapefiles madison &
+wait
+osm2pgsql_shapefiles mexico-city &
+imposm_shapefiles mexico-city &
+wait
+osm2pgsql_shapefiles miami &
+imposm_shapefiles miami &
+wait
+osm2pgsql_shapefiles milwaukee &
+imposm_shapefiles milwaukee &
+wait
+osm2pgsql_shapefiles mpls-stpaul &
+imposm_shapefiles mpls-stpaul &
+wait
+osm2pgsql_shapefiles montreal &
+imposm_shapefiles montreal &
+wait
+osm2pgsql_shapefiles new-orleans &
+imposm_shapefiles new-orleans &
+wait
+osm2pgsql_shapefiles new-york &
+imposm_shapefiles new-york &
+wait
+osm2pgsql_shapefiles philadelphia &
+imposm_shapefiles philadelphia &
+wait
+osm2pgsql_shapefiles phoenix &
+imposm_shapefiles phoenix &
+wait
+osm2pgsql_shapefiles pittsburgh &
+imposm_shapefiles pittsburgh &
+wait
+osm2pgsql_shapefiles portland &
+imposm_shapefiles portland &
+wait
+osm2pgsql_shapefiles reno &
+imposm_shapefiles reno &
+wait
+osm2pgsql_shapefiles st-louis &
+imposm_shapefiles st-louis &
+wait
+osm2pgsql_shapefiles sacramento &
+imposm_shapefiles sacramento &
+wait
+osm2pgsql_shapefiles san-diego-tijuana &
+imposm_shapefiles san-diego-tijuana &
+wait
+osm2pgsql_shapefiles san-francisco &
+imposm_shapefiles san-francisco &
+wait
+osm2pgsql_shapefiles sf-bay-area &
+imposm_shapefiles sf-bay-area &
+wait
+osm2pgsql_shapefiles seattle &
+imposm_shapefiles seattle &
+wait
+osm2pgsql_shapefiles state-college-pa &
+imposm_shapefiles state-college-pa &
+wait
+osm2pgsql_shapefiles tampa &
+imposm_shapefiles tampa &
+wait
+osm2pgsql_shapefiles toronto &
+imposm_shapefiles toronto &
+wait
+osm2pgsql_shapefiles vancouver &
+imposm_shapefiles vancouver &
+wait
+osm2pgsql_shapefiles victoria &
+imposm_shapefiles victoria &
+wait
+osm2pgsql_shapefiles dc-baltimore &
+imposm_shapefiles dc-baltimore &
+wait
+osm2pgsql_shapefiles auckland &
+imposm_shapefiles auckland &
+wait
+osm2pgsql_shapefiles jakarta &
+imposm_shapefiles jakarta &
+wait
+osm2pgsql_shapefiles melbourne &
+imposm_shapefiles melbourne &
+wait
+osm2pgsql_shapefiles sydney &
+imposm_shapefiles sydney &
+wait
+osm2pgsql_shapefiles bogota &
+imposm_shapefiles bogota &
+wait
+osm2pgsql_shapefiles cartagena &
+imposm_shapefiles cartagena &
+wait
+osm2pgsql_shapefiles buenos-aires &
+imposm_shapefiles buenos-aires &
+wait
+osm2pgsql_shapefiles lima &
+imposm_shapefiles lima &
+wait
+osm2pgsql_shapefiles rio-de-janeiro &
+imposm_shapefiles rio-de-janeiro &
+wait
+osm2pgsql_shapefiles sao-paulo &
+imposm_shapefiles sao-paulo &
+wait
+osm2pgsql_shapefiles santiago &
+imposm_shapefiles santiago &
 wait
