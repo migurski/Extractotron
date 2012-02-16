@@ -22,8 +22,6 @@ createlang plpgsql osm
 psql -f /usr/share/postgresql/8.4/contrib/postgis-1.5/postgis.sql osm
 psql -f /usr/share/postgresql/8.4/contrib/postgis-1.5/spatial_ref_sys.sql osm
 
-curl -o tmp/default.style http://svn.openstreetmap.org/applications/utils/export/osm2pgsql/default.style
-
 function osm2pgsql_shapefiles
 {
     slug=$1
@@ -54,6 +52,7 @@ function imposm_shapefiles
     
     mkdir tmp/$slug-imposm
     
+    # "--connect" is an undocumented option for imposm; Olive Tonnhofer assures me it won't disappear in the future.
     imposm --read --cache-dir tmp/$slug-imposm --write --table-prefix=${prefix}_ --connect postgis://postgres:@127.0.0.1/osm ex/$slug.osm.pbf
 
     pgsql2shp -rk -f tmp/$slug-imposm/$slug.osm-admin.shp osm ${prefix}_admin
