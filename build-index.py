@@ -18,7 +18,8 @@ dimensions = Point(960, 600)
 base_url = 'http://osm-metro-extracts.s3.amazonaws.com/log.txt'
 extract_pat = compile(r'^((\S+)\.osm\.(bz2|pbf))\s+(\d+)$')
 coastshape_pat = compile(r'^((\S+)\.coastline\.zip)\s+(\d+)$')
-shapefiles_pat = compile(r'^((\S+)\.shapefiles\.zip)\s+(\d+)$')
+shp_imposm_pat = compile(r'^((\S+)\.imposm-shapefiles\.zip)\s+(\d+)$')
+shp_osm2pgsql_pat = compile(r'^((\S+)\..*\bshapefiles\.zip)\s+(\d+)$')
 coastline_pat = compile(r'^((\w+)-(latlon|merc)\.tar\.bz2)\s+(\d+)$')
 months = '- Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split()
 
@@ -98,13 +99,20 @@ if __name__ == '__main__':
 
             key, slug_file = 'coastline', (file, int(size), urljoin(base_url, file))
         
-        elif shapefiles_pat.match(line):
+        elif shp_imposm_pat.match(line):
 
-            match = shapefiles_pat.match(line)
+            match = shp_imposm_pat.match(line)
             file, slug, size = (match.group(g) for g in (1, 2, 3))
 
-            key, slug_file = 'shapefiles', (file, int(size), urljoin(base_url, file))
+            key, slug_file = 'imposm shapefiles', (file, int(size), urljoin(base_url, file))
         
+        elif shp_osm2pgsql_pat.match(line):
+
+            match = shp_osm2pgsql_pat.match(line)
+            file, slug, size = (match.group(g) for g in (1, 2, 3))
+
+            key, slug_file = 'osm2pgsql shapefiles', (file, int(size), urljoin(base_url, file))
+            
         else:
             continue
         
@@ -209,9 +217,13 @@ if __name__ == '__main__':
                 coast_file, coast_size, coast_href = files[slug]['coastline']
                 list += '<li class="file"><a href="%s">%s coastline shapefile</a></li>' % (coast_href, nice_size(coast_size))
 
-            if 'shapefiles' in files[slug]:
-                shape_file, shape_size, shape_href = files[slug]['shapefiles']
+            if 'osm2pgsql shapefiles' in files[slug]:
+                shape_file, shape_size, shape_href = files[slug]['osm2pgsql shapefiles']
                 list += '<li class="file"><a href="%s">%s osm2pgsql shapefiles</a></li>' % (shape_href, nice_size(shape_size))
+
+            if 'imposm shapefiles' in files[slug]:
+                shape_file, shape_size, shape_href = files[slug]['imposm shapefiles']
+                list += '<li class="file"><a href="%s">%s imposm shapefiles</a></li>' % (shape_href, nice_size(shape_size))
 
             center = mmap.pointLocation(Point(dimensions.x/2, dimensions.y/2))
             zoom = mmap.coordinate.zoom
