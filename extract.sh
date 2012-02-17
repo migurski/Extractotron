@@ -10,11 +10,19 @@ apt-get update > install.txt 2>&1
 apt-get install -y \
     apache2-mpm-worker openjdk-6-jre-headless python-boto libshp-dev libxml2-dev \
     libproj-dev zlib1g-dev libbz2-dev mapnik-utils gdal-bin subversion make zip \
-    postgresql-8.4-postgis postgresql-contrib-8.4 osm2pgsql \
+    postgresql-8.4-postgis postgresql-contrib-8.4 osm2pgsql build-essential \
+    libprotobuf-dev libtokyocabinet-dev libgeos-c1 libgeos-dev \
+    protobuf-compiler python-dev python-pip python-psycopg2 \
  >> install.txt 2>&1
+
+pip install shapely imposm.parser imposm
 
 PERL_MM_USE_DEFAULT=1 perl -MCPAN -e 'install Tree::R' >> install.txt 2>&1
 PERL_MM_USE_DEFAULT=1 perl -MCPAN -e 'install Bit::Vector' >> install.txt 2>&1
+
+echo 'local all postgres              ident' > /etc/postgresql/8.4/main/pg_hba.conf
+echo 'host  all all      127.0.0.1/32 trust' >> /etc/postgresql/8.4/main/pg_hba.conf
+/etc/init.d/postgresql restart
 
 svn co http://svn.openstreetmap.org/applications/utils/coastcheck cc >> install.txt 2>&1
 cd cc
@@ -69,9 +77,9 @@ mkdir ex
 
 ./osmosis.sh > osmosis.txt 2>&1
 
-# makes *.shapefiles.zip files in tmp
+# makes *-shapefiles.zip files in tmp
 sudo -u postgres ./osm2pgsql.sh > osm2pgsql.txt 2>&1
-cp tmp/*.shapefiles.zip ex/
+cp tmp/*-shapefiles.zip ex/
 
 wait
 
@@ -87,33 +95,3 @@ for NAME in processed_p processed_i coastline_p coastline_i post_errors post_mis
 done
 
 ./coastshapes.sh > coastshapes.txt 2>&1
-
-
-python <<SEND
-
-from os import stat
-from glob import glob
-from sys import stderr
-from os.path import basename
-
-from boto.s3.connection import S3Connection
-from boto.s3.bucket import Bucket
-
-types = dict(bz2='application/x-bzip2', pbf='application/octet-stream', zip='application/zip')
-bucket = Bucket(S3Connection('$KEY', '$SECRET'), '$BUCKET')
-log = open('log.txt', 'a')
-
-for file in sorted(glob('ex/*.osm.???') + glob('ex/*.zip')) + sorted(glob('ex/*.tar.bz2')):
-    name = basename(file)
-    type = types[name[-3:]]
-    key = bucket.new_key(name)
-    key.set_contents_from_file(open(file), policy='public-read', headers={'Content-Type': type})
-
-    print >> stderr, file
-    print >> log, name, stat(file).st_size
-
-log.close()
-key = bucket.new_key('log.txt')
-key.set_contents_from_file(open('log.txt'), policy='public-read', headers={'Content-Type': 'text/plain'})
-
-SEND

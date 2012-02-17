@@ -8,7 +8,7 @@ from urllib import urlencode
 
 parser = OptionParser(usage="%prog [options] <aws key> <aws secret> <s3 bucket>")
 
-defaults = dict(ami_id='ami-71589518', type='m2.xlarge', run=True, kill=True)
+defaults = dict(ami_id='ami-71589518', type='m2.xlarge', run=True, upload=True, kill=True)
 
 parser.set_defaults(**defaults)
 
@@ -20,6 +20,9 @@ parser.add_option('--type', dest='type',
 
 parser.add_option('--no-run', dest='run', action='store_false',
                   help="Don't actually run the instance, just output user-data.")
+
+parser.add_option('--no-upload', dest='upload', action='store_false',
+                  help="Don't instruct the instance to upload resulting files.")
 
 parser.add_option('--no-kill', dest='kill', action='store_false',
                   help="Don't instruct the instance to kill itself at the end.")
@@ -58,6 +61,9 @@ if __name__ == '__main__':
     
     user_data = open('extract.sh').read()
     
+    if options.upload:
+        user_data += open('upload-files.sh').read()
+
     if options.kill:
         user_data += open('kill-self.sh').read()
 
