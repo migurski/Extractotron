@@ -9,14 +9,12 @@ createlang plpgsql osm
 psql -f /usr/share/postgresql/8.4/contrib/postgis-1.5/postgis.sql osm
 psql -f /usr/share/postgresql/8.4/contrib/postgis-1.5/spatial_ref_sys.sql osm
 
-curl -o tmp/default.style http://svn.openstreetmap.org/applications/utils/export/osm2pgsql/default.style
-
 function osm2pgsql_shapefiles
 {
     slug=$1
-    prefix=${slug/-/_}_osm
+    prefix=${slug//-/_}_osm
 
-    osm2pgsql -sluc -C 1024 -d osm -S tmp/default.style -p ${prefix} ex/$slug.osm.bz2 > /dev/null 2>&1
+    osm2pgsql -sluc -C 1024 -d osm -S osm2pgsql.style -p ${prefix} ex/$slug.osm.bz2 > /dev/null 2>&1
     
     pgsql2shp -rk -f tmp/$slug.osm-point.shp osm ${prefix}_point
     pgsql2shp -rk -f tmp/$slug.osm-polygon.shp osm ${prefix}_polygon
@@ -41,6 +39,7 @@ function imposm_shapefiles
     
     mkdir tmp/$slug-imposm
     
+    # "--connect" is an undocumented option for imposm; Olive Tonnhofer assures me it won't disappear in the future.
     imposm --read --cache-dir tmp/$slug-imposm --write --table-prefix=${prefix}_ --connect postgis://postgres:@127.0.0.1/osm ex/$slug.osm.pbf
 
     pgsql2shp -rk -f tmp/$slug-imposm/$slug.osm-admin.shp osm ${prefix}_admin
@@ -274,6 +273,9 @@ imposm_shapefiles st-petersburg &
 wait
 osm2pgsql_shapefiles toulouse &
 imposm_shapefiles toulouse &
+wait
+osm2pgsql_shapefiles venice &
+imposm_shapefiles venice &
 wait
 osm2pgsql_shapefiles warsaw &
 imposm_shapefiles warsaw &
