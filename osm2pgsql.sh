@@ -403,6 +403,9 @@ wait
 osm2pgsql_shapefiles sf-bay-area &
 imposm_shapefiles sf-bay-area &
 wait
+osm2pgsql_shapefiles santa-barbara &
+imposm_shapefiles santa-barbara &
+wait
 osm2pgsql_shapefiles seattle &
 imposm_shapefiles seattle &
 wait

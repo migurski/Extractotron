@@ -398,6 +398,10 @@ ogr2ogr -spat -123.640 36.791 -121.025 38.719 -t_srs EPSG:900913 ex/merc/sf-bay-
 zip -j - ex/merc/sf-bay-area.??? > ex/sf-bay-area.shp.zip
 cp ex/sf-bay-area.shp.zip ex/sf-bay-area.coastline.zip
 
+ogr2ogr -spat -120.712 33.872 -119.080 34.764 -t_srs EPSG:900913 ex/merc/santa-barbara.shp ex/wgs84/processed_p.shp
+zip -j - ex/merc/santa-barbara.??? > ex/santa-barbara.shp.zip
+cp ex/santa-barbara.shp.zip ex/santa-barbara.coastline.zip
+
 ogr2ogr -spat -122.860 47.380 -121.868 47.843 -t_srs EPSG:900913 ex/merc/seattle.shp ex/wgs84/processed_p.shp
 zip -j - ex/merc/seattle.??? > ex/seattle.shp.zip
 cp ex/seattle.shp.zip ex/seattle.coastline.zip
