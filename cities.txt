@@ -118,3 +118,6 @@ South America	3936456	-11.644	-77.294	-12.358	-76.701	lima	Lima
 South America	3451190	-22.510	-43.553	-23.231	-42.850	rio-de-janeiro	Rio de Janeiro
 South America	3448439	-23.125	-47.357	-24.317	-45.863	sao-paulo	Sao Paulo
 South America	3871336	-33.151	-71.043	-33.824	-70.353	santiago	Santiago
+South America	3652462	0.109	-78.653	-0.550	-78.100	quito-ecuador	Quito, Ecuador
+South America	3469058	-15.560	-48.401	-16.317	-47.378	brasilia-brazil	Brasília, Brazil
+South America	3464975	-25.071	-49.603	-25.799	-48.799	curitiba-brazil	Curitiba, Brazil
