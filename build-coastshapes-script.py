@@ -11,10 +11,23 @@ except ValueError:
 
 coastshapes = open(coastshapes, 'w')
 
+print >> coastshapes, """#!/bin/bash -x
+
+function package_coast
+{
+    slug=$1
+    top=$2
+    left=$3
+    bottom=$4
+    right=$5
+    
+    ogr2ogr -spat $left $bottom $right $top -t_srs EPSG:900913 ex/merc/$slug.shp ex/wgs84/processed_p.shp
+    zip -j - ex/merc/$slug.??? > ex/$slug.shp.zip
+    cp ex/$slug.shp.zip ex/$slug.coastline.zip
+}
+"""
+
 for city in cities:
-    print >> coastshapes, 'ogr2ogr -spat %(left)s %(bottom)s %(right)s %(top)s -t_srs EPSG:900913 ex/merc/%(slug)s.shp ex/wgs84/processed_p.shp' % city
-    print >> coastshapes, 'zip -j - ex/merc/%(slug)s.??? > ex/%(slug)s.shp.zip' % city
-    print >> coastshapes, 'cp ex/%(slug)s.shp.zip ex/%(slug)s.coastline.zip' % city
-    print >> coastshapes, '' % city
+    print >> coastshapes, 'package_coast %(slug)s %(top)s %(left)s %(bottom)s %(right)s' % city
 
 coastshapes.close()
