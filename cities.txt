@@ -101,7 +101,7 @@ North America	5389489	38.955	-121.821	38.395	-120.995	sacramento	Sacramento
 North America	5391811;3981609	33.078	-117.376	32.312	-116.588	san-diego-tijuana	San Diego, Tijuana
 North America	5391959	37.955	-122.737	37.449	-122.011	san-francisco	San Francisco
 North America		38.719	-123.640	36.791	-121.025	sf-bay-area	San Francisco Bay Area
-North America	5392952 34.612	-120.024	34.37	-119.459	santa-barbara	Santa Barbara/Goleta/Carpinteria, CA
+North America	5392952	34.764	-120.712	33.872	-119.080	santa-barbara	Santa Barbara
 North America	5809844	47.843	-122.860	47.380	-121.868	seattle	Seattle
 North America	5213681	41.106	-78.280	40.572	-77.302	state-college-pa	State College, PA
 North America	4174757	28.376	-82.935	27.279	-82.012	tampa	Tampa

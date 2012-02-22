@@ -42,7 +42,7 @@ def post_script(filename):
     
     resp = conn.getresponse()
     
-    if resp.status >= 400:
+    if resp.status not in range(300, 399):
         print resp.getheaders()
         raise Exception('Received status %d from dpaste.com' % resp.status)
     
