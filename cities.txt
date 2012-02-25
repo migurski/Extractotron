@@ -46,6 +46,7 @@ Europe	3117735	40.839	-4.293	39.889	-3.057	madrid	Madrid
 Europe	2643123	53.672	-2.588	53.237	-1.877	manchester	Manchester
 Europe	2995469	43.554	4.905	43.038	5.776	marseille	Marseille
 Europe	2993458	43.770	7.349	43.710	7.491	monaco	Monaco	
+Europe  2992166	43.643	3.811	43.571	3.932	montpellier	Montpellier	
 Europe	524901	56.200	36.870	55.285	38.430	moscow	Moscow
 Europe	2867714	48.523	10.799	47.717	12.178	munich	Munich
 Europe	2988507	49.178	1.851	48.531	2.911	paris	Paris
