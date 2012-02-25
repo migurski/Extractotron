@@ -79,6 +79,7 @@ North America	4684888	33.431	-97.789	32.166	-96.113	dallas	Dallas
 North America	5419384	40.204	-105.746	39.323	-104.334	denver	Denver
 North America	4990729	42.811	-83.875	41.836	-82.375	detroit	Detroit
 North America	4257227	38.177	-87.747	37.759	-87.237	evansville	Evansville
+North America	5856195	21.781	-158.35	21.192	-157.592	honolulu	Honolulu
 North America	4699066	30.261	-96.064	28.856	-94.378	houston	Houston
 North America	5565500	41.553	-124.744	39.988	-122.802	humboldt-ca	Humboldt, CA
 North America	4259418	40.134	-86.485	39.454	-85.746	indianapolis	Indianapolis
