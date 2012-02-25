@@ -2,6 +2,8 @@ group	geonameid	top	left	bottom	right	slug	name
 Africa	360630	30.564	30.897	29.761	31.710	cairo	Cairo
 Africa	993800	-25.834	27.537	-26.563	28.542	johannesburg	Johannesburg
 Africa	2332459	6.910	2.889	6.320	3.834	lagos	Lagos
+Africa	184745	-0.965	36.582	-1.488	37.056	nairobi	Nairobi, Kenya
+Asia	1526384	43.549	76.575	43.057	77.223	almaty	Almaty, Kazakhstan
 Asia	323786	40.372	32.105	39.439	33.509	ankara	Ankara
 Asia	1609350	15.019	99.569	12.661	101.337	bangkok	Bangkok
 Asia	1816670	40.426	115.686	39.414	117.119	beijing	Beijing
@@ -108,6 +110,11 @@ North America	6167865	44.182	-80.161	43.201	-78.717	toronto	Toronto
 North America	6173331	49.475	-123.513	48.669	-121.777	vancouver	Vancouver
 North America	6174041	48.871	-124.063	48.054	-122.568	victoria	Victoria
 North America	4140963;4347778	39.631	-77.599	38.539	-76.058	dc-baltimore	Washington D.C., Baltimore
+North America	4508722	39.471	-84.843	38.875	-84.121	cincinnati-oh	Cincinnati, OH
+North America	4259418	40.134	-86.485	39.454	-85.746	indianapolis-in	Indianapolis, IN
+North America	7164249	39.578	-87.508	39.367	-87.280	terre-haute-in	Terre Haute, IN
+North America	4257227	38.177	-87.747	37.759	-87.237	evansville-in	Evansville, IN
+North America	4076598	30.883	-88.363	30.496	-87.932	mobile-al	Mobile, AL
 Oceania	2193733	-36.410	174.223	-37.348	175.314	auckland	Auckland
 Oceania	1642911	-5.881	106.435	-6.615	107.160	jakarta	Jakarta
 Oceania	2158177	-37.365	144.266	-38.552	145.810	melbourne	Melbourne
@@ -119,3 +126,6 @@ South America	3936456	-11.644	-77.294	-12.358	-76.701	lima	Lima
 South America	3451190	-22.510	-43.553	-23.231	-42.850	rio-de-janeiro	Rio de Janeiro
 South America	3448439	-23.125	-47.357	-24.317	-45.863	sao-paulo	Sao Paulo
 South America	3871336	-33.151	-71.043	-33.824	-70.353	santiago	Santiago
+South America	3652462	0.109	-78.653	-0.550	-78.100	quito-ecuador	Quito, Ecuador
+South America	3469058	-15.560	-48.401	-16.317	-47.378	brasilia-brazil	Brasília, Brazil
+South America	3464975	-25.071	-49.603	-25.799	-48.799	curitiba-brazil	Curitiba, Brazil
