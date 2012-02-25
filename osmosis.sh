@@ -1,6 +1,6 @@
 bunzip2 -c planet-latest.osm.bz2 | osmosis-*/bin/osmosis --rx file=- \
     --log-progress interval=60 \
-    --tee outputCount=119 \
+    --tee outputCount=131 \
     \
     --bb top=30.564 left=30.897 bottom=29.761 right=31.710 \
         --tee outputCount=2 --wx file=ex/cairo.osm.bz2 --wb file=ex/cairo.osm.pbf \
@@ -8,6 +8,10 @@ bunzip2 -c planet-latest.osm.bz2 | osmosis-*/bin/osmosis --rx file=- \
         --tee outputCount=2 --wx file=ex/johannesburg.osm.bz2 --wb file=ex/johannesburg.osm.pbf \
     --bb top=6.910 left=2.889 bottom=6.320 right=3.834 \
         --tee outputCount=2 --wx file=ex/lagos.osm.bz2 --wb file=ex/lagos.osm.pbf \
+    --bb top=-0.965 left=36.582 bottom=-1.488 right=37.056 \
+        --tee outputCount=2 --wx file=ex/nairobi.osm.bz2 --wb file=ex/nairobi.osm.pbf \
+    --bb top=43.549 left=76.575 bottom=43.057 right=77.223 \
+        --tee outputCount=2 --wx file=ex/almaty.osm.bz2 --wb file=ex/almaty.osm.pbf \
     --bb top=40.372 left=32.105 bottom=39.439 right=33.509 \
         --tee outputCount=2 --wx file=ex/ankara.osm.bz2 --wb file=ex/ankara.osm.pbf \
     --bb top=15.019 left=99.569 bottom=12.661 right=101.337 \
@@ -96,6 +100,8 @@ bunzip2 -c planet-latest.osm.bz2 | osmosis-*/bin/osmosis --rx file=- \
         --tee outputCount=2 --wx file=ex/marseille.osm.bz2 --wb file=ex/marseille.osm.pbf \
     --bb top=43.770 left=7.349 bottom=43.710 right=7.491 \
         --tee outputCount=2 --wx file=ex/monaco.osm.bz2 --wb file=ex/monaco.osm.pbf \
+    --bb top=43.910 left=3.381 bottom=43.241 right=4.488 \
+        --tee outputCount=2 --wx file=ex/montpellier.osm.bz2 --wb file=ex/montpellier.osm.pbf \
     --bb top=56.200 left=36.870 bottom=55.285 right=38.430 \
         --tee outputCount=2 --wx file=ex/moscow.osm.bz2 --wb file=ex/moscow.osm.pbf \
     --bb top=48.523 left=10.799 bottom=47.717 right=12.178 \
@@ -142,6 +148,8 @@ bunzip2 -c planet-latest.osm.bz2 | osmosis-*/bin/osmosis --rx file=- \
         --tee outputCount=2 --wx file=ex/charlotte.osm.bz2 --wb file=ex/charlotte.osm.pbf \
     --bb top=42.297 left=-88.505 bottom=41.339 right=-87.066 \
         --tee outputCount=2 --wx file=ex/chicago.osm.bz2 --wb file=ex/chicago.osm.pbf \
+    --bb top=39.471 left=-84.843 bottom=38.875 right=-84.121 \
+        --tee outputCount=2 --wx file=ex/cincinnati.osm.bz2 --wb file=ex/cincinnati.osm.pbf \
     --bb top=41.918 left=-82.485 bottom=40.730 right=-80.798 \
         --tee outputCount=2 --wx file=ex/cleveland.osm.bz2 --wb file=ex/cleveland.osm.pbf \
     --bb top=40.459 left=-83.482 bottom=39.542 right=-82.479 \
@@ -152,10 +160,16 @@ bunzip2 -c planet-latest.osm.bz2 | osmosis-*/bin/osmosis --rx file=- \
         --tee outputCount=2 --wx file=ex/denver.osm.bz2 --wb file=ex/denver.osm.pbf \
     --bb top=42.811 left=-83.875 bottom=41.836 right=-82.375 \
         --tee outputCount=2 --wx file=ex/detroit.osm.bz2 --wb file=ex/detroit.osm.pbf \
+    --bb top=38.177 left=-87.747 bottom=37.759 right=-87.237 \
+        --tee outputCount=2 --wx file=ex/evansville.osm.bz2 --wb file=ex/evansville.osm.pbf \
+    --bb top=21.781 left=-158.350 bottom=21.192 right=-157.592 \
+        --tee outputCount=2 --wx file=ex/honolulu.osm.bz2 --wb file=ex/honolulu.osm.pbf \
     --bb top=30.261 left=-96.064 bottom=28.856 right=-94.378 \
         --tee outputCount=2 --wx file=ex/houston.osm.bz2 --wb file=ex/houston.osm.pbf \
     --bb top=41.553 left=-124.744 bottom=39.988 right=-122.802 \
         --tee outputCount=2 --wx file=ex/humboldt-ca.osm.bz2 --wb file=ex/humboldt-ca.osm.pbf \
+    --bb top=40.134 left=-86.485 bottom=39.454 right=-85.746 \
+        --tee outputCount=2 --wx file=ex/indianapolis.osm.bz2 --wb file=ex/indianapolis.osm.pbf \
     --bb top=51.003 left=-121.437 bottom=50.011 right=-119.514 \
         --tee outputCount=2 --wx file=ex/kamloops.osm.bz2 --wb file=ex/kamloops.osm.pbf \
     --bb top=36.615 left=-115.581 bottom=35.757 right=-114.211 \
@@ -176,6 +190,8 @@ bunzip2 -c planet-latest.osm.bz2 | osmosis-*/bin/osmosis --rx file=- \
         --tee outputCount=2 --wx file=ex/milwaukee.osm.bz2 --wb file=ex/milwaukee.osm.pbf \
     --bb top=45.410 left=-94.064 bottom=44.496 right=-92.543 \
         --tee outputCount=2 --wx file=ex/mpls-stpaul.osm.bz2 --wb file=ex/mpls-stpaul.osm.pbf \
+    --bb top=30.883 left=-88.363 bottom=30.496 right=-87.832 \
+        --tee outputCount=2 --wx file=ex/mobile-al.osm.bz2 --wb file=ex/mobile-al.osm.pbf \
     --bb top=46.057 left=-74.734 bottom=44.968 right=-72.723 \
         --tee outputCount=2 --wx file=ex/montreal.osm.bz2 --wb file=ex/montreal.osm.pbf \
     --bb top=30.510 left=-90.653 bottom=28.887 right=-89.110 \
@@ -210,6 +226,8 @@ bunzip2 -c planet-latest.osm.bz2 | osmosis-*/bin/osmosis --rx file=- \
         --tee outputCount=2 --wx file=ex/state-college-pa.osm.bz2 --wb file=ex/state-college-pa.osm.pbf \
     --bb top=28.376 left=-82.935 bottom=27.279 right=-82.012 \
         --tee outputCount=2 --wx file=ex/tampa.osm.bz2 --wb file=ex/tampa.osm.pbf \
+    --bb top=39.578 left=-87.508 bottom=39.367 right=-87.280 \
+        --tee outputCount=2 --wx file=ex/terre-haute.osm.bz2 --wb file=ex/terre-haute.osm.pbf \
     --bb top=44.182 left=-80.161 bottom=43.201 right=-78.717 \
         --tee outputCount=2 --wx file=ex/toronto.osm.bz2 --wb file=ex/toronto.osm.pbf \
     --bb top=49.475 left=-123.513 bottom=48.669 right=-121.777 \
@@ -228,12 +246,18 @@ bunzip2 -c planet-latest.osm.bz2 | osmosis-*/bin/osmosis --rx file=- \
         --tee outputCount=2 --wx file=ex/sydney.osm.bz2 --wb file=ex/sydney.osm.pbf \
     --bb top=5.022 left=-74.421 bottom=4.291 right=-73.767 \
         --tee outputCount=2 --wx file=ex/bogota.osm.bz2 --wb file=ex/bogota.osm.pbf \
-    --bb top=10.572 left=-75.627 bottom=10.251 right=-75.337 \
-        --tee outputCount=2 --wx file=ex/cartagena.osm.bz2 --wb file=ex/cartagena.osm.pbf \
+    --bb top=-15.360 left=-48.501 bottom=-16.317 right=-47.378 \
+        --tee outputCount=2 --wx file=ex/brasilia-brazil.osm.bz2 --wb file=ex/brasilia-brazil.osm.pbf \
     --bb top=-34.293 left=-58.899 bottom=-34.966 right=-57.992 \
         --tee outputCount=2 --wx file=ex/buenos-aires.osm.bz2 --wb file=ex/buenos-aires.osm.pbf \
+    --bb top=10.572 left=-75.627 bottom=10.251 right=-75.337 \
+        --tee outputCount=2 --wx file=ex/cartagena.osm.bz2 --wb file=ex/cartagena.osm.pbf \
+    --bb top=-25.071 left=-49.703 bottom=-25.799 right=-48.799 \
+        --tee outputCount=2 --wx file=ex/curitiba-brazil.osm.bz2 --wb file=ex/curitiba-brazil.osm.pbf \
     --bb top=-11.644 left=-77.294 bottom=-12.358 right=-76.701 \
         --tee outputCount=2 --wx file=ex/lima.osm.bz2 --wb file=ex/lima.osm.pbf \
+    --bb top=0.109 left=-78.853 bottom=-0.550 right=-78.100 \
+        --tee outputCount=2 --wx file=ex/quito-ecuador.osm.bz2 --wb file=ex/quito-ecuador.osm.pbf \
     --bb top=-22.510 left=-43.553 bottom=-23.231 right=-42.850 \
         --tee outputCount=2 --wx file=ex/rio-de-janeiro.osm.bz2 --wb file=ex/rio-de-janeiro.osm.pbf \
     --bb top=-23.125 left=-47.357 bottom=-24.317 right=-45.863 \

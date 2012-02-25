@@ -112,6 +112,12 @@ wait
 osm2pgsql_shapefiles lagos &
 imposm_shapefiles lagos &
 wait
+osm2pgsql_shapefiles nairobi &
+imposm_shapefiles nairobi &
+wait
+osm2pgsql_shapefiles almaty &
+imposm_shapefiles almaty &
+wait
 osm2pgsql_shapefiles ankara &
 imposm_shapefiles ankara &
 wait
@@ -244,6 +250,9 @@ wait
 osm2pgsql_shapefiles monaco &
 imposm_shapefiles monaco &
 wait
+osm2pgsql_shapefiles montpellier &
+imposm_shapefiles montpellier &
+wait
 osm2pgsql_shapefiles moscow &
 imposm_shapefiles moscow &
 wait
@@ -313,6 +322,9 @@ wait
 osm2pgsql_shapefiles chicago &
 imposm_shapefiles chicago &
 wait
+osm2pgsql_shapefiles cincinnati &
+imposm_shapefiles cincinnati &
+wait
 osm2pgsql_shapefiles cleveland &
 imposm_shapefiles cleveland &
 wait
@@ -328,11 +340,20 @@ wait
 osm2pgsql_shapefiles detroit &
 imposm_shapefiles detroit &
 wait
+osm2pgsql_shapefiles evansville &
+imposm_shapefiles evansville &
+wait
+osm2pgsql_shapefiles honolulu &
+imposm_shapefiles honolulu &
+wait
 osm2pgsql_shapefiles houston &
 imposm_shapefiles houston &
 wait
 osm2pgsql_shapefiles humboldt-ca &
 imposm_shapefiles humboldt-ca &
+wait
+osm2pgsql_shapefiles indianapolis &
+imposm_shapefiles indianapolis &
 wait
 osm2pgsql_shapefiles kamloops &
 imposm_shapefiles kamloops &
@@ -363,6 +384,9 @@ imposm_shapefiles milwaukee &
 wait
 osm2pgsql_shapefiles mpls-stpaul &
 imposm_shapefiles mpls-stpaul &
+wait
+osm2pgsql_shapefiles mobile-al &
+imposm_shapefiles mobile-al &
 wait
 osm2pgsql_shapefiles montreal &
 imposm_shapefiles montreal &
@@ -415,6 +439,9 @@ wait
 osm2pgsql_shapefiles tampa &
 imposm_shapefiles tampa &
 wait
+osm2pgsql_shapefiles terre-haute &
+imposm_shapefiles terre-haute &
+wait
 osm2pgsql_shapefiles toronto &
 imposm_shapefiles toronto &
 wait
@@ -442,14 +469,23 @@ wait
 osm2pgsql_shapefiles bogota &
 imposm_shapefiles bogota &
 wait
-osm2pgsql_shapefiles cartagena &
-imposm_shapefiles cartagena &
+osm2pgsql_shapefiles brasilia-brazil &
+imposm_shapefiles brasilia-brazil &
 wait
 osm2pgsql_shapefiles buenos-aires &
 imposm_shapefiles buenos-aires &
 wait
+osm2pgsql_shapefiles cartagena &
+imposm_shapefiles cartagena &
+wait
+osm2pgsql_shapefiles curitiba-brazil &
+imposm_shapefiles curitiba-brazil &
+wait
 osm2pgsql_shapefiles lima &
 imposm_shapefiles lima &
+wait
+osm2pgsql_shapefiles quito-ecuador &
+imposm_shapefiles quito-ecuador &
 wait
 osm2pgsql_shapefiles rio-de-janeiro &
 imposm_shapefiles rio-de-janeiro &
