@@ -262,6 +262,9 @@ wait
 osm2pgsql_shapefiles paris &
 imposm_shapefiles paris &
 wait
+osm2pgsql_shapefiles porto &
+imposm_shapefiles porto &
+wait
 osm2pgsql_shapefiles prague &
 imposm_shapefiles prague &
 wait

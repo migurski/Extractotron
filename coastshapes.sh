@@ -66,6 +66,7 @@ package_coast montpellier 43.910 4.488 43.241 3.381
 package_coast moscow 56.200 36.870 55.285 38.430
 package_coast munich 48.523 10.799 47.717 12.178
 package_coast paris 49.178 1.851 48.531 2.911
+package_coast porto 41.399 -8.795 40.981 -8.358
 package_coast prague 50.408 13.842 49.763 15.012
 package_coast rome 42.130 12.109 41.578 12.845
 package_coast rotterdam 52.109 3.911 51.737 4.784
