@@ -63,6 +63,7 @@ Europe	2972315	43.838	1.062	43.327	1.779	toulouse	Toulouse
 Europe	3164603	45.811	11.629	45.123	12.735	venice	Venice
 Europe	756135	52.623	20.341	51.845	21.692	warsaw	Warsaw
 Europe	3081368	51.311	16.652	50.877	17.363	wroclaw	Wroclaw
+Middle East 172410  33.212  36.346	32.316	37.374	as-suwayda	As Suwayda'
 Middle East	98182	33.715	43.786	32.9671	44.862	baghdad	Baghdad
 Middle East	170654	33.805	35.841	33.112	36.730	damascus	Damascus
 Middle East	292223;292968	26.539	53.580	23.735	56.887	dubai-abu-dhabi	Dubai, Abu Dhabi
