@@ -131,3 +131,4 @@ South America	3652462	0.109	-78.853	-0.550	-78.100	quito-ecuador	Quito
 South America	3451190	-22.510	-43.553	-23.231	-42.850	rio-de-janeiro	Rio de Janeiro
 South America	3448439	-23.125	-47.357	-24.317	-45.863	sao-paulo	Sao Paulo
 South America	3871336	-33.151	-71.043	-33.824	-70.353	santiago	Santiago
+South America   3467747 -20.352 -54.801 -20.598 -54.445 campo-grande	Campo Grande
