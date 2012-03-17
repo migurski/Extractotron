@@ -71,6 +71,7 @@ Middle East	108410	25.098	46.227	24.292	47.202	riyadh	Riyadh
 North America	4180439	34.090	-84.857	33.414	-83.890	atlanta	Atlanta
 North America	4671654	30.670	-98.212	29.931	-97.234	austin	Austin
 North America	4930956	42.702	-71.861	41.951	-70.285	boston	Boston
+North America 4123456	40.0708	-105.2981	39.9616	-105.2214	boulder	Boulder
 North America	4460243	35.476	-81.307	34.919	-80.396	charlotte	Charlotte
 North America	4887398	42.297	-88.505	41.339	-87.066	chicago	Chicago
 North America	4508722	39.471	-84.843	38.875	-84.121	cincinnati	Cincinnati
