@@ -15,6 +15,7 @@ Asia	1275339	19.500	72.415	18.466	73.516	mumbai	Mumbai
 Asia	1261481	28.969	76.692	28.183	77.733	new-delhi	New Delhi
 Asia	1853909	35.031	135.057	34.355	135.892	osaka	Osaka
 Asia	1835848	37.980	126.064	37.019	127.525	seoul	Seoul
+Asia	6301065	13.735	103.543	12.932	104.479	siem-reap	Siem Reap
 Asia	1796236	32.472	118.887	29.477	123.787	shanghai	Shanghai
 Asia	1880252	1.823	103.062	0.807	104.545	singapore	Singapore
 Asia	1668341	25.386	120.995	24.779	122.025	taipei	Taipei
@@ -73,14 +74,13 @@ Middle East	108410	25.098	46.227	24.292	47.202	riyadh	Riyadh
 North America	4180439	34.090	-84.857	33.414	-83.890	atlanta	Atlanta
 North America	4671654	30.670	-98.212	29.931	-97.234	austin	Austin
 North America	4930956	42.702	-71.861	41.951	-70.285	boston	Boston
-North America 4123456	40.0708	-105.2981	39.9616	-105.2214	boulder	Boulder
 North America	4460243	35.476	-81.307	34.919	-80.396	charlotte	Charlotte
 North America	4887398	42.297	-88.505	41.339	-87.066	chicago	Chicago
 North America	4508722	39.471	-84.843	38.875	-84.121	cincinnati	Cincinnati
 North America	5150529	41.918	-82.485	40.730	-80.798	cleveland	Cleveland
 North America	4509177;5151891	40.459	-83.482	39.542	-82.479	columbus-oh	Columbus and Delaware, OH
 North America	4684888	33.431	-97.789	32.166	-96.113	dallas	Dallas
-North America	5419384	40.204	-105.746	39.323	-104.334	denver	Denver
+North America	5419384,4123456	40.313	-105.746	39.323	-104.334	denver-boulder	Denver and Boulder CO
 North America	4990729	42.811	-83.875	41.836	-82.375	detroit	Detroit
 North America	4257227	38.177	-87.747	37.759	-87.237	evansville	Evansville
 North America	5856195	21.781	-158.35	21.192	-157.592	honolulu	Honolulu
