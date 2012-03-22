@@ -151,6 +151,9 @@ wait
 osm2pgsql_shapefiles seoul &
 imposm_shapefiles seoul &
 wait
+osm2pgsql_shapefiles siem-reap &
+imposm_shapefiles siem-reap &
+wait
 osm2pgsql_shapefiles shanghai &
 imposm_shapefiles shanghai &
 wait
@@ -247,6 +250,9 @@ wait
 osm2pgsql_shapefiles marseille &
 imposm_shapefiles marseille &
 wait
+osm2pgsql_shapefiles milan &
+imposm_shapefiles milan &
+wait
 osm2pgsql_shapefiles monaco &
 imposm_shapefiles monaco &
 wait
@@ -295,6 +301,9 @@ wait
 osm2pgsql_shapefiles wroclaw &
 imposm_shapefiles wroclaw &
 wait
+osm2pgsql_shapefiles as-suwayda &
+imposm_shapefiles as-suwayda &
+wait
 osm2pgsql_shapefiles baghdad &
 imposm_shapefiles baghdad &
 wait
@@ -337,8 +346,8 @@ wait
 osm2pgsql_shapefiles dallas &
 imposm_shapefiles dallas &
 wait
-osm2pgsql_shapefiles denver &
-imposm_shapefiles denver &
+osm2pgsql_shapefiles denver-boulder &
+imposm_shapefiles denver-boulder &
 wait
 osm2pgsql_shapefiles detroit &
 imposm_shapefiles detroit &
@@ -477,6 +486,9 @@ imposm_shapefiles brasilia-brazil &
 wait
 osm2pgsql_shapefiles buenos-aires &
 imposm_shapefiles buenos-aires &
+wait
+osm2pgsql_shapefiles campo-grande &
+imposm_shapefiles campo-grande &
 wait
 osm2pgsql_shapefiles cartagena &
 imposm_shapefiles cartagena &

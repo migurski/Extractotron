@@ -29,6 +29,7 @@ package_coast mumbai 19.500 72.415 18.466 73.516
 package_coast new-delhi 28.969 76.692 28.183 77.733
 package_coast osaka 35.031 135.057 34.355 135.892
 package_coast seoul 37.980 126.064 37.019 127.525
+package_coast siem-reap 13.735 103.543 12.932 104.479
 package_coast shanghai 32.472 118.887 29.477 123.787
 package_coast singapore 1.823 103.062 0.807 104.545
 package_coast taipei 25.386 120.995 24.779 122.025
@@ -61,6 +62,7 @@ package_coast london 51.984 -1.115 50.941 0.895
 package_coast madrid 40.839 -4.293 39.889 -3.057
 package_coast manchester 53.672 -2.588 53.237 -1.877
 package_coast marseille 43.554 4.905 43.038 5.776
+package_coast milan 45.694 8.860 45.246 9.470
 package_coast monaco 43.770 7.349 43.710 7.491
 package_coast montpellier 43.910 4.488 43.241 3.381
 package_coast moscow 56.200 36.870 55.285 38.430
@@ -77,6 +79,7 @@ package_coast toulouse 43.838 1.062 43.327 1.779
 package_coast venice 45.811 11.629 45.123 12.735
 package_coast warsaw 52.623 20.341 51.845 21.692
 package_coast wroclaw 51.311 16.652 50.877 17.363
+package_coast as-suwayda 33.321 36.210 32.198 37.611
 package_coast baghdad 33.715 43.786 32.9671 44.862
 package_coast damascus 33.805 35.841 33.112 36.730
 package_coast dubai-abu-dhabi 26.539 53.580 23.735 56.887
@@ -91,7 +94,7 @@ package_coast cincinnati 39.471 -84.843 38.875 -84.121
 package_coast cleveland 41.918 -82.485 40.730 -80.798
 package_coast columbus-oh 40.459 -83.482 39.542 -82.479
 package_coast dallas 33.431 -97.789 32.166 -96.113
-package_coast denver 40.204 -105.746 39.323 -104.334
+package_coast denver-boulder 40.313 -105.746 39.323 -104.334
 package_coast detroit 42.811 -83.875 41.836 -82.375
 package_coast evansville 38.177 -87.747 37.759 -87.237
 package_coast honolulu 21.781 -158.35 21.192 -157.592
@@ -138,6 +141,7 @@ package_coast sydney -33.637 150.628 -34.189 151.647
 package_coast bogota 5.022 -74.421 4.291 -73.767
 package_coast brasilia-brazil -15.360 -48.501 -16.317 -47.378
 package_coast buenos-aires -34.293 -58.899 -34.966 -57.992
+package_coast campo-grande -20.352 -54.902 -20.670 -54.445
 package_coast cartagena 10.572 -75.627 10.251 -75.337
 package_coast curitiba-brazil -25.071 -49.703 -25.799 -48.799
 package_coast lima -11.644 -77.294 -12.358 -76.701
