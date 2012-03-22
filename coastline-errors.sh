@@ -19,6 +19,7 @@ psql -tA -F ' ' -c "SELECT gid FROM coast ORDER BY gid" coast > /tmp/gids
 psql -tA -F ' ' -c "SELECT gid, tile_x, tile_y FROM coast ORDER BY gid" coast > /tmp/tiles
 
 rm -f /tmp/reasons
+touch /tmp/reasons
 
 for GID in `cat /tmp/gids`; do
     psql -tA -F ' ' -c "SELECT gid, ST_IsValidReason(the_geom) FROM coast WHERE gid=$GID" coast >> /tmp/reasons
