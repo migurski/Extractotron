@@ -47,7 +47,7 @@ Europe	2643743	51.984	-1.115	50.941	0.895	london	London
 Europe	3117735	40.839	-4.293	39.889	-3.057	madrid	Madrid
 Europe	2643123	53.672	-2.588	53.237	-1.877	manchester	Manchester
 Europe	2995469	43.554	4.905	43.038	5.776	marseille	Marseille
-Europe  3173435 45.561  9.035  45.333  9.393  milan  Milan
+Europe	3173435	45.694	8.860	45.246	9.470	milan	Milan
 Europe	2993458	43.770	7.349	43.710	7.491	monaco	Monaco	
 Europe	2992166	43.910	4.488	43.241	3.381	montpellier	Montpellier	
 Europe	524901	56.200	36.870	55.285	38.430	moscow	Moscow
