@@ -30,7 +30,7 @@ def nice_size(size):
     TB = 1024. * GB
     
     if size < KB:
-        size, suffix = size, ''
+        size, suffix = size, 'B'
     elif size < MB:
         size, suffix = size/KB, 'KB'
     elif size < GB:
