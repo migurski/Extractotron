@@ -9,10 +9,13 @@ Asia	1609350	15.019	99.569	12.661	101.337	bangkok	Bangkok
 Asia	1816670	40.426	115.686	39.414	117.119	beijing	Beijing
 Asia	1277333	13.23	77.35	12.75	77.85	bengaluru	Bengaluru
 Asia	1264527	13.3	79.9	12.7	80.4	chennai	Chennai
+Asia  1264524	31.0	103.0	30.0	105.0	chengdu	Chengdu
 Asia	1819729	23.488	112.780	21.591	115.125	hong-kong	Hong Kong
+Asia  1819733	31.8249	35.1617	31.7355	35.2869	Jerusalem	Jerusalem
 Asia	1701668	14.900	120.885	14.327	121.200	manila	Manila
 Asia	1275339	19.500	72.415	18.466	73.516	mumbai	Mumbai
 Asia	1261481	28.969	76.692	28.183	77.733	new-delhi	New Delhi
+Asia  1261488	32.7366	35.2455	32.6765	35.3325	nazareth	Nazareth
 Asia	1853909	35.031	135.057	34.355	135.892	osaka	Osaka
 Asia	1835848	37.980	126.064	37.019	127.525	seoul	Seoul
 Asia	6301065	13.735	103.543	12.932	104.479	siem-reap	Siem Reap
@@ -53,6 +56,7 @@ Europe	2993458	43.770	7.349	43.710	7.491	monaco	Monaco
 Europe	2992166	43.910	4.488	43.241	3.381	montpellier	Montpellier	
 Europe	524901	56.200	36.870	55.285	38.430	moscow	Moscow
 Europe	2867714	48.523	10.799	47.717	12.178	munich	Munich
+Europe  2867744	54.9969	-1.6554	54.9586	-1.5678	newcastle	Newcastle
 Europe	2988507	49.178	1.851	48.531	2.911	paris	Paris
 Europe	2735943	41.399	-8.795	40.981	-8.358	porto	Porto
 Europe	3067696	50.408	13.842	49.763	15.012	prague	Prague
@@ -69,8 +73,9 @@ Middle East	172410	33.321	36.210	32.198	37.611	as-suwayda	As Suwayda'
 Middle East	98182	33.715	43.786	32.9671	44.862	baghdad	Baghdad
 Middle East	170654	33.805	35.841	33.112	36.730	damascus	Damascus
 Middle East	292223;292968	26.539	53.580	23.735	56.887	dubai-abu-dhabi	Dubai, Abu Dhabi
-Middle East	1138958	34.95	68.48	34.081	69.86	kabul	Kabul
-Middle East	108410	25.098	46.227	24.292	47.202	riyadh	Riyadh
+Middle East	1138958	34.95	68.48	34.081	69.86	kabul	Kabul 
+Middle East  108410	25.098	46.227	24.292	47.202	riyadh	Riyadh
+Canada	108409	52.0	-115.0	50.0	-112.0	calgary	Calgary
 North America	4180439	34.090	-84.857	33.414	-83.890	atlanta	Atlanta
 North America	4671654	30.670	-98.212	29.931	-97.234	austin	Austin
 North America	4930956	42.702	-71.861	41.951	-70.285	boston	Boston
