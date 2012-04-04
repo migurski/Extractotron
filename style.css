@@ -29,7 +29,8 @@ li.link
 li.group
 {
     color: gray;
-    font-size: small;
+    display: block !important;
+    margin-top: .5em;
 }
 
 li.group,
@@ -74,4 +75,12 @@ li.city h3
 li.file
 {
     list-style-type: none;
+}
+
+#archive-note
+{
+    background-color: #ffd652;
+    border: 1px solid #ffb933;
+    padding: .5em;
+    border-radius: 3px;
 }
