@@ -89,7 +89,8 @@ North America	5565500	41.553	-124.744	39.988	-122.802	humboldt-ca	Humboldt, CA
 North America	4259418	40.134	-86.485	39.454	-85.746	indianapolis	Indianapolis
 North America	5989045	51.003	-121.437	50.011	-119.514	kamloops	Kamloops
 North America	5506956	36.615	-115.581	35.757	-114.211	las-vegas	Las Vegas
-North America	4393217;4274277;4280539	39.419	-95.946	38.599	-94.048	kansas-city-lawrence-topeka	Kansas City, Lawrence, Topeka
+North America 4393217;4274277;4280539	39.419	-95.946	38.599	-94.048	kansas-city-lawrence-topeka	Kansas City, Lawrence, Topeka
+North America 37.989;-84.478  38.197  -84.732 -84.207 37.883 lexington Lexington
 North America	5368361	34.583	-119.437	33.298	-116.724	los-angeles	Los Angeles
 North America	4207400	32.969	-83.907	32.660	-83.482	macon-ga	Macon, GA
 North America	5261457	43.343	-89.854	42.801	-88.992	madison	Madison
