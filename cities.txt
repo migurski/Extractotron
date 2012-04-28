@@ -21,6 +21,7 @@ Asia	1880252	1.823	103.062	0.807	104.545	singapore	Singapore
 Asia	1668341	25.386	120.995	24.779	122.025	taipei	Taipei
 Asia	112931	35.917	50.87	35.383	51.648	tehran	Tehran
 Asia	1850147	36.558	138.779	34.867	141.152	tokyo	Tokyo
+Central America   18.594  -70.086 18.388-69.715 santo_domingo Santo Domingo
 Europe	2759794	52.629	4.465	52.163	5.347	amsterdam	Amsterdam
 Europe	2759794	38.365	22.949	37.514	24.421	athens	Athens
 Europe	3128760	41.687	1.734	41.075	2.496	barcelona	Barcelona
