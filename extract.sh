@@ -54,7 +54,7 @@ chmod +x coastline-errors.sh
 curl -sOL http://dev.openstreetmap.org/~bretth/osmosis-build/osmosis-latest.tgz
 tar -xzf osmosis-latest.tgz
 
-curl -OL "http://planet.openstreetmap.org/planet-latest.osm.bz2" > download.txt 2>&1
+curl -OL "http://download.geofabrik.de/osm/europe/iceland.osm.bz2" > download.txt 2>&1
 
 echo '# extract', `date` >> log.txt
 mkdir ex
@@ -62,7 +62,7 @@ mkdir ex
 (
     mkdir coast
     
-    cc/osm2coast planet-latest.osm.bz2 | gzip > coast/coastline.osm.gz
+    cc/osm2coast iceland.osm.bz2 | gzip > coast/coastline.osm.gz
     cc/merge-coastlines.pl coast/coastline.osm.gz > coast/coast-merged.txt
     cc/coast2shp coast/coast-merged.txt coast/coastline.osm.gz coast/coastline > /dev/null
     cc/closeshp coast/coastline_c coast/coastline_i coast/processed > /dev/null

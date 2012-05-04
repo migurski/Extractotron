@@ -11,7 +11,7 @@ except ValueError:
 
 osmosis = open(osmosis, 'w')
 
-print >> osmosis, 'bunzip2 -c planet-latest.osm.bz2 | osmosis-*/bin/osmosis --rx file=- \\'
+print >> osmosis, 'bunzip2 -c iceland.osm.bz2 | osmosis-*/bin/osmosis --rx file=- \\'
 print >> osmosis, '    --log-progress interval=60 \\'
 #print >> osmosis, '    --tee outputCount=2 \\'
 #print >> osmosis, '    --tag-filter accept-ways natural=coastline --used-node \\'
