@@ -15,7 +15,7 @@ from ModestMaps.OpenStreetMap import Provider
 provider = Provider()
 dimensions = Point(960, 600)
 
-base_url = 'http://osm-metro-extracts.s3.amazonaws.com/log.txt'
+base_url = 'http://osm-extracts-pallih.s3.amazonaws.com/log.txt'
 extract_pat = compile(r'^((\S+)\.osm\.(bz2|pbf))\s+(\d+)$')
 coastshape_pat = compile(r'^((\S+)\.coastline\.zip)\s+(\d+)$')
 shp_imposm_pat = compile(r'^((\S+)\.imposm-shapefiles\.zip)\s+(\d+)$')
@@ -121,38 +121,19 @@ if __name__ == '__main__':
         
         files[slug][key] = slug_file
     
-    coast['coastline-good'] = {}
-    
-    for prj in ('merc', 'latlon'):
-        file = 'coastline-good-%s.tar.bz2' % prj
-        href = urljoin(base_url, file)
-        
-        url = urlparse(href)
-        conn = HTTPConnection(url.netloc)
-        conn.request('HEAD', url.path)
-        resp = conn.getresponse()
-        size = resp.getheader('content-length')
-        date = parser.parse(resp.getheader('last-modified'))
-        date = '%s %d, %s' % (months[date.month], date.day, date.year)
-
-        coast['coastline-good'][prj] = (file, int(size), href, date)
-    
-    #
     
     print >> index, """<!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Metro Extracts</title>
+	<title>City Extracts</title>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
     <link rel="stylesheet" href="style.css" type="text/css" media="all">
 </head>
 <body>
-    <h1>Metro Extracts</h1>
+    <h1>City Extracts - Iceland</h1>
     <p>
         Parts of the <a href="http://www.openstreetmap.org/">OpenStreetMap database</a>
-        for major world cities and their surrounding areas. The goal of these
-        extracts is to make it easy to make maps for major world cities, even if
-        they cross state or national boundaries.
+        for cities in Iceland and their surrounding areas. 
     </p>
     <p>
         Each city includes:
@@ -164,22 +145,9 @@ if __name__ == '__main__':
         <li>Point, line and polygon shapefiles from <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql">Osm2pgsql</a> in a <tt>.zip</tt> file.</li>
     </ol>
     <p>
-        Provided by <a href="http://mike.teczno.com">Michal Migurski</a> on an expected
-        monthly basis <a href="https://github.com/migurski/Extractotron/">via extractotron</a>.
-        Contact me <a href="https://github.com/migurski">via Github</a> to request new cities,
-        or add them directly to
-        <a href="https://github.com/migurski/Extractotron/blob/master/cities.txt">cities.txt</a>
-        with a <a href="http://help.github.com/fork-a-repo/">fork</a>-and-<a href="http://help.github.com/send-pull-requests/">pull-request</a>.
+        Provided by <a href="http://gogn.in">Páll Hilmarsson</a> on a monthly basis. Forked from <a href="https://github.com/migurski/Extractotron/">extractotron</a> by <a href="http://mike.teczno.com">Michal Migurski</a>. He provides extracts for major world cities <a href="http://metro.teczno.com/">here</a>.
     </p>
-    <h2>Updated From <a href="http://planet.openstreetmap.org/">Planet</a> %(start)s</h2>
-    <p id="archive-note">
-        An archived copy of this collection of extracts from the
-        <a href="http://archive.org/download/metro.teczno.com/planet-120314.osm.bz2">March 14th 2012 Planet file</a>
-        (just before the <a href="http://lists.openstreetmap.org/pipermail/talk/2012-January/061800.html">April, 2012</a> 
-        <a href="http://www.osmfoundation.org/wiki/License/We_Are_Changing_The_License">license changeover</a>)
-        is available at <a href="http://archive.org/download/metro.teczno.com">archive.org</a>.
-        Extracts here will continue to be updated into the future.
-    </p>
+    <h2>Updated From <a href="http://download.geofabrik.de/osm/">Iceland</a> %(start)s</h2>
     <ul class="links">""" % locals()
 
     cities = list(DictReader(open('cities.txt'), dialect='excel-tab'))
@@ -246,53 +214,6 @@ if __name__ == '__main__':
 
     print >> index, """</ul>"""
 
-    if 'processed_p' in coast:
-        print >> index, """<h2><a name="coastline">Coastline Shapefiles</a></h2>
-        <p>
-            <a href="http://wiki.openstreetmap.org/wiki/Coastline">Coastline</a> objects
-            in OpenStreetMap are not directly usable for rendering. They must first be
-            joined into continent-sized polygons by the
-            <a href="http://wiki.openstreetmap.org/wiki/Coastline_error_checker">coastline error checker</a>
-            and converted to shapefiles. The files available below are up-to-date,
-            error-corrected versions of the worldwide coastline generated using the code available from
-            <a href="http://svn.openstreetmap.org/applications/utils/coastcheck/">Subversion</a>.
-        </p>
-        <ul class="coast">
-            <li><a href="%s">Coastline polygons</a>: automatically generated areas, divided into 100km squares.<br><a href="%s">Mercator</a> (%s) and <a href="%s">unprojected</a> (%s) shapefiles.<br>Updated from <a href="http://planet.openstreetmap.org/">Planet</a> %s.</li>
-            <li><a href="%s">Good coastline polygons</a>: coastline polygons chosen to fill gaps in new data with old data.<br><a href="%s">Mercator</a> (%s) and <a href="%s">unprojected</a> (%s) shapefiles.<br>Last manually selected %s.</li>
-        </ul>
-        <p>
-            The coastline usually has errors in it. These files help show where
-            those errors might be lurking, so that you can fix OpenStreetMap for
-            the next time the coastline polygons are rendered:
-        </p>
-        <ul class="coast">
-            <li><a href="%s">Incomplete lines</a>: incomplete coastlines, joined into linestrings.<br><a href="%s">Mercator</a> (%s) and <a href="%s">unprojected</a> (%s) shapefiles.</li>
-            <li><a href="%s">Error points</a>: points where the coastline checker found errors.<br><a href="%s">Mercator</a> (%s) and <a href="%s">unprojected</a> (%s) shapefiles.</li>
-            <li><a href="%s">PostGIS error points</a>: points where PostGIS found topology errors.<br><a href="%s">Mercator</a> (%s) and <a href="%s">unprojected</a> (%s) shapefiles.</li>
-            <li><a href="%s">PostGIS missing tiles</a>: areas where PostGIS was unable to parse a geometry.<br><a href="%s">Mercator</a> (%s) and <a href="%s">unprojected</a> (%s) shapefiles.</li>
-        </ul>""" \
-        % (
-            coast['processed_p']['merc'][2],
-            coast['processed_p']['merc'][2], nice_size(coast['processed_p']['merc'][1]),
-            coast['processed_p']['latlon'][2], nice_size(coast['processed_p']['latlon'][1]),
-            start,
-            coast['coastline-good']['merc'][2],
-            coast['coastline-good']['merc'][2], nice_size(coast['coastline-good']['merc'][1]),
-            coast['coastline-good']['latlon'][2], nice_size(coast['coastline-good']['latlon'][1]),
-            coast['coastline-good']['merc'][3],
-            coast['processed_i']['merc'][2],
-            coast['processed_i']['merc'][2], nice_size(coast['processed_i']['merc'][1]),
-            coast['processed_i']['latlon'][2], nice_size(coast['processed_i']['latlon'][1]),
-            coast['coastline_p']['merc'][2],
-            coast['coastline_p']['merc'][2], nice_size(coast['coastline_p']['merc'][1]),
-            coast['coastline_p']['latlon'][2], nice_size(coast['coastline_p']['latlon'][1]),
-            coast['post_errors']['merc'][2],
-            coast['post_errors']['merc'][2], nice_size(coast['post_errors']['merc'][1]),
-            coast['post_errors']['latlon'][2], nice_size(coast['post_errors']['latlon'][1]),
-            coast['post_missing']['merc'][2],
-            coast['post_missing']['merc'][2], nice_size(coast['post_missing']['merc'][1]),
-            coast['post_missing']['latlon'][2], nice_size(coast['post_missing']['latlon'][1])
-        )
+   
     
     print >> index, """</body></html>"""
