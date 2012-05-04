@@ -6,7 +6,7 @@ Fork from [extractotron](https://github.com/migurski/Extractotron) that provides
 Adding New Cities
 -----------------
 
-Extractotron is run once a month, to http://metro.teczno.com. If you have
+Extractotron is run once a month. If you have
 cities to add, you can add them directly to cities.txt and send me a pull request
 in Github.
 
