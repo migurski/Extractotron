@@ -11,6 +11,7 @@ Asia	1277333	13.23	77.35	12.75	77.85	bengaluru	Bengaluru
 Asia	1815286	30.987	103.564	30.363	104.555	chengdu	Chengdu
 Asia	1264527	13.3	79.9	12.7	80.4	chennai	Chennai
 Asia	1819729	23.488	112.780	21.591	115.125	hong-kong	Hong Kong
+Asia	294098	32.895	35.077	32.502	35.497	nazareth	Nazareth
 Asia	1701668	14.900	120.885	14.327	121.200	manila	Manila
 Asia	1275339	19.500	72.415	18.466	73.516	mumbai	Mumbai
 Asia	1261481	28.969	76.692	28.183	77.733	new-delhi	New Delhi
@@ -54,6 +55,7 @@ Europe	2993458	43.770	7.349	43.710	7.491	monaco	Monaco
 Europe	2992166	43.910	4.488	43.241	3.381	montpellier	Montpellier	
 Europe	524901	56.200	36.870	55.285	38.430	moscow	Moscow
 Europe	2867714	48.523	10.799	47.717	12.178	munich	Munich
+Europe	2641673	55.163	-2.027	54.744	-1.261	newcastle	Newcastle upon Tyne
 Europe	2988507	49.178	1.851	48.531	2.911	paris	Paris
 Europe	2735943	41.399	-8.795	40.981	-8.358	porto	Porto
 Europe	3067696	50.408	13.842	49.763	15.012	prague	Prague
