@@ -23,7 +23,6 @@ Asia	1880252	1.823	103.062	0.807	104.545	singapore	Singapore
 Asia	1668341	25.386	120.995	24.779	122.025	taipei	Taipei
 Asia	112931	35.917	50.87	35.383	51.648	tehran	Tehran
 Asia	1850147	36.558	138.779	34.867	141.152	tokyo	Tokyo
-Central America   18.684  -72.448 18.371  -72.163 port-au-prince  Port-au-Prince, Haiti
 Europe	2759794	52.629	4.465	52.163	5.347	amsterdam	Amsterdam
 Europe	2759794	38.365	22.949	37.514	24.421	athens	Athens
 Europe	3128760	41.687	1.734	41.075	2.496	barcelona	Barcelona
@@ -40,7 +39,7 @@ Europe	2925533	50.447	7.811	49.632	9.442	frankfurt	Frankfurt
 Europe	3099434	54.870	18.174	54.007	19.113	gdansk	Gdansk
 Europe	2648579	56.034	-4.613	55.668	-3.935	glasgow	Glasgow
 Europe	2911298	53.833	9.376	53.159	10.678	hamburg	Hamburg
-Europe          60.357  24.428  60.052  25.381  helsinki  Helsinki
+Europe	658225	60.357	24.428	60.052	25.381	helsinki	Helsinki
 Europe	745044	41.421	28.313	40.738	29.678	istanbul	Istanbul
 Europe	2892794	49.246	7.893	48.730	8.816	karlsruhe	Karlsruhe
 Europe	3094802	50.240	19.594	49.850	20.275	krakow	Krakow
@@ -112,6 +111,7 @@ North America	5128581	41.097	-74.501	40.345	-73.226	new-york	New York City
 North America	4560349	40.308	-75.572	39.641	-74.641	philadelphia	Philadelphia
 North America	5308655	34.070	-112.821	32.796	-111.211	phoenix	Phoenix
 North America	5206379	40.880	-80.711	40.023	-79.249	pittsburgh	Pittsburgh
+North America	3718426	18.683	-72.518	18.456	-72.112	port-au-prince	Port-au-Prince
 North America	5746545	45.897	-123.211	45.096	-122.113	portland	Portland
 North America	5511077	39.769	-120.094	39.309	-119.506	reno	Reno
 North America	4407066	39.151	-91.010	38.069	-89.533	st-louis	St. Louis
