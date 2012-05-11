@@ -61,7 +61,7 @@ Europe	2735943	41.399	-8.795	40.981	-8.358	porto	Porto
 Europe	3067696	50.408	13.842	49.763	15.012	prague	Prague
 Europe	3169070	42.130	12.109	41.578	12.845	rome	Rome
 Europe	2747891	52.109	3.911	51.737	4.784	rotterdam	Rotterdam
-Europe  3191281 43.918  18.244  43.778 18.515 sarajevo Sarajevo
+Europe	3191281	43.987	18.115	43.702	18.631	sarajevo	Sarajevo
 Europe	727011	43.040	22.870	42.380	23.830	sofia	Sofia
 Europe	2673730	59.908	17.061	58.850	19.055	stockholm	Stockholm
 Europe	498817	60.345	29.168	59.556	31.173	st-petersburg	Saint Petersburg
