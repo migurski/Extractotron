@@ -23,7 +23,6 @@ Asia	1880252	1.823	103.062	0.807	104.545	singapore	Singapore
 Asia	1668341	25.386	120.995	24.779	122.025	taipei	Taipei
 Asia	112931	35.917	50.87	35.383	51.648	tehran	Tehran
 Asia	1850147	36.558	138.779	34.867	141.152	tokyo	Tokyo
-Central America   18.594  -70.086 18.388-69.715 santo_domingo Santo Domingo
 Europe	2759794	52.629	4.465	52.163	5.347	amsterdam	Amsterdam
 Europe	2759794	38.365	22.949	37.514	24.421	athens	Athens
 Europe	3128760	41.687	1.734	41.075	2.496	barcelona	Barcelona
@@ -121,6 +120,7 @@ North America	5391811;3981609	33.078	-117.376	32.312	-116.588	san-diego-tijuana	
 North America	5391959	37.955	-122.737	37.449	-122.011	san-francisco	San Francisco
 North America		38.719	-123.640	36.791	-121.025	sf-bay-area	San Francisco Bay Area
 North America	5392952	34.764	-120.712	33.872	-119.080	santa-barbara	Santa Barbara
+North America	3492908	18.685	-70.203	18.314	-69.620	santo-domingo	Santo Domingo
 North America	5809844	47.843	-122.860	47.380	-121.868	seattle	Seattle
 North America	5213681	41.106	-78.280	40.572	-77.302	state-college-pa	State College, PA
 North America	4174757	28.376	-82.935	27.279	-82.012	tampa	Tampa
