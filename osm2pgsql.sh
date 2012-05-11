@@ -130,11 +130,17 @@ wait
 osm2pgsql_shapefiles bengaluru &
 imposm_shapefiles bengaluru &
 wait
+osm2pgsql_shapefiles chengdu &
+imposm_shapefiles chengdu &
+wait
 osm2pgsql_shapefiles chennai &
 imposm_shapefiles chennai &
 wait
 osm2pgsql_shapefiles hong-kong &
 imposm_shapefiles hong-kong &
+wait
+osm2pgsql_shapefiles nazareth &
+imposm_shapefiles nazareth &
 wait
 osm2pgsql_shapefiles manila &
 imposm_shapefiles manila &
@@ -217,6 +223,9 @@ wait
 osm2pgsql_shapefiles hamburg &
 imposm_shapefiles hamburg &
 wait
+osm2pgsql_shapefiles helsinki &
+imposm_shapefiles helsinki &
+wait
 osm2pgsql_shapefiles istanbul &
 imposm_shapefiles istanbul &
 wait
@@ -265,6 +274,9 @@ wait
 osm2pgsql_shapefiles munich &
 imposm_shapefiles munich &
 wait
+osm2pgsql_shapefiles newcastle &
+imposm_shapefiles newcastle &
+wait
 osm2pgsql_shapefiles paris &
 imposm_shapefiles paris &
 wait
@@ -280,11 +292,17 @@ wait
 osm2pgsql_shapefiles rotterdam &
 imposm_shapefiles rotterdam &
 wait
+osm2pgsql_shapefiles sarajevo &
+imposm_shapefiles sarajevo &
+wait
 osm2pgsql_shapefiles sofia &
 imposm_shapefiles sofia &
 wait
 osm2pgsql_shapefiles stockholm &
 imposm_shapefiles stockholm &
+wait
+osm2pgsql_shapefiles strasbourg &
+imposm_shapefiles strasbourg &
 wait
 osm2pgsql_shapefiles st-petersburg &
 imposm_shapefiles st-petersburg &
@@ -327,6 +345,9 @@ imposm_shapefiles austin &
 wait
 osm2pgsql_shapefiles boston &
 imposm_shapefiles boston &
+wait
+osm2pgsql_shapefiles calgary &
+imposm_shapefiles calgary &
 wait
 osm2pgsql_shapefiles charlotte &
 imposm_shapefiles charlotte &
@@ -376,6 +397,9 @@ wait
 osm2pgsql_shapefiles kansas-city-lawrence-topeka &
 imposm_shapefiles kansas-city-lawrence-topeka &
 wait
+osm2pgsql_shapefiles lexington &
+imposm_shapefiles lexington &
+wait
 osm2pgsql_shapefiles los-angeles &
 imposm_shapefiles los-angeles &
 wait
@@ -418,6 +442,9 @@ wait
 osm2pgsql_shapefiles pittsburgh &
 imposm_shapefiles pittsburgh &
 wait
+osm2pgsql_shapefiles port-au-prince &
+imposm_shapefiles port-au-prince &
+wait
 osm2pgsql_shapefiles portland &
 imposm_shapefiles portland &
 wait
@@ -441,6 +468,9 @@ imposm_shapefiles sf-bay-area &
 wait
 osm2pgsql_shapefiles santa-barbara &
 imposm_shapefiles santa-barbara &
+wait
+osm2pgsql_shapefiles santo-domingo &
+imposm_shapefiles santo-domingo &
 wait
 osm2pgsql_shapefiles seattle &
 imposm_shapefiles seattle &
