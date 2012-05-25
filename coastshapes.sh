@@ -24,6 +24,7 @@ package_coast beijing 40.426 115.686 39.414 117.119
 package_coast bengaluru 13.23 77.35 12.75 77.85
 package_coast chengdu 30.987 103.564 30.363 104.555
 package_coast chennai 13.3 79.9 12.7 80.4
+package_coast dushanbe 38.829 68.244 38.244 69.134
 package_coast hong-kong 23.488 112.780 21.591 115.125
 package_coast nazareth 32.895 35.077 32.502 35.497
 package_coast manila 14.900 120.885 14.327 121.200
@@ -74,6 +75,7 @@ package_coast newcastle 55.163 -2.027 54.744 -1.261
 package_coast paris 49.178 1.851 48.531 2.911
 package_coast porto 41.399 -8.795 40.981 -8.358
 package_coast prague 50.408 13.842 49.763 15.012
+package_coast reykjavik 64.297 -22.826 63.771 -21.140
 package_coast rome 42.130 12.109 41.578 12.845
 package_coast rotterdam 52.109 3.911 51.737 4.784
 package_coast sarajevo 43.987 18.115 43.702 18.631

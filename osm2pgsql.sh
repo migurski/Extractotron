@@ -289,6 +289,9 @@ wait
 osm2pgsql_shapefiles prague &
 imposm_shapefiles prague &
 wait
+osm2pgsql_shapefiles reykjavik &
+imposm_shapefiles reykjavik &
+wait
 osm2pgsql_shapefiles rome &
 imposm_shapefiles rome &
 wait
