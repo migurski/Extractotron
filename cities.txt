@@ -60,7 +60,8 @@ Europe	2867714	48.523	10.799	47.717	12.178	munich	Munich
 Europe	2641673	55.163	-2.027	54.744	-1.261	newcastle	Newcastle upon Tyne
 Europe	2988507	49.178	1.851	48.531	2.911	paris	Paris
 Europe	2735943	41.399	-8.795	40.981	-8.358	porto	Porto
-Europe	3067696	50.408	13.842	49.763	15.012	prague	Prague
+Europe  3067696	50.408	13.842	49.763	15.012	prague	Prague
+Europe  3413829	64.253	-22.101	64.0289	-21.618	reykjavik	Reykjavik
 Europe	3169070	42.130	12.109	41.578	12.845	rome	Rome
 Europe	2747891	52.109	3.911	51.737	4.784	rotterdam	Rotterdam
 Europe	3191281	43.987	18.115	43.702	18.631	sarajevo	Sarajevo
