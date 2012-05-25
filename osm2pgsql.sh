@@ -136,6 +136,9 @@ wait
 osm2pgsql_shapefiles chennai &
 imposm_shapefiles chennai &
 wait
+osm2pgsql_shapefiles dushanbe &
+imposm_shapefiles dushanbe &
+wait
 osm2pgsql_shapefiles hong-kong &
 imposm_shapefiles hong-kong &
 wait
