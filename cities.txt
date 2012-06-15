@@ -1,7 +1,12 @@
 group	geonameid	top	left	bottom	right	slug	name
+Africa  2352778 9.146 7.348  8.935 7.617 abuja Abuja
 Africa	360630	30.564	30.897	29.761	31.710	cairo	Cairo
+Africa  160263  -6.602  38.994  -7.020  39.561  dar-es-salaam Dar-es-Salaam
+Africa  890299  -17.708 30.901  -17.961 31.177  harare  Harare
 Africa	993800	-25.834	27.537	-26.563	28.542	johannesburg	Johannesburg
+Africa  232422  0.400 32.487  0.219 32.666  kampala Kampala
 Africa	2332459	6.910	2.889	6.320	3.834	lagos	Lagos
+Africa  53654  2.1298 45.225  1.973 45.436  mogadishu Mogadishu
 Africa	184745	-0.965	36.582	-1.488	37.056	nairobi	Nairobi
 Asia	1526384	43.549	76.575	43.057	77.223	almaty	Almaty, Kazakhstan
 Asia	323786	40.372	32.105	39.439	33.509	ankara	Ankara
