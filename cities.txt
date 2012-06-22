@@ -129,6 +129,7 @@ North America	5213681	41.106	-78.280	40.572	-77.302	state-college-pa	State Colle
 North America	4174757	28.376	-82.935	27.279	-82.012	tampa	Tampa
 North America	7164249	39.578	-87.508	39.367	-87.280	terre-haute	Terre Haute
 North America	6167865	44.182	-80.161	43.201	-78.717	toronto	Toronto
+North America 5318313 32.477  -111.228  32.044  -110.655 tucson Tucson
 North America	6173331	49.475	-123.513	48.669	-121.777	vancouver	Vancouver
 North America	6174041	48.871	-124.063	48.054	-122.568	victoria	Victoria
 North America	4140963;4347778	39.631	-77.599	38.539	-76.058	dc-baltimore	Washington D.C., Baltimore
