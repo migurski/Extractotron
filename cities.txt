@@ -58,7 +58,7 @@ Europe	2992166	43.910	4.488	43.241	3.381	montpellier	Montpellier
 Europe	524901	56.200	36.870	55.285	38.430	moscow	Moscow
 Europe	2867714	48.523	10.799	47.717	12.178	munich	Munich
 Europe	2641673	55.163	-2.027	54.744	-1.261	newcastle	Newcastle upon Tyne
-Europe  2861650 49.511  10.907  49.377  11.193  nuremberg Nuremberg
+Europe  2861650 49.657  10.797  49.319  11.239  nuremberg Nuremberg
 Europe	2988507	49.178	1.851	48.531	2.911	paris	Paris
 Europe	2735943	41.399	-8.795	40.981	-8.358	porto	Porto
 Europe	3067696	50.408	13.842	49.763	15.012	prague	Prague
