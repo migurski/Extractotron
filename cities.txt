@@ -106,7 +106,7 @@ North America	5261457	43.343	-89.854	42.801	-88.992	madison	Madison
 North America	3530597	19.921	-99.597	18.992	-98.606	mexico-city	Mexico City
 North America	4164138	26.912	-80.683	25.291	-79.774	miami	Miami
 North America	5263045	43.389	-88.511	42.656	-87.522	milwaukee	Milwaukee
-North America	5037649;5045360	45.410	-94.064	44.496	-92.543	mpls-stpaul	Minneapolis, St. Paul
+North America	5037649;5045360	45.4148	-94.0125	44.4711	-92.7319	mpls-stpaul	Minneapolis, St. Paul
 North America	4076598	30.883	-88.363	30.496	-87.832	mobile-al	Mobile, AL
 North America	6077243	46.057	-74.734	44.968	-72.723	montreal	Montreal
 North America	4335045	30.510	-90.653	28.887	-89.110	new-orleans	New Orleans
