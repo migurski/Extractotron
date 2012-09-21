@@ -54,7 +54,7 @@ chmod +x coastline-errors.sh
 curl -sOL http://dev.openstreetmap.org/~bretth/osmosis-build/osmosis-latest.tgz
 tar -xzf osmosis-latest.tgz
 
-curl -OL "http://planet.openstreetmap.org/planet-latest.osm.bz2" > download.txt 2>&1
+curl -OL "http://planet.openstreetmap.org/planet/planet-latest.osm.bz2" > download.txt 2>&1
 
 echo '# extract', `date` >> log.txt
 mkdir ex
