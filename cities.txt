@@ -1,4 +1,5 @@
 group	geonameid	top	left	bottom	right	slug	name
+Africa  2505329 36.79   5.01    5.12    36.7    Bejaia Bejaia
 Africa	360630	30.564	30.897	29.761	31.710	cairo	Cairo
 Africa	993800	-25.834	27.537	-26.563	28.542	johannesburg	Johannesburg
 Africa	2332459	6.910	2.889	6.320	3.834	lagos	Lagos
