@@ -15,7 +15,7 @@ from ModestMaps.OpenStreetMap import Provider
 provider = Provider()
 dimensions = Point(960, 600)
 
-base_url = 'http://osm-metro-extracts.s3.amazonaws.com/log.txt'
+base_url = 'http://osm-extracted-metros.s3.amazonaws.com/log.txt'
 extract_pat = compile(r'^((\S+)\.osm\.(bz2|pbf))\s+(\d+)$')
 coastshape_pat = compile(r'^((\S+)\.coastline\.zip)\s+(\d+)$')
 shp_imposm_pat = compile(r'^((\S+)\.imposm-shapefiles\.zip)\s+(\d+)$')
