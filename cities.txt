@@ -94,6 +94,7 @@ North America	4671654	30.670	-98.212	29.931	-97.234	austin	Austin
 North America	4930956	42.702	-71.861	41.951	-70.285	boston	Boston
 North America	5913490	51.353	-114.612	50.710	-113.478	calgary	Calgary
 North America	4460243	35.476	-81.307	34.919	-80.396	charlotte	Charlotte
+North America 4612862 35.268  -85.487 34.904  -85.492 chattanooga Chattanooga
 North America	4887398	42.297	-88.505	41.339	-87.066	chicago	Chicago
 North America	4508722	39.471	-84.843	38.875	-84.121	cincinnati	Cincinnati
 North America	5150529	41.918	-82.485	40.730	-80.798	cleveland	Cleveland
