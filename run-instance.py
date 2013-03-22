@@ -8,7 +8,7 @@ from urllib import urlencode
 
 parser = OptionParser(usage="%prog [options] <s3 bucket>")
 
-defaults = dict(ami_id='ami-71589518', type='m2.xlarge', run=True, upload=True, kill=True)
+defaults = dict(ami_id='ami-bffa6fd6', type='m2.4xlarge', run=True, upload=True, kill=True)
 
 parser.set_defaults(**defaults)
 
