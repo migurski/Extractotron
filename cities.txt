@@ -38,6 +38,7 @@ Europe	2650225	56.132	-3.585	55.783	-2.835	edinburgh	Edinburgh
 Europe	3176959	43.983	10.982	43.601	11.504	florence	Florence
 Europe	2925533	50.447	7.811	49.632	9.442	frankfurt	Frankfurt
 Europe	3099434	54.870	18.174	54.007	19.113	gdansk	Gdansk
+Europe  3176219 44.561  8.444 44.291  9.114 genoa Genoa
 Europe	2648579	56.034	-4.613	55.668	-3.935	glasgow	Glasgow
 Europe	2911298	53.833	9.376	53.159	10.678	hamburg	Hamburg
 Europe	658225	60.357	24.428	60.052	25.381	helsinki	Helsinki
@@ -129,6 +130,7 @@ North America	5213681	41.106	-78.280	40.572	-77.302	state-college-pa	State Colle
 North America	4174757	28.376	-82.935	27.279	-82.012	tampa	Tampa
 North America	7164249	39.578	-87.508	39.367	-87.280	terre-haute	Terre Haute
 North America	6167865	44.182	-80.161	43.201	-78.717	toronto	Toronto
+North America 5318313 32.477  -111.228  32.044  -110.655 tucson Tucson
 North America	6173331	49.475	-123.513	48.669	-121.777	vancouver	Vancouver
 North America	6174041	48.871	-124.063	48.054	-122.568	victoria	Victoria
 North America	4140963;4347778	39.631	-77.599	38.539	-76.058	dc-baltimore	Washington D.C., Baltimore
