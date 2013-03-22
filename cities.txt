@@ -1,5 +1,6 @@
 group	geonameid	top	left	bottom	right	slug	name
 Africa	2352778	9.246	7.248	8.835	7.717	abuja	Abuja
+Africa  2505329 36.79   5.01    5.12    36.7    bejaia Bejaia
 Africa	360630	30.564	30.897	29.761	31.710	cairo	Cairo
 Africa	160263	-6.502	38.894	-7.120	39.661	dar-es-salaam	Dar-es-Salaam
 Africa	890299	-17.508	30.701	-18.161	31.377	harare	Harare
