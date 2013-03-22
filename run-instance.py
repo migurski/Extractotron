@@ -6,7 +6,7 @@ from httplib import HTTPConnection
 from urlparse import urljoin
 from urllib import urlencode
 
-parser = OptionParser(usage="%prog [options] <aws key> <aws secret> <s3 bucket>")
+parser = OptionParser(usage="%prog [options] <s3 bucket>")
 
 defaults = dict(ami_id='ami-71589518', type='m2.xlarge', run=True, upload=True, kill=True)
 
@@ -54,12 +54,13 @@ def post_script(filename):
 if __name__ == '__main__':
     
     try:
-        options, (aws_key, aws_secret, s3_bucket) = parser.parse_args()
+        options, (s3_bucket, ) = parser.parse_args()
     except ValueError:
         parser.print_usage()
         exit(1)
     
     user_data = open('extract.sh').read()
+    ec2 = EC2Connection()
     
     if options.upload:
         user_data += open('upload-files.sh').read()
@@ -67,8 +68,8 @@ if __name__ == '__main__':
     if options.kill:
         user_data += open('kill-self.sh').read()
 
-    user_data = user_data.replace('$KEY', aws_key)
-    user_data = user_data.replace('$SECRET', aws_secret)
+    user_data = user_data.replace('$KEY', ec2.access_key)
+    user_data = user_data.replace('$SECRET', ec2.secret_key)
     user_data = user_data.replace('$BUCKET', s3_bucket)
     user_data = user_data.replace('$OSMOSIS_HREF', post_script('osmosis.sh'))
     user_data = user_data.replace('$OSM2PGSQL_HREF', post_script('osm2pgsql.sh'))
@@ -77,8 +78,12 @@ if __name__ == '__main__':
     user_data = user_data.replace('$OSM2STYLE_HREF', post_script('osm2pgsql.style'))
     
     if options.run:
-        conn = EC2Connection(aws_key, aws_secret)
-        print conn.run_instances(options.ami_id, instance_type=options.type, user_data=user_data)
+        # bid a penny over median
+        history = ec2.get_spot_price_history(instance_type=options.type)
+        median = sorted([h.price for h in history])[len(history)/2]
+        bid = median + .01
+        
+        print ec2.request_spot_instances(bid, options.ami_id, instance_type=options.type, user_data=user_data, key_name='whiteknight-id_rsa.pub', security_groups=['quicklaunch-0'])
     
     else:
         print user_data
