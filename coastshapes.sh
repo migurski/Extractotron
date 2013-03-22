@@ -13,10 +13,17 @@ function package_coast
     cp ex/$slug.shp.zip ex/$slug.coastline.zip
 }
 
+package_coast abuja 9.246 7.248 8.835 7.717
+package_coast bejaia 36.89 4.91 36.6 5.22
 package_coast cairo 30.564 30.897 29.761 31.710
+package_coast dar-es-salaam -6.502 38.894 -7.120 39.661
+package_coast harare -17.508 30.701 -18.161 31.377
 package_coast johannesburg -25.834 27.537 -26.563 28.542
+package_coast kampala 0.600 32.287 -0.081 32.866
 package_coast lagos 6.910 2.889 6.320 3.834
+package_coast mogadishu 2.3298 45.025 1.773 45.636
 package_coast nairobi -0.965 36.582 -1.488 37.056
+package_coast kigali -1.6978 29.9105 -2.1255 30.2883
 package_coast almaty 43.549 76.575 43.057 77.223
 package_coast ankara 40.372 32.105 39.439 33.509
 package_coast bangkok 15.019 99.569 12.661 101.337
@@ -24,6 +31,7 @@ package_coast beijing 40.426 115.686 39.414 117.119
 package_coast bengaluru 13.23 77.35 12.75 77.85
 package_coast chengdu 30.987 103.564 30.363 104.555
 package_coast chennai 13.3 79.9 12.7 80.4
+package_coast chongqing 32.217 105.283 28.167 110.183
 package_coast dushanbe 38.829 68.244 38.244 69.134
 package_coast hong-kong 23.488 112.780 21.591 115.125
 package_coast nazareth 32.895 35.077 32.502 35.497
@@ -48,16 +56,19 @@ package_coast brno 49.357 16.268 48.951 16.940
 package_coast brussels 51.053 3.981 50.645 4.761
 package_coast budapest 47.861 18.347 47.025 19.780
 package_coast copenhagen 55.950 11.894 55.491 13.147
+package_coast colchester 52.031 0.609 51.743 1.188
 package_coast edinburgh 56.132 -3.585 55.783 -2.835
 package_coast florence 43.983 10.982 43.601 11.504
 package_coast frankfurt 50.447 7.811 49.632 9.442
 package_coast gdansk 54.870 18.174 54.007 19.113
+package_coast genoa 44.561 8.444 44.291 9.114
 package_coast glasgow 56.034 -4.613 55.668 -3.935
 package_coast hamburg 53.833 9.376 53.159 10.678
 package_coast helsinki 60.357 24.428 60.052 25.381
 package_coast istanbul 41.421 28.313 40.738 29.678
 package_coast karlsruhe 49.246 7.893 48.730 8.816
 package_coast krakow 50.240 19.594 49.850 20.275
+package_coast kyiv 50.740 30.078 50.086 30.970
 package_coast leeds 53.921 -1.717 53.697 -1.33
 package_coast lille 50.800 2.823 50.469 3.389
 package_coast lisbon 39.150 -9.634 38.358 -8.458
@@ -72,6 +83,8 @@ package_coast montpellier 43.910 4.488 43.241 3.381
 package_coast moscow 56.200 36.870 55.285 38.430
 package_coast munich 48.523 10.799 47.717 12.178
 package_coast newcastle 55.163 -2.027 54.744 -1.261
+package_coast nuremberg 49.757 10.697 49.219 11.339
+package_coast odessa 46.227 30.154 46.731 30.935
 package_coast paris 49.178 1.851 48.531 2.911
 package_coast porto 41.399 -8.795 40.981 -8.358
 package_coast prague 50.408 13.842 49.763 15.012
@@ -84,6 +97,8 @@ package_coast stockholm 59.908 17.061 58.850 19.055
 package_coast strasbourg 48.722 7.449 48.371 8.078
 package_coast st-petersburg 60.345 29.168 59.556 31.173
 package_coast toulouse 43.838 1.062 43.327 1.779
+package_coast vienna 48.305 15.899 47.985 16.934
+package_coast vienna-bratislava 48.609 15.763 47.496 17.841
 package_coast venice 45.811 11.629 45.123 12.735
 package_coast warsaw 52.623 20.341 51.845 21.692
 package_coast wroclaw 51.311 16.652 50.877 17.363
@@ -93,11 +108,13 @@ package_coast damascus 33.805 35.841 33.112 36.730
 package_coast dubai-abu-dhabi 26.539 53.580 23.735 56.887
 package_coast kabul 34.95 68.48 34.081 69.86
 package_coast riyadh 25.098 46.227 24.292 47.202
+package_coast tel-aviv 32.246 34.642 31.929 35.052
 package_coast atlanta 34.090 -84.857 33.414 -83.890
 package_coast austin 30.670 -98.212 29.931 -97.234
 package_coast boston 42.702 -71.861 41.951 -70.285
 package_coast calgary 51.353 -114.612 50.710 -113.478
 package_coast charlotte 35.476 -81.307 34.919 -80.396
+package_coast chattanooga 35.268 -85.592 34.904 -84.992
 package_coast chicago 42.297 -88.505 41.339 -87.066
 package_coast cincinnati 39.471 -84.843 38.875 -84.121
 package_coast cleveland 41.918 -82.485 40.730 -80.798
@@ -106,6 +123,7 @@ package_coast dallas 33.431 -97.789 32.166 -96.113
 package_coast denver-boulder 40.313 -105.746 39.323 -104.334
 package_coast detroit 42.811 -83.875 41.836 -82.375
 package_coast evansville 38.177 -87.747 37.759 -87.237
+package_coast grassvalley 39.32 -121.30 39.08 -120.88
 package_coast honolulu 21.781 -158.35 21.192 -157.592
 package_coast houston 30.261 -96.064 28.856 -94.378
 package_coast humboldt-ca 41.553 -124.744 39.988 -122.802
@@ -120,7 +138,7 @@ package_coast madison 43.343 -89.854 42.801 -88.992
 package_coast mexico-city 19.921 -99.597 18.992 -98.606
 package_coast miami 26.912 -80.683 25.291 -79.774
 package_coast milwaukee 43.389 -88.511 42.656 -87.522
-package_coast mpls-stpaul 45.410 -94.064 44.496 -92.543
+package_coast mpls-stpaul 45.4148 -94.0125 44.4711 -92.543
 package_coast mobile-al 30.883 -88.363 30.496 -87.832
 package_coast montreal 46.057 -74.734 44.968 -72.723
 package_coast new-orleans 30.510 -90.653 28.887 -89.110
@@ -143,6 +161,7 @@ package_coast state-college-pa 41.106 -78.280 40.572 -77.302
 package_coast tampa 28.376 -82.935 27.279 -82.012
 package_coast terre-haute 39.578 -87.508 39.367 -87.280
 package_coast toronto 44.182 -80.161 43.201 -78.717
+package_coast tucson 32.577 -111.328 31.944 -110.555
 package_coast vancouver 49.475 -123.513 48.669 -121.777
 package_coast victoria 48.871 -124.063 48.054 -122.568
 package_coast dc-baltimore 39.631 -77.599 38.539 -76.058

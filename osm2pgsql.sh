@@ -103,17 +103,38 @@ function imposm_shapefiles
     echo "DROP TABLE ${prefix}_waterways" | psql osm
 }
 
+osm2pgsql_shapefiles abuja &
+imposm_shapefiles abuja &
+wait
+osm2pgsql_shapefiles bejaia &
+imposm_shapefiles bejaia &
+wait
 osm2pgsql_shapefiles cairo &
 imposm_shapefiles cairo &
+wait
+osm2pgsql_shapefiles dar-es-salaam &
+imposm_shapefiles dar-es-salaam &
+wait
+osm2pgsql_shapefiles harare &
+imposm_shapefiles harare &
 wait
 osm2pgsql_shapefiles johannesburg &
 imposm_shapefiles johannesburg &
 wait
+osm2pgsql_shapefiles kampala &
+imposm_shapefiles kampala &
+wait
 osm2pgsql_shapefiles lagos &
 imposm_shapefiles lagos &
 wait
+osm2pgsql_shapefiles mogadishu &
+imposm_shapefiles mogadishu &
+wait
 osm2pgsql_shapefiles nairobi &
 imposm_shapefiles nairobi &
+wait
+osm2pgsql_shapefiles kigali &
+imposm_shapefiles kigali &
 wait
 osm2pgsql_shapefiles almaty &
 imposm_shapefiles almaty &
@@ -135,6 +156,9 @@ imposm_shapefiles chengdu &
 wait
 osm2pgsql_shapefiles chennai &
 imposm_shapefiles chennai &
+wait
+osm2pgsql_shapefiles chongqing &
+imposm_shapefiles chongqing &
 wait
 osm2pgsql_shapefiles dushanbe &
 imposm_shapefiles dushanbe &
@@ -208,6 +232,9 @@ wait
 osm2pgsql_shapefiles copenhagen &
 imposm_shapefiles copenhagen &
 wait
+osm2pgsql_shapefiles colchester &
+imposm_shapefiles colchester &
+wait
 osm2pgsql_shapefiles edinburgh &
 imposm_shapefiles edinburgh &
 wait
@@ -219,6 +246,9 @@ imposm_shapefiles frankfurt &
 wait
 osm2pgsql_shapefiles gdansk &
 imposm_shapefiles gdansk &
+wait
+osm2pgsql_shapefiles genoa &
+imposm_shapefiles genoa &
 wait
 osm2pgsql_shapefiles glasgow &
 imposm_shapefiles glasgow &
@@ -237,6 +267,9 @@ imposm_shapefiles karlsruhe &
 wait
 osm2pgsql_shapefiles krakow &
 imposm_shapefiles krakow &
+wait
+osm2pgsql_shapefiles kyiv &
+imposm_shapefiles kyiv &
 wait
 osm2pgsql_shapefiles leeds &
 imposm_shapefiles leeds &
@@ -280,6 +313,12 @@ wait
 osm2pgsql_shapefiles newcastle &
 imposm_shapefiles newcastle &
 wait
+osm2pgsql_shapefiles nuremberg &
+imposm_shapefiles nuremberg &
+wait
+osm2pgsql_shapefiles odessa &
+imposm_shapefiles odessa &
+wait
 osm2pgsql_shapefiles paris &
 imposm_shapefiles paris &
 wait
@@ -316,6 +355,12 @@ wait
 osm2pgsql_shapefiles toulouse &
 imposm_shapefiles toulouse &
 wait
+osm2pgsql_shapefiles vienna &
+imposm_shapefiles vienna &
+wait
+osm2pgsql_shapefiles vienna-bratislava &
+imposm_shapefiles vienna-bratislava &
+wait
 osm2pgsql_shapefiles venice &
 imposm_shapefiles venice &
 wait
@@ -343,6 +388,9 @@ wait
 osm2pgsql_shapefiles riyadh &
 imposm_shapefiles riyadh &
 wait
+osm2pgsql_shapefiles tel-aviv &
+imposm_shapefiles tel-aviv &
+wait
 osm2pgsql_shapefiles atlanta &
 imposm_shapefiles atlanta &
 wait
@@ -357,6 +405,9 @@ imposm_shapefiles calgary &
 wait
 osm2pgsql_shapefiles charlotte &
 imposm_shapefiles charlotte &
+wait
+osm2pgsql_shapefiles chattanooga &
+imposm_shapefiles chattanooga &
 wait
 osm2pgsql_shapefiles chicago &
 imposm_shapefiles chicago &
@@ -381,6 +432,9 @@ imposm_shapefiles detroit &
 wait
 osm2pgsql_shapefiles evansville &
 imposm_shapefiles evansville &
+wait
+osm2pgsql_shapefiles grassvalley &
+imposm_shapefiles grassvalley &
 wait
 osm2pgsql_shapefiles honolulu &
 imposm_shapefiles honolulu &
@@ -492,6 +546,9 @@ imposm_shapefiles terre-haute &
 wait
 osm2pgsql_shapefiles toronto &
 imposm_shapefiles toronto &
+wait
+osm2pgsql_shapefiles tucson &
+imposm_shapefiles tucson &
 wait
 osm2pgsql_shapefiles vancouver &
 imposm_shapefiles vancouver &
