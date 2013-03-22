@@ -51,6 +51,7 @@ Europe	658225	60.357	24.428	60.052	25.381	helsinki	Helsinki
 Europe	745044	41.421	28.313	40.738	29.678	istanbul	Istanbul
 Europe	2892794	49.246	7.893	48.730	8.816	karlsruhe	Karlsruhe
 Europe	3094802	50.240	19.594	49.850	20.275	krakow	Krakow
+Europe  703448	50.640	30.178	50.186	30.870	kyiv	Kyiv
 Europe	2644688	53.921	-1.717	53.697	-1.33	leeds	Leeds
 Europe	2998324	50.800	2.823	50.469	3.389	lille	Lille
 Europe	2267057	39.150	-9.634	38.358	-8.458	lisbon	Lisbon
