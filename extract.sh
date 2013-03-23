@@ -22,7 +22,7 @@ PERL_MM_USE_DEFAULT=1 perl -MCPAN -e 'install Bit::Vector' >> install.txt 2>&1
 
 echo 'local all postgres              ident' > /etc/postgresql/8.4/main/pg_hba.conf
 echo 'host  all all      127.0.0.1/32 trust' >> /etc/postgresql/8.4/main/pg_hba.conf
-/etc/init.d/postgresql restart
+/etc/init.d/postgresql* restart
 
 svn co http://svn.openstreetmap.org/applications/utils/coastcheck cc >> install.txt 2>&1
 cd cc

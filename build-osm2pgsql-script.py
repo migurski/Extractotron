@@ -19,8 +19,8 @@ print >> osm2pgsql, """#!/bin/bash -x
 
 createdb -E utf8 -T template0 osm
 createlang plpgsql osm
-psql -f /usr/share/postgresql/8.4/contrib/postgis-1.5/postgis.sql osm
-psql -f /usr/share/postgresql/8.4/contrib/postgis-1.5/spatial_ref_sys.sql osm
+psql -f /usr/share/postgresql/8.4/contrib/postgis.sql osm
+psql -f /usr/share/postgresql/8.4/contrib/spatial_ref_sys.sql osm
 
 function osm2pgsql_shapefiles
 {
