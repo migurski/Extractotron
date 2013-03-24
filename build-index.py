@@ -260,7 +260,9 @@ if __name__ == '__main__':
         </p>
         <ul class="coast">
             <li><a href="%s">Coastline polygons</a>: automatically generated areas, divided into 100km squares.<br><a href="%s">Mercator</a> (%s) and <a href="%s">unprojected</a> (%s) shapefiles.<br>Updated from <a href="http://planet.openstreetmap.org/">Planet</a> %s.</li>
+            <!--
             <li><a href="%s">Good coastline polygons</a>: coastline polygons chosen to fill gaps in new data with old data.<br><a href="%s">Mercator</a> (%s) and <a href="%s">unprojected</a> (%s) shapefiles.<br>Last manually selected %s.</li>
+            -->
         </ul>
         <p>
             The coastline usually has errors in it. These files help show where

@@ -3,6 +3,7 @@
 <head>
 	<title>Metro Extracts</title>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="http://www.openstreetmap.us/~migurski/style.css" type="text/css" media="all">
     <link rel="stylesheet" href="style.css" type="text/css" media="all">
 </head>
 <body>
@@ -30,7 +31,7 @@
         <a href="https://github.com/migurski/Extractotron/blob/master/cities.txt">cities.txt</a>
         with a <a href="http://help.github.com/fork-a-repo/">fork</a>-and-<a href="http://help.github.com/send-pull-requests/">pull-request</a>.
     </p>
-    <h2>Updated From <a href="http://planet.openstreetmap.org/">Planet</a> Mar 20, 2013</h2>
+    <h2>Updated From <a href="http://planet.openstreetmap.org/">Planet</a> Mar 23, 2013</h2>
     <p id="archive-note">
         An archived copy of this collection of extracts from the
         <a href="http://archive.org/download/metro.teczno.com/planet-120314.osm.bz2">March 14th 2012 Planet file</a>
@@ -41,9 +42,16 @@
     </p>
     <ul class="links">
 <li class="group">Africa:</li>
+<li class="link"><a href="#abuja">Abuja</a></li>
+<li class="link"><a href="#bejaia">Bejaia</a></li>
 <li class="link"><a href="#cairo">Cairo</a></li>
+<li class="link"><a href="#dar-es-salaam">Dar-es-Salaam</a></li>
+<li class="link"><a href="#harare">Harare</a></li>
 <li class="link"><a href="#johannesburg">Johannesburg</a></li>
+<li class="link"><a href="#kampala">Kampala</a></li>
+<li class="link"><a href="#kigali">Kigali</a></li>
 <li class="link"><a href="#lagos">Lagos</a></li>
+<li class="link"><a href="#mogadishu">Mogadishu</a></li>
 <li class="link"><a href="#nairobi">Nairobi</a></li>
 <li class="group">Asia:</li>
 <li class="link"><a href="#almaty">Almaty, Kazakhstan</a></li>
@@ -53,6 +61,7 @@
 <li class="link"><a href="#bengaluru">Bengaluru</a></li>
 <li class="link"><a href="#chengdu">Chengdu</a></li>
 <li class="link"><a href="#chennai">Chennai</a></li>
+<li class="link"><a href="#chongqing">Chongqing</a></li>
 <li class="link"><a href="#dushanbe">Dushanbe, Tajikistan</a></li>
 <li class="link"><a href="#hong-kong">Hong Kong</a></li>
 <li class="link"><a href="#manila">Manila</a></li>
@@ -77,17 +86,20 @@
 <li class="link"><a href="#brno">Brno</a></li>
 <li class="link"><a href="#brussels">Brussels</a></li>
 <li class="link"><a href="#budapest">Budapest</a></li>
+<li class="link"><a href="#colchester">Colchester</a></li>
 <li class="link"><a href="#copenhagen">Copenhagen</a></li>
 <li class="link"><a href="#edinburgh">Edinburgh</a></li>
 <li class="link"><a href="#florence">Florence</a></li>
 <li class="link"><a href="#frankfurt">Frankfurt</a></li>
 <li class="link"><a href="#gdansk">Gdansk</a></li>
+<li class="link"><a href="#genoa">Genoa</a></li>
 <li class="link"><a href="#glasgow">Glasgow</a></li>
 <li class="link"><a href="#hamburg">Hamburg</a></li>
 <li class="link"><a href="#helsinki">Helsinki</a></li>
 <li class="link"><a href="#istanbul">Istanbul</a></li>
 <li class="link"><a href="#karlsruhe">Karlsruhe</a></li>
 <li class="link"><a href="#krakow">Krakow</a></li>
+<li class="link"><a href="#kyiv">Kyiv</a></li>
 <li class="link"><a href="#leeds">Leeds</a></li>
 <li class="link"><a href="#lille">Lille</a></li>
 <li class="link"><a href="#lisbon">Lisbon</a></li>
@@ -102,6 +114,8 @@
 <li class="link"><a href="#moscow">Moscow</a></li>
 <li class="link"><a href="#munich">Munich</a></li>
 <li class="link"><a href="#newcastle">Newcastle upon Tyne</a></li>
+<li class="link"><a href="#nuremberg">Nuremberg</a></li>
+<li class="link"><a href="#odessa">Odessa</a></li>
 <li class="link"><a href="#paris">Paris</a></li>
 <li class="link"><a href="#porto">Porto</a></li>
 <li class="link"><a href="#prague">Prague</a></li>
@@ -115,6 +129,8 @@
 <li class="link"><a href="#strasbourg">Strasbourg</a></li>
 <li class="link"><a href="#toulouse">Toulouse</a></li>
 <li class="link"><a href="#venice">Venice</a></li>
+<li class="link"><a href="#vienna">Vienna</a></li>
+<li class="link"><a href="#vienna-bratislava">Vienna, Bratislava, Győr, Eisenstadt</a></li>
 <li class="link"><a href="#warsaw">Warsaw</a></li>
 <li class="link"><a href="#wroclaw">Wroclaw</a></li>
 <li class="group">Middle East:</li>
@@ -124,12 +140,14 @@
 <li class="link"><a href="#dubai-abu-dhabi">Dubai, Abu Dhabi</a></li>
 <li class="link"><a href="#kabul">Kabul</a></li>
 <li class="link"><a href="#riyadh">Riyadh</a></li>
+<li class="link"><a href="#tel-aviv">Tel Aviv</a></li>
 <li class="group">North America:</li>
 <li class="link"><a href="#atlanta">Atlanta</a></li>
 <li class="link"><a href="#austin">Austin</a></li>
 <li class="link"><a href="#boston">Boston</a></li>
 <li class="link"><a href="#calgary">Calgary</a></li>
 <li class="link"><a href="#charlotte">Charlotte</a></li>
+<li class="link"><a href="#chattanooga">Chattanooga</a></li>
 <li class="link"><a href="#chicago">Chicago</a></li>
 <li class="link"><a href="#cincinnati">Cincinnati</a></li>
 <li class="link"><a href="#cleveland">Cleveland</a></li>
@@ -138,6 +156,7 @@
 <li class="link"><a href="#denver-boulder">Denver and Boulder CO</a></li>
 <li class="link"><a href="#detroit">Detroit</a></li>
 <li class="link"><a href="#evansville">Evansville</a></li>
+<li class="link"><a href="#grassvalley">Grass Valley, CA</a></li>
 <li class="link"><a href="#honolulu">Honolulu</a></li>
 <li class="link"><a href="#houston">Houston</a></li>
 <li class="link"><a href="#humboldt-ca">Humboldt, CA</a></li>
@@ -175,6 +194,7 @@
 <li class="link"><a href="#tampa">Tampa</a></li>
 <li class="link"><a href="#terre-haute">Terre Haute</a></li>
 <li class="link"><a href="#toronto">Toronto</a></li>
+<li class="link"><a href="#tucson">Tucson</a></li>
 <li class="link"><a href="#vancouver">Vancouver</a></li>
 <li class="link"><a href="#victoria">Victoria</a></li>
 <li class="link"><a href="#dc-baltimore">Washington D.C., Baltimore</a></li>
@@ -199,21 +219,27 @@
 <ul>
 
                 <li class="city">
+                    <a name="abuja" href="http://www.openstreetmap.org/?lat=9.041&amp;lon=7.483&amp;zoom=10&amp;layers=M"><img src="previews/abuja.jpg"></a>
+                    <h3>Abuja</h3>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/abuja.osm.bz2">518 KB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/abuja.osm.pbf">323 KB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/abuja.coastline.zip">1.1 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/abuja.osm2pgsql-shapefiles.zip">654 KB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/abuja.imposm-shapefiles.zip">1.3 MB imposm shapefiles</a></li></ul>
+                </li>
+
+                <li class="city">
                     <a name="almaty" href="http://www.openstreetmap.org/?lat=43.303&amp;lon=76.899&amp;zoom=10&amp;layers=M"><img src="previews/almaty.jpg"></a>
                     <h3>Almaty, Kazakhstan</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/almaty.osm.bz2">1.8 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/almaty.osm.pbf">1.1 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/almaty.coastline.zip">1.0 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/almaty.osm2pgsql-shapefiles.zip">2.0 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/almaty.imposm-shapefiles.zip">3.1 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/almaty.osm.bz2">1.8 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/almaty.osm.pbf">1.1 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/almaty.coastline.zip">1.0 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/almaty.osm2pgsql-shapefiles.zip">2.0 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/almaty.imposm-shapefiles.zip">3.2 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
                     <a name="amsterdam" href="http://www.openstreetmap.org/?lat=52.397&amp;lon=4.905&amp;zoom=10&amp;layers=M"><img src="previews/amsterdam.jpg"></a>
                     <h3>Amsterdam</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/amsterdam.osm.bz2">72 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/amsterdam.osm.pbf">52 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/amsterdam.coastline.zip">193 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/amsterdam.osm2pgsql-shapefiles.zip">98 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/amsterdam.imposm-shapefiles.zip">114 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/amsterdam.osm.bz2">72 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/amsterdam.osm.pbf">52 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/amsterdam.coastline.zip">193 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/amsterdam.osm2pgsql-shapefiles.zip">98 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/amsterdam.imposm-shapefiles.zip">115 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
                     <a name="ankara" href="http://www.openstreetmap.org/?lat=39.908&amp;lon=32.808&amp;zoom=9&amp;layers=M"><img src="previews/ankara.jpg"></a>
                     <h3>Ankara</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/ankara.osm.bz2">2.8 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/ankara.osm.pbf">1.7 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/ankara.coastline.zip">1.3 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/ankara.osm2pgsql-shapefiles.zip">3.4 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/ankara.imposm-shapefiles.zip">6.6 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/ankara.osm.bz2">3.0 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/ankara.osm.pbf">1.8 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/ankara.coastline.zip">1.3 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/ankara.osm2pgsql-shapefiles.zip">3.6 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/ankara.imposm-shapefiles.zip">7.0 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
@@ -225,7 +251,7 @@
                 <li class="city">
                     <a name="athens" href="http://www.openstreetmap.org/?lat=37.940&amp;lon=23.684&amp;zoom=9&amp;layers=M"><img src="previews/athens.jpg"></a>
                     <h3>Athens</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/athens.osm.bz2">16 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/athens.osm.pbf">9.6 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/athens.coastline.zip">631 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/athens.osm2pgsql-shapefiles.zip">18 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/athens.imposm-shapefiles.zip">32 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/athens.osm.bz2">16 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/athens.osm.pbf">9.6 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/athens.coastline.zip">635 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/athens.osm2pgsql-shapefiles.zip">18 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/athens.imposm-shapefiles.zip">32 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
@@ -255,19 +281,25 @@
                 <li class="city">
                     <a name="bangkok" href="http://www.openstreetmap.org/?lat=13.843&amp;lon=100.453&amp;zoom=8&amp;layers=M"><img src="previews/bangkok.jpg"></a>
                     <h3>Bangkok</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/bangkok.osm.bz2">12 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/bangkok.osm.pbf">7.6 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/bangkok.coastline.zip">67 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/bangkok.osm2pgsql-shapefiles.zip">14 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/bangkok.imposm-shapefiles.zip">25 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/bangkok.osm.bz2">12 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/bangkok.osm.pbf">7.7 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/bangkok.coastline.zip">67 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/bangkok.osm2pgsql-shapefiles.zip">14 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/bangkok.imposm-shapefiles.zip">25 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
                     <a name="barcelona" href="http://www.openstreetmap.org/?lat=41.382&amp;lon=2.115&amp;zoom=10&amp;layers=M"><img src="previews/barcelona.jpg"></a>
                     <h3>Barcelona</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/barcelona.osm.bz2">19 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/barcelona.osm.pbf">12 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/barcelona.coastline.zip">112 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/barcelona.osm2pgsql-shapefiles.zip">23 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/barcelona.imposm-shapefiles.zip">35 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/barcelona.osm.bz2">20 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/barcelona.osm.pbf">12 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/barcelona.coastline.zip">113 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/barcelona.osm2pgsql-shapefiles.zip">23 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/barcelona.imposm-shapefiles.zip">35 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
                     <a name="beijing" href="http://www.openstreetmap.org/?lat=39.922&amp;lon=116.403&amp;zoom=9&amp;layers=M"><img src="previews/beijing.jpg"></a>
                     <h3>Beijing</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/beijing.osm.bz2">5.3 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/beijing.osm.pbf">3.4 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/beijing.coastline.zip">6.7 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/beijing.osm2pgsql-shapefiles.zip">6.7 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/beijing.imposm-shapefiles.zip">13 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/beijing.osm.bz2">5.5 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/beijing.osm.pbf">3.5 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/beijing.coastline.zip">6.7 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/beijing.osm2pgsql-shapefiles.zip">6.9 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/beijing.imposm-shapefiles.zip">13 MB imposm shapefiles</a></li></ul>
+                </li>
+
+                <li class="city">
+                    <a name="bejaia" href="http://www.openstreetmap.org/?lat=36.745&amp;lon=5.065&amp;zoom=11&amp;layers=M"><img src="previews/bejaia.jpg"></a>
+                    <h3>Bejaia</h3>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/bejaia.osm.bz2">238 KB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/bejaia.osm.pbf">144 KB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/bejaia.coastline.zip">16 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/bejaia.osm2pgsql-shapefiles.zip">240 KB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/bejaia.imposm-shapefiles.zip">385 KB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
@@ -279,7 +311,7 @@
                 <li class="city">
                     <a name="berlin" href="http://www.openstreetmap.org/?lat=52.426&amp;lon=13.480&amp;zoom=8&amp;layers=M"><img src="previews/berlin.jpg"></a>
                     <h3>Berlin</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/berlin.osm.bz2">84 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/berlin.osm.pbf">56 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/berlin.coastline.zip">1.4 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/berlin.osm2pgsql-shapefiles.zip">101 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/berlin.imposm-shapefiles.zip">124 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/berlin.osm.bz2">85 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/berlin.osm.pbf">56 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/berlin.coastline.zip">1.4 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/berlin.osm2pgsql-shapefiles.zip">101 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/berlin.imposm-shapefiles.zip">125 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
@@ -297,19 +329,19 @@
                 <li class="city">
                     <a name="bordeaux" href="http://www.openstreetmap.org/?lat=44.818&amp;lon=-0.531&amp;zoom=10&amp;layers=M"><img src="previews/bordeaux.jpg"></a>
                     <h3>Bordeaux</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/bordeaux.osm.bz2">40 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/bordeaux.osm.pbf">25 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/bordeaux.coastline.zip">64 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/bordeaux.osm2pgsql-shapefiles.zip">54 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/bordeaux.imposm-shapefiles.zip">65 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/bordeaux.osm.bz2">40 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/bordeaux.osm.pbf">25 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/bordeaux.coastline.zip">64 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/bordeaux.osm2pgsql-shapefiles.zip">54 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/bordeaux.imposm-shapefiles.zip">66 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
                     <a name="boston" href="http://www.openstreetmap.org/?lat=42.328&amp;lon=-71.073&amp;zoom=9&amp;layers=M"><img src="previews/boston.jpg"></a>
                     <h3>Boston</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/boston.osm.bz2">92 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/boston.osm.pbf">65 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/boston.coastline.zip">453 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/boston.osm2pgsql-shapefiles.zip">96 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/boston.imposm-shapefiles.zip">114 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/boston.osm.bz2">92 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/boston.osm.pbf">65 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/boston.coastline.zip">453 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/boston.osm2pgsql-shapefiles.zip">97 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/boston.imposm-shapefiles.zip">114 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
                     <a name="brasilia-brazil" href="http://www.openstreetmap.org/?lat=-15.840&amp;lon=-47.939&amp;zoom=9&amp;layers=M"><img src="previews/brasilia-brazil.jpg"></a>
                     <h3>Brasília</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/brasilia-brazil.osm.bz2">3.4 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/brasilia-brazil.osm.pbf">2.2 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/brasilia-brazil.coastline.zip">1.2 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/brasilia-brazil.osm2pgsql-shapefiles.zip">4.5 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/brasilia-brazil.imposm-shapefiles.zip">9.6 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/brasilia-brazil.osm.bz2">3.4 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/brasilia-brazil.osm.pbf">2.2 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/brasilia-brazil.coastline.zip">1.2 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/brasilia-brazil.osm2pgsql-shapefiles.zip">4.6 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/brasilia-brazil.imposm-shapefiles.zip">9.7 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
@@ -321,13 +353,13 @@
                 <li class="city">
                     <a name="brussels" href="http://www.openstreetmap.org/?lat=50.849&amp;lon=4.371&amp;zoom=10&amp;layers=M"><img src="previews/brussels.jpg"></a>
                     <h3>Brussels</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/brussels.osm.bz2">36 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/brussels.osm.pbf">23 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/brussels.coastline.zip">103 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/brussels.osm2pgsql-shapefiles.zip">45 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/brussels.imposm-shapefiles.zip">58 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/brussels.osm.bz2">36 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/brussels.osm.pbf">23 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/brussels.coastline.zip">103 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/brussels.osm2pgsql-shapefiles.zip">45 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/brussels.imposm-shapefiles.zip">59 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
                     <a name="budapest" href="http://www.openstreetmap.org/?lat=47.445&amp;lon=19.064&amp;zoom=9&amp;layers=M"><img src="previews/budapest.jpg"></a>
                     <h3>Budapest</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/budapest.osm.bz2">14 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/budapest.osm.pbf">9.7 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/budapest.coastline.zip">1.2 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/budapest.osm2pgsql-shapefiles.zip">19 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/budapest.imposm-shapefiles.zip">26 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/budapest.osm.bz2">14 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/budapest.osm.pbf">9.9 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/budapest.coastline.zip">1.2 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/budapest.osm2pgsql-shapefiles.zip">19 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/budapest.imposm-shapefiles.zip">27 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
@@ -339,13 +371,13 @@
                 <li class="city">
                     <a name="cairo" href="http://www.openstreetmap.org/?lat=30.164&amp;lon=31.303&amp;zoom=9&amp;layers=M"><img src="previews/cairo.jpg"></a>
                     <h3>Cairo</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/cairo.osm.bz2">3.9 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/cairo.osm.pbf">2.6 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/cairo.coastline.zip">5.7 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/cairo.osm2pgsql-shapefiles.zip">4.4 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/cairo.imposm-shapefiles.zip">8.4 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/cairo.osm.bz2">4.0 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/cairo.osm.pbf">2.6 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/cairo.coastline.zip">5.7 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/cairo.osm2pgsql-shapefiles.zip">4.4 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/cairo.imposm-shapefiles.zip">8.5 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
                     <a name="calgary" href="http://www.openstreetmap.org/?lat=51.033&amp;lon=-114.046&amp;zoom=9&amp;layers=M"><img src="previews/calgary.jpg"></a>
                     <h3>Calgary</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/calgary.osm.bz2">8.7 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/calgary.osm.pbf">5.4 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/calgary.coastline.zip">1.2 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/calgary.osm2pgsql-shapefiles.zip">9.6 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/calgary.imposm-shapefiles.zip">15 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/calgary.osm.bz2">8.7 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/calgary.osm.pbf">5.4 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/calgary.coastline.zip">1.2 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/calgary.osm2pgsql-shapefiles.zip">9.7 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/calgary.imposm-shapefiles.zip">15 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
@@ -367,9 +399,15 @@
                 </li>
 
                 <li class="city">
+                    <a name="chattanooga" href="http://www.openstreetmap.org/?lat=35.086&amp;lon=-85.292&amp;zoom=10&amp;layers=M"><img src="previews/chattanooga.jpg"></a>
+                    <h3>Chattanooga</h3>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/chattanooga.osm.bz2">7.3 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/chattanooga.osm.pbf">5.1 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/chattanooga.coastline.zip">1.1 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/chattanooga.osm2pgsql-shapefiles.zip">7.7 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/chattanooga.imposm-shapefiles.zip">9.9 MB imposm shapefiles</a></li></ul>
+                </li>
+
+                <li class="city">
                     <a name="chengdu" href="http://www.openstreetmap.org/?lat=30.676&amp;lon=104.060&amp;zoom=10&amp;layers=M"><img src="previews/chengdu.jpg"></a>
                     <h3>Chengdu</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/chengdu.osm.bz2">1.0 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/chengdu.osm.pbf">646 KB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/chengdu.coastline.zip">1.2 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/chengdu.osm2pgsql-shapefiles.zip">1.1 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/chengdu.imposm-shapefiles.zip">2.5 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/chengdu.osm.bz2">1.1 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/chengdu.osm.pbf">662 KB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/chengdu.coastline.zip">1.2 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/chengdu.osm2pgsql-shapefiles.zip">1.2 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/chengdu.imposm-shapefiles.zip">2.6 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
@@ -381,19 +419,31 @@
                 <li class="city">
                     <a name="chicago" href="http://www.openstreetmap.org/?lat=41.820&amp;lon=-87.786&amp;zoom=9&amp;layers=M"><img src="previews/chicago.jpg"></a>
                     <h3>Chicago</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/chicago.osm.bz2">67 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/chicago.osm.pbf">42 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/chicago.coastline.zip">82 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/chicago.osm2pgsql-shapefiles.zip">81 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/chicago.imposm-shapefiles.zip">104 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/chicago.osm.bz2">86 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/chicago.osm.pbf">53 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/chicago.coastline.zip">85 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/chicago.osm2pgsql-shapefiles.zip">104 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/chicago.imposm-shapefiles.zip">128 MB imposm shapefiles</a></li></ul>
+                </li>
+
+                <li class="city">
+                    <a name="chongqing" href="http://www.openstreetmap.org/?lat=30.212&amp;lon=107.732&amp;zoom=7&amp;layers=M"><img src="previews/chongqing.jpg"></a>
+                    <h3>Chongqing</h3>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/chongqing.osm.bz2">3.6 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/chongqing.osm.pbf">1.8 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/chongqing.coastline.zip">2.4 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/chongqing.osm2pgsql-shapefiles.zip">4.3 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/chongqing.imposm-shapefiles.zip">7.2 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
                     <a name="cincinnati" href="http://www.openstreetmap.org/?lat=39.174&amp;lon=-84.482&amp;zoom=10&amp;layers=M"><img src="previews/cincinnati.jpg"></a>
                     <h3>Cincinnati</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/cincinnati.osm.bz2">18 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/cincinnati.osm.pbf">10 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/cincinnati.coastline.zip">1.2 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/cincinnati.osm2pgsql-shapefiles.zip">21 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/cincinnati.imposm-shapefiles.zip">31 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/cincinnati.osm.bz2">18 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/cincinnati.osm.pbf">10 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/cincinnati.coastline.zip">1.2 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/cincinnati.osm2pgsql-shapefiles.zip">22 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/cincinnati.imposm-shapefiles.zip">31 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
                     <a name="cleveland" href="http://www.openstreetmap.org/?lat=41.327&amp;lon=-81.642&amp;zoom=9&amp;layers=M"><img src="previews/cleveland.jpg"></a>
                     <h3>Cleveland</h3>
                     <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/cleveland.osm.bz2">15 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/cleveland.osm.pbf">10 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/cleveland.coastline.zip">121 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/cleveland.osm2pgsql-shapefiles.zip">18 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/cleveland.imposm-shapefiles.zip">33 MB imposm shapefiles</a></li></ul>
+                </li>
+
+                <li class="city">
+                    <a name="colchester" href="http://www.openstreetmap.org/?lat=51.888&amp;lon=0.898&amp;zoom=10&amp;layers=M"><img src="previews/colchester.jpg"></a>
+                    <h3>Colchester</h3>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/colchester.osm.bz2">12 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/colchester.osm.pbf">8.0 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/colchester.coastline.zip">1.9 MB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/colchester.osm2pgsql-shapefiles.zip">15 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/colchester.imposm-shapefiles.zip">15 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
@@ -405,7 +455,7 @@
                 <li class="city">
                     <a name="copenhagen" href="http://www.openstreetmap.org/?lat=55.721&amp;lon=12.520&amp;zoom=10&amp;layers=M"><img src="previews/copenhagen.jpg"></a>
                     <h3>Copenhagen</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/copenhagen.osm.bz2">32 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/copenhagen.osm.pbf">22 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/copenhagen.coastline.zip">363 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/copenhagen.osm2pgsql-shapefiles.zip">28 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/copenhagen.imposm-shapefiles.zip">38 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/copenhagen.osm.bz2">33 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/copenhagen.osm.pbf">22 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/copenhagen.coastline.zip">364 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/copenhagen.osm2pgsql-shapefiles.zip">28 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/copenhagen.imposm-shapefiles.zip">39 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
@@ -423,7 +473,13 @@
                 <li class="city">
                     <a name="damascus" href="http://www.openstreetmap.org/?lat=33.459&amp;lon=36.285&amp;zoom=9&amp;layers=M"><img src="previews/damascus.jpg"></a>
                     <h3>Damascus</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/damascus.osm.bz2">3.4 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/damascus.osm.pbf">2.2 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/damascus.coastline.zip">18 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/damascus.osm2pgsql-shapefiles.zip">3.8 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/damascus.imposm-shapefiles.zip">7.0 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/damascus.osm.bz2">3.4 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/damascus.osm.pbf">2.2 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/damascus.coastline.zip">18 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/damascus.osm2pgsql-shapefiles.zip">3.8 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/damascus.imposm-shapefiles.zip">7.1 MB imposm shapefiles</a></li></ul>
+                </li>
+
+                <li class="city">
+                    <a name="dar-es-salaam" href="http://www.openstreetmap.org/?lat=-6.811&amp;lon=39.277&amp;zoom=10&amp;layers=M"><img src="previews/dar-es-salaam.jpg"></a>
+                    <h3>Dar-es-Salaam</h3>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/dar-es-salaam.osm.bz2">1.1 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/dar-es-salaam.osm.pbf">696 KB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/dar-es-salaam.coastline.zip">40 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/dar-es-salaam.osm2pgsql-shapefiles.zip">1.3 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/dar-es-salaam.imposm-shapefiles.zip">1.9 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
@@ -435,19 +491,19 @@
                 <li class="city">
                     <a name="detroit" href="http://www.openstreetmap.org/?lat=42.326&amp;lon=-83.125&amp;zoom=9&amp;layers=M"><img src="previews/detroit.jpg"></a>
                     <h3>Detroit</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/detroit.osm.bz2">29 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/detroit.osm.pbf">17 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/detroit.coastline.zip">375 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/detroit.osm2pgsql-shapefiles.zip">31 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/detroit.imposm-shapefiles.zip">50 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/detroit.osm.bz2">30 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/detroit.osm.pbf">17 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/detroit.coastline.zip">375 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/detroit.osm2pgsql-shapefiles.zip">32 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/detroit.imposm-shapefiles.zip">51 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
                     <a name="dubai-abu-dhabi" href="http://www.openstreetmap.org/?lat=25.145&amp;lon=55.234&amp;zoom=8&amp;layers=M"><img src="previews/dubai-abu-dhabi.jpg"></a>
                     <h3>Dubai, Abu Dhabi</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/dubai-abu-dhabi.osm.bz2">13 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/dubai-abu-dhabi.osm.pbf">8.8 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/dubai-abu-dhabi.coastline.zip">1.5 MB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/dubai-abu-dhabi.osm2pgsql-shapefiles.zip">14 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/dubai-abu-dhabi.imposm-shapefiles.zip">26 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/dubai-abu-dhabi.osm.bz2">13 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/dubai-abu-dhabi.osm.pbf">8.9 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/dubai-abu-dhabi.coastline.zip">1.5 MB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/dubai-abu-dhabi.osm2pgsql-shapefiles.zip">15 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/dubai-abu-dhabi.imposm-shapefiles.zip">26 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
                     <a name="dushanbe" href="http://www.openstreetmap.org/?lat=38.537&amp;lon=68.689&amp;zoom=10&amp;layers=M"><img src="previews/dushanbe.jpg"></a>
                     <h3>Dushanbe, Tajikistan</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/dushanbe.osm.bz2">1.7 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/dushanbe.osm.pbf">914 KB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/dushanbe.coastline.zip">1.1 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/dushanbe.osm2pgsql-shapefiles.zip">1.7 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/dushanbe.imposm-shapefiles.zip">2.8 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/dushanbe.osm.bz2">1.7 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/dushanbe.osm.pbf">916 KB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/dushanbe.coastline.zip">1.1 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/dushanbe.osm2pgsql-shapefiles.zip">1.7 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/dushanbe.imposm-shapefiles.zip">2.8 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
@@ -471,31 +527,49 @@
                 <li class="city">
                     <a name="frankfurt" href="http://www.openstreetmap.org/?lat=50.041&amp;lon=8.627&amp;zoom=9&amp;layers=M"><img src="previews/frankfurt.jpg"></a>
                     <h3>Frankfurt</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/frankfurt.osm.bz2">109 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/frankfurt.osm.pbf">72 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/frankfurt.coastline.zip">1.3 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/frankfurt.osm2pgsql-shapefiles.zip">135 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/frankfurt.imposm-shapefiles.zip">167 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/frankfurt.osm.bz2">110 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/frankfurt.osm.pbf">72 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/frankfurt.coastline.zip">1.3 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/frankfurt.osm2pgsql-shapefiles.zip">136 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/frankfurt.imposm-shapefiles.zip">169 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
                     <a name="gdansk" href="http://www.openstreetmap.org/?lat=54.441&amp;lon=18.644&amp;zoom=9&amp;layers=M"><img src="previews/gdansk.jpg"></a>
                     <h3>Gdansk</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/gdansk.osm.bz2">14 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/gdansk.osm.pbf">9.2 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/gdansk.coastline.zip">40 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/gdansk.osm2pgsql-shapefiles.zip">17 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/gdansk.imposm-shapefiles.zip">21 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/gdansk.osm.bz2">14 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/gdansk.osm.pbf">9.5 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/gdansk.coastline.zip">40 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/gdansk.osm2pgsql-shapefiles.zip">17 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/gdansk.imposm-shapefiles.zip">22 MB imposm shapefiles</a></li></ul>
+                </li>
+
+                <li class="city">
+                    <a name="genoa" href="http://www.openstreetmap.org/?lat=44.426&amp;lon=8.779&amp;zoom=10&amp;layers=M"><img src="previews/genoa.jpg"></a>
+                    <h3>Genoa</h3>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/genoa.osm.bz2">12 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/genoa.osm.pbf">7.4 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/genoa.coastline.zip">93 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/genoa.osm2pgsql-shapefiles.zip">15 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/genoa.imposm-shapefiles.zip">18 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
                     <a name="glasgow" href="http://www.openstreetmap.org/?lat=55.851&amp;lon=-4.274&amp;zoom=10&amp;layers=M"><img src="previews/glasgow.jpg"></a>
                     <h3>Glasgow</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/glasgow.osm.bz2">11 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/glasgow.osm.pbf">7.9 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/glasgow.coastline.zip">166 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/glasgow.osm2pgsql-shapefiles.zip">14 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/glasgow.imposm-shapefiles.zip">21 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/glasgow.osm.bz2">11 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/glasgow.osm.pbf">7.9 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/glasgow.coastline.zip">166 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/glasgow.osm2pgsql-shapefiles.zip">14 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/glasgow.imposm-shapefiles.zip">22 MB imposm shapefiles</a></li></ul>
+                </li>
+
+                <li class="city">
+                    <a name="grassvalley" href="http://www.openstreetmap.org/?lat=39.200&amp;lon=-121.090&amp;zoom=11&amp;layers=M"><img src="previews/grassvalley.jpg"></a>
+                    <h3>Grass Valley, CA</h3>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/grassvalley.osm.bz2">1.7 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/grassvalley.osm.pbf">1.2 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/grassvalley.coastline.zip">1.1 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/grassvalley.osm2pgsql-shapefiles.zip">1.6 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/grassvalley.imposm-shapefiles.zip">2.2 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
                     <a name="hamburg" href="http://www.openstreetmap.org/?lat=53.498&amp;lon=10.028&amp;zoom=9&amp;layers=M"><img src="previews/hamburg.jpg"></a>
                     <h3>Hamburg</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/hamburg.osm.bz2">55 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/hamburg.osm.pbf">37 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/hamburg.coastline.zip">32 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/hamburg.osm2pgsql-shapefiles.zip">66 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/hamburg.imposm-shapefiles.zip">81 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/hamburg.osm.bz2">56 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/hamburg.osm.pbf">37 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/hamburg.coastline.zip">32 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/hamburg.osm2pgsql-shapefiles.zip">67 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/hamburg.imposm-shapefiles.zip">82 MB imposm shapefiles</a></li></ul>
+                </li>
+
+                <li class="city">
+                    <a name="harare" href="http://www.openstreetmap.org/?lat=-17.835&amp;lon=31.039&amp;zoom=10&amp;layers=M"><img src="previews/harare.jpg"></a>
+                    <h3>Harare</h3>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/harare.osm.bz2">625 KB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/harare.osm.pbf">390 KB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/harare.coastline.zip">1.1 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/harare.osm2pgsql-shapefiles.zip">715 KB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/harare.imposm-shapefiles.zip">1.4 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
                     <a name="helsinki" href="http://www.openstreetmap.org/?lat=60.205&amp;lon=24.905&amp;zoom=10&amp;layers=M"><img src="previews/helsinki.jpg"></a>
                     <h3>Helsinki</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/helsinki.osm.bz2">33 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/helsinki.osm.pbf">22 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/helsinki.coastline.zip">757 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/helsinki.osm2pgsql-shapefiles.zip">40 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/helsinki.imposm-shapefiles.zip">46 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/helsinki.osm.bz2">33 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/helsinki.osm.pbf">22 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/helsinki.coastline.zip">760 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/helsinki.osm2pgsql-shapefiles.zip">40 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/helsinki.imposm-shapefiles.zip">46 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
@@ -507,13 +581,13 @@
                 <li class="city">
                     <a name="honolulu" href="http://www.openstreetmap.org/?lat=21.486&amp;lon=-157.971&amp;zoom=10&amp;layers=M"><img src="previews/honolulu.jpg"></a>
                     <h3>Honolulu</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/honolulu.osm.bz2">2.6 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/honolulu.osm.pbf">1.7 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/honolulu.coastline.zip">59 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/honolulu.osm2pgsql-shapefiles.zip">2.6 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/honolulu.imposm-shapefiles.zip">4.4 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/honolulu.osm.bz2">2.6 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/honolulu.osm.pbf">1.7 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/honolulu.coastline.zip">63 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/honolulu.osm2pgsql-shapefiles.zip">2.6 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/honolulu.imposm-shapefiles.zip">4.5 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
                     <a name="houston" href="http://www.openstreetmap.org/?lat=29.562&amp;lon=-95.221&amp;zoom=9&amp;layers=M"><img src="previews/houston.jpg"></a>
                     <h3>Houston</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/houston.osm.bz2">31 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/houston.osm.pbf">19 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/houston.coastline.zip">1015 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/houston.osm2pgsql-shapefiles.zip">34 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/houston.imposm-shapefiles.zip">56 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/houston.osm.bz2">31 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/houston.osm.pbf">20 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/houston.coastline.zip">1015 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/houston.osm2pgsql-shapefiles.zip">34 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/houston.imposm-shapefiles.zip">57 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
@@ -531,31 +605,37 @@
                 <li class="city">
                     <a name="istanbul" href="http://www.openstreetmap.org/?lat=41.081&amp;lon=28.996&amp;zoom=9&amp;layers=M"><img src="previews/istanbul.jpg"></a>
                     <h3>Istanbul</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/istanbul.osm.bz2">6.5 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/istanbul.osm.pbf">3.9 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/istanbul.coastline.zip">182 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/istanbul.osm2pgsql-shapefiles.zip">7.8 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/istanbul.imposm-shapefiles.zip">15 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/istanbul.osm.bz2">6.5 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/istanbul.osm.pbf">4.0 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/istanbul.coastline.zip">182 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/istanbul.osm2pgsql-shapefiles.zip">7.8 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/istanbul.imposm-shapefiles.zip">15 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
                     <a name="jakarta" href="http://www.openstreetmap.org/?lat=-6.248&amp;lon=106.798&amp;zoom=10&amp;layers=M"><img src="previews/jakarta.jpg"></a>
                     <h3>Jakarta</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/jakarta.osm.bz2">12 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/jakarta.osm.pbf">7.1 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/jakarta.coastline.zip">51 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/jakarta.osm2pgsql-shapefiles.zip">14 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/jakarta.imposm-shapefiles.zip">19 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/jakarta.osm.bz2">13 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/jakarta.osm.pbf">7.3 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/jakarta.coastline.zip">51 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/jakarta.osm2pgsql-shapefiles.zip">15 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/jakarta.imposm-shapefiles.zip">20 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
                     <a name="johannesburg" href="http://www.openstreetmap.org/?lat=-26.199&amp;lon=28.040&amp;zoom=10&amp;layers=M"><img src="previews/johannesburg.jpg"></a>
                     <h3>Johannesburg</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/johannesburg.osm.bz2">7.1 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/johannesburg.osm.pbf">4.8 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/johannesburg.coastline.zip">1.2 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/johannesburg.osm2pgsql-shapefiles.zip">9.1 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/johannesburg.imposm-shapefiles.zip">16 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/johannesburg.osm.bz2">7.1 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/johannesburg.osm.pbf">4.8 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/johannesburg.coastline.zip">1.2 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/johannesburg.osm2pgsql-shapefiles.zip">9.2 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/johannesburg.imposm-shapefiles.zip">16 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
                     <a name="kabul" href="http://www.openstreetmap.org/?lat=34.516&amp;lon=69.170&amp;zoom=9&amp;layers=M"><img src="previews/kabul.jpg"></a>
                     <h3>Kabul</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/kabul.osm.bz2">1023 KB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/kabul.osm.pbf">603 KB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/kabul.coastline.zip">1.1 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/kabul.osm2pgsql-shapefiles.zip">1.1 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/kabul.imposm-shapefiles.zip">2.0 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/kabul.osm.bz2">1.0 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/kabul.osm.pbf">603 KB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/kabul.coastline.zip">1.1 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/kabul.osm2pgsql-shapefiles.zip">1.1 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/kabul.imposm-shapefiles.zip">2.0 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
                     <a name="kamloops" href="http://www.openstreetmap.org/?lat=50.510&amp;lon=-120.476&amp;zoom=9&amp;layers=M"><img src="previews/kamloops.jpg"></a>
                     <h3>Kamloops</h3>
                     <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/kamloops.osm.bz2">17 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/kamloops.osm.pbf">11 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/kamloops.coastline.zip">1.3 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/kamloops.osm2pgsql-shapefiles.zip">18 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/kamloops.imposm-shapefiles.zip">22 MB imposm shapefiles</a></li></ul>
+                </li>
+
+                <li class="city">
+                    <a name="kampala" href="http://www.openstreetmap.org/?lat=0.260&amp;lon=32.576&amp;zoom=10&amp;layers=M"><img src="previews/kampala.jpg"></a>
+                    <h3>Kampala</h3>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/kampala.osm.bz2">2.1 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/kampala.osm.pbf">1.2 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/kampala.coastline.zip">1.2 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/kampala.osm2pgsql-shapefiles.zip">2.5 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/kampala.imposm-shapefiles.zip">3.4 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
@@ -567,13 +647,25 @@
                 <li class="city">
                     <a name="karlsruhe" href="http://www.openstreetmap.org/?lat=48.988&amp;lon=8.355&amp;zoom=10&amp;layers=M"><img src="previews/karlsruhe.jpg"></a>
                     <h3>Karlsruhe</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/karlsruhe.osm.bz2">45 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/karlsruhe.osm.pbf">30 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/karlsruhe.coastline.zip">1.2 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/karlsruhe.osm2pgsql-shapefiles.zip">56 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/karlsruhe.imposm-shapefiles.zip">69 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/karlsruhe.osm.bz2">46 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/karlsruhe.osm.pbf">30 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/karlsruhe.coastline.zip">1.2 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/karlsruhe.osm2pgsql-shapefiles.zip">56 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/karlsruhe.imposm-shapefiles.zip">69 MB imposm shapefiles</a></li></ul>
+                </li>
+
+                <li class="city">
+                    <a name="kigali" href="http://www.openstreetmap.org/?lat=-1.911&amp;lon=30.100&amp;zoom=10&amp;layers=M"><img src="previews/kigali.jpg"></a>
+                    <h3>Kigali</h3>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/kigali.osm.bz2">996 KB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/kigali.osm.pbf">605 KB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/kigali.coastline.zip">1.1 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/kigali.osm2pgsql-shapefiles.zip">1.1 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/kigali.imposm-shapefiles.zip">1.7 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
                     <a name="krakow" href="http://www.openstreetmap.org/?lat=50.046&amp;lon=19.935&amp;zoom=10&amp;layers=M"><img src="previews/krakow.jpg"></a>
                     <h3>Krakow</h3>
                     <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/krakow.osm.bz2">12 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/krakow.osm.pbf">7.3 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/krakow.coastline.zip">1.1 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/krakow.osm2pgsql-shapefiles.zip">14 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/krakow.imposm-shapefiles.zip">18 MB imposm shapefiles</a></li></ul>
+                </li>
+
+                <li class="city">
+                    <a name="kyiv" href="http://www.openstreetmap.org/?lat=50.414&amp;lon=30.523&amp;zoom=9&amp;layers=M"><img src="previews/kyiv.jpg"></a>
+                    <h3>Kyiv</h3>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/kyiv.osm.bz2">12 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/kyiv.osm.pbf">7.9 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/kyiv.coastline.zip">1.1 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/kyiv.osm2pgsql-shapefiles.zip">14 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/kyiv.imposm-shapefiles.zip">18 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
@@ -585,13 +677,13 @@
                 <li class="city">
                     <a name="las-vegas" href="http://www.openstreetmap.org/?lat=36.187&amp;lon=-114.895&amp;zoom=9&amp;layers=M"><img src="previews/las-vegas.jpg"></a>
                     <h3>Las Vegas</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/las-vegas.osm.bz2">9.4 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/las-vegas.osm.pbf">5.9 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/las-vegas.coastline.zip">1.3 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/las-vegas.osm2pgsql-shapefiles.zip">10 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/las-vegas.imposm-shapefiles.zip">17 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/las-vegas.osm.bz2">9.5 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/las-vegas.osm.pbf">6.0 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/las-vegas.coastline.zip">1.3 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/las-vegas.osm2pgsql-shapefiles.zip">10 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/las-vegas.imposm-shapefiles.zip">17 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
                     <a name="leeds" href="http://www.openstreetmap.org/?lat=53.809&amp;lon=-1.524&amp;zoom=11&amp;layers=M"><img src="previews/leeds.jpg"></a>
                     <h3>Leeds</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/leeds.osm.bz2">7.2 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/leeds.osm.pbf">5.1 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/leeds.coastline.zip">1.1 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/leeds.osm2pgsql-shapefiles.zip">9.1 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/leeds.imposm-shapefiles.zip">13 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/leeds.osm.bz2">7.3 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/leeds.osm.pbf">5.1 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/leeds.coastline.zip">1.1 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/leeds.osm2pgsql-shapefiles.zip">9.1 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/leeds.imposm-shapefiles.zip">13 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
@@ -621,19 +713,19 @@
                 <li class="city">
                     <a name="london" href="http://www.openstreetmap.org/?lat=51.464&amp;lon=-0.110&amp;zoom=8&amp;layers=M"><img src="previews/london.jpg"></a>
                     <h3>London</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/london.osm.bz2">130 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/london.osm.pbf">85 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/london.coastline.zip">720 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/london.osm2pgsql-shapefiles.zip">167 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/london.imposm-shapefiles.zip">217 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/london.osm.bz2">131 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/london.osm.pbf">86 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/london.coastline.zip">720 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/london.osm2pgsql-shapefiles.zip">169 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/london.imposm-shapefiles.zip">218 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
                     <a name="los-angeles" href="http://www.openstreetmap.org/?lat=33.943&amp;lon=-118.081&amp;zoom=8&amp;layers=M"><img src="previews/los-angeles.jpg"></a>
                     <h3>Los Angeles</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/los-angeles.osm.bz2">63 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/los-angeles.osm.pbf">43 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/los-angeles.coastline.zip">263 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/los-angeles.osm2pgsql-shapefiles.zip">67 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/los-angeles.imposm-shapefiles.zip">112 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/los-angeles.osm.bz2">63 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/los-angeles.osm.pbf">43 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/los-angeles.coastline.zip">263 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/los-angeles.osm2pgsql-shapefiles.zip">68 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/los-angeles.imposm-shapefiles.zip">113 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
                     <a name="lyon" href="http://www.openstreetmap.org/?lat=45.750&amp;lon=4.826&amp;zoom=9&amp;layers=M"><img src="previews/lyon.jpg"></a>
                     <h3>Lyon</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/lyon.osm.bz2">124 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/lyon.osm.pbf">78 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/lyon.coastline.zip">1.3 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/lyon.osm2pgsql-shapefiles.zip">166 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/lyon.imposm-shapefiles.zip">187 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/lyon.osm.bz2">125 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/lyon.osm.pbf">78 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/lyon.coastline.zip">1.3 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/lyon.osm2pgsql-shapefiles.zip">166 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/lyon.imposm-shapefiles.zip">188 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
@@ -645,13 +737,13 @@
                 <li class="city">
                     <a name="madison" href="http://www.openstreetmap.org/?lat=43.073&amp;lon=-89.423&amp;zoom=10&amp;layers=M"><img src="previews/madison.jpg"></a>
                     <h3>Madison</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/madison.osm.bz2">6.8 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/madison.osm.pbf">4.0 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/madison.coastline.zip">1.2 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/madison.osm2pgsql-shapefiles.zip">7.1 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/madison.imposm-shapefiles.zip">12 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/madison.osm.bz2">6.8 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/madison.osm.pbf">4.0 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/madison.coastline.zip">1.2 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/madison.osm2pgsql-shapefiles.zip">7.2 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/madison.imposm-shapefiles.zip">12 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
                     <a name="madrid" href="http://www.openstreetmap.org/?lat=40.365&amp;lon=-3.675&amp;zoom=9&amp;layers=M"><img src="previews/madrid.jpg"></a>
                     <h3>Madrid</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/madrid.osm.bz2">26 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/madrid.osm.pbf">17 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/madrid.coastline.zip">1.2 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/madrid.osm2pgsql-shapefiles.zip">32 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/madrid.imposm-shapefiles.zip">51 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/madrid.osm.bz2">26 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/madrid.osm.pbf">17 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/madrid.coastline.zip">1.2 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/madrid.osm2pgsql-shapefiles.zip">32 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/madrid.imposm-shapefiles.zip">52 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
@@ -693,7 +785,7 @@
                 <li class="city">
                     <a name="milan" href="http://www.openstreetmap.org/?lat=45.471&amp;lon=9.165&amp;zoom=10&amp;layers=M"><img src="previews/milan.jpg"></a>
                     <h3>Milan</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/milan.osm.bz2">23 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/milan.osm.pbf">15 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/milan.coastline.zip">1.1 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/milan.osm2pgsql-shapefiles.zip">29 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/milan.imposm-shapefiles.zip">37 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/milan.osm.bz2">23 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/milan.osm.pbf">15 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/milan.coastline.zip">1.1 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/milan.osm2pgsql-shapefiles.zip">29 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/milan.imposm-shapefiles.zip">38 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
@@ -705,13 +797,19 @@
                 <li class="city">
                     <a name="mpls-stpaul" href="http://www.openstreetmap.org/?lat=44.945&amp;lon=-93.277&amp;zoom=9&amp;layers=M"><img src="previews/mpls-stpaul.jpg"></a>
                     <h3>Minneapolis, St. Paul</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/mpls-stpaul.osm.bz2">36 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/mpls-stpaul.osm.pbf">23 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/mpls-stpaul.coastline.zip">1.3 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/mpls-stpaul.osm2pgsql-shapefiles.zip">40 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/mpls-stpaul.imposm-shapefiles.zip">60 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/mpls-stpaul.osm.bz2">37 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/mpls-stpaul.osm.pbf">23 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/mpls-stpaul.coastline.zip">1.3 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/mpls-stpaul.osm2pgsql-shapefiles.zip">41 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/mpls-stpaul.imposm-shapefiles.zip">60 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
                     <a name="mobile-al" href="http://www.openstreetmap.org/?lat=30.690&amp;lon=-88.098&amp;zoom=10&amp;layers=M"><img src="previews/mobile-al.jpg"></a>
                     <h3>Mobile, AL</h3>
                     <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/mobile-al.osm.bz2">3.3 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/mobile-al.osm.pbf">2.2 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/mobile-al.coastline.zip">66 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/mobile-al.osm2pgsql-shapefiles.zip">3.9 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/mobile-al.imposm-shapefiles.zip">7.9 MB imposm shapefiles</a></li></ul>
+                </li>
+
+                <li class="city">
+                    <a name="mogadishu" href="http://www.openstreetmap.org/?lat=2.051&amp;lon=45.331&amp;zoom=10&amp;layers=M"><img src="previews/mogadishu.jpg"></a>
+                    <h3>Mogadishu</h3>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/mogadishu.osm.bz2">799 KB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/mogadishu.osm.pbf">505 KB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/mogadishu.coastline.zip">30 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/mogadishu.osm2pgsql-shapefiles.zip">1.0 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/mogadishu.imposm-shapefiles.zip">2.1 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
@@ -723,19 +821,19 @@
                 <li class="city">
                     <a name="montpellier" href="http://www.openstreetmap.org/?lat=43.576&amp;lon=3.936&amp;zoom=9&amp;layers=M"><img src="previews/montpellier.jpg"></a>
                     <h3>Montpellier</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/montpellier.osm.bz2">56 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/montpellier.osm.pbf">38 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/montpellier.coastline.zip">68 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/montpellier.osm2pgsql-shapefiles.zip">70 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/montpellier.imposm-shapefiles.zip">83 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/montpellier.osm.bz2">57 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/montpellier.osm.pbf">38 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/montpellier.coastline.zip">68 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/montpellier.osm2pgsql-shapefiles.zip">70 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/montpellier.imposm-shapefiles.zip">83 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
                     <a name="montreal" href="http://www.openstreetmap.org/?lat=45.516&amp;lon=-73.729&amp;zoom=9&amp;layers=M"><img src="previews/montreal.jpg"></a>
                     <h3>Montreal</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/montreal.osm.bz2">39 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/montreal.osm.pbf">27 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/montreal.coastline.zip">442 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/montreal.osm2pgsql-shapefiles.zip">34 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/montreal.imposm-shapefiles.zip">50 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/montreal.osm.bz2">39 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/montreal.osm.pbf">27 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/montreal.coastline.zip">440 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/montreal.osm2pgsql-shapefiles.zip">34 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/montreal.imposm-shapefiles.zip">51 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
                     <a name="moscow" href="http://www.openstreetmap.org/?lat=55.746&amp;lon=37.650&amp;zoom=9&amp;layers=M"><img src="previews/moscow.jpg"></a>
                     <h3>Moscow</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/moscow.osm.bz2">64 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/moscow.osm.pbf">42 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/moscow.coastline.zip">1.2 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/moscow.osm2pgsql-shapefiles.zip">77 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/moscow.imposm-shapefiles.zip">94 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/moscow.osm.bz2">64 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/moscow.osm.pbf">42 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/moscow.coastline.zip">1.2 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/moscow.osm2pgsql-shapefiles.zip">77 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/moscow.imposm-shapefiles.zip">95 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
@@ -759,7 +857,7 @@
                 <li class="city">
                     <a name="nazareth" href="http://www.openstreetmap.org/?lat=32.698&amp;lon=35.287&amp;zoom=10&amp;layers=M"><img src="previews/nazareth.jpg"></a>
                     <h3>Nazareth</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/nazareth.osm.bz2">3.8 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/nazareth.osm.pbf">2.5 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/nazareth.coastline.zip">19 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/nazareth.osm2pgsql-shapefiles.zip">3.9 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/nazareth.imposm-shapefiles.zip">6.1 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/nazareth.osm.bz2">3.8 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/nazareth.osm.pbf">2.5 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/nazareth.coastline.zip">19 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/nazareth.osm2pgsql-shapefiles.zip">4.1 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/nazareth.imposm-shapefiles.zip">6.1 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
@@ -771,7 +869,7 @@
                 <li class="city">
                     <a name="new-orleans" href="http://www.openstreetmap.org/?lat=29.702&amp;lon=-89.879&amp;zoom=8&amp;layers=M"><img src="previews/new-orleans.jpg"></a>
                     <h3>New Orleans</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/new-orleans.osm.bz2">65 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/new-orleans.osm.pbf">27 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/new-orleans.coastline.zip">2.2 MB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/new-orleans.osm2pgsql-shapefiles.zip">70 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/new-orleans.imposm-shapefiles.zip">37 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/new-orleans.osm.bz2">65 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/new-orleans.osm.pbf">27 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/new-orleans.coastline.zip">2.2 MB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/new-orleans.osm2pgsql-shapefiles.zip">71 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/new-orleans.imposm-shapefiles.zip">37 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
@@ -783,7 +881,19 @@
                 <li class="city">
                     <a name="newcastle" href="http://www.openstreetmap.org/?lat=54.954&amp;lon=-1.644&amp;zoom=10&amp;layers=M"><img src="previews/newcastle.jpg"></a>
                     <h3>Newcastle upon Tyne</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/newcastle.osm.bz2">10 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/newcastle.osm.pbf">7.0 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/newcastle.coastline.zip">46 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/newcastle.osm2pgsql-shapefiles.zip">12 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/newcastle.imposm-shapefiles.zip">20 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/newcastle.osm.bz2">10 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/newcastle.osm.pbf">7.1 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/newcastle.coastline.zip">47 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/newcastle.osm2pgsql-shapefiles.zip">12 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/newcastle.imposm-shapefiles.zip">20 MB imposm shapefiles</a></li></ul>
+                </li>
+
+                <li class="city">
+                    <a name="nuremberg" href="http://www.openstreetmap.org/?lat=49.490&amp;lon=11.019&amp;zoom=9&amp;layers=M"><img src="previews/nuremberg.jpg"></a>
+                    <h3>Nuremberg</h3>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/nuremberg.osm.bz2">36 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/nuremberg.osm.pbf">24 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/nuremberg.coastline.zip">1.1 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/nuremberg.osm2pgsql-shapefiles.zip">46 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/nuremberg.imposm-shapefiles.zip">52 MB imposm shapefiles</a></li></ul>
+                </li>
+
+                <li class="city">
+                    <a name="odessa" href="http://www.openstreetmap.org/?lat=46.479&amp;lon=30.545&amp;zoom=10&amp;layers=M"><img src="previews/odessa.jpg"></a>
+                    <h3>Odessa</h3>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/odessa.osm.bz2">2.9 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/odessa.osm.pbf">1.9 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/odessa.coastline.zip">62 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/odessa.osm2pgsql-shapefiles.zip">3.2 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/odessa.imposm-shapefiles.zip">4.2 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
@@ -795,7 +905,7 @@
                 <li class="city">
                     <a name="paris" href="http://www.openstreetmap.org/?lat=48.856&amp;lon=2.381&amp;zoom=9&amp;layers=M"><img src="previews/paris.jpg"></a>
                     <h3>Paris</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/paris.osm.bz2">226 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/paris.osm.pbf">157 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/paris.coastline.zip">1.1 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/paris.osm2pgsql-shapefiles.zip">285 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/paris.imposm-shapefiles.zip">337 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/paris.osm.bz2">227 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/paris.osm.pbf">158 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/paris.coastline.zip">1.1 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/paris.osm2pgsql-shapefiles.zip">287 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/paris.imposm-shapefiles.zip">340 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
@@ -825,37 +935,37 @@
                 <li class="city">
                     <a name="portland" href="http://www.openstreetmap.org/?lat=45.499&amp;lon=-122.662&amp;zoom=9&amp;layers=M"><img src="previews/portland.jpg"></a>
                     <h3>Portland</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/portland.osm.bz2">22 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/portland.osm.pbf">15 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/portland.coastline.zip">7.1 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/portland.osm2pgsql-shapefiles.zip">24 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/portland.imposm-shapefiles.zip">43 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/portland.osm.bz2">22 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/portland.osm.pbf">16 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/portland.coastline.zip">7.1 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/portland.osm2pgsql-shapefiles.zip">24 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/portland.imposm-shapefiles.zip">43 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
                     <a name="porto" href="http://www.openstreetmap.org/?lat=41.190&amp;lon=-8.576&amp;zoom=10&amp;layers=M"><img src="previews/porto.jpg"></a>
                     <h3>Porto</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/porto.osm.bz2">6.4 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/porto.osm.pbf">4.2 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/porto.coastline.zip">17 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/porto.osm2pgsql-shapefiles.zip">7.5 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/porto.imposm-shapefiles.zip">13 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/porto.osm.bz2">6.5 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/porto.osm.pbf">4.2 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/porto.coastline.zip">17 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/porto.osm2pgsql-shapefiles.zip">7.7 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/porto.imposm-shapefiles.zip">13 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
                     <a name="prague" href="http://www.openstreetmap.org/?lat=50.087&amp;lon=14.428&amp;zoom=9&amp;layers=M"><img src="previews/prague.jpg"></a>
                     <h3>Prague</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/prague.osm.bz2">64 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/prague.osm.pbf">42 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/prague.coastline.zip">1.2 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/prague.osm2pgsql-shapefiles.zip">80 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/prague.imposm-shapefiles.zip">83 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/prague.osm.bz2">64 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/prague.osm.pbf">42 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/prague.coastline.zip">1.2 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/prague.osm2pgsql-shapefiles.zip">81 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/prague.imposm-shapefiles.zip">84 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
                     <a name="quito-ecuador" href="http://www.openstreetmap.org/?lat=-0.221&amp;lon=-78.477&amp;zoom=10&amp;layers=M"><img src="previews/quito-ecuador.jpg"></a>
                     <h3>Quito</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/quito-ecuador.osm.bz2">3.1 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/quito-ecuador.osm.pbf">1.9 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/quito-ecuador.coastline.zip">1.2 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/quito-ecuador.osm2pgsql-shapefiles.zip">4.2 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/quito-ecuador.imposm-shapefiles.zip">6.9 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/quito-ecuador.osm.bz2">3.1 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/quito-ecuador.osm.pbf">1.9 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/quito-ecuador.coastline.zip">1.2 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/quito-ecuador.osm2pgsql-shapefiles.zip">4.3 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/quito-ecuador.imposm-shapefiles.zip">6.9 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
                     <a name="reno" href="http://www.openstreetmap.org/?lat=39.539&amp;lon=-119.800&amp;zoom=10&amp;layers=M"><img src="previews/reno.jpg"></a>
                     <h3>Reno</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/reno.osm.bz2">4.1 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/reno.osm.pbf">2.3 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/reno.coastline.zip">1.1 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/reno.osm2pgsql-shapefiles.zip">4.3 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/reno.imposm-shapefiles.zip">7.3 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/reno.osm.bz2">4.1 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/reno.osm.pbf">2.3 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/reno.coastline.zip">1.1 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/reno.osm2pgsql-shapefiles.zip">4.3 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/reno.imposm-shapefiles.zip">7.4 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
                     <a name="reykjavik" href="http://www.openstreetmap.org/?lat=64.035&amp;lon=-21.984&amp;zoom=9&amp;layers=M"><img src="previews/reykjavik.jpg"></a>
                     <h3>Reykjavik</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/reykjavik.osm.bz2">8.7 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/reykjavik.osm.pbf">5.6 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/reykjavik.coastline.zip">116 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/reykjavik.osm2pgsql-shapefiles.zip">10 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/reykjavik.imposm-shapefiles.zip">13 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/reykjavik.osm.bz2">8.8 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/reykjavik.osm.pbf">5.6 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/reykjavik.coastline.zip">116 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/reykjavik.osm2pgsql-shapefiles.zip">10 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/reykjavik.imposm-shapefiles.zip">13 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
@@ -891,7 +1001,7 @@
                 <li class="city">
                     <a name="st-petersburg" href="http://www.openstreetmap.org/?lat=59.952&amp;lon=30.171&amp;zoom=9&amp;layers=M"><img src="previews/st-petersburg.jpg"></a>
                     <h3>Saint Petersburg</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/st-petersburg.osm.bz2">44 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/st-petersburg.osm.pbf">29 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/st-petersburg.coastline.zip">189 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/st-petersburg.osm2pgsql-shapefiles.zip">54 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/st-petersburg.imposm-shapefiles.zip">64 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/st-petersburg.osm.bz2">45 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/st-petersburg.osm.pbf">29 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/st-petersburg.coastline.zip">189 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/st-petersburg.osm2pgsql-shapefiles.zip">54 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/st-petersburg.imposm-shapefiles.zip">64 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
@@ -915,7 +1025,7 @@
                 <li class="city">
                     <a name="santa-barbara" href="http://www.openstreetmap.org/?lat=34.318&amp;lon=-119.897&amp;zoom=9&amp;layers=M"><img src="previews/santa-barbara.jpg"></a>
                     <h3>Santa Barbara</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/santa-barbara.osm.bz2">11 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/santa-barbara.osm.pbf">6.4 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/santa-barbara.coastline.zip">297 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/santa-barbara.osm2pgsql-shapefiles.zip">10 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/santa-barbara.imposm-shapefiles.zip">17 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/santa-barbara.osm.bz2">11 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/santa-barbara.osm.pbf">6.4 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/santa-barbara.coastline.zip">297 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/santa-barbara.osm2pgsql-shapefiles.zip">11 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/santa-barbara.imposm-shapefiles.zip">17 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
@@ -939,13 +1049,13 @@
                 <li class="city">
                     <a name="sarajevo" href="http://www.openstreetmap.org/?lat=43.844&amp;lon=18.373&amp;zoom=11&amp;layers=M"><img src="previews/sarajevo.jpg"></a>
                     <h3>Sarajevo</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/sarajevo.osm.bz2">5.1 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/sarajevo.osm.pbf">2.9 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/sarajevo.coastline.zip">1.0 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/sarajevo.osm2pgsql-shapefiles.zip">5.9 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/sarajevo.imposm-shapefiles.zip">6.7 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/sarajevo.osm.bz2">5.1 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/sarajevo.osm.pbf">2.9 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/sarajevo.coastline.zip">1.0 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/sarajevo.osm2pgsql-shapefiles.zip">6.0 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/sarajevo.imposm-shapefiles.zip">6.7 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
                     <a name="seattle" href="http://www.openstreetmap.org/?lat=47.612&amp;lon=-122.364&amp;zoom=10&amp;layers=M"><img src="previews/seattle.jpg"></a>
                     <h3>Seattle</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/seattle.osm.bz2">13 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/seattle.osm.pbf">9.1 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/seattle.coastline.zip">411 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/seattle.osm2pgsql-shapefiles.zip">14 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/seattle.imposm-shapefiles.zip">22 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/seattle.osm.bz2">13 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/seattle.osm.pbf">9.2 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/seattle.coastline.zip">411 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/seattle.osm2pgsql-shapefiles.zip">14 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/seattle.imposm-shapefiles.zip">22 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
@@ -957,19 +1067,19 @@
                 <li class="city">
                     <a name="shanghai" href="http://www.openstreetmap.org/?lat=30.987&amp;lon=121.333&amp;zoom=7&amp;layers=M"><img src="previews/shanghai.jpg"></a>
                     <h3>Shanghai</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/shanghai.osm.bz2">13 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/shanghai.osm.pbf">8.2 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/shanghai.coastline.zip">839 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/shanghai.osm2pgsql-shapefiles.zip">14 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/shanghai.imposm-shapefiles.zip">30 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/shanghai.osm.bz2">13 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/shanghai.osm.pbf">8.3 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/shanghai.coastline.zip">838 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/shanghai.osm2pgsql-shapefiles.zip">14 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/shanghai.imposm-shapefiles.zip">31 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
                     <a name="siem-reap" href="http://www.openstreetmap.org/?lat=13.334&amp;lon=104.010&amp;zoom=9&amp;layers=M"><img src="previews/siem-reap.jpg"></a>
                     <h3>Siem Reap</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/siem-reap.osm.bz2">474 KB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/siem-reap.osm.pbf">287 KB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/siem-reap.coastline.zip">1.2 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/siem-reap.osm2pgsql-shapefiles.zip">470 KB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/siem-reap.imposm-shapefiles.zip">808 KB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/siem-reap.osm.bz2">474 KB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/siem-reap.osm.pbf">287 KB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/siem-reap.coastline.zip">1.2 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/siem-reap.osm2pgsql-shapefiles.zip">470 KB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/siem-reap.imposm-shapefiles.zip">809 KB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
                     <a name="singapore" href="http://www.openstreetmap.org/?lat=1.315&amp;lon=103.804&amp;zoom=9&amp;layers=M"><img src="previews/singapore.jpg"></a>
                     <h3>Singapore</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/singapore.osm.bz2">8.5 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/singapore.osm.pbf">5.4 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/singapore.coastline.zip">248 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/singapore.osm2pgsql-shapefiles.zip">10 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/singapore.imposm-shapefiles.zip">15 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/singapore.osm.bz2">8.5 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/singapore.osm.pbf">5.5 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/singapore.coastline.zip">248 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/singapore.osm2pgsql-shapefiles.zip">10 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/singapore.imposm-shapefiles.zip">15 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
@@ -993,13 +1103,13 @@
                 <li class="city">
                     <a name="stockholm" href="http://www.openstreetmap.org/?lat=59.384&amp;lon=18.056&amp;zoom=8&amp;layers=M"><img src="previews/stockholm.jpg"></a>
                     <h3>Stockholm</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/stockholm.osm.bz2">38 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/stockholm.osm.pbf">23 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/stockholm.coastline.zip">1.7 MB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/stockholm.osm2pgsql-shapefiles.zip">42 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/stockholm.imposm-shapefiles.zip">58 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/stockholm.osm.bz2">39 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/stockholm.osm.pbf">23 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/stockholm.coastline.zip">1.7 MB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/stockholm.osm2pgsql-shapefiles.zip">43 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/stockholm.imposm-shapefiles.zip">59 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
                     <a name="strasbourg" href="http://www.openstreetmap.org/?lat=48.547&amp;lon=7.763&amp;zoom=10&amp;layers=M"><img src="previews/strasbourg.jpg"></a>
                     <h3>Strasbourg</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/strasbourg.osm.bz2">33 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/strasbourg.osm.pbf">22 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/strasbourg.coastline.zip">1.1 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/strasbourg.osm2pgsql-shapefiles.zip">41 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/strasbourg.imposm-shapefiles.zip">48 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/strasbourg.osm.bz2">33 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/strasbourg.osm.pbf">22 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/strasbourg.coastline.zip">1.1 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/strasbourg.osm2pgsql-shapefiles.zip">41 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/strasbourg.imposm-shapefiles.zip">49 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
@@ -1011,7 +1121,7 @@
                 <li class="city">
                     <a name="taipei" href="http://www.openstreetmap.org/?lat=25.083&amp;lon=121.510&amp;zoom=10&amp;layers=M"><img src="previews/taipei.jpg"></a>
                     <h3>Taipei</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/taipei.osm.bz2">5.2 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/taipei.osm.pbf">3.3 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/taipei.coastline.zip">76 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/taipei.osm2pgsql-shapefiles.zip">6.0 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/taipei.imposm-shapefiles.zip">10 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/taipei.osm.bz2">5.3 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/taipei.osm.pbf">3.3 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/taipei.coastline.zip">76 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/taipei.osm2pgsql-shapefiles.zip">6.1 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/taipei.imposm-shapefiles.zip">10 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
@@ -1023,19 +1133,25 @@
                 <li class="city">
                     <a name="tehran" href="http://www.openstreetmap.org/?lat=35.651&amp;lon=51.259&amp;zoom=10&amp;layers=M"><img src="previews/tehran.jpg"></a>
                     <h3>Tehran</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/tehran.osm.bz2">3.0 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/tehran.osm.pbf">2.0 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/tehran.coastline.zip">1.1 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/tehran.osm2pgsql-shapefiles.zip">4.0 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/tehran.imposm-shapefiles.zip">9.4 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/tehran.osm.bz2">3.0 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/tehran.osm.pbf">2.1 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/tehran.coastline.zip">1.1 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/tehran.osm2pgsql-shapefiles.zip">4.0 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/tehran.imposm-shapefiles.zip">9.5 MB imposm shapefiles</a></li></ul>
+                </li>
+
+                <li class="city">
+                    <a name="tel-aviv" href="http://www.openstreetmap.org/?lat=32.088&amp;lon=34.847&amp;zoom=11&amp;layers=M"><img src="previews/tel-aviv.jpg"></a>
+                    <h3>Tel Aviv</h3>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/tel-aviv.osm.bz2">7.0 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/tel-aviv.osm.pbf">5.0 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/tel-aviv.coastline.zip">16 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/tel-aviv.osm2pgsql-shapefiles.zip">7.5 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/tel-aviv.imposm-shapefiles.zip">11 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
                     <a name="terre-haute" href="http://www.openstreetmap.org/?lat=39.473&amp;lon=-87.394&amp;zoom=11&amp;layers=M"><img src="previews/terre-haute.jpg"></a>
                     <h3>Terre Haute</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/terre-haute.osm.bz2">437 KB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/terre-haute.osm.pbf">333 KB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/terre-haute.coastline.zip">1.1 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/terre-haute.osm2pgsql-shapefiles.zip">486 KB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/terre-haute.imposm-shapefiles.zip">862 KB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/terre-haute.osm.bz2">437 KB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/terre-haute.osm.pbf">333 KB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/terre-haute.coastline.zip">1.1 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/terre-haute.osm2pgsql-shapefiles.zip">487 KB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/terre-haute.imposm-shapefiles.zip">865 KB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
                     <a name="tokyo" href="http://www.openstreetmap.org/?lat=35.715&amp;lon=139.966&amp;zoom=8&amp;layers=M"><img src="previews/tokyo.jpg"></a>
                     <h3>Tokyo</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/tokyo.osm.bz2">149 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/tokyo.osm.pbf">102 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/tokyo.coastline.zip">960 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/tokyo.osm2pgsql-shapefiles.zip">186 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/tokyo.imposm-shapefiles.zip">315 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/tokyo.osm.bz2">150 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/tokyo.osm.pbf">102 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/tokyo.coastline.zip">960 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/tokyo.osm2pgsql-shapefiles.zip">187 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/tokyo.imposm-shapefiles.zip">317 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
@@ -1047,7 +1163,13 @@
                 <li class="city">
                     <a name="toulouse" href="http://www.openstreetmap.org/?lat=43.583&amp;lon=1.420&amp;zoom=10&amp;layers=M"><img src="previews/toulouse.jpg"></a>
                     <h3>Toulouse</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/toulouse.osm.bz2">63 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/toulouse.osm.pbf">46 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/toulouse.coastline.zip">1.1 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/toulouse.osm2pgsql-shapefiles.zip">79 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/toulouse.imposm-shapefiles.zip">91 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/toulouse.osm.bz2">63 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/toulouse.osm.pbf">46 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/toulouse.coastline.zip">1.1 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/toulouse.osm2pgsql-shapefiles.zip">79 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/toulouse.imposm-shapefiles.zip">92 MB imposm shapefiles</a></li></ul>
+                </li>
+
+                <li class="city">
+                    <a name="tucson" href="http://www.openstreetmap.org/?lat=32.262&amp;lon=-110.941&amp;zoom=10&amp;layers=M"><img src="previews/tucson.jpg"></a>
+                    <h3>Tucson</h3>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/tucson.osm.bz2">3.8 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/tucson.osm.pbf">2.7 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/tucson.coastline.zip">1.2 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/tucson.osm2pgsql-shapefiles.zip">4.0 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/tucson.imposm-shapefiles.zip">7.3 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
@@ -1065,19 +1187,31 @@
                 <li class="city">
                     <a name="victoria" href="http://www.openstreetmap.org/?lat=48.464&amp;lon=-123.316&amp;zoom=9&amp;layers=M"><img src="previews/victoria.jpg"></a>
                     <h3>Victoria</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/victoria.osm.bz2">12 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/victoria.osm.pbf">7.1 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/victoria.coastline.zip">1.3 MB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/victoria.osm2pgsql-shapefiles.zip">13 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/victoria.imposm-shapefiles.zip">18 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/victoria.osm.bz2">12 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/victoria.osm.pbf">7.2 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/victoria.coastline.zip">1.3 MB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/victoria.osm2pgsql-shapefiles.zip">13 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/victoria.imposm-shapefiles.zip">18 MB imposm shapefiles</a></li></ul>
+                </li>
+
+                <li class="city">
+                    <a name="vienna" href="http://www.openstreetmap.org/?lat=48.145&amp;lon=16.416&amp;zoom=10&amp;layers=M"><img src="previews/vienna.jpg"></a>
+                    <h3>Vienna</h3>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/vienna.osm.bz2">31 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/vienna.osm.pbf">20 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/vienna.coastline.zip">1.1 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/vienna.osm2pgsql-shapefiles.zip">36 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/vienna.imposm-shapefiles.zip">41 MB imposm shapefiles</a></li></ul>
+                </li>
+
+                <li class="city">
+                    <a name="vienna-bratislava" href="http://www.openstreetmap.org/?lat=48.056&amp;lon=16.804&amp;zoom=8&amp;layers=M"><img src="previews/vienna-bratislava.jpg"></a>
+                    <h3>Vienna, Bratislava, Győr, Eisenstadt</h3>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/vienna-bratislava.osm.bz2">96 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/vienna-bratislava.osm.pbf">62 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/vienna-bratislava.coastline.zip">1.3 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/vienna-bratislava.osm2pgsql-shapefiles.zip">120 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/vienna-bratislava.imposm-shapefiles.zip">141 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
                     <a name="warsaw" href="http://www.openstreetmap.org/?lat=52.236&amp;lon=21.017&amp;zoom=9&amp;layers=M"><img src="previews/warsaw.jpg"></a>
                     <h3>Warsaw</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/warsaw.osm.bz2">22 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/warsaw.osm.pbf">15 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/warsaw.coastline.zip">1.3 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/warsaw.osm2pgsql-shapefiles.zip">22 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/warsaw.imposm-shapefiles.zip">31 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/warsaw.osm.bz2">22 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/warsaw.osm.pbf">16 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/warsaw.coastline.zip">1.3 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/warsaw.osm2pgsql-shapefiles.zip">23 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/warsaw.imposm-shapefiles.zip">31 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
                     <a name="dc-baltimore" href="http://www.openstreetmap.org/?lat=39.087&amp;lon=-76.827&amp;zoom=9&amp;layers=M"><img src="previews/dc-baltimore.jpg"></a>
                     <h3>Washington D.C., Baltimore</h3>
-                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/dc-baltimore.osm.bz2">81 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/dc-baltimore.osm.pbf">52 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/dc-baltimore.coastline.zip">621 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/dc-baltimore.osm2pgsql-shapefiles.zip">92 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/dc-baltimore.imposm-shapefiles.zip">141 MB imposm shapefiles</a></li></ul>
+                    <ul><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/dc-baltimore.osm.bz2">82 MB bzip’ed XML OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/dc-baltimore.osm.pbf">52 MB binary PBF OSM data</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/dc-baltimore.coastline.zip">621 KB coastline shapefile</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/dc-baltimore.osm2pgsql-shapefiles.zip">93 MB osm2pgsql shapefiles</a></li><li class="file"><a href="http://osm-extracted-metros.s3.amazonaws.com/dc-baltimore.imposm-shapefiles.zip">141 MB imposm shapefiles</a></li></ul>
                 </li>
 
                 <li class="city">
@@ -1097,8 +1231,10 @@
             <a href="http://svn.openstreetmap.org/applications/utils/coastcheck/">Subversion</a>.
         </p>
         <ul class="coast">
-            <li><a href="http://osm-extracted-metros.s3.amazonaws.com/processed_p-merc.tar.bz2">Coastline polygons</a>: automatically generated areas, divided into 100km squares.<br><a href="http://osm-extracted-metros.s3.amazonaws.com/processed_p-merc.tar.bz2">Mercator</a> (393 MB) and <a href="http://osm-extracted-metros.s3.amazonaws.com/processed_p-latlon.tar.bz2">unprojected</a> (280 MB) shapefiles.<br>Updated from <a href="http://planet.openstreetmap.org/">Planet</a> Mar 20, 2013.</li>
+            <li><a href="http://osm-extracted-metros.s3.amazonaws.com/processed_p-merc.tar.bz2">Coastline polygons</a>: automatically generated areas, divided into 100km squares.<br><a href="http://osm-extracted-metros.s3.amazonaws.com/processed_p-merc.tar.bz2">Mercator</a> (393 MB) and <a href="http://osm-extracted-metros.s3.amazonaws.com/processed_p-latlon.tar.bz2">unprojected</a> (280 MB) shapefiles.<br>Updated from <a href="http://planet.openstreetmap.org/">Planet</a> Mar 23, 2013.</li>
+            <!--
             <li><a href="http://osm-extracted-metros.s3.amazonaws.com/coastline-good-merc.tar.bz2">Good coastline polygons</a>: coastline polygons chosen to fill gaps in new data with old data.<br><a href="http://osm-extracted-metros.s3.amazonaws.com/coastline-good-merc.tar.bz2">Mercator</a> (359 MB) and <a href="http://osm-extracted-metros.s3.amazonaws.com/coastline-good-latlon.tar.bz2">unprojected</a> (256 MB) shapefiles.<br>Last manually selected Mar 22, 2013.</li>
+            -->
         </ul>
         <p>
             The coastline usually has errors in it. These files help show where
@@ -1106,9 +1242,9 @@
             the next time the coastline polygons are rendered:
         </p>
         <ul class="coast">
-            <li><a href="http://osm-extracted-metros.s3.amazonaws.com/processed_i-merc.tar.bz2">Incomplete lines</a>: incomplete coastlines, joined into linestrings.<br><a href="http://osm-extracted-metros.s3.amazonaws.com/processed_i-merc.tar.bz2">Mercator</a> (2.8 KB) and <a href="http://osm-extracted-metros.s3.amazonaws.com/processed_i-latlon.tar.bz2">unprojected</a> (2.7 KB) shapefiles.</li>
-            <li><a href="http://osm-extracted-metros.s3.amazonaws.com/coastline_p-merc.tar.bz2">Error points</a>: points where the coastline checker found errors.<br><a href="http://osm-extracted-metros.s3.amazonaws.com/coastline_p-merc.tar.bz2">Mercator</a> (689 B) and <a href="http://osm-extracted-metros.s3.amazonaws.com/coastline_p-latlon.tar.bz2">unprojected</a> (593 B) shapefiles.</li>
-            <li><a href="http://osm-extracted-metros.s3.amazonaws.com/post_errors-merc.tar.bz2">PostGIS error points</a>: points where PostGIS found topology errors.<br><a href="http://osm-extracted-metros.s3.amazonaws.com/post_errors-merc.tar.bz2">Mercator</a> (549 B) and <a href="http://osm-extracted-metros.s3.amazonaws.com/post_errors-latlon.tar.bz2">unprojected</a> (449 B) shapefiles.</li>
-            <li><a href="http://osm-extracted-metros.s3.amazonaws.com/post_missing-merc.tar.bz2">PostGIS missing tiles</a>: areas where PostGIS was unable to parse a geometry.<br><a href="http://osm-extracted-metros.s3.amazonaws.com/post_missing-merc.tar.bz2">Mercator</a> (443 B) and <a href="http://osm-extracted-metros.s3.amazonaws.com/post_missing-latlon.tar.bz2">unprojected</a> (356 B) shapefiles.</li>
+            <li><a href="http://osm-extracted-metros.s3.amazonaws.com/processed_i-merc.tar.bz2">Incomplete lines</a>: incomplete coastlines, joined into linestrings.<br><a href="http://osm-extracted-metros.s3.amazonaws.com/processed_i-merc.tar.bz2">Mercator</a> (1.7 MB) and <a href="http://osm-extracted-metros.s3.amazonaws.com/processed_i-latlon.tar.bz2">unprojected</a> (1.2 MB) shapefiles.</li>
+            <li><a href="http://osm-extracted-metros.s3.amazonaws.com/coastline_p-merc.tar.bz2">Error points</a>: points where the coastline checker found errors.<br><a href="http://osm-extracted-metros.s3.amazonaws.com/coastline_p-merc.tar.bz2">Mercator</a> (761 B) and <a href="http://osm-extracted-metros.s3.amazonaws.com/coastline_p-latlon.tar.bz2">unprojected</a> (642 B) shapefiles.</li>
+            <li><a href="http://osm-extracted-metros.s3.amazonaws.com/post_errors-merc.tar.bz2">PostGIS error points</a>: points where PostGIS found topology errors.<br><a href="http://osm-extracted-metros.s3.amazonaws.com/post_errors-merc.tar.bz2">Mercator</a> (443 B) and <a href="http://osm-extracted-metros.s3.amazonaws.com/post_errors-latlon.tar.bz2">unprojected</a> (352 B) shapefiles.</li>
+            <li><a href="http://osm-extracted-metros.s3.amazonaws.com/post_missing-merc.tar.bz2">PostGIS missing tiles</a>: areas where PostGIS was unable to parse a geometry.<br><a href="http://osm-extracted-metros.s3.amazonaws.com/post_missing-merc.tar.bz2">Mercator</a> (445 B) and <a href="http://osm-extracted-metros.s3.amazonaws.com/post_missing-latlon.tar.bz2">unprojected</a> (350 B) shapefiles.</li>
         </ul>
 </body></html>
