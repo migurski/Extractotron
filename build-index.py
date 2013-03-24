@@ -144,6 +144,7 @@ if __name__ == '__main__':
 <head>
 	<title>Metro Extracts</title>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="http://www.openstreetmap.us/~migurski/style.css" type="text/css" media="all">
     <link rel="stylesheet" href="style.css" type="text/css" media="all">
 </head>
 <body>

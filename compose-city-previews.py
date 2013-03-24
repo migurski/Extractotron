@@ -9,11 +9,11 @@ except ImportError:
     from ImageDraw import ImageDraw
 
 from ModestMaps import mapByExtent
-from ModestMaps.OpenStreetMap import Provider
+from ModestMaps.Providers import TemplatedMercatorProvider
 from ModestMaps.Geo import Location
 from ModestMaps.Core import Point
 
-provider = Provider()
+provider = TemplatedMercatorProvider('http://otile1.mqcdn.com/tiles/1.0.0/osm/{Z}/{X}/{Y}.jpg')
 dimensions = Point(310, 200)
 
 cities = list(DictReader(open('cities.txt'), dialect='excel-tab'))
