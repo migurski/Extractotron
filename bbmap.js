@@ -1,6 +1,7 @@
 // A Leaflet map to draw bounding boxes of the metros in Extractotron
 
 function makeBbMap() {
+    // Create the leaflet base map
     var map = L.map('bbMap');
     map.setView([20, 0], 2);
     var basemap = L.tileLayer('http://otile{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.jpg', {
@@ -11,21 +12,23 @@ function makeBbMap() {
     });
     basemap.addTo(map);
 
-    d3.tsv('cities.txt', function(cities) {
-        for (var i = 0; i < cities.length; i++) {
-            var city = cities[i];
-            var t = parseFloat(city.top),
-                b = parseFloat(city.bottom),
-                l = parseFloat(city.left),
-                r = parseFloat(city.right);
-            var polygon = L.polygon([[b,r], [b,l], [t,l], [t, r]],
-                                    { weight: 1.5, color: "#000",
-                                     fillColor: "#82c", fillOpacity: 0.5 });
-            var popupData = [
-                '<a href="#' + city.slug + '">' + city.name + '</a>',
-            ];
-            polygon.bindPopup(popupData.join(''));
-            polygon.addTo(map);
-        }
-    });
+    // Load cities.json synchronously
+    var req = new XMLHttpRequest();
+    req.open('GET', 'cities.json', false);
+    req.send();
+    var cities = JSON.parse(req.responseText);
+
+    // Render a box for each city, create the popup
+    for (var i = 0; i < cities.length; i++) {
+        var city = cities[i];
+        var polygon = L.polygon([[city.b, city.r], [city.b, city.l],
+                                 [city.t, city.l], [city.t, city.r]],
+                                { weight: 1.5, color: "#000",
+                                 fillColor: "#82c", fillOpacity: 0.5 });
+        var popupData = [
+            '<a href="#' + city.slug + '">' + city.name + '</a>',
+        ];
+        polygon.bindPopup(popupData.join(''));
+        polygon.addTo(map);
+    }
 };

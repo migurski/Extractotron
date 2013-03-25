@@ -1,4 +1,4 @@
-all: osmosis.sh osm2pgsql.sh coastshapes.sh index.html previews
+all: osmosis.sh osm2pgsql.sh coastshapes.sh index.html previews cities.json
 
 osmosis.sh: build-osmosis-script.py cities.txt
 	python build-osmosis-script.py $@
@@ -15,3 +15,6 @@ index.html: build-index.py cities.txt
 previews: compose-city-previews.py cities.txt
 	python compose-city-previews.py $@
 	touch previews
+
+cities.json: build-cities-json.py cities.txt
+	python build-cities-json.py $@

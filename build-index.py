@@ -152,7 +152,6 @@ if __name__ == '__main__':
         <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.ie.css" />
     <![endif]-->
     <script src="http://cdn.leafletjs.com/leaflet-0.5/leaflet.js"></script>
-    <script src="http://d3js.org/d3.v3.min.js"></script>
     <script src="bbmap.js"></script>
 </head>
 <body>
