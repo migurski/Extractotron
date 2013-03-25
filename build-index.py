@@ -146,6 +146,14 @@ if __name__ == '__main__':
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 	<link rel="stylesheet" href="http://www.openstreetmap.us/~migurski/style.css" type="text/css" media="all">
     <link rel="stylesheet" href="style.css" type="text/css" media="all">
+
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.css" />
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.ie.css" />
+    <![endif]-->
+    <script src="http://cdn.leafletjs.com/leaflet-0.5/leaflet.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="bbmap.js"></script>
 </head>
 <body>
     <h1>Metro Extracts</h1>
@@ -181,6 +189,7 @@ if __name__ == '__main__':
         is available at <a href="http://archive.org/download/metro.teczno.com">archive.org</a>.
         Extracts here will continue to be updated into the future.
     </p>
+    <div id="bbMap"></div>
     <ul class="links">""" % locals()
 
     cities = list(DictReader(open('cities.txt'), dialect='excel-tab'))
@@ -298,4 +307,7 @@ if __name__ == '__main__':
             coast['post_missing']['latlon'][2], nice_size(coast['post_missing']['latlon'][1])
         )
 
+    print >> index, """    <script type="text/javascript">
+    makeBbMap();
+    </script>""";
     print >> index, """</body></html>"""

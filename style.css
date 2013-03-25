@@ -89,3 +89,10 @@ li.file
     padding: .5em;
     border-radius: 3px;
 }
+
+#bbMap {
+    width: 950px;
+    height: 400px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
