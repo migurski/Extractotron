@@ -47,8 +47,8 @@ To use Extractotron yourself, use run-instance.py:
 
     python run-instance.py <your AWS access key> <your AWS secret> <your bucket name>
 
-By default, run-instance.py instantiates an m1.large instance with Alestic's
-Ubuntu 11.04 Natty instance-store AMI ami-68ad5201. You can change the instance
+By default, run-instance.py instantiates an m2.4xlarge instance with Alestic's
+Ubuntu 10.04 Lucid instance-store AMI ami-bffa6fd6. You can change the instance
 type or AMI, see ```python run-instance.py --help``` for details.
 
 Currently, the cities list is very short. Help me expand it by modifying
