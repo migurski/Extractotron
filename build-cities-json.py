@@ -24,4 +24,4 @@ with open("cities.txt") as fp:
 
 # Write the database to named file
 with open(sys.argv[1], "w") as fp:
-    json.dump(db, fp)
+    json.dump(db, fp, indent=2)
