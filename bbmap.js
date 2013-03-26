@@ -1,5 +1,27 @@
 // A Leaflet map to draw bounding boxes of the metros in Extractotron
 
+function jsonXhr(url, success, error) {
+    var req = new XMLHttpRequest();
+    req.open('GET', url, true);
+    req.onreadystatechange = function() {
+        if (req.readyState < 4) {
+            return;
+        }
+        var s = req.status;
+        if ((s >= 200 && s < 300) || s == 304) {
+            var data = JSON.parse(req.responseText);
+            success(data);
+        } else {
+            if (error) {
+                error(req);
+            } else {
+                console.log("XHR error", req);
+            }
+        }
+    };
+    req.send();
+}
+
 function makeBbMap() {
     // Create the leaflet base map
     var map = L.map('bbMap');
@@ -12,23 +34,20 @@ function makeBbMap() {
     });
     basemap.addTo(map);
 
-    // Load cities.json synchronously
-    var req = new XMLHttpRequest();
-    req.open('GET', 'cities.json', false);
-    req.send();
-    var cities = JSON.parse(req.responseText);
-
-    // Render a box for each city, create the popup
-    for (var i = 0; i < cities.length; i++) {
-        var city = cities[i];
-        var polygon = L.polygon([[city.b, city.r], [city.b, city.l],
-                                 [city.t, city.l], [city.t, city.r]],
-                                { weight: 1.5, color: "#000",
-                                 fillColor: "#82c", fillOpacity: 0.5 });
-        var popupData = [
-            '<a href="#' + city.slug + '">' + city.name + '</a>',
-        ];
-        polygon.bindPopup(popupData.join(''));
-        polygon.addTo(map);
-    }
+    // Load cities.json asynchronously
+    jsonXhr('cities.json', function(cities) {
+        // Render a box for each city, create the popup
+        for (var i = 0; i < cities.length; i++) {
+            var city = cities[i];
+            var polygon = L.polygon([[city.b, city.r], [city.b, city.l],
+                                     [city.t, city.l], [city.t, city.r]],
+                                    { weight: 1.5, color: "#000",
+                                     fillColor: "#82c", fillOpacity: 0.5 });
+            var popupData = [
+                '<a href="#' + city.slug + '">' + city.name + '</a>',
+            ];
+            polygon.bindPopup(popupData.join(''));
+            polygon.addTo(map);
+        }
+    });
 };
