@@ -2,7 +2,6 @@
 
 function jsonXhr(url, success, error) {
     var req = new XMLHttpRequest();
-    req.open('GET', url, true);
     req.onreadystatechange = function() {
         if (req.readyState < 4) {
             return;
@@ -19,6 +18,7 @@ function jsonXhr(url, success, error) {
             }
         }
     };
+    req.open('GET', url, true);
     req.send();
 }
 
