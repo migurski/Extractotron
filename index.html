@@ -5,6 +5,13 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 	<link rel="stylesheet" href="http://www.openstreetmap.us/~migurski/style.css" type="text/css" media="all">
     <link rel="stylesheet" href="style.css" type="text/css" media="all">
+
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.css" />
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.ie.css" />
+    <![endif]-->
+    <script src="http://cdn.leafletjs.com/leaflet-0.5/leaflet.js"></script>
+    <script src="bbmap.js"></script>
 </head>
 <body>
     <h1>Metro Extracts</h1>
@@ -35,11 +42,12 @@
     <p id="archive-note">
         An archived copy of this collection of extracts from the
         <a href="http://archive.org/download/metro.teczno.com/planet-120314.osm.bz2">March 14th 2012 Planet file</a>
-        (just before the <a href="http://lists.openstreetmap.org/pipermail/talk/2012-January/061800.html">April, 2012</a> 
+        (just before the <a href="http://lists.openstreetmap.org/pipermail/talk/2012-January/061800.html">April, 2012</a>
         <a href="http://www.osmfoundation.org/wiki/License/We_Are_Changing_The_License">license changeover</a>)
         is available at <a href="http://archive.org/download/metro.teczno.com">archive.org</a>.
         Extracts here will continue to be updated into the future.
     </p>
+    <div id="bbMap"></div>
     <ul class="links">
 <li class="group">Africa:</li>
 <li class="link"><a href="#abuja">Abuja</a></li>
@@ -1247,4 +1255,7 @@
             <li><a href="http://osm-extracted-metros.s3.amazonaws.com/post_errors-merc.tar.bz2">PostGIS error points</a>: points where PostGIS found topology errors.<br><a href="http://osm-extracted-metros.s3.amazonaws.com/post_errors-merc.tar.bz2">Mercator</a> (443 B) and <a href="http://osm-extracted-metros.s3.amazonaws.com/post_errors-latlon.tar.bz2">unprojected</a> (352 B) shapefiles.</li>
             <li><a href="http://osm-extracted-metros.s3.amazonaws.com/post_missing-merc.tar.bz2">PostGIS missing tiles</a>: areas where PostGIS was unable to parse a geometry.<br><a href="http://osm-extracted-metros.s3.amazonaws.com/post_missing-merc.tar.bz2">Mercator</a> (445 B) and <a href="http://osm-extracted-metros.s3.amazonaws.com/post_missing-latlon.tar.bz2">unprojected</a> (350 B) shapefiles.</li>
         </ul>
+    <script type="text/javascript">
+    makeBbMap();
+    </script>
 </body></html>
