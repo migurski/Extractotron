@@ -180,14 +180,6 @@ if __name__ == '__main__':
         with a <a href="http://help.github.com/fork-a-repo/">fork</a>-and-<a href="http://help.github.com/send-pull-requests/">pull-request</a>.
     </p>
     <h2>Updated From <a href="http://planet.openstreetmap.org/">Planet</a> %(start)s</h2>
-    <p id="archive-note">
-        An archived copy of this collection of extracts from the
-        <a href="http://archive.org/download/metro.teczno.com/planet-120314.osm.bz2">March 14th 2012 Planet file</a>
-        (just before the <a href="http://lists.openstreetmap.org/pipermail/talk/2012-January/061800.html">April, 2012</a>
-        <a href="http://www.osmfoundation.org/wiki/License/We_Are_Changing_The_License">license changeover</a>)
-        is available at <a href="http://archive.org/download/metro.teczno.com">archive.org</a>.
-        Extracts here will continue to be updated into the future.
-    </p>
     <div id="bbMap"></div>
     <ul class="links">""" % locals()
 
@@ -203,9 +195,18 @@ if __name__ == '__main__':
                 last_group = city['group']
             print >> index, '<li class="link"><a href="#%(slug)s">%(name)s</a></li>' % city
 
-    print >> index, """</ul>"""
-
-    print >> index, """<ul>"""
+    print >> index, '''
+    </ul>
+    <p id="archive-note">
+        An archived copy of this collection of extracts from the
+        <a href="http://archive.org/download/metro.teczno.com/planet-120314.osm.bz2">March 14th 2012 Planet file</a>
+        (just before the <a href="http://lists.openstreetmap.org/pipermail/talk/2012-January/061800.html">April, 2012</a>
+        <a href="http://www.osmfoundation.org/wiki/License/We_Are_Changing_The_License">license changeover</a>)
+        is available at <a href="http://archive.org/download/metro.teczno.com">archive.org</a>.
+        Extracts here will continue to be updated into the future.
+    </p>
+    <ul>
+    '''
 
     cities.sort(key=lambda city: city['name'])
 
