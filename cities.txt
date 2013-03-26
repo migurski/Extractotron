@@ -162,7 +162,7 @@ South America	3467747	-20.352	-54.902	-20.670	-54.445	campo-grande	Campo Grande
 South America	3687238	10.572	-75.627	10.251	-75.337	cartagena	Cartagena de Indias
 South America	3464975	-25.071	-49.703	-25.799	-48.799	curitiba-brazil	Curitiba, Brazil
 South America	3936456	-11.644	-77.294	-12.358	-76.701	lima	Lima
-SOuth America 3452925 -29.471 -52.159 -30.638 -50.371 porto-alegre Porto Alegre
+South America	3452925	-29.471	-52.159	-30.638	-50.371	porto-alegre	Porto Alegre
 South America	3652462	0.109	-78.853	-0.550	-78.100	quito-ecuador	Quito
 South America	3451190	-22.510	-43.553	-23.231	-42.850	rio-de-janeiro	Rio de Janeiro
 South America	3448439	-23.125	-47.357	-24.317	-45.863	sao-paulo	Sao Paulo

@@ -592,6 +592,9 @@ wait
 osm2pgsql_shapefiles lima &
 imposm_shapefiles lima &
 wait
+osm2pgsql_shapefiles porto-alegre &
+imposm_shapefiles porto-alegre &
+wait
 osm2pgsql_shapefiles quito-ecuador &
 imposm_shapefiles quito-ecuador &
 wait

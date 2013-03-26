@@ -176,6 +176,7 @@ package_coast campo-grande -20.352 -54.902 -20.670 -54.445
 package_coast cartagena 10.572 -75.627 10.251 -75.337
 package_coast curitiba-brazil -25.071 -49.703 -25.799 -48.799
 package_coast lima -11.644 -77.294 -12.358 -76.701
+package_coast porto-alegre -29.471 -52.159 -30.638 -50.371
 package_coast quito-ecuador 0.109 -78.853 -0.550 -78.100
 package_coast rio-de-janeiro -22.510 -43.553 -23.231 -42.850
 package_coast sao-paulo -23.125 -47.357 -24.317 -45.863
