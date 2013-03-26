@@ -97,7 +97,7 @@ package_coast stockholm 59.908 17.061 58.850 19.055
 package_coast strasbourg 48.722 7.449 48.371 8.078
 package_coast st-petersburg 60.345 29.168 59.556 31.173
 package_coast toulouse 43.838 1.062 43.327 1.779
-package_coast vienna 48.305 15.899 47.985 16.934
+package_coast vienna 48.505 15.899 47.885 16.834
 package_coast vienna-bratislava 48.609 15.763 47.496 17.841
 package_coast venice 45.811 11.629 45.123 12.735
 package_coast warsaw 52.623 20.341 51.845 21.692

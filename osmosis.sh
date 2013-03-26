@@ -175,7 +175,7 @@ bzcat planet-latest.osm.bz2 | bin/osmosis --rx file=- \
     --tee outputCount=2 --wx file=ex/st-petersburg.osm.bz2 --wb file=ex/st-petersburg.osm.pbf \
     --bb top=43.838 left=1.062 bottom=43.327 right=1.779 \
     --tee outputCount=2 --wx file=ex/toulouse.osm.bz2 --wb file=ex/toulouse.osm.pbf \
-    --bb top=48.305 left=15.899 bottom=47.985 right=16.934 \
+    --bb top=48.505 left=15.899 bottom=47.885 right=16.834 \
     --tee outputCount=2 --wx file=ex/vienna.osm.bz2 --wb file=ex/vienna.osm.pbf \
     --bb top=48.609 left=15.763 bottom=47.496 right=17.841 \
     --tee outputCount=2 --wx file=ex/vienna-bratislava.osm.bz2 --wb file=ex/vienna-bratislava.osm.pbf \
