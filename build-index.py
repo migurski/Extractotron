@@ -28,7 +28,7 @@ def nice_size(size):
     MB = 1024. * KB
     GB = 1024. * MB
     TB = 1024. * GB
-    
+
     if size < KB:
         size, suffix = size, 'B'
     elif size < MB:
@@ -39,7 +39,7 @@ def nice_size(size):
         size, suffix = size/GB, 'GB'
     else:
         size, suffix = size/TB, 'TB'
-    
+
     if size < 10:
         return '%.1f %s' % (size, suffix)
     else:
@@ -65,68 +65,68 @@ if __name__ == '__main__':
 
     (index, ) = argv[1:]
     index = open(index, 'w')
-    
+
     log = list(urlopen(base_url))
     start = parser.parse(log[0][len('# begin, '):])
     start = '%s %d, %s' % (months[start.month], start.day, start.year)
-    
+
     files = dict()
     coast = dict()
-    
+
     for line in log:
         if coastline_pat.match(line):
 
             match = coastline_pat.match(line)
             file, slug, prj, size = (match.group(g) for g in (1, 2, 3, 4))
-            
+
             if slug not in coast:
                 coast[slug] = dict()
-            
+
             coast[slug][prj] = (file, int(size), urljoin(base_url, file))
             continue
-            
+
         elif extract_pat.match(line):
 
             match = extract_pat.match(line)
             file, slug, ext, size = (match.group(g) for g in (1, 2, 3, 4))
-            
+
             key, slug_file = ext, (file, int(size), urljoin(base_url, file))
-            
+
         elif coastshape_pat.match(line):
 
             match = coastshape_pat.match(line)
             file, slug, size = (match.group(g) for g in (1, 2, 3))
 
             key, slug_file = 'coastline', (file, int(size), urljoin(base_url, file))
-        
+
         elif shp_imposm_pat.match(line):
 
             match = shp_imposm_pat.match(line)
             file, slug, size = (match.group(g) for g in (1, 2, 3))
 
             key, slug_file = 'imposm shapefiles', (file, int(size), urljoin(base_url, file))
-        
+
         elif shp_osm2pgsql_pat.match(line):
 
             match = shp_osm2pgsql_pat.match(line)
             file, slug, size = (match.group(g) for g in (1, 2, 3))
 
             key, slug_file = 'osm2pgsql shapefiles', (file, int(size), urljoin(base_url, file))
-            
+
         else:
             continue
-        
+
         if slug not in files:
             files[slug] = dict()
-        
+
         files[slug][key] = slug_file
-    
+
     coast['coastline-good'] = {}
-    
+
     for prj in ('merc', 'latlon'):
         file = 'coastline-good-%s.tar.bz2' % prj
         href = urljoin(base_url, file)
-        
+
         url = urlparse(href)
         conn = HTTPConnection(url.netloc)
         conn.request('HEAD', url.path)
@@ -136,9 +136,9 @@ if __name__ == '__main__':
         date = '%s %d, %s' % (months[date.month], date.day, date.year)
 
         coast['coastline-good'][prj] = (file, int(size), href, date)
-    
+
     #
-    
+
     print >> index, """<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -146,6 +146,13 @@ if __name__ == '__main__':
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 	<link rel="stylesheet" href="http://www.openstreetmap.us/~migurski/style.css" type="text/css" media="all">
     <link rel="stylesheet" href="style.css" type="text/css" media="all">
+
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.css" />
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.ie.css" />
+    <![endif]-->
+    <script src="http://cdn.leafletjs.com/leaflet-0.5/leaflet.js"></script>
+    <script src="bbmap.js"></script>
 </head>
 <body>
     <h1>Metro Extracts</h1>
@@ -176,35 +183,36 @@ if __name__ == '__main__':
     <p id="archive-note">
         An archived copy of this collection of extracts from the
         <a href="http://archive.org/download/metro.teczno.com/planet-120314.osm.bz2">March 14th 2012 Planet file</a>
-        (just before the <a href="http://lists.openstreetmap.org/pipermail/talk/2012-January/061800.html">April, 2012</a> 
+        (just before the <a href="http://lists.openstreetmap.org/pipermail/talk/2012-January/061800.html">April, 2012</a>
         <a href="http://www.osmfoundation.org/wiki/License/We_Are_Changing_The_License">license changeover</a>)
         is available at <a href="http://archive.org/download/metro.teczno.com">archive.org</a>.
         Extracts here will continue to be updated into the future.
     </p>
+    <div id="bbMap"></div>
     <ul class="links">""" % locals()
 
     cities = list(DictReader(open('cities.txt'), dialect='excel-tab'))
 
     cities.sort(key=lambda city: (city['group'], city['name']))
     last_group = None
-    
+
     for city in cities:
         if city['slug'] in files:
             if city['group'] != last_group:
                 print >> index, '<li class="group">%(group)s:</li>' % city
                 last_group = city['group']
             print >> index, '<li class="link"><a href="#%(slug)s">%(name)s</a></li>' % city
-    
+
     print >> index, """</ul>"""
-    
+
     print >> index, """<ul>"""
-    
+
     cities.sort(key=lambda city: city['name'])
 
     for city in cities:
         slug = city['slug']
         name = city['name']
-        
+
         try:
             ul = Location(float(city['top']), float(city['left']))
             lr = Location(float(city['bottom']), float(city['right']))
@@ -213,15 +221,15 @@ if __name__ == '__main__':
             raise
         else:
             mmap = mapByExtent(provider, ul, lr, dimensions)
-        
+
         if slug in files:
             bz2_file, bz2_size, bz2_href = files[slug]['bz2']
             pbf_file, pbf_size, pbf_href = files[slug]['pbf']
-            
+
             list = ('<li class="file"><a href="%s">%s %s OSM data</a></li>' * 2) \
                  % (bz2_href, nice_size(bz2_size), 'bzip’ed XML',
                     pbf_href, nice_size(pbf_size), 'binary PBF')
-            
+
             if 'coastline' in files[slug]:
                 coast_file, coast_size, coast_href = files[slug]['coastline']
                 list += '<li class="file"><a href="%s">%s coastline shapefile</a></li>' % (coast_href, nice_size(coast_size))
@@ -237,7 +245,7 @@ if __name__ == '__main__':
             center = mmap.pointLocation(Point(dimensions.x/2, dimensions.y/2))
             zoom = mmap.coordinate.zoom
             href = 'http://www.openstreetmap.org/?lat=%.3f&amp;lon=%.3f&amp;zoom=%d&amp;layers=M' % (center.lat, center.lon, zoom)
-            
+
             print >> index, """
                 <li class="city">
                     <a name="%(slug)s" href="%(href)s"><img src="previews/%(slug)s.jpg"></a>
@@ -297,5 +305,8 @@ if __name__ == '__main__':
             coast['post_missing']['merc'][2], nice_size(coast['post_missing']['merc'][1]),
             coast['post_missing']['latlon'][2], nice_size(coast['post_missing']['latlon'][1])
         )
-    
+
+    print >> index, """    <script type="text/javascript">
+    makeBbMap();
+    </script>""";
     print >> index, """</body></html>"""

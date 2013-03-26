@@ -46,10 +46,61 @@ Rolling Your Own
 To use Extractotron yourself, use run-instance.py:
 
     python run-instance.py <your AWS access key> <your AWS secret> <your bucket name>
-    
+
 By default, run-instance.py instantiates an m1.large instance with Alestic's
 Ubuntu 11.04 Natty instance-store AMI ami-68ad5201. You can change the instance
 type or AMI, see ```python run-instance.py --help``` for details.
 
 Currently, the cities list is very short. Help me expand it by modifying
 ```cities.txt``` and sending a pull request via Github.
+
+Code Documentation
+------------------
+
+The ``Makefile`` generates various derived files from the ```cities.txt``` file.
+These scripts are utilities to do the extracts, generate utility scripts, JPG previews,
+and an HTML index based on the regions specified in ```index.html```. Note the
+result of this Makefile is checked in at github so there's no immediate need to run
+make on a fresh clone of the repo.
+
+-   **build-osmosis-script.py**
+
+    Generate the shell script ```osmosis.sh``` which uses
+    [Osmosis](http://wiki.openstreetmap.org/wiki/Osmosis) to extract subsets
+    of OSM based on the bounding boxes in ```cities.txt```
+
+-   **build-osm2pgsql-script.py**
+
+    Generate the shell script ```osm2pgsql.sh``` which uses
+    [imposm](http://imposm.org/) to import generated OSM metro subsets into
+    a PostGIS database.
+
+-   **build-coastshapes-script.py**
+
+    Generate the shell script ```coastshapes.sh``` which uses
+    [ogr2ogr](http://www.gdal.org/ogr2ogr.html) to generate coastline
+    shapefiles.
+
+-   **build-index.py**
+
+    Generate ```index.html```, the current HTML interface to allow download
+    of various extracted OSM data.
+
+-   **compose-city-previews.py**
+
+    Generate the JPG images in ```previews```, snapshot maps of the various
+    metros being extracted.
+
+The scripts generated above are then used by Extractotron to generate the actual
+extracts. The code for doing the extracts includes
+
+-   **run-instance.py**
+
+    Utility script to create an EC2 instance to run the extract. See above for details.
+
+-   **extract.sh**
+
+    Template for the shell script to do the extraction. ```run-instance.py```
+    substitutes pathnames for the scripts generated in the Makefile so that EC2 can
+    then run the extraction. See also ```upload-files.sh``` and ```kill-self.sh```.
+
