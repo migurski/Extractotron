@@ -24,7 +24,7 @@ function jsonXhr(url, success, error) {
 
 function makeBbMap() {
     // Create the leaflet base map
-    var map = L.map('bbMap');
+    var map = L.map('bbMap', {scrollWheelZoom: false});
     map.setView([20, 0], 2);
     var basemap = L.tileLayer('http://otile{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.jpg', {
             attribution: 'Tiles courtesy of <a href="http://www.mapquest.com/">MapQuest</a>, map data © <a href="http://www.openstreetmap.org/">OpenStreetMap</a>',
