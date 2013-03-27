@@ -1,28 +1,7 @@
 // A Leaflet map to draw bounding boxes of the metros in Extractotron
 
-function jsonXhr(url, success, error) {
-    var req = new XMLHttpRequest();
-    req.onreadystatechange = function() {
-        if (req.readyState < 4) {
-            return;
-        }
-        var s = req.status;
-        if ((s >= 200 && s < 300) || s == 304) {
-            var data = JSON.parse(req.responseText);
-            success(data);
-        } else {
-            if (error) {
-                error(req);
-            } else {
-                console.log("XHR error", req);
-            }
-        }
-    };
-    req.open('GET', url, true);
-    req.send();
-}
-
-function makeBbMap() {
+function makeBbMap()
+{
     // Create the leaflet base map
     var map = L.map('bbMap', {scrollWheelZoom: false});
     map.setView([20, 0], 2);
@@ -50,7 +29,7 @@ function makeBbMap() {
             city.osm_size + " bzip’ed XML OSM data<br>",
             city.pbf_size + " binary PBF OSM data<br>",
             '<p>',
-            '<img src="previews/' + city.slug + '.jpg" width=155 height=100/>',
+            '<a href="#' + city.slug + '"><img src="previews/' + city.slug + '.jpg" width="155" height="100"></a>',
         ];
         polygon.bindPopup(popupData.join(''));
         polygon.addTo(map);
