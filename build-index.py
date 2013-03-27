@@ -216,6 +216,9 @@ if __name__ == '__main__':
         or add them directly to
         <a href="https://github.com/migurski/Extractotron/blob/master/cities.txt">cities.txt</a>
         with a <a href="http://help.github.com/fork-a-repo/">fork</a>-and-<a href="http://help.github.com/send-pull-requests/">pull-request</a>.
+        Thanks <a href="http://somebits.com/">Nelson Minar</a> for contributing the map browser,
+        <a href="http://www.smartchicagocollaborative.org/">Smart Chicago</a> for EC2 funding, and all
+        <a href="https://github.com/migurski/Extractotron/commits/master/cities.txt">cities.txt contributors</a>.
     </p>
     <h2>Updated From <a href="http://planet.openstreetmap.org/">Planet</a> %(start)s</h2>
     <div id="bbMap"></div>
