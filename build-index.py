@@ -4,6 +4,7 @@ from httplib import HTTPConnection
 from re import compile
 from csv import DictReader
 from sys import argv, stderr
+from math import cos, pi
 import json
 
 from dateutil import parser
@@ -61,6 +62,22 @@ def nice_time(time):
         return '%d weeks' % (time / 604800.)
 
     return '%d months' % (time / 2592000.)
+
+def nice_area(top, left, bottom, right):
+    '''
+    '''
+    latitude = top/2 + bottom/2
+    ne = provider.locationCoordinate(Location(top, right)).zoomTo(25.256)
+    sw = provider.locationCoordinate(Location(bottom, left)).zoomTo(25.256)
+    
+    xspan, yspan = abs(ne.column - sw.column), abs(ne.row - sw.row)
+    area = '%d' % (xspan * yspan * 0.000001 * cos(latitude * pi/180))
+    pat = compile(r'(\d)(\d\d\d)\b')
+    
+    while pat.search(area):
+        area = pat.sub(r'\1,\2', area)
+    
+    return area + ' km²'
 
 if __name__ == '__main__':
 
@@ -158,21 +175,6 @@ if __name__ == '__main__':
     <script src="http://cdn.leafletjs.com/leaflet-0.5/leaflet.js"></script>
     <script type="application/javascript">
     """
-    
-    def nice_area(top, left, bottom, right):
-        '''
-        '''
-        ne = provider.locationCoordinate(Location(top, right)).zoomTo(25.256)
-        sw = provider.locationCoordinate(Location(bottom, left)).zoomTo(25.256)
-        
-        xspan, yspan = abs(ne.column - sw.column), abs(ne.row - sw.row)
-        area = '%d' % (xspan * yspan * 0.000001)
-        pat = compile(r'(\d)(\d\d\d)\b')
-        
-        while pat.search(area):
-            area = pat.sub(r'\1,\2', area)
-        
-        return area + ' km²'
     
     map_cities = [{
                     'name': city['name'],
