@@ -4,6 +4,7 @@ from httplib import HTTPConnection
 from re import compile
 from csv import DictReader
 from sys import argv, stderr
+import json
 
 from dateutil import parser
 
@@ -137,6 +138,8 @@ if __name__ == '__main__':
 
         coast['coastline-good'][prj] = (file, int(size), href, date)
 
+    cities = list(DictReader(open('cities.txt'), dialect='excel-tab'))
+
     #
 
     print >> index, """<!DOCTYPE html>
@@ -153,6 +156,40 @@ if __name__ == '__main__':
     <link rel="stylesheet" href="style.css" type="text/css" media="all">
 
     <script src="http://cdn.leafletjs.com/leaflet-0.5/leaflet.js"></script>
+    <script type="application/javascript">
+    """
+    
+    def nice_area(top, left, bottom, right):
+        '''
+        '''
+        ne = provider.locationCoordinate(Location(top, right)).zoomTo(25.256)
+        sw = provider.locationCoordinate(Location(bottom, left)).zoomTo(25.256)
+        
+        xspan, yspan = abs(ne.column - sw.column), abs(ne.row - sw.row)
+        area = '%d' % (xspan * yspan * 0.000001)
+        pat = compile(r'(\d)(\d\d\d)\b')
+        
+        while pat.search(area):
+            area = pat.sub(r'\1,\2', area)
+        
+        return area + ' km²'
+    
+    map_cities = [{
+                    'name': city['name'],
+                    'slug': city['slug'],
+                    'area': nice_area(*[float(city[k]) for k in 'top left bottom right'.split()]),
+                    'bounds': '%(left)s %(bottom)s %(right)s %(top)s' % city,
+                    'osm_size': nice_size(files[city['slug']]['bz2'][1]),
+                    'pbf_size': nice_size(files[city['slug']]['pbf'][1])
+                  }
+                  for city
+                  in cities
+                  if city['slug'] in files]
+    
+    print >> index, 'var cities = %s;' % json.dumps(map_cities)
+    
+    print >> index, """
+    </script>    
     <script src="bbmap.js"></script>
 </head>
 <body>
@@ -183,8 +220,6 @@ if __name__ == '__main__':
     <h2>Updated From <a href="http://planet.openstreetmap.org/">Planet</a> %(start)s</h2>
     <div id="bbMap"></div>
     <ul class="links">""" % locals()
-
-    cities = list(DictReader(open('cities.txt'), dialect='excel-tab'))
 
     cities.sort(key=lambda city: (city['group'], city['name']))
     last_group = None

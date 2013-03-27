@@ -34,25 +34,25 @@ function makeBbMap() {
     });
     basemap.addTo(map);
 
-    // Load cities.json asynchronously
-    jsonXhr('cities.json', function(cities) {
-        // Render a box for each city, create the popup
-        for (var i = 0; i < cities.length; i++) {
-            var city = cities[i];
-            var polygon = L.polygon([[city.b, city.r], [city.b, city.l],
-                                     [city.t, city.l], [city.t, city.r]],
-                                    { weight: 1.5, color: "#000",
-                                     fillColor: "#82c", fillOpacity: 0.5 });
-            var popupData = [
-                '<b><a href="#' + city.slug + '">' + city.name + '</a></b><br>',
-                '999km<sup>2</sup><br>',
-                "99M bzip'ed XML OSM data<br>",
-                '9999 ways<br>',
-                '<p>',
-                '<img src="previews/' + city.slug + '.jpg" width=155 height=100/>',
-            ];
-            polygon.bindPopup(popupData.join(''));
-            polygon.addTo(map);
-        }
-    });
+    // Render a box for each city, create the popup
+    for (var i = 0; i < cities.length; i++)
+    {
+        var city = cities[i],
+            bounds = city['bounds'].split(/\s/).map(parseFloat);
+
+        var polygon = L.polygon([[bounds[1], bounds[2]], [bounds[1], bounds[0]],
+                                 [bounds[3], bounds[0]], [bounds[3], bounds[2]]],
+                                { weight: 1.5, color: "#000",
+                                 fillColor: "#82c", fillOpacity: 0.5 });
+        var popupData = [
+            '<b><a href="#' + city.slug + '">' + city.name + '</a></b><br>',
+            city.area + '<br>',
+            city.osm_size + " bzip’ed XML OSM data<br>",
+            city.pbf_size + " binary PBF OSM data<br>",
+            '<p>',
+            '<img src="previews/' + city.slug + '.jpg" width=155 height=100/>',
+        ];
+        polygon.bindPopup(popupData.join(''));
+        polygon.addTo(map);
+    }
 };
