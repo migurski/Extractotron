@@ -97,3 +97,11 @@ li.file
     margin: 1em 0;
     background-color: #CCE9FE;
 }
+
+.leaflet-popup-content-wrapper {
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+.leaflet-popup-content-wrapper a {
+    text-decoration: none;
+}

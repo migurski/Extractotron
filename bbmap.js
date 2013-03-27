@@ -30,7 +30,7 @@ function makeBbMap() {
             attribution: 'Tiles courtesy of <a href="http://www.mapquest.com/">MapQuest</a>, map data © <a href="http://www.openstreetmap.org/">OpenStreetMap</a>',
             maxZoom: 7,
             subdomains: '1234',
-            noWrap: true,
+            noWrap: false,
     });
     basemap.addTo(map);
 
@@ -44,7 +44,12 @@ function makeBbMap() {
                                     { weight: 1.5, color: "#000",
                                      fillColor: "#82c", fillOpacity: 0.5 });
             var popupData = [
-                '<a href="#' + city.slug + '">' + city.name + '</a>',
+                '<b><a href="#' + city.slug + '">' + city.name + '</a></b><br>',
+                '999km<sup>2</sup><br>',
+                "99M bzip'ed XML OSM data<br>",
+                '9999 ways<br>',
+                '<p>',
+                '<img src="previews/' + city.slug + '.jpg" width=155 height=100/>',
             ];
             polygon.bindPopup(popupData.join(''));
             polygon.addTo(map);
