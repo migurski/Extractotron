@@ -14,6 +14,8 @@ from ModestMaps.Core import Point
 from ModestMaps.Geo import Location
 from ModestMaps.OpenStreetMap import Provider
 
+import lib
+
 provider = Provider()
 dimensions = Point(960, 600)
 
@@ -66,18 +68,10 @@ def nice_time(time):
 def nice_area(top, left, bottom, right):
     '''
     '''
-    latitude = top/2 + bottom/2
-    ne = provider.locationCoordinate(Location(top, right)).zoomTo(25.256)
-    sw = provider.locationCoordinate(Location(bottom, left)).zoomTo(25.256)
-    
-    xspan, yspan = abs(ne.column - sw.column), abs(ne.row - sw.row)
-    area = '%d' % (xspan * yspan * 0.000001 * cos(latitude * pi/180))
-    pat = compile(r'(\d)(\d\d\d)\b')
-    
-    while pat.search(area):
-        area = pat.sub(r'\1,\2', area)
-    
-    return area + ' km²'
+
+    km2 = lib.area(left, top, right, bottom) / 1000000
+    area = 100 * round(km2 / 100)
+    return "{:,.0f} km²".format(area)
 
 if __name__ == '__main__':
 
@@ -175,7 +169,7 @@ if __name__ == '__main__':
     <script src="http://cdn.leafletjs.com/leaflet-0.5/leaflet.js"></script>
     <script type="application/javascript">
     """
-    
+
     map_cities = [{
                     'name': city['name'],
                     'slug': city['slug'],
@@ -187,11 +181,11 @@ if __name__ == '__main__':
                   for city
                   in cities
                   if city['slug'] in files]
-    
+
     print >> index, 'var cities = %s;' % json.dumps(map_cities)
-    
+
     print >> index, """
-    </script>    
+    </script>
     <script src="bbmap.js"></script>
 </head>
 <body>
