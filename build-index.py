@@ -70,8 +70,8 @@ def nice_area(top, left, bottom, right):
     '''
 
     km2 = lib.area(left, top, right, bottom) / 1000000
-    area = 100 * round(km2 / 100)
-    return "{:,.0f} km²".format(area)
+    area = int(100 * round(km2 / 100))
+    return "{0:,d} km²".format(area)
 
 if __name__ == '__main__':
 
