@@ -20,8 +20,8 @@ Asia	1264527	13.3	79.9	12.7	80.4	chennai	Chennai
 Asia	1814905	32.217	105.283	28.167	110.183	chongqing	Chongqing
 Asia	1221874	38.829	68.244	38.244	69.134	dushanbe	Dushanbe, Tajikistan
 Asia	1819729	23.488	112.780	21.591	115.125	hong-kong	Hong Kong
-Asia  1174872 25.5  67.12 25.4  67.13 karachi Karachi, Pakistan
-Asia  1172451 31.548  74.34 31.547  74.35 lahore  Lahore, Pakistan 
+Asia	1174872	25.5	67.12	25.4	67.13	karachi	Karachi, Pakistan
+Asia	1172451	31.548	74.34	31.547	74.35	lahore	Lahore, Pakistan 
 Asia	294098	32.895	35.077	32.502	35.497	nazareth	Nazareth
 Asia	1701668	14.900	120.885	14.327	121.200	manila	Manila
 Asia	1275339	19.500	72.415	18.466	73.516	mumbai	Mumbai
