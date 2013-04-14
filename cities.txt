@@ -21,6 +21,8 @@ Asia	1814905	32.217	105.283	28.167	110.183	chongqing	Chongqing
 Asia	1221874	38.829	68.244	38.244	69.134	dushanbe	Dushanbe, Tajikistan
 Asia	1819729	23.488	112.780	21.591	115.125	hong-kong	Hong Kong
 Asia  1283240 27.811  85.188  27.553  85.588  kathmandu  Kathmandu
+Asia	1174872	25.5	67.12	25.4	67.13	karachi	Karachi, Pakistan
+Asia	1172451	31.548	74.34	31.547	74.35	lahore	Lahore, Pakistan 
 Asia	294098	32.895	35.077	32.502	35.497	nazareth	Nazareth
 Asia	1701668	14.900	120.885	14.327	121.200	manila	Manila
 Asia	1275339	19.500	72.415	18.466	73.516	mumbai	Mumbai
@@ -97,6 +99,7 @@ Middle East	292223;292968	26.539	53.580	23.735	56.887	dubai-abu-dhabi	Dubai, Abu
 Middle East	1138958	34.95	68.48	34.081	69.86	kabul	Kabul
 Middle East	108410	25.098	46.227	24.292	47.202	riyadh	Riyadh
 Middle East	293397	32.246	34.642	31.929	35.052	tel-aviv	Tel Aviv
+Middle East 616051  40.183  44.5  40.185  44.505  yerevan Yerevan  
 North America	4180439	34.090	-84.857	33.414	-83.890	atlanta	Atlanta
 North America	4671654	30.670	-98.212	29.931	-97.234	austin	Austin
 North America	4930956	42.702	-71.861	41.951	-70.285	boston	Boston
