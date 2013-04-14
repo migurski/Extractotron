@@ -70,8 +70,13 @@ def nice_area(top, left, bottom, right):
     '''
 
     km2 = lib.area(left, top, right, bottom) / 1000000
-    area = int(100 * round(km2 / 100))
-    return "{0:,d} km²".format(area)
+    area = str(int(100 * round(km2 / 100)))
+    pat = compile(r'(\d)(\d\d\d)\b')
+    
+    while pat.search(area):
+        area = pat.sub(r'\1,\2', area)
+    
+    return area + ' km²'
 
 if __name__ == '__main__':
 
