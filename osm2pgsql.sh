@@ -166,6 +166,15 @@ wait
 osm2pgsql_shapefiles hong-kong &
 imposm_shapefiles hong-kong &
 wait
+osm2pgsql_shapefiles kathmandu &
+imposm_shapefiles kathmandu &
+wait
+osm2pgsql_shapefiles karachi &
+imposm_shapefiles karachi &
+wait
+osm2pgsql_shapefiles lahore &
+imposm_shapefiles lahore &
+wait
 osm2pgsql_shapefiles nazareth &
 imposm_shapefiles nazareth &
 wait
@@ -228,6 +237,9 @@ imposm_shapefiles brussels &
 wait
 osm2pgsql_shapefiles budapest &
 imposm_shapefiles budapest &
+wait
+osm2pgsql_shapefiles cantabria &
+imposm_shapefiles cantabria &
 wait
 osm2pgsql_shapefiles copenhagen &
 imposm_shapefiles copenhagen &
@@ -331,6 +343,9 @@ wait
 osm2pgsql_shapefiles reykjavik &
 imposm_shapefiles reykjavik &
 wait
+osm2pgsql_shapefiles riga &
+imposm_shapefiles riga &
+wait
 osm2pgsql_shapefiles rome &
 imposm_shapefiles rome &
 wait
@@ -390,6 +405,9 @@ imposm_shapefiles riyadh &
 wait
 osm2pgsql_shapefiles tel-aviv &
 imposm_shapefiles tel-aviv &
+wait
+osm2pgsql_shapefiles yerevan &
+imposm_shapefiles yerevan &
 wait
 osm2pgsql_shapefiles atlanta &
 imposm_shapefiles atlanta &

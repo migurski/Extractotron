@@ -34,6 +34,9 @@ package_coast chennai 13.3 79.9 12.7 80.4
 package_coast chongqing 32.217 105.283 28.167 110.183
 package_coast dushanbe 38.829 68.244 38.244 69.134
 package_coast hong-kong 23.488 112.780 21.591 115.125
+package_coast kathmandu 27.938 85.019 27.437 85.678
+package_coast karachi 25.593 66.401 23.958 68.576
+package_coast lahore 32.201 73.381 30.796 75.425
 package_coast nazareth 32.895 35.077 32.502 35.497
 package_coast manila 14.900 120.885 14.327 121.200
 package_coast mumbai 19.500 72.415 18.466 73.516
@@ -55,6 +58,7 @@ package_coast bordeaux 45.065 -0.900 44.569 -0.162
 package_coast brno 49.357 16.268 48.951 16.940
 package_coast brussels 51.053 3.981 50.645 4.761
 package_coast budapest 47.861 18.347 47.025 19.780
+package_coast cantabria 43.523 -4.859 42.753 -3.134
 package_coast copenhagen 55.950 11.894 55.491 13.147
 package_coast colchester 52.031 0.609 51.743 1.188
 package_coast edinburgh 56.132 -3.585 55.783 -2.835
@@ -89,6 +93,7 @@ package_coast paris 49.178 1.851 48.531 2.911
 package_coast porto 41.399 -8.795 40.981 -8.358
 package_coast prague 50.408 13.842 49.763 15.012
 package_coast reykjavik 64.297 -22.826 63.771 -21.140
+package_coast riga 57.300 23.469 56.579 24.789
 package_coast rome 42.130 12.109 41.578 12.845
 package_coast rotterdam 52.109 3.911 51.737 4.784
 package_coast sarajevo 43.987 18.115 43.702 18.631
@@ -109,6 +114,7 @@ package_coast dubai-abu-dhabi 26.539 53.580 23.735 56.887
 package_coast kabul 34.95 68.48 34.081 69.86
 package_coast riyadh 25.098 46.227 24.292 47.202
 package_coast tel-aviv 32.246 34.642 31.929 35.052
+package_coast yerevan 40.617 43.907 39.693 45.276
 package_coast atlanta 34.090 -84.857 33.414 -83.890
 package_coast austin 30.670 -98.212 29.931 -97.234
 package_coast boston 42.702 -71.861 41.951 -70.285

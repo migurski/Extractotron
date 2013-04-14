@@ -20,9 +20,9 @@ Asia	1264527	13.3	79.9	12.7	80.4	chennai	Chennai
 Asia	1814905	32.217	105.283	28.167	110.183	chongqing	Chongqing
 Asia	1221874	38.829	68.244	38.244	69.134	dushanbe	Dushanbe, Tajikistan
 Asia	1819729	23.488	112.780	21.591	115.125	hong-kong	Hong Kong
-Asia  1283240 27.811  85.188  27.553  85.588  kathmandu  Kathmandu
-Asia	1174872	25.5	67.12	25.4	67.13	karachi	Karachi, Pakistan
-Asia	1172451	31.548	74.34	31.547	74.35	lahore	Lahore, Pakistan 
+Asia	1283240	27.938	85.019	27.437	85.678	kathmandu	Kathmandu
+Asia	1174872	25.593	66.401	23.958	68.576	karachi	Karachi, Pakistan
+Asia	1172451	32.201	73.381	30.796	75.425	lahore	Lahore, Pakistan 
 Asia	294098	32.895	35.077	32.502	35.497	nazareth	Nazareth
 Asia	1701668	14.900	120.885	14.327	121.200	manila	Manila
 Asia	1275339	19.500	72.415	18.466	73.516	mumbai	Mumbai
@@ -44,7 +44,7 @@ Europe	3031582	45.065	-0.900	44.569	-0.162	bordeaux	Bordeaux
 Europe	3078610	49.357	16.268	48.951	16.940	brno	Brno
 Europe	2800866	51.053	3.981	50.645	4.761	brussels	Brussels
 Europe	3054643	47.861	18.347	47.025	19.780	budapest	Budapest
-Europe  3117735	43.523	-4.859	42.753	-3.134	cantabria	Cantabria
+Europe	3117735	43.523	-4.859	42.753	-3.134	cantabria	Cantabria, Spain
 Europe	2618425	55.950	11.894	55.491	13.147	copenhagen	Copenhagen
 Europe	2652618	52.031	0.609	51.743	1.188	colchester	Colchester
 Europe	2650225	56.132	-3.585	55.783	-2.835	edinburgh	Edinburgh
@@ -79,7 +79,7 @@ Europe	2988507	49.178	1.851	48.531	2.911	paris	Paris
 Europe	2735943	41.399	-8.795	40.981	-8.358	porto	Porto
 Europe	3067696	50.408	13.842	49.763	15.012	prague	Prague
 Europe	3413829	64.297	-22.826	63.771	-21.140	reykjavik	Reykjavik
-Europe  456172  57.095  23.915  56.853  24.335  riga  Riga
+Europe	456172	57.300	23.469	56.579	24.789	riga	Riga
 Europe	3169070	42.130	12.109	41.578	12.845	rome	Rome
 Europe	2747891	52.109	3.911	51.737	4.784	rotterdam	Rotterdam
 Europe	3191281	43.987	18.115	43.702	18.631	sarajevo	Sarajevo
@@ -100,7 +100,7 @@ Middle East	292223;292968	26.539	53.580	23.735	56.887	dubai-abu-dhabi	Dubai, Abu
 Middle East	1138958	34.95	68.48	34.081	69.86	kabul	Kabul
 Middle East	108410	25.098	46.227	24.292	47.202	riyadh	Riyadh
 Middle East	293397	32.246	34.642	31.929	35.052	tel-aviv	Tel Aviv
-Middle East 616051  40.183  44.5  40.185  44.505  yerevan Yerevan  
+Middle East	616051	40.617	43.907	39.693	45.276	yerevan	Yerevan, Armenia
 North America	4180439	34.090	-84.857	33.414	-83.890	atlanta	Atlanta
 North America	4671654	30.670	-98.212	29.931	-97.234	austin	Austin
 North America	4930956	42.702	-71.861	41.951	-70.285	boston	Boston
