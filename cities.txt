@@ -20,6 +20,7 @@ Asia	1264527	13.3	79.9	12.7	80.4	chennai	Chennai
 Asia	1814905	32.217	105.283	28.167	110.183	chongqing	Chongqing
 Asia	1221874	38.829	68.244	38.244	69.134	dushanbe	Dushanbe, Tajikistan
 Asia	1819729	23.488	112.780	21.591	115.125	hong-kong	Hong Kong
+Asia	1176615	34.347	72.286	33.092	73.822	islamabad	Islamabad
 Asia	1283240	27.938	85.019	27.437	85.678	kathmandu	Kathmandu
 Asia	1174872	25.593	66.401	23.958	68.576	karachi	Karachi, Pakistan
 Asia	1172451	32.201	73.381	30.796	75.425	lahore	Lahore, Pakistan 
@@ -44,7 +45,7 @@ Europe	3031582	45.065	-0.900	44.569	-0.162	bordeaux	Bordeaux
 Europe	3078610	49.357	16.268	48.951	16.940	brno	Brno
 Europe	2800866	51.053	3.981	50.645	4.761	brussels	Brussels
 Europe	3054643	47.861	18.347	47.025	19.780	budapest	Budapest
-Europe	3117735	43.523	-4.859	42.753	-3.134	cantabria	Cantabria, Spain
+Europe	3336898	43.523	-4.859	42.753	-3.134	cantabria	Cantabria, Spain
 Europe	2618425	55.950	11.894	55.491	13.147	copenhagen	Copenhagen
 Europe	2652618	52.031	0.609	51.743	1.188	colchester	Colchester
 Europe	2650225	56.132	-3.585	55.783	-2.835	edinburgh	Edinburgh

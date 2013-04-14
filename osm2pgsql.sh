@@ -166,6 +166,9 @@ wait
 osm2pgsql_shapefiles hong-kong &
 imposm_shapefiles hong-kong &
 wait
+osm2pgsql_shapefiles islamabad &
+imposm_shapefiles islamabad &
+wait
 osm2pgsql_shapefiles kathmandu &
 imposm_shapefiles kathmandu &
 wait

@@ -34,6 +34,7 @@ package_coast chennai 13.3 79.9 12.7 80.4
 package_coast chongqing 32.217 105.283 28.167 110.183
 package_coast dushanbe 38.829 68.244 38.244 69.134
 package_coast hong-kong 23.488 112.780 21.591 115.125
+package_coast islamabad 34.347 72.286 33.092 73.822
 package_coast kathmandu 27.938 85.019 27.437 85.678
 package_coast karachi 25.593 66.401 23.958 68.576
 package_coast lahore 32.201 73.381 30.796 75.425
