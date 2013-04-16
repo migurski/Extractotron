@@ -141,7 +141,7 @@ North America	5308655	34.070	-112.821	32.796	-111.211	phoenix	Phoenix
 North America	5206379	40.880	-80.711	40.023	-79.249	pittsburgh	Pittsburgh
 North America	3718426	18.683	-72.518	18.456	-72.112	port-au-prince	Port-au-Prince
 North America	5746545	45.897	-123.211	45.096	-122.113	portland	Portland
-North America	4975802	43.743	-70.392	43.612	-70.1336	portland-me	Portland, ME
+North America	4975802	43.737	-70.393	43.525	-70.134	portland-me	Portland, ME
 North America	5511077	39.769	-120.094	39.309	-119.506	reno	Reno
 North America	4407066	39.151	-91.010	38.069	-89.533	st-louis	St. Louis
 North America	5389489	38.955	-121.821	38.395	-120.995	sacramento	Sacramento
