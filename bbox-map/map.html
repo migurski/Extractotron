@@ -1,0 +1,87 @@
+<html><head><title>Bounding Box Map</title>
+</head>
+<body>
+    <div id="map"></div>
+    <div id="info"></div>
+
+<!-- Styles and Scripts -->
+    <style>
+body {
+    margin: 0;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+}
+
+#info {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    margin-left: -150px;
+    width: 300px;
+    height: 20px;
+    background: #ddd;
+}
+    </style>
+
+    <link rel="stylesheet" href="leaflet/leaflet.css" />
+    <!--[if lte IE 8]><link rel="stylesheet" href="leaflet/leaflet.ie.css" /><![endif]-->
+    <link rel="stylesheet" href="leafletdraw/leaflet.draw.css" />
+    <!--[if lte IE 8]><link rel="stylesheet" href="leafletdraw/leaflet.draw.ie.css" /><![endif]-->
+
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <!-- leaflet.draw requires leaflet unstable -->
+    <script src="leaflet/leaflet.js"></script>
+    <script src="leafletdraw/leaflet.draw.js"></script>
+    <script>
+var map;
+
+function onMapClick(e) {
+    console.log("You clicked the map at " + e.latlng);
+    console.log(e);
+}
+
+function init_maps(provider) {
+    // Use mapquest OSM maps
+    var tileurl = 'http://{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
+      subDomains = ['otile1','otile2','otile3','otile4'],
+      mapquestAttrib = 'Data, imagery and map information provided by <a href="http://open.mapquest.co.uk" target="_blank">MapQuest</a>, <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/" target="_blank">CC-BY-SA</a>';
+
+    map = L.map('map');
+
+    //every map developer has seen 0,0 at high zoom, right?
+    map.setView([0, 0], 3);
+
+    var layer = new L.TileLayer(tileurl, {maxZoom: 18, attribution: mapquestAttrib, subdomains: subDomains});
+    layer.addTo(map);
+
+    var drawnItems = new L.FeatureGroup();
+    map.addLayer(drawnItems);
+
+    var drawControl = new L.Control.Draw({
+        draw: {
+            featureGroup: drawnItems,
+            position: 'topleft',
+            polyline: false,
+            polygon: false,
+            circle: false,
+            marker: false,
+        },
+        edit: false,
+    });
+    map.addControl(drawControl);
+
+    map.on('draw:created', function (e) {
+        var type = e.layerType,
+            layer = e.layer;
+
+        drawnItems.addLayer(layer);
+    });
+}
+
+$(function() { init_maps(); });
+    </script>
+</body>
