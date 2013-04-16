@@ -23,7 +23,7 @@ Asia	1819729	23.488	112.780	21.591	115.125	hong-kong	Hong Kong
 Asia	1176615	34.347	72.286	33.092	73.822	islamabad	Islamabad
 Asia	1283240	27.938	85.019	27.437	85.678	kathmandu	Kathmandu
 Asia	1174872	25.593	66.401	23.958	68.576	karachi	Karachi, Pakistan
-Asia	1172451	32.201	73.381	30.796	75.425	lahore	Lahore, Pakistan 
+Asia	1172451	32.201	73.381	30.796	75.425	lahore	Lahore, Pakistan
 Asia	294098	32.895	35.077	32.502	35.497	nazareth	Nazareth
 Asia	1701668	14.900	120.885	14.327	121.200	manila	Manila
 Asia	1275339	19.500	72.415	18.466	73.516	mumbai	Mumbai
@@ -69,8 +69,8 @@ Europe	3117735	40.839	-4.293	39.889	-3.057	madrid	Madrid
 Europe	2643123	53.672	-2.588	53.237	-1.877	manchester	Manchester
 Europe	2995469	43.554	4.905	43.038	5.776	marseille	Marseille
 Europe	3173435	45.694	8.860	45.246	9.470	milan	Milan
-Europe	2993458	43.770	7.349	43.710	7.491	monaco	Monaco	
-Europe	2992166	43.910	4.488	43.241	3.381	montpellier	Montpellier	
+Europe	2993458	43.770	7.349	43.710	7.491	monaco	Monaco
+Europe	2992166	43.910	4.488	43.241	3.381	montpellier	Montpellier
 Europe	524901	56.200	36.870	55.285	38.430	moscow	Moscow
 Europe	2867714	48.523	10.799	47.717	12.178	munich	Munich
 Europe	2641673	55.163	-2.027	54.744	-1.261	newcastle	Newcastle upon Tyne
