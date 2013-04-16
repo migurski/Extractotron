@@ -72,11 +72,8 @@ function onDrawBBox(e) {
     $("#bottom").html(round3(bottom));
     $("#right").html(round3(right));
 
-    console.log(top, bottom, left, right);
-
     var bbox = latlngs[0].lat
 
-    console.log(drawnItems);
     $.each(drawnItems._layers, function(layer) { drawnItems.removeLayer(drawnItems._layers[layer]) });
 
     drawnItems.addLayer(layer);
