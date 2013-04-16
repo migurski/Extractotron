@@ -2,12 +2,22 @@
 </head>
 <body>
     <div id="map"></div>
-    <div id="info"></div>
+    <div id="info">
+        <table><tr>
+            <td>Top</td><td>Left</td><td>Bottom</td><td>Right</td></tr>
+        <tr>
+            <td id="top"></td><td id="left"></td><td id="bottom"></td><td id="right"></td>
+    </div>
 
 <!-- Styles and Scripts -->
     <style>
 body {
     margin: 0;
+}
+
+td {
+    padding: 3px;
+    width: 65px;
 }
 
 #map {
@@ -20,9 +30,9 @@ body {
     position: absolute;
     top: 10px;
     left: 50%;
-    margin-left: -150px;
-    width: 300px;
-    height: 20px;
+    margin-left: -130px;
+    width: 260px;
+    height: 52px;
     background: #ddd;
 }
     </style>
@@ -38,10 +48,38 @@ body {
     <script src="leafletdraw/leaflet.draw.js"></script>
     <script>
 var map;
+var drawnItems;
 
-function onMapClick(e) {
-    console.log("You clicked the map at " + e.latlng);
-    console.log(e);
+//round to 3 digits
+function round3(n) {
+    return Math.round(n*1000)/1000;
+}
+
+function onDrawBBox(e) {
+    drawnItems.clearLayers();
+
+    var layer = e.layer,
+        latlngs = e.layer._latlngs,
+        max = Math.max,
+        min = Math.min,
+        top    = max(latlngs[0].lat, latlngs[1].lat),
+        bottom = min(latlngs[0].lat, latlngs[1].lat),
+        right  = max(latlngs[0].lng, latlngs[2].lng),
+        left   = min(latlngs[0].lng, latlngs[2].lng);
+
+    $("#top").html(round3(top));
+    $("#left").html(round3(left));
+    $("#bottom").html(round3(bottom));
+    $("#right").html(round3(right));
+
+    console.log(top, bottom, left, right);
+
+    var bbox = latlngs[0].lat
+
+    console.log(drawnItems);
+    $.each(drawnItems._layers, function(layer) { drawnItems.removeLayer(drawnItems._layers[layer]) });
+
+    drawnItems.addLayer(layer);
 }
 
 function init_maps(provider) {
@@ -58,7 +96,7 @@ function init_maps(provider) {
     var layer = new L.TileLayer(tileurl, {maxZoom: 18, attribution: mapquestAttrib, subdomains: subDomains});
     layer.addTo(map);
 
-    var drawnItems = new L.FeatureGroup();
+    drawnItems = new L.FeatureGroup();
     map.addLayer(drawnItems);
 
     var drawControl = new L.Control.Draw({
@@ -74,12 +112,7 @@ function init_maps(provider) {
     });
     map.addControl(drawControl);
 
-    map.on('draw:created', function (e) {
-        var type = e.layerType,
-            layer = e.layer;
-
-        drawnItems.addLayer(layer);
-    });
+    map.on('draw:created', onDrawBBox);
 }
 
 $(function() { init_maps(); });
