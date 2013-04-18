@@ -1,0 +1,10 @@
+{
+  "name": "ubuntu",
+  "run_list": [
+    "sample"
+  ],
+  "create_mysql_db": {
+    "db_name": "ubuntu_production"
+  }
+}
+

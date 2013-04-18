@@ -1,0 +1,3 @@
+http://jonathanotto.com/blog/chef-tutorial-in-minutes.html
+
+sudo chef-solo -c /home/ubuntu/my_cookbooks/chefsoloconfig.rb -j /home/ubuntu/my_cookbooks/roles/ubuntu.json -linfo
