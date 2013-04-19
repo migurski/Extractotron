@@ -1,3 +1,9 @@
 http://jonathanotto.com/blog/chef-tutorial-in-minutes.html
 
-sudo chef-solo -c /home/ubuntu/my_cookbooks/chefsoloconfig.rb -j /home/ubuntu/my_cookbooks/roles/ubuntu.json -linfo
+apt-get update -y && apt-get upgrade -y
+apt-get install rubygems -y && gem install chef ohai --no-rdoc --no-ri
+
+sudo chef-solo -c my_cookbooks/chefsoloconfig.rb -j my_cookbooks/roles/ubuntu.json -linfo
+
+curl -L http://ci.mapsforge.org/job/mapsforge/lastSuccessfulBuild/artifact/mapsforge-map-writer/target/mapsforge-map-writer-0.3.1-SNAPSHOT-jar-with-dependencies.jar \
+     -o /usr/local/lib/default/mapsforge-map-writer-0.3.1-SNAPSHOT-jar-with-dependencies.jar
