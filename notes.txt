@@ -1,6 +1,9 @@
-http://jonathanotto.com/blog/chef-tutorial-in-minutes.html
+#
+# http://jonathanotto.com/blog/chef-tutorial-in-minutes.html
+#
 
-apt-get update -y && apt-get upgrade -y
-apt-get install rubygems -y && gem install chef ohai --no-rdoc --no-ri
+apt-get update -y
+apt-get install rubygems -y
+gem install chef ohai --no-rdoc --no-ri
 
-sudo chef-solo -c my_cookbooks/chefsoloconfig.rb -j my_cookbooks/roles/ubuntu.json -ldebug
+chef-solo -c my_cookbooks/chefsoloconfig.rb -j my_cookbooks/roles/ubuntu.json -ldebug

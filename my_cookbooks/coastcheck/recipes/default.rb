@@ -1,10 +1,16 @@
-package('build-essential')
-package('libbz2-dev')
-package('libproj-dev')
-package('libshp-dev')
-package('libxml2-dev')
-package('subversion')
-package('zlib1g-dev')
+#
+# Install Martijn van Oosterhout's coastline error checker.
+#
+# Places coast2shp and other executables in /usr/loca/bin, with source
+# code from http://svn.openstreetmap.org/applications/utils/coastcheck
+#
+package 'build-essential'
+package 'libbz2-dev'
+package 'libproj-dev'
+package 'libshp-dev'
+package 'libxml2-dev'
+package 'subversion'
+package 'zlib1g-dev'
 
 bash "install coastcheck" do
 	not_if('which osm2coast merge-coastlines.pl coast2shp closeshp')
