@@ -280,6 +280,9 @@ wait
 osm2pgsql_shapefiles karlsruhe &
 imposm_shapefiles karlsruhe &
 wait
+osm2pgsql_shapefiles kirovograd &
+imposm_shapefiles kirovograd &
+wait
 osm2pgsql_shapefiles krakow &
 imposm_shapefiles krakow &
 wait
@@ -300,6 +303,9 @@ imposm_shapefiles lyon &
 wait
 osm2pgsql_shapefiles london &
 imposm_shapefiles london &
+wait
+osm2pgsql_shapefiles lviv &
+imposm_shapefiles lviv &
 wait
 osm2pgsql_shapefiles madrid &
 imposm_shapefiles madrid &
@@ -528,6 +534,9 @@ imposm_shapefiles port-au-prince &
 wait
 osm2pgsql_shapefiles portland &
 imposm_shapefiles portland &
+wait
+osm2pgsql_shapefiles portland-me &
+imposm_shapefiles portland-me &
 wait
 osm2pgsql_shapefiles reno &
 imposm_shapefiles reno &

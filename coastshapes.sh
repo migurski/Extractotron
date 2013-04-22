@@ -72,6 +72,7 @@ package_coast hamburg 53.833 9.376 53.159 10.678
 package_coast helsinki 60.357 24.428 60.052 25.381
 package_coast istanbul 41.421 28.313 40.738 29.678
 package_coast karlsruhe 49.246 7.893 48.730 8.816
+package_coast kirovograd 48.760 31.923 48.281 32.623
 package_coast krakow 50.240 19.594 49.850 20.275
 package_coast kyiv 50.740 30.078 50.086 30.970
 package_coast leeds 53.921 -1.717 53.697 -1.33
@@ -79,6 +80,7 @@ package_coast lille 50.800 2.823 50.469 3.389
 package_coast lisbon 39.150 -9.634 38.358 -8.458
 package_coast lyon 46.191 4.136 45.305 5.517
 package_coast london 51.984 -1.115 50.941 0.895
+package_coast lviv 50.148 23.587 49.573 24.433
 package_coast madrid 40.839 -4.293 39.889 -3.057
 package_coast manchester 53.672 -2.588 53.237 -1.877
 package_coast marseille 43.554 4.905 43.038 5.776
@@ -155,6 +157,7 @@ package_coast phoenix 34.070 -112.821 32.796 -111.211
 package_coast pittsburgh 40.880 -80.711 40.023 -79.249
 package_coast port-au-prince 18.683 -72.518 18.456 -72.112
 package_coast portland 45.897 -123.211 45.096 -122.113
+package_coast portland-me 43.737 -70.393 43.525 -70.134
 package_coast reno 39.769 -120.094 39.309 -119.506
 package_coast st-louis 39.151 -91.010 38.069 -89.533
 package_coast sacramento 38.955 -121.821 38.395 -120.995
