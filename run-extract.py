@@ -99,17 +99,34 @@ def process_coastline(planet_file):
         if exists(coast_shape_base + extension):
             remove(coast_shape_base + extension)
     
+    #
+    # Filter complete planet down to only natural=coastline ways.
+    #
     osmcoastline_filter = Popen(['osmcoastline_filter', '-o', coast_planet_path, planet_path])
     osmcoastline_filter.wait()
     
+    #
+    # Generate coastline sqlite database, creating land + water polygons,
+    # coastal rings, and skipping spatial index.
+    #
     osmcoastline = Popen('osmcoastline -p both -r -v -i -o'.split() + [coast_sqlite_path, coast_planet_path])
     osmcoastline.wait()
     
+    #
+    # Extract land polygons to mercator-projected shapefiles.
+    #
     ogr2ogr = Popen(['ogr2ogr', '-t_srs', mercator, coast_shape_path, coast_sqlite_path, 'land_polygons'])
     ogr2ogr.wait()
     
+    #
+    # Archive shapefiles from previous step into a zip file.
+    #
     zip = Popen(['zip', '-j', coast_zip_path] + [coast_shape_base + ext for ext in ('.shp', '.shx', '.prj', '.dbf')])
     zip.wait()
+    
+    for extension in ('.shp', '.shx', '.prj', '.dbf'):
+        if exists(coast_shape_base + extension):
+            remove(coast_shape_base + extension)
 
 def process_city_osm2pgsql(osm_path, slug, osm2pgsql_style_path):
     ''' Pass extracted OSM data through osm2pgsql to create shapefile archive.
@@ -120,6 +137,10 @@ def process_city_osm2pgsql(osm_path, slug, osm2pgsql_style_path):
     if exists(zip_path):
         remove(zip_path)
     
+    #
+    # Import city extract to PostGIS, in unprojected utf-8 slim mode.
+    # Clobber existing tables, if any exist.
+    #
     osm2pgsql = Popen('osm2pgsql -sluc -C 1024 -i work -U osm -d osm'.split()
                       + ['-S', osm2pgsql_style_path, '-p', prefix, osm_path])
 
@@ -136,17 +157,26 @@ def process_city_osm2pgsql(osm_path, slug, osm2pgsql_style_path):
             if exists(shape_base + extension):
                 remove(shape_base + extension)
 
+        #
+        # Extract PostGIS tables to shapefiles by geometry type.
+        #
         pgsql2shp = Popen('pgsql2shp -rk -u osm -f'.split() + [shape_path, 'osm', table_name])
         pgsql2shp.wait()
         
         filenames += glob(shape_base + '.???')
     
+    #
+    # Archive shapefiles from previous steps into a zip file.
+    #
     zip = Popen(['zip', '-j', zip_path] + filenames)
     zip.wait()
     
     for filename in filenames:
         remove(filename)
     
+    #
+    # Drop city tables from PostGIS.
+    #
     for suffix in ('line', 'nodes', 'point', 'polygon', 'rels', 'roads', 'ways'):
         psql = Popen(['psql', '-c', 'DROP TABLE %(prefix)s_%(suffix)s' % locals(), '-U', 'osm', 'osm'])
         psql.wait()
