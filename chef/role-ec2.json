@@ -1,5 +1,5 @@
 {
-  "name": "ubuntu",
+  "name": "ec2",
   "run_list":
   [
     "postgis",
@@ -16,4 +16,3 @@
     "database": "osm"
   }
 }
-

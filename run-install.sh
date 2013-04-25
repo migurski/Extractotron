@@ -2,7 +2,7 @@
 EXTRACTO_HOME=`dirname $0`
 
 #
-# Install the chef rub gem if chef-solo is not in the path.
+# Install the chef ruby gem if chef-solo is not in the path.
 #
 if [ ! `which chef-solo` ]; then
     apt-get install -y rubygems
