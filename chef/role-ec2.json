@@ -2,16 +2,17 @@
   "name": "ec2",
   "run_list":
   [
-    "postgis",
-    "osmosis",
-    "lockrun",
+    "apache",
     "imposm",
-    "python",
+    "lockrun",
     "ogr2ogr",
     "osm2pgsql",
-    "zip",
     "osmcoastline",
-    "work-area"
+    "osmosis",
+    "postgis",
+    "python",
+    "work-area",
+    "zip"
   ],
   "workdir": "/usr/local/work",
   "postgis":
