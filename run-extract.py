@@ -14,6 +14,13 @@ from scipy.cluster.vq import kmeans2
 
 mercator = '+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs'
 
+def relative(absolute_path, filename):
+    ''' Return a new absolute path for a file in the same directory as another.
+    
+        E.g. relative('/etc/foo', 'bar') --> '/etc/bar'
+    '''
+    return join(dirname(absolute_path), filename)
+
 def open_logs(name_base):
     ''' Open a pair of logfiles and return a dictionary for subprocess.Popen().
     '''
@@ -57,7 +64,7 @@ def osmosis_command(planet_path, cities):
     '''
     groups = group_cities(cities)
     
-    log = open(join(dirname(planet_path), 'logs/osmosis.cmd'), 'w')
+    log = open(relative(planet_path, 'logs/osmosis.cmd'), 'w')
     
     osmosis = [
         'osmosis', '--rb', planet_path, '--lp', 'interval=60',
@@ -96,7 +103,7 @@ def extract_cities(planet_path, cities):
     ''' Process planet file through osmosis and output a file for each city.
     '''
     logging.info('Extracting %d cities from %s' % (len(cities), basename(planet_path)))
-    logs = open_logs(join(dirname(planet_path), 'logs/osmosis'))
+    logs = open_logs(relative(planet_path, 'logs/osmosis'))
     
     osmosis = Popen(osmosis_command(planet_path, cities), **logs)
     osmosis.wait()
@@ -107,14 +114,14 @@ def extract_cities(planet_path, cities):
 def process_coastline(planet_path):
     ''' Process planet file through osmcoastline and output a zipped shapefile.
     '''
-    coast_planet_path = join(dirname(planet_path), 'coastline.osm.pbf')
-    coast_sqlite_path = join(dirname(planet_path), 'coastline.db')
-    coast_shape_base = join(dirname(planet_path), 'land-polygons')
+    coast_planet_path = relative(planet_path, 'coastline.osm.pbf')
+    coast_sqlite_path = relative(planet_path, 'coastline.db')
+    coast_shape_base = relative(planet_path, 'land-polygons')
     coast_shape_path = coast_shape_base + '.shp'
     coast_zip_path = coast_shape_base + '.zip'
     
     logging.info('Processing coastline from %s to %s' % (basename(planet_path), basename(coast_sqlite_path)))
-    logs = open_logs(join(dirname(planet_path), 'logs/process-coastline'))
+    logs = open_logs(relative(planet_path, 'logs/process-coastline'))
     
     if exists(coast_planet_path):
         remove(coast_planet_path)
@@ -164,10 +171,10 @@ def process_city_osm2pgsql(osm_path, slug, osm2pgsql_style_path):
     ''' Pass extracted OSM data through osm2pgsql to create shapefile archive.
     '''
     prefix = '%s_osm' % slug.replace('-', '_')
-    zip_path = join(dirname(osm_path), '%s.osm2pgsql-shps.zip' % slug)
+    zip_path = relative(osm_path, '%s.osm2pgsql-shps.zip' % slug)
     
     logging.info('Converting from from %s to %s' % (basename(osm_path), basename(zip_path)))
-    logs = open_logs(join(dirname(planet_path), 'logs/process-osm2pgsql-%s' % slug))
+    logs = open_logs(relative(planet_path, 'logs/process-osm2pgsql-%s' % slug))
     
     if exists(zip_path):
         remove(zip_path)
@@ -186,7 +193,7 @@ def process_city_osm2pgsql(osm_path, slug, osm2pgsql_style_path):
     
     for geomtype in ('point', 'polygon', 'line'):
         table_name = '%(prefix)s_%(geomtype)s' % locals()
-        shape_base = join(dirname(osm_path), '%(slug)s.osm-%(geomtype)s' % locals())
+        shape_base = relative(osm_path, '%(slug)s.osm-%(geomtype)s' % locals())
         shape_path = shape_base + '.shp'
         
         for extension in ('.shp', '.shx', '.prj', '.dbf'):
@@ -257,13 +264,13 @@ if __name__ == '__main__':
     # Process planet.
     #
     for city in cities:
-        city['osm_path'] = join(dirname(planet_path), '%(slug)s.osm.bz2' % city)
-        city['pbf_path'] = join(dirname(planet_path), '%(slug)s.osm.pbf' % city)
+        city['osm_path'] = relative(planet_path, '%(slug)s.osm.bz2' % city)
+        city['pbf_path'] = relative(planet_path, '%(slug)s.osm.pbf' % city)
     
     process_coastline(planet_path)
     extract_cities(planet_path, cities)
     
-    osm2pgsql_style_path = join(dirname(__file__), 'postgis/osm2pgsql.style')
+    osm2pgsql_style_path = relative(__file__, 'postgis/osm2pgsql.style')
     
     for city in cities:
         process_city_osm2pgsql(city['osm_path'], city['slug'], osm2pgsql_style_path)
