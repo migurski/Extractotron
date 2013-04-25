@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 from sys import argv
-from os import mkdir
+from os import mkdir, remove
 from subprocess import Popen
 from os.path import join, exists, dirname, abspath
 from math import sqrt
@@ -8,6 +8,8 @@ from sh import curl
 
 from numpy import array
 from scipy.cluster.vq import kmeans2
+
+mercator = '+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs'
 
 def group_cities(cities):
     ''' Cluster cities into sqrt(len) groups by k-means in unprojected space.
@@ -77,6 +79,37 @@ def osmosis_command(planet_path, cities):
     
     return osmosis
 
+def process_coastline(planet_file):
+    ''' Process planet file through osmcoastline and output a zipped shapefile.
+    '''
+    coast_planet_path = join(dirname(planet_path), 'coastline.osm.pbf')
+    coast_sqlite_path = join(dirname(planet_path), 'coastline.db')
+    coast_shape_base = join(dirname(planet_path), 'land-polygons')
+    coast_shape_path = coast_shape_base + '.shp'
+    coast_zip_path = coast_shape_base + '.zip'
+    
+    if exists(coast_planet_path):
+        remove(coast_planet_path)
+    
+    if exists(coast_sqlite_path):
+        remove(coast_sqlite_path)
+    
+    for extension in ('.zip', '.shp', '.shx', '.prj', '.dbf'):
+        if exists(coast_shape_base + extension):
+            remove(coast_shape_base + extension)
+    
+    osmcoastline_filter = Popen(['osmcoastline_filter', '-o', coast_planet_path, planet_path])
+    osmcoastline_filter.wait()
+    
+    osmcoastline = Popen('osmcoastline -p both -r -v -i -o'.split() + [coast_sqlite_path, coast_planet_path])
+    osmcoastline.wait()
+    
+    ogr2ogr = Popen(['ogr2ogr', '-t_srs', mercator, coast_shape_path, coast_sqlite_path, 'land_polygons'])
+    ogr2ogr.wait()
+    
+    zip = Popen(['zip', '-j', coast_zip_path] + [coast_shape_base + ext for ext in ('.shp', '.shx', '.prj', '.dbf')])
+    zip.wait()
+
 # a small, default list of cities
 
 cities = [
@@ -109,6 +142,8 @@ if __name__ == '__main__':
         city['pbf_path'] = join(dirname(planet_path), '%(slug)s.osm.pbf' % city)
     
     curl(url, o=planet_path)
+    
+    process_coastline(planet_path)
     
     osmosis = Popen(osmosis_command(planet_path, cities))
     osmosis.wait()

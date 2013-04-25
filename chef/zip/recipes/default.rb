@@ -1,0 +1,4 @@
+#
+# Install zip.
+#
+package 'zip'

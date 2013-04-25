@@ -6,7 +6,9 @@
     "osmosis",
     "lockrun",
     "imposm",
-    "sh",
+    "python",
+    "ogr2ogr",
+    "zip",
     "osmcoastline",
     "work-area"
   ],
