@@ -15,6 +15,7 @@
     "zip"
   ],
   "workdir": "/usr/local/work",
+  "planet": "http://osm-extracted-metros.s3.amazonaws.com/sf-bay-area.osm.pbf",
   "postgis":
   {
     "username": "osm",
