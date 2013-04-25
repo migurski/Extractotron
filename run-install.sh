@@ -10,4 +10,4 @@ if [ ! `which chef-solo` ]; then
 fi
 
 chef-solo -c $EXTRACTO_HOME/chef/chefsoloconfig.rb \
-          -j $EXTRACTO_HOME/chef/roles/ubuntu.json
+          -j $EXTRACTO_HOME/chef/role-ec2.json
