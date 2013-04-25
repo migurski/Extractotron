@@ -4,6 +4,7 @@ from os import mkdir, remove
 from subprocess import Popen
 from os.path import join, exists, dirname, abspath
 from math import sqrt
+from glob import glob
 from sh import curl
 
 from numpy import array
@@ -110,6 +111,46 @@ def process_coastline(planet_file):
     zip = Popen(['zip', '-j', coast_zip_path] + [coast_shape_base + ext for ext in ('.shp', '.shx', '.prj', '.dbf')])
     zip.wait()
 
+def process_city_osm2pgsql(osm_path, slug, osm2pgsql_style_path):
+    ''' Pass extracted OSM data through osm2pgsql to create shapefile archive.
+    '''
+    prefix = '%s_osm' % slug.replace('-', '_')
+    zip_path = join(dirname(osm_path), '%s.osm2pgsql-shps.zip' % slug)
+    
+    if exists(zip_path):
+        remove(zip_path)
+    
+    osm2pgsql = Popen('osm2pgsql -sluc -C 1024 -i work -U osm -d osm'.split()
+                      + ['-S', osm2pgsql_style_path, '-p', prefix, osm_path])
+
+    osm2pgsql.wait()
+    
+    filenames = []
+    
+    for geomtype in ('point', 'polygon', 'line'):
+        table_name = '%(prefix)s_%(geomtype)s' % locals()
+        shape_base = join(dirname(osm_path), '%(slug)s.osm-%(geomtype)s' % locals())
+        shape_path = shape_base + '.shp'
+        
+        for extension in ('.shp', '.shx', '.prj', '.dbf'):
+            if exists(shape_base + extension):
+                remove(shape_base + extension)
+
+        pgsql2shp = Popen('pgsql2shp -rk -u osm -f'.split() + [shape_path, 'osm', table_name])
+        pgsql2shp.wait()
+        
+        filenames += glob(shape_base + '.???')
+    
+    zip = Popen(['zip', '-j', zip_path] + filenames)
+    zip.wait()
+    
+    for filename in filenames:
+        remove(filename)
+    
+    for suffix in ('line', 'nodes', 'point', 'polygon', 'rels', 'roads', 'ways'):
+        psql = Popen(['psql', '-c', 'DROP TABLE %(prefix)s_%(suffix)s' % locals(), '-U', 'osm', 'osm'])
+        psql.wait()
+
 # a small, default list of cities
 
 cities = [
@@ -147,3 +188,8 @@ if __name__ == '__main__':
     
     osmosis = Popen(osmosis_command(planet_path, cities))
     osmosis.wait()
+    
+    osm2pgsql_style_path = join(dirname(__file__), 'postgis/osm2pgsql.style')
+    
+    for city in cities:
+        process_city_osm2pgsql(city['osm_path'], city['slug'], osm2pgsql_style_path)

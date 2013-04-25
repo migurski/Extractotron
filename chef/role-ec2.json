@@ -8,6 +8,7 @@
     "imposm",
     "python",
     "ogr2ogr",
+    "osm2pgsql",
     "zip",
     "osmcoastline",
     "work-area"
