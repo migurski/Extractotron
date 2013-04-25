@@ -29,3 +29,8 @@ directory workdir do
     mode   00777
     action :create
 end
+
+directory "#{workdir}/history" do
+    mode   00777
+    action :create
+end
