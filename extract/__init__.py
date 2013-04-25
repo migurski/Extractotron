@@ -153,17 +153,16 @@ def process_coastline(planet_path):
     logs['stdout'].close()
     logs['stderr'].close()
 
-def process_city_osm2pgsql(osm_path, slug, osm2pgsql_style_path):
+def process_city_osm2pgsql(osm_path, o2p_path, slug, osm2pgsql_style_path):
     ''' Pass extracted OSM data through osm2pgsql to create shapefile archive.
     '''
     prefix = '%s_osm' % slug.replace('-', '_')
-    zip_path = relative(osm_path, '%s.osm2pgsql-shps.zip' % slug)
     
-    logging.info('Converting from from %s to %s' % (basename(osm_path), basename(zip_path)))
+    logging.info('Converting from from %s to %s' % (basename(osm_path), basename(o2p_path)))
     logs = open_logs(relative(osm_path, 'logs/process-osm2pgsql-%s' % slug))
     
-    if exists(zip_path):
-        remove(zip_path)
+    if exists(o2p_path):
+        remove(o2p_path)
     
     #
     # Import city extract to PostGIS, in unprojected utf-8 slim mode.
@@ -197,7 +196,7 @@ def process_city_osm2pgsql(osm_path, slug, osm2pgsql_style_path):
     #
     # Archive shapefiles from previous steps into a zip file.
     #
-    zip = Popen(['zip', '-j', zip_path] + filenames, **logs)
+    zip = Popen(['zip', '-j', o2p_path] + filenames, **logs)
     zip.wait()
     
     for filename in filenames:

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Hello World</title>
+</head>
+<body>
+
+    {% for city in cities %}
+        <li class="city">
+            <a name="{{ city.slug }}" href="http://www.openstreetmap.org/?lat={{ city.lat |round(4)}}&amp;lon={{ city.lon |round(4)}}&amp;zoom=9&amp;layers=M"><img src="previews/xxx.jpg"></a>
+            <h3>{{ city.name |e}}</h3>
+            <ul>
+                <li class="file"><a href="{{ city.osm_path |e}}">{{ city.osm_size |filesizeformat}} bzip’ed XML OSM data</a></li>
+                <li class="file"><a href="{{ city.pbf_path |e}}">{{ city.pbf_size |filesizeformat}} binary PBF OSM data</a></li>
+                <li class="file"><a href="{{ city.o2p_path |e}}">{{ city.o2p_size |filesizeformat}} osm2pgsql shapefiles</a></li>
+                <!--
+                <li class="file"><a href="xxx">X.X KB coastline shapefile</a></li>
+                <li class="file"><a href="xxx">X.X MB imposm shapefiles</a></li>
+                -->
+            </ul>
+        </li>
+    {% endfor %}
+
+</body>
+</html>

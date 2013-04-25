@@ -4,6 +4,7 @@
 package 'python-pip'
 package 'python-scipy'
 package 'python-numpy'
+package 'python-jinja2'
 
 #
 # Install sh:

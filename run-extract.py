@@ -1,12 +1,13 @@
 #!/usr/bin/env python
 from sys import argv
 from os import mkdir
-from os.path import join, exists, abspath, basename
+from os.path import join, exists, abspath, basename, dirname
 from sh import curl
 
 import logging
 
 from extract import process_coastline, extract_cities, process_city_osm2pgsql
+from extract.html import build_index
 from extract.util import relative
 
 # a small, default list of cities
@@ -48,6 +49,7 @@ if __name__ == '__main__':
     for city in cities:
         city['osm_path'] = relative(planet_path, '%(slug)s.osm.bz2' % city)
         city['pbf_path'] = relative(planet_path, '%(slug)s.osm.pbf' % city)
+        city['o2p_path'] = relative(planet_path, '%(slug)s.osm2pgsql-shps.zip' % city)
     
     process_coastline(planet_path)
     extract_cities(planet_path, cities)
@@ -55,4 +57,11 @@ if __name__ == '__main__':
     osm2pgsql_style_path = relative(__file__, 'postgis/osm2pgsql.style')
     
     for city in cities:
-        process_city_osm2pgsql(city['osm_path'], city['slug'], osm2pgsql_style_path)
+        process_city_osm2pgsql(city['osm_path'], city['o2p_path'], city['slug'], osm2pgsql_style_path)
+    
+    templates_dir = relative(__file__, 'templates')
+    index_path = relative(dir, 'index.html')
+    index_dir = dirname(dir)
+    
+    with open(index_path, 'w') as index:
+        index.write(build_index(cities, index_dir, templates_dir).encode('utf8'))
