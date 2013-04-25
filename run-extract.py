@@ -2,15 +2,23 @@
 from sys import argv
 from os import mkdir, remove
 from subprocess import Popen
-from os.path import join, exists, dirname, abspath
+from os.path import join, exists, dirname, abspath, basename
 from math import sqrt
 from glob import glob
 from sh import curl
+
+import logging
 
 from numpy import array
 from scipy.cluster.vq import kmeans2
 
 mercator = '+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs'
+
+def open_logs(name_base):
+    ''' Open a pair of logfiles and return a dictionary for subprocess.Popen().
+    '''
+    return dict(stdout = open(name_base + '.out', 'w'), 
+                stderr = open(name_base + '.err', 'w'))
 
 def group_cities(cities):
     ''' Cluster cities into sqrt(len) groups by k-means in unprojected space.
@@ -48,13 +56,15 @@ def osmosis_command(planet_path, cities):
     ''' Generate a complete osmosis command for use with subprocess.Popen().
     '''
     groups = group_cities(cities)
-
+    
+    log = open(join(dirname(planet_path), 'logs/osmosis.cmd'), 'w')
+    
     osmosis = [
         'osmosis', '--rb', planet_path, '--lp', 'interval=60',
         '--tee', 'outputCount=%d' % len(groups)
         ]
     
-    print ' '.join(osmosis)
+    print >> log, ' '.join(osmosis)
     
     for group in groups:
     
@@ -64,7 +74,7 @@ def osmosis_command(planet_path, cities):
             '--b', '--tee', 'outputCount=%d' % len(group['cities'])
             ]
     
-        print ' ', ' '.join(osmosis[-8:])
+        print >> log, ' ', ' '.join(osmosis[-8:])
         
         for city in group['cities']:
             osmosis += [
@@ -75,12 +85,26 @@ def osmosis_command(planet_path, cities):
                 '--wb', city['pbf_path']
                 ]
         
-            print '   ', ' '.join(osmosis[-11:-4])
-            print '   ', ' '.join(osmosis[-4:])
+            print >> log, '   ', ' '.join(osmosis[-11:-4])
+            print >> log, '   ', ' '.join(osmosis[-4:])
+    
+    log.close()
     
     return osmosis
 
-def process_coastline(planet_file):
+def extract_cities(planet_path, cities):
+    ''' Process planet file through osmosis and output a file for each city.
+    '''
+    logging.info('Extracting %d cities from %s' % (len(cities), basename(planet_path)))
+    logs = open_logs(join(dirname(planet_path), 'logs/osmosis'))
+    
+    osmosis = Popen(osmosis_command(planet_path, cities), **logs)
+    osmosis.wait()
+    
+    logs['stdout'].close()
+    logs['stderr'].close()
+
+def process_coastline(planet_path):
     ''' Process planet file through osmcoastline and output a zipped shapefile.
     '''
     coast_planet_path = join(dirname(planet_path), 'coastline.osm.pbf')
@@ -88,6 +112,9 @@ def process_coastline(planet_file):
     coast_shape_base = join(dirname(planet_path), 'land-polygons')
     coast_shape_path = coast_shape_base + '.shp'
     coast_zip_path = coast_shape_base + '.zip'
+    
+    logging.info('Processing coastline from %s to %s' % (basename(planet_path), basename(coast_sqlite_path)))
+    logs = open_logs(join(dirname(planet_path), 'logs/process-coastline'))
     
     if exists(coast_planet_path):
         remove(coast_planet_path)
@@ -102,37 +129,45 @@ def process_coastline(planet_file):
     #
     # Filter complete planet down to only natural=coastline ways.
     #
-    osmcoastline_filter = Popen(['osmcoastline_filter', '-o', coast_planet_path, planet_path])
+    osmcoastline_filter = Popen(['osmcoastline_filter', '-o', coast_planet_path, planet_path], **logs)
     osmcoastline_filter.wait()
     
     #
     # Generate coastline sqlite database, creating land + water polygons,
     # coastal rings, and skipping spatial index.
     #
-    osmcoastline = Popen('osmcoastline -p both -r -v -i -o'.split() + [coast_sqlite_path, coast_planet_path])
+    osmcoastline = Popen('osmcoastline -p both -r -v -i -o'.split() + [coast_sqlite_path, coast_planet_path], **logs)
     osmcoastline.wait()
+    
+    logging.info('Extracting shapefiles from %s to %s' % (basename(coast_sqlite_path), basename(coast_zip_path)))
     
     #
     # Extract land polygons to mercator-projected shapefiles.
     #
-    ogr2ogr = Popen(['ogr2ogr', '-t_srs', mercator, coast_shape_path, coast_sqlite_path, 'land_polygons'])
+    ogr2ogr = Popen(['ogr2ogr', '-t_srs', mercator, coast_shape_path, coast_sqlite_path, 'land_polygons'], **logs)
     ogr2ogr.wait()
     
     #
     # Archive shapefiles from previous step into a zip file.
     #
-    zip = Popen(['zip', '-j', coast_zip_path] + [coast_shape_base + ext for ext in ('.shp', '.shx', '.prj', '.dbf')])
+    zip = Popen(['zip', '-j', coast_zip_path] + [coast_shape_base + ext for ext in ('.shp', '.shx', '.prj', '.dbf')], **logs)
     zip.wait()
     
     for extension in ('.shp', '.shx', '.prj', '.dbf'):
         if exists(coast_shape_base + extension):
             remove(coast_shape_base + extension)
+    
+    logs['stdout'].close()
+    logs['stderr'].close()
 
 def process_city_osm2pgsql(osm_path, slug, osm2pgsql_style_path):
     ''' Pass extracted OSM data through osm2pgsql to create shapefile archive.
     '''
     prefix = '%s_osm' % slug.replace('-', '_')
     zip_path = join(dirname(osm_path), '%s.osm2pgsql-shps.zip' % slug)
+    
+    logging.info('Converting from from %s to %s' % (basename(osm_path), basename(zip_path)))
+    logs = open_logs(join(dirname(planet_path), 'logs/process-osm2pgsql-%s' % slug))
     
     if exists(zip_path):
         remove(zip_path)
@@ -142,7 +177,8 @@ def process_city_osm2pgsql(osm_path, slug, osm2pgsql_style_path):
     # Clobber existing tables, if any exist.
     #
     osm2pgsql = Popen('osm2pgsql -sluc -C 1024 -i work -U osm -d osm'.split()
-                      + ['-S', osm2pgsql_style_path, '-p', prefix, osm_path])
+                      + ['-S', osm2pgsql_style_path, '-p', prefix, osm_path],
+                      **logs)
 
     osm2pgsql.wait()
     
@@ -160,7 +196,7 @@ def process_city_osm2pgsql(osm_path, slug, osm2pgsql_style_path):
         #
         # Extract PostGIS tables to shapefiles by geometry type.
         #
-        pgsql2shp = Popen('pgsql2shp -rk -u osm -f'.split() + [shape_path, 'osm', table_name])
+        pgsql2shp = Popen('pgsql2shp -rk -u osm -f'.split() + [shape_path, 'osm', table_name], **logs)
         pgsql2shp.wait()
         
         filenames += glob(shape_base + '.???')
@@ -168,7 +204,7 @@ def process_city_osm2pgsql(osm_path, slug, osm2pgsql_style_path):
     #
     # Archive shapefiles from previous steps into a zip file.
     #
-    zip = Popen(['zip', '-j', zip_path] + filenames)
+    zip = Popen(['zip', '-j', zip_path] + filenames, **logs)
     zip.wait()
     
     for filename in filenames:
@@ -178,8 +214,11 @@ def process_city_osm2pgsql(osm_path, slug, osm2pgsql_style_path):
     # Drop city tables from PostGIS.
     #
     for suffix in ('line', 'nodes', 'point', 'polygon', 'rels', 'roads', 'ways'):
-        psql = Popen(['psql', '-c', 'DROP TABLE %(prefix)s_%(suffix)s' % locals(), '-U', 'osm', 'osm'])
+        psql = Popen(['psql', '-c', 'DROP TABLE %(prefix)s_%(suffix)s' % locals(), '-U', 'osm', 'osm'], **logs)
         psql.wait()
+    
+    logs['stdout'].close()
+    logs['stderr'].close()
 
 # a small, default list of cities
 
@@ -194,30 +233,35 @@ cities = [
 
 if __name__ == '__main__':
 
+    logging.basicConfig(level=logging.INFO, format='%(levelname)s - %(message)s')
+
     (url, dir) = argv[1:]
     dir += '/stuff'
     
-    try:
-        mkdir(dir)
-    except OSError:
-        if not exists(dir):
-            raise
+    for newdir in (dir, dir + '/logs'):
+        try:
+            mkdir(newdir)
+        except OSError:
+            if not exists(newdir):
+                raise
     
     #
-    # Download complete planet.
+    # Download planet.
     #
     planet_path = abspath(join(dir, 'planet.osm.pbf'))
+    logging.info('Downloading %s to %s' % (url, basename(planet_path)))
     
+    curl(url, o=planet_path)
+    
+    #
+    # Process planet.
+    #
     for city in cities:
         city['osm_path'] = join(dirname(planet_path), '%(slug)s.osm.bz2' % city)
         city['pbf_path'] = join(dirname(planet_path), '%(slug)s.osm.pbf' % city)
     
-    curl(url, o=planet_path)
-    
     process_coastline(planet_path)
-    
-    osmosis = Popen(osmosis_command(planet_path, cities))
-    osmosis.wait()
+    extract_cities(planet_path, cities)
     
     osm2pgsql_style_path = join(dirname(__file__), 'postgis/osm2pgsql.style')
     
