@@ -1,5 +1,5 @@
 file_cache_path  "/tmp/chef-solo"
-cookbook_path    "/home/ubuntu/my_cookbooks"
+cookbook_path    "/usr/local/extractotron/chef"
 log_level        :info
-log_location     STDOUT
+log_location     "/var/log/cheflog"
 ssl_verify_mode  :verify_none

@@ -9,5 +9,5 @@ if [ ! `which chef-solo` ]; then
     gem install chef ohai --no-rdoc --no-ri
 fi
 
-chef-solo -c $EXTRACTO_HOME/my_cookbooks/chefsoloconfig.rb \
-          -j $EXTRACTO_HOME/my_cookbooks/roles/ubuntu.json
+chef-solo -c $EXTRACTO_HOME/chef/chefsoloconfig.rb \
+          -j $EXTRACTO_HOME/chef/roles/ubuntu.json
