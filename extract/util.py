@@ -18,8 +18,6 @@ def Popen(command, stderr=None, **kwargs):
     ''' Run subprocess.Popen(), after writing a copy of the command to stderr.
     '''
     if stderr is not None:
-        print >> stderr, ''
-        print >> stderr, '#', ' '.join(command)
-        print >> stderr, ''
+        print >> stderr, '####', ' '.join(command)
 
     return _Popen(command, stderr=stderr, **kwargs)

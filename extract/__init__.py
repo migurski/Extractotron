@@ -1,5 +1,7 @@
 from os import remove
-from os.path import join, exists, basename
+from os.path import join, exists, basename, dirname
+from tempfile import mkdtemp
+from shutil import rmtree
 from math import sqrt
 from glob import glob
 
@@ -206,6 +208,73 @@ def process_city_osm2pgsql(osm_path, o2p_path, slug, osm2pgsql_style_path):
     #
     for suffix in ('line', 'nodes', 'point', 'polygon', 'rels', 'roads', 'ways'):
         psql = Popen(['psql', '-c', 'DROP TABLE %(prefix)s_%(suffix)s' % locals(), '-U', 'osm', 'osm'], **logs)
+        psql.wait()
+    
+    logs['stdout'].close()
+    logs['stderr'].close()
+
+def process_city_imposm(pbf_path, imp_path, slug):
+    ''' Pass extracted OSM data through imposm to create shapefile archive.
+    '''
+    prefix = '%s' % slug.replace('-', '_')
+    
+    logging.info('Converting from from %s to %s' % (basename(pbf_path), basename(imp_path)))
+    logs = open_logs(relative(pbf_path, 'logs/process-imposm-%s' % slug))
+    
+    if exists(imp_path):
+        remove(imp_path)
+    
+    tempdir = mkdtemp(dir=dirname(imp_path), prefix='imposm-%s.' % slug)
+    
+    #
+    # Import city extract to PostGIS tables with default imposm mapping
+    # in mercator projection. Clobber existing tables, if any exist.
+    #
+    imposm = Popen(['imposm', '--read', '--cache-dir', tempdir,
+                    '--write', '--table-prefix=%(prefix)s_' % locals(),
+                    '--connect', 'postgis://osm:@127.0.0.1/osm', pbf_path],
+                   **logs)
+
+    imposm.wait()
+    
+    filenames = []
+    
+    for mapping in ('roads', 'buildings'):
+        table_name = '%(prefix)s_%(mapping)s' % locals()
+        shape_base = relative(pbf_path, '%(slug)s.osm-%(mapping)s' % locals())
+        shape_path = shape_base + '.shp'
+        
+        for extension in ('.shp', '.shx', '.prj', '.dbf'):
+            if exists(shape_base + extension):
+                remove(shape_base + extension)
+
+        #
+        # Extract PostGIS tables to shapefiles by geometry type.
+        #
+        pgsql2shp = Popen('pgsql2shp -rk -u osm -f'.split() + [shape_path, 'osm', table_name], **logs)
+        pgsql2shp.wait()
+        
+        filenames += glob(shape_base + '.???')
+    
+    #
+    # Archive shapefiles from previous steps into a zip file.
+    #
+    zip = Popen(['zip', '-j', imp_path] + filenames, **logs)
+    zip.wait()
+    
+    for filename in filenames:
+        remove(filename)
+    
+    if not exists(imp_path):
+        raise Exception('Failed to create %s' % imp_path)
+    
+    rmtree(tempdir)
+    
+    #
+    # Drop city tables from PostGIS.
+    #
+    for mapping in ('roads', 'buildings'):
+        psql = Popen(['psql', '-c', 'DROP TABLE %(prefix)s_%(mapping)s' % locals(), '-U', 'osm', 'osm'], **logs)
         psql.wait()
     
     logs['stdout'].close()

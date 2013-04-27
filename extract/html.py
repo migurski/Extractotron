@@ -24,11 +24,13 @@ def expand_city(city, base_dir):
     pbf_size = nice_size(stat(city['pbf_path']).st_size)
     mfg_size = nice_size(stat(city['mfg_path']).st_size)
     o2p_size = nice_size(stat(city['o2p_path']).st_size)
+    imp_size = nice_size(stat(city['imp_path']).st_size)
     
     osm_path = relpath(city['osm_path'], base_dir)
     pbf_path = relpath(city['pbf_path'], base_dir)
     mfg_path = relpath(city['mfg_path'], base_dir)
     o2p_path = relpath(city['o2p_path'], base_dir)
+    imp_path = relpath(city['imp_path'], base_dir)
     jpg_path = relpath(city['jpg_path'], base_dir)
     
     lat = city['top']/2 + city['bottom']/2
@@ -39,6 +41,7 @@ def expand_city(city, base_dir):
                 pbf_path=pbf_path, pbf_size=pbf_size,
                 mfg_path=mfg_path, mfg_size=mfg_size,
                 o2p_path=o2p_path, o2p_size=o2p_size,
+                imp_path=imp_path, imp_size=imp_size,
                 jpg_path=jpg_path, lat=lat, lon=lon)
 
 def nice_size(size):

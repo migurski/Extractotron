@@ -6,7 +6,7 @@ from sh import curl
 
 import logging
 
-from extract import process_coastline, extract_cities
+from extract import process_coastline, extract_cities, process_city_imposm
 from extract import process_city_osm2pgsql, process_city_mapsforge
 from extract.html import build_index
 from extract.preview import render_preview
@@ -53,6 +53,7 @@ if __name__ == '__main__':
         city['pbf_path'] = relative(planet_path, '%(slug)s.osm.pbf' % city)
         city['mfg_path'] = relative(planet_path, '%(slug)s.osm.map' % city)
         city['o2p_path'] = relative(planet_path, '%(slug)s.osm2pgsql-shps.zip' % city)
+        city['imp_path'] = relative(planet_path, '%(slug)s.imposm-shps.zip' % city)
         city['jpg_path'] = relative(planet_path, '%(slug)s.jpg' % city)
     
     process_coastline(planet_path)
@@ -63,6 +64,7 @@ if __name__ == '__main__':
     for city in cities:
         process_city_osm2pgsql(city['osm_path'], city['o2p_path'], city['slug'], osm2pgsql_style_path)
         process_city_mapsforge(city['pbf_path'], city['mfg_path'], city['slug'])
+        process_city_imposm(city['pbf_path'], city['imp_path'], city['slug'])
         render_preview(city['jpg_path'], city['top'], city['left'], city['bottom'], city['right'])
     
     templates_dir = relative(__file__, 'templates')
