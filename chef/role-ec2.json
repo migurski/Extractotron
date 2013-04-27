@@ -3,6 +3,7 @@
   "run_list":
   [
     "apache",
+    "cron-task",
     "imposm",
     "lockrun",
     "ogr2ogr",
@@ -11,9 +12,11 @@
     "osmosis",
     "postgis",
     "python",
+    "status-files",
     "work-area",
     "zip"
   ],
+  "user": "ubuntu",
   "workdir": "/usr/local/work",
   "planet": "http://osm-extracted-metros.s3.amazonaws.com/sf-bay-area.osm.pbf",
   "postgis":
