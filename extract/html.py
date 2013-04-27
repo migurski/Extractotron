@@ -5,15 +5,15 @@ import logging
 
 from jinja2 import Environment, FileSystemLoader
 
-def build_index(cities, index_dir, templates_dir):
-    ''' Render index.html template and return its contents.
+def build_catalog(cities, catalog_dir, templates_dir):
+    ''' Render catalog.html template and return its contents.
     '''
-    logging.info('Building index page with %d cities' % len(cities))
+    logging.info('Building catalog page with %d cities' % len(cities))
     
     env = Environment(loader=FileSystemLoader(templates_dir))
-    tpl = env.get_template('index.html')
+    tpl = env.get_template('catalog.html')
     
-    expanded_cities = [expand_city(city, index_dir) for city in cities]
+    expanded_cities = [expand_city(city, catalog_dir) for city in cities]
     
     return tpl.render(cities=expanded_cities)
 

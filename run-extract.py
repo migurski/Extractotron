@@ -8,7 +8,7 @@ import logging
 
 from extract import process_coastline, extract_cities, process_city_imposm
 from extract import process_city_osm2pgsql, process_city_mapsforge
-from extract.html import build_index
+from extract.html import build_catalog
 from extract.preview import render_preview
 from extract.util import relative
 
@@ -68,8 +68,7 @@ if __name__ == '__main__':
         render_preview(city['jpg_path'], city['top'], city['left'], city['bottom'], city['right'])
     
     templates_dir = relative(__file__, 'templates')
-    index_path = relative(dir, 'index.html')
-    index_dir = dirname(dir)
+    catalog_path = join(dir, 'index.html')
     
-    with open(index_path, 'w') as index:
-        index.write(build_index(cities, index_dir, templates_dir).encode('utf8'))
+    with open(catalog_path, 'w') as catalog:
+        catalog.write(build_catalog(cities, dir, templates_dir).encode('utf8'))
