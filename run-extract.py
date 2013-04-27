@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 from sys import argv
-from os import mkdir
+from time import strftime
+from tempfile import mkdtemp
+from os import mkdir, chmod, symlink, remove
 from os.path import join, exists, abspath, basename, dirname
 from sh import curl
 
@@ -27,20 +29,17 @@ if __name__ == '__main__':
 
     logging.basicConfig(level=logging.INFO, format='%(levelname)s - %(message)s')
 
-    (url, dir) = argv[1:]
-    dir += '/stuff'
-    
-    for newdir in (dir, dir + '/logs'):
-        try:
-            mkdir(newdir)
-        except OSError:
-            if not exists(newdir):
-                raise
+    (url, history_dir) = argv[1:]
+
+    catalog_dir = mkdtemp(dir=history_dir, prefix=strftime('%Y-%m-%d-'))
+    mkdir(join(catalog_dir, 'logs'))
+    chmod(catalog_dir, 0755)
     
     #
     # Download planet.
     #
-    planet_path = abspath(join(dir, 'planet.osm.pbf'))
+    planet_path = abspath(join(catalog_dir, 'planet.osm.pbf'))
+    logging.info('Setting up in %s' % catalog_dir)
     logging.info('Downloading %s to %s' % (url, basename(planet_path)))
     
     curl(url, o=planet_path)
@@ -68,7 +67,18 @@ if __name__ == '__main__':
         render_preview(city['jpg_path'], city['top'], city['left'], city['bottom'], city['right'])
     
     templates_dir = relative(__file__, 'templates')
-    catalog_path = join(dir, 'index.html')
+    catalog_path = join(catalog_dir, 'index.html')
     
     with open(catalog_path, 'w') as catalog:
-        catalog.write(build_catalog(cities, dir, templates_dir).encode('utf8'))
+        catalog.write(build_catalog(cities, catalog_dir, templates_dir).encode('utf8'))
+    
+    #
+    # Link in history directory.
+    #
+    last_path = join(history_dir, 'last')
+    logging.info('Linking %s to %s' % (last_path, catalog_dir))
+    
+    if exists(last_path):
+        remove(last_path)
+    
+    symlink(catalog_dir, last_path)
