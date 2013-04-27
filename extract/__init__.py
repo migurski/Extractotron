@@ -218,6 +218,15 @@ def process_city_imposm(pbf_path, imp_path, slug):
     '''
     prefix = '%s' % slug.replace('-', '_')
     
+    mappings = (
+        'roads', 'roads_gen0', 'roads_gen1', 'admin', 'aeroways', 'amenities',
+        'buildings', 'landusages', 'landusages_gen0', 'landusages_gen1', 'mainroads',
+        'mainroads_gen0', 'mainroads_gen1', 'minorroads', 'motorways', 'motorways_gen0',
+        'motorways_gen1', 'places', 'railways', 'railways_gen0', 'railways_gen1',
+        'transport_areas', 'transport_points', 'waterareas', 'waterareas_gen0',
+        'waterareas_gen1', 'waterways'
+        )
+
     logging.info('Converting from from %s to %s' % (basename(pbf_path), basename(imp_path)))
     logs = open_logs(relative(pbf_path, 'logs/process-imposm-%s' % slug))
     
@@ -239,7 +248,7 @@ def process_city_imposm(pbf_path, imp_path, slug):
     
     filenames = []
     
-    for mapping in ('roads', 'buildings'):
+    for mapping in mappings:
         table_name = '%(prefix)s_%(mapping)s' % locals()
         shape_base = relative(pbf_path, '%(slug)s.osm-%(mapping)s' % locals())
         shape_path = shape_base + '.shp'
@@ -273,8 +282,9 @@ def process_city_imposm(pbf_path, imp_path, slug):
     #
     # Drop city tables from PostGIS.
     #
-    for mapping in ('roads', 'buildings'):
-        psql = Popen(['psql', '-c', 'DROP TABLE %(prefix)s_%(mapping)s' % locals(), '-U', 'osm', 'osm'], **logs)
+    for mapping in mappings:
+        object = 'TABLE' if mapping not in ('roads', 'roads_gen0', 'roads_gen1') else 'VIEW'
+        psql = Popen(['psql', '-c', 'DROP %(object)s %(prefix)s_%(mapping)s' % locals(), '-U', 'osm', 'osm'], **logs)
         psql.wait()
     
     logs['stdout'].close()
