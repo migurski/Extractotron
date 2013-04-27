@@ -1,4 +1,5 @@
 from os.path import join, dirname
+from subprocess import Popen as _Popen
 
 def relative(absolute_path, filename):
     ''' Return a new absolute path for a file in the same directory as another.
@@ -12,3 +13,13 @@ def open_logs(name_base):
     '''
     return dict(stdout = open(name_base + '.out', 'w'), 
                 stderr = open(name_base + '.err', 'w'))
+
+def Popen(command, stderr=None, **kwargs):
+    ''' Run subprocess.Popen(), after writing a copy of the command to stderr.
+    '''
+    if stderr is not None:
+        print >> stderr, ''
+        print >> stderr, '#', ' '.join(command)
+        print >> stderr, ''
+
+    return _Popen(command, stderr=stderr, **kwargs)

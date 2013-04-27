@@ -22,10 +22,12 @@ def expand_city(city, base_dir):
     '''
     osm_size = nice_size(stat(city['osm_path']).st_size)
     pbf_size = nice_size(stat(city['pbf_path']).st_size)
+    mfg_size = nice_size(stat(city['mfg_path']).st_size)
     o2p_size = nice_size(stat(city['o2p_path']).st_size)
     
     osm_path = relpath(city['osm_path'], base_dir)
     pbf_path = relpath(city['pbf_path'], base_dir)
+    mfg_path = relpath(city['mfg_path'], base_dir)
     o2p_path = relpath(city['o2p_path'], base_dir)
     jpg_path = relpath(city['jpg_path'], base_dir)
     
@@ -35,6 +37,7 @@ def expand_city(city, base_dir):
     return dict(slug=city['slug'], name=city['name'],
                 osm_path=osm_path, osm_size=osm_size,
                 pbf_path=pbf_path, pbf_size=pbf_size,
+                mfg_path=mfg_path, mfg_size=mfg_size,
                 o2p_path=o2p_path, o2p_size=o2p_size,
                 jpg_path=jpg_path, lat=lat, lon=lon)
 

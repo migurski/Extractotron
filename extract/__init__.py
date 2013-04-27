@@ -1,5 +1,4 @@
 from os import remove
-from subprocess import Popen
 from os.path import join, exists, basename
 from math import sqrt
 from glob import glob
@@ -9,7 +8,7 @@ import logging
 from numpy import array
 from scipy.cluster.vq import kmeans2
 
-from .util import relative, open_logs
+from .util import relative, open_logs, Popen
 
 mercator = '+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs'
 
@@ -208,6 +207,30 @@ def process_city_osm2pgsql(osm_path, o2p_path, slug, osm2pgsql_style_path):
     for suffix in ('line', 'nodes', 'point', 'polygon', 'rels', 'roads', 'ways'):
         psql = Popen(['psql', '-c', 'DROP TABLE %(prefix)s_%(suffix)s' % locals(), '-U', 'osm', 'osm'], **logs)
         psql.wait()
+    
+    logs['stdout'].close()
+    logs['stderr'].close()
+
+def process_city_mapsforge(pbf_path, mfg_path, slug):
+    ''' Pass extracted OSM data through osmosis to create mapsforge file.
+    '''
+    logging.info('Converting from from %s to %s' % (basename(pbf_path), basename(mfg_path)))
+    logs = open_logs(relative(pbf_path, 'logs/process-mapsforge-%s' % slug))
+    
+    if exists(mfg_path):
+        remove(mfg_path)
+    
+    #
+    # Generate MapsForge binary map file with MapFileWriter osmosis plugin.
+    #
+    osmosis = Popen('osmosis -p org.mapsforge.map.writer.osmosis.MapFileWriterPluginLoader'.split()
+                    + ['--rb', pbf_path, '--mw', 'file=%s' % mfg_path],
+                    **logs)
+
+    osmosis.wait()
+    
+    if not exists(mfg_path):
+        raise Exception('Failed to create %s' % mfg_path)
     
     logs['stdout'].close()
     logs['stderr'].close()
