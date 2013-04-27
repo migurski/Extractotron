@@ -250,7 +250,7 @@ def process_city_imposm(pbf_path, imp_path, slug):
     
     for mapping in mappings:
         table_name = '%(prefix)s_%(mapping)s' % locals()
-        shape_base = relative(pbf_path, '%(slug)s.osm-%(mapping)s' % locals())
+        shape_base = join(tempdir, '%(slug)s.osm-%(mapping)s' % locals())
         shape_path = shape_base + '.shp'
         
         for extension in ('.shp', '.shx', '.prj', '.dbf'):
@@ -270,9 +270,6 @@ def process_city_imposm(pbf_path, imp_path, slug):
     #
     zip = Popen(['zip', '-j', imp_path] + filenames, **logs)
     zip.wait()
-    
-    for filename in filenames:
-        remove(filename)
     
     if not exists(imp_path):
         raise Exception('Failed to create %s' % imp_path)
