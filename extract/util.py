@@ -18,6 +18,7 @@ def Popen(command, stderr=None, **kwargs):
     ''' Run subprocess.Popen(), after writing a copy of the command to stderr.
     '''
     if stderr is not None:
-        print >> stderr, '####', ' '.join(command)
+        stderr.write('#### %s\n' % ' '.join(command))
+        stderr.flush()
 
     return _Popen(command, stderr=stderr, **kwargs)
