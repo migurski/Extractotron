@@ -4,6 +4,7 @@
 package 'python-imaging'
 package 'python-jinja2'
 package 'python-numpy'
+package 'python-pika'
 package 'python-pip'
 package 'python-scipy'
 

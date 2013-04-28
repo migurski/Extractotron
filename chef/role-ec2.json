@@ -12,6 +12,7 @@
     "osmosis",
     "postgis",
     "python",
+    "rabbitmq",
     "status-files",
     "work-area",
     "zip"
