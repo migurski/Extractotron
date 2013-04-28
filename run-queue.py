@@ -42,9 +42,10 @@ if __name__ == '__main__':
         print body
         
         if body == 'extract':
-            extract = join(dirname(__file__), 'run-extract.py')
-            extract = Popen([extract, planet, join(workdir, 'history')])
-            extract.wait()
+            with open('/tmp/stderr.log', 'w') as stderr, open('/tmp/stdout.log', 'w') as stdout:
+                extract = join(dirname(__file__), 'run-extract.py')
+                extract = Popen([extract, planet, join(workdir, 'history')], stderr=stderr, stdout=stdout)
+                extract.wait()
         
         if hasattr(method, 'delivery_tag'):
             channel.basic_ack(delivery_tag=method.delivery_tag)
