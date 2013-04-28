@@ -5,7 +5,6 @@
     "apache",
     "cron-task",
     "imposm",
-    "lockrun",
     "ogr2ogr",
     "osm2pgsql",
     "osmcoastline",

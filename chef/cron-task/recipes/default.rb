@@ -11,6 +11,6 @@ file '/etc/cron.d/run-queue' do
     content <<-CRON
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
-* * * * *	#{node['user']}	/usr/local/bin/lockrun --lockfile=/var/run/extractotron/lock -- /usr/local/extractotron/run-queue.py
+* * * * *	#{node['user']}	/usr/local/extractotron/run-queue.py
 CRON
 end

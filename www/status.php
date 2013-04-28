@@ -2,6 +2,15 @@
 
     if($_POST['action'] == 'go for it')
     {
+        $id = uniqid();
+        $fp = @fopen('/var/run/extractotron/tasks.csv', 'a');
+    
+        if($fp !== false && flock($fp, LOCK_EX))
+        {
+            fputcsv($fp, array($id, 'extract', time()));
+            flock($fp, LOCK_UN);
+        }
+    
         $conn = new AMQPConnection();
         $conn->connect();
         
@@ -19,7 +28,7 @@
         $queu->bind('exchangotron', '');
         $queu->declare();
         
-        $msg = $exch->publish('extract', '');
+        $msg = $exch->publish("$id extract", '');
         
         if(!$msg)
         {
