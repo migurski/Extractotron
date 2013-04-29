@@ -28,7 +28,7 @@
         $queu->bind('exchangotron', '');
         $queu->declare();
         
-        $msg = $exch->publish("$id extract", '');
+        $msg = $exch->publish($id, '');
         
         if(!$msg)
         {
