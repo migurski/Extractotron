@@ -36,4 +36,6 @@ link '/var/www/status.php' do
     to "/usr/local/extractotron/www/status.php"
 end
 
-execute 'apache2ctl restart'
+execute 'apache2ctl restart' do
+    path ['/usr/bin', '/usr/sbin', '/usr/local/bin', '/usr/local/sbin']
+end
