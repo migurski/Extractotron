@@ -8,15 +8,18 @@ package 'php-pear'
 include_recipe 'rabbitmq'
 
 bash 'install amqp extension' do
-    not_if 'file /usr/lib/php5/*/amqp.so && grep amqp.so /etc/php5/apache2/php.ini'
+    creates '/usr/lib/php5/20090626/amqp.so'
+    code 'pecl install -f http://pecl.php.net/get/amqp-1.0.10.tgz'
+end
 
-    code <<-INSTALL
-        pecl install -f http://pecl.php.net/get/amqp-1.0.10.tgz
+bash 'enable amqp extension' do
+    not_if 'grep amqp.so /etc/php5/apache2/php.ini'
 
+    code <<-ENABLE
         echo ''                  >> /etc/php5/apache2/php.ini
         echo '; Added by chef.'  >> /etc/php5/apache2/php.ini
         echo 'extension=amqp.so' >> /etc/php5/apache2/php.ini
-    INSTALL
+    ENABLE
 end
 
 include_recipe 'work-area'
