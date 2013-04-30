@@ -16,13 +16,6 @@ git clone -b lmco-2013 git://github.com/migurski/Extractotron.git /usr/local/ext
 /usr/local/extractotron/run-install.sh
 
 #
-# Look in Chef's local config file to find our work directory and planet URL.
-#
-ROLE="/usr/local/extractotron/chef/role-ec2.json"
-WORKDIR=`python -c "import json; print json.load(open('$ROLE'))['workdir']"`
-PLANET=`python -c "import json; print json.load(open('$ROLE'))['planet']"`
-
-#
 # Actually run the actual thing.
 #
-/usr/local/extractotron/run-extract.py $PLANET $WORKDIR/history
+/usr/local/extractotron/run-extract.py

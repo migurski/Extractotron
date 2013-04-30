@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from sys import argv
+from json import load
 from time import strftime
 from tempfile import mkdtemp
 from os import mkdir, chmod, symlink, remove
@@ -29,7 +29,12 @@ if __name__ == '__main__':
 
     logging.basicConfig(level=logging.INFO, format='%(levelname)s - %(message)s')
 
-    (url, history_dir) = argv[1:]
+    role_path = relative(__file__, 'chef/role-ec2.json')
+    
+    with open(role_path) as role_file:
+        role = load(role_file)
+        planet_url = role['planet']
+        history_dir = join(role['workdir'], 'history')
 
     catalog_dir = mkdtemp(dir=history_dir, prefix=strftime('%Y-%m-%d-'))
     mkdir(join(catalog_dir, 'logs'))
@@ -40,9 +45,9 @@ if __name__ == '__main__':
     #
     planet_path = abspath(join(catalog_dir, 'planet.osm.pbf'))
     logging.info('Setting up in %s' % catalog_dir)
-    logging.info('Downloading %s to %s' % (url, basename(planet_path)))
+    logging.info('Downloading %s to %s' % (planet_url, basename(planet_path)))
     
-    curl(url, o=planet_path)
+    curl(planet_url, o=planet_path)
     
     #
     # Process planet.
