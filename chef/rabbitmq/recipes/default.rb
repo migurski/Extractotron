@@ -10,9 +10,13 @@ package 'rabbitmq-server'
 
 package 'git'
 package 'build-essential'
+package 'autoconf'
+package 'automake'
+package 'libtool'
+package 'pkg-config'
 
 bash 'install librabbit' do
-    not_if 'file /usr/local/lib/librabbitmq.so'
+    creates '/usr/local/lib/librabbitmq.so'
     
     code <<-INSTALL
         DIR=`mktemp -d /tmp/rabbitmq-XXX`
