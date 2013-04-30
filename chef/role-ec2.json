@@ -18,6 +18,7 @@
   ],
   "user": "ubuntu",
   "workdir": "/usr/local/work",
+  "bucket": "osm-extracted-metros-dev",
   "planet": "http://osm-extracted-metros.s3.amazonaws.com/sf-bay-area.osm.pbf",
   "postgis":
   {
