@@ -43,8 +43,10 @@ if __name__ == '__main__':
     
     with open(cities_path) as cities_file:
         cities = [dict(slug=row['slug'], name=row['name'],
-                       top=float(row['top']), left=float(row['left']),
-                       bottom=float(row['bottom']), right=float(row['right']))
+                       top=max(float(row['top']), float(row['bottom'])),
+                       left=min(float(row['left']), float(row['right'])),
+                       bottom=min(float(row['top']), float(row['bottom'])),
+                       right=max(float(row['left']), float(row['right'])))
                   for row in DictReader(cities_file, dialect='excel-tab')]
 
     catalog_dir = mkdtemp(dir=history_dir, prefix=strftime('%Y-%m-%d-'))

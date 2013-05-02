@@ -138,7 +138,7 @@ def process_coastline(planet_path):
     #
     # Extract land polygons to mercator-projected shapefiles.
     #
-    ogr2ogr = Popen(['ogr2ogr', '-t_srs', mercator, coast_shape_path, coast_sqlite_path, 'land_polygons'], **logs)
+    ogr2ogr = Popen(['ogr2ogr', '-t_srs', mercator, '-skipfailures', coast_shape_path, coast_sqlite_path, 'land_polygons'], **logs)
     ogr2ogr.wait()
     
     #
