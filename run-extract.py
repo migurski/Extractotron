@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 from json import load
 from time import strftime
+from csv import DictReader
 from tempfile import mkdtemp
 from os import mkdir, chmod, symlink, remove
 from os.path import join, exists, abspath, basename, dirname
@@ -14,27 +15,23 @@ from extract.html import build_catalog
 from extract.preview import render_preview
 from extract.util import relative
 
-# a small, default list of cities
-
-cities = [
-    dict(slug='west-oak', name='West Oakland', top=37.8325, left=-122.3443, bottom=37.7865, right=-122.2586),
-    dict(slug='core-sf', name='Core San Francisco', top=37.8097, left=-122.4278, bottom=37.7617, right=-122.3842),
-    dict(slug='berkeley', name='U.C. Berkeley', top=37.8810, left=-122.2752, bottom=37.8615, right=-122.2352),
-    dict(slug='san-bruno', name='San Bruno', top=37.6457, left=-122.4666, bottom=37.6003, right=-122.3488),
-    dict(slug='santa-clara', name='Santa Clara', top=37.3796, left=-121.9992, bottom=37.3215, right=-121.9110),
-    dict(slug='san-jose', name='San Jose', top=37.3660, left=-121.9439, bottom=37.3125, right=-121.8485),
-    ]
-
 if __name__ == '__main__':
 
     logging.basicConfig(level=logging.INFO, format='%(levelname)s - %(message)s')
-
+    
+    cities_path = relative(__file__, 'cities.txt')
     role_path = relative(__file__, 'chef/role-ec2.json')
     
     with open(role_path) as role_file:
         role = load(role_file)
         planet_url = role['planet']
         history_dir = join(role['workdir'], 'history')
+    
+    with open(cities_path) as cities_file:
+        cities = [dict(slug=row['slug'], name=row['name'],
+                       top=float(row['top']), left=float(row['left']),
+                       bottom=float(row['bottom']), right=float(row['right']))
+                  for row in DictReader(cities_file, dialect='excel-tab')]
 
     catalog_dir = mkdtemp(dir=history_dir, prefix=strftime('%Y-%m-%d-'))
     mkdir(join(catalog_dir, 'logs'))

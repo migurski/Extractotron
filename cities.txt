@@ -1,0 +1,7 @@
+group	geonameid	top	left	bottom	right	slug	name
+Bay Area	999999	37.8325	-122.3443	37.7865	-122.2586	west-oak	West Oakland
+Bay Area	999999	37.8097	-122.4278	37.7617	-122.3842	core-sf	Core San Francisco
+Bay Area	999999	37.8810	-122.2752	37.8615	-122.2352	berkeley	U.C. Berkeley
+Bay Area	999999	37.6457	-122.4666	37.6003	-122.3488	san-bruno	San Bruno
+Bay Area	999999	37.3796	-121.9992	37.3215	-121.9110	santa-clara	Santa Clara
+Bay Area	999999	37.3660	-121.9439	37.3125	-121.8485	san-jose	San Jose
