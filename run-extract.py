@@ -5,6 +5,7 @@ from csv import DictReader
 from tempfile import mkdtemp
 from os import mkdir, chmod, symlink, remove
 from os.path import join, exists, abspath, basename, dirname
+from multiprocessing import Pool as _Pool
 from sh import curl
 
 import logging
@@ -14,6 +15,19 @@ from extract import process_city_osm2pgsql, process_city_mapsforge
 from extract.html import build_catalog
 from extract.preview import render_preview
 from extract.util import relative
+
+class Pool:
+    def __init__(self):
+        logging.info('Starting multiprocess Pool...')
+        self._pool = _Pool()
+    
+    def __enter__(self):
+        return self._pool.apply_async
+    
+    def __exit__(self, type, value, traceback):
+        self._pool.close()
+        self._pool.join()
+        logging.info('...Pool is now closed.')
 
 if __name__ == '__main__':
 
@@ -57,16 +71,18 @@ if __name__ == '__main__':
         city['imp_path'] = relative(planet_path, '%(slug)s.imposm-shps.zip' % city)
         city['jpg_path'] = relative(planet_path, '%(slug)s.jpg' % city)
     
-    process_coastline(planet_path)
-    extract_cities(planet_path, cities)
+    with Pool() as apply:
+        apply(process_coastline, (planet_path, ))
+        apply(extract_cities, (planet_path, cities))
     
     osm2pgsql_style_path = relative(__file__, 'postgis/osm2pgsql.style')
     
-    for city in cities:
-        process_city_osm2pgsql(city['osm_path'], city['o2p_path'], city['slug'], osm2pgsql_style_path)
-        process_city_mapsforge(city['pbf_path'], city['mfg_path'], city['slug'])
-        process_city_imposm(city['pbf_path'], city['imp_path'], city['slug'])
-        render_preview(city['jpg_path'], city['top'], city['left'], city['bottom'], city['right'])
+    with Pool() as apply:
+        for city in cities:
+            apply(process_city_osm2pgsql, (city['osm_path'], city['o2p_path'], city['slug'], osm2pgsql_style_path))
+            apply(process_city_mapsforge, (city['pbf_path'], city['mfg_path'], city['slug']))
+            apply(process_city_imposm, (city['pbf_path'], city['imp_path'], city['slug']))
+            apply(render_preview, (city['jpg_path'], city['top'], city['left'], city['bottom'], city['right']))
     
     templates_dir = relative(__file__, 'templates')
     catalog_path = join(catalog_dir, 'index.html')
