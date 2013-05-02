@@ -150,6 +150,7 @@ if __name__ == '__main__':
 
     for prj in ('merc', 'latlon'):
         break
+
         file = 'coastline-good-%s.tar.bz2' % prj
         href = urljoin(base_url, file)
 
@@ -216,7 +217,7 @@ if __name__ == '__main__':
     <ol>
         <li>Bzip’ed OpenStreetMap <a href="http://wiki.openstreetmap.org/wiki/.osm">XML data</a> in an <tt>.osm.bz2</tt> file.</li>
         <li>Compressed OpenStreetMap <a href="http://wiki.openstreetmap.org/wiki/PBF">binary PBF data</a> in an <tt>.osm.pbf</tt> file.</li>
-        <li><a href="#coastline">Coastline shapefile</a> extracts of the immediate area in a <tt>.zip</tt> file.</li>
+        <!--<li><a href="#coastline">Coastline shapefile</a> extracts of the immediate area in a <tt>.zip</tt> file.</li>-->
         <li>Point, line and polygon shapefiles from <a href="http://wiki.openstreetmap.org/wiki/Osm2pgsql">Osm2pgsql</a> in a <tt>.zip</tt> file.</li>
     </ol>
     <p>
