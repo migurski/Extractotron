@@ -5,6 +5,7 @@ from glob import glob
 from os.path import basename, join
 from mimetypes import guess_type
 from StringIO import StringIO
+from time import gmtime, strftime
 
 import logging
 
@@ -34,6 +35,11 @@ if __name__ == '__main__':
 
     s3 = connect_s3().create_bucket(bucket)
     log = StringIO()
+    
+    file_path = join('/usr/local/work/history/last', 'planet.osm.pbf')
+    file_time = stat(file_path).st_ctime
+
+    print >> log, '# begin,', strftime('%a %b %d %H:%M:%S %Z %Y', gmtime(file_time))
     
     uploads = []
     
