@@ -19,11 +19,12 @@ import lib
 provider = Provider()
 dimensions = Point(960, 600)
 
-base_url = 'http://osm-extracted-metros.s3.amazonaws.com/log.txt'
+base_url = 'http://osm-extracted-metros-dev.s3.amazonaws.com/log.txt'
+preview_pat = compile(r'^((\S+)\.jpg)\s+(\d+)$')
 extract_pat = compile(r'^((\S+)\.osm\.(bz2|pbf))\s+(\d+)$')
 coastshape_pat = compile(r'^((\S+)\.coastline\.zip)\s+(\d+)$')
-shp_imposm_pat = compile(r'^((\S+)\.imposm-shapefiles\.zip)\s+(\d+)$')
-shp_osm2pgsql_pat = compile(r'^((\S+)\..*\bshapefiles\.zip)\s+(\d+)$')
+shp_imposm_pat = compile(r'^((\S+)\.imposm-shps\.zip)\s+(\d+)$')
+shp_osm2pgsql_pat = compile(r'^((\S+)\.osm2pgsql-shps\.zip)\s+(\d+)$')
 coastline_pat = compile(r'^((\w+)-(latlon|merc)\.tar\.bz2)\s+(\d+)$')
 months = '- Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split()
 
@@ -102,6 +103,13 @@ if __name__ == '__main__':
             coast[slug][prj] = (file, int(size), urljoin(base_url, file))
             continue
 
+        elif preview_pat.match(line):
+
+            match = preview_pat.match(line)
+            file, slug, size = (match.group(g) for g in (1, 2, 3))
+
+            key, slug_file = 'preview', (file, int(size), urljoin(base_url, file))
+
         elif extract_pat.match(line):
 
             match = extract_pat.match(line)
@@ -141,6 +149,7 @@ if __name__ == '__main__':
     coast['coastline-good'] = {}
 
     for prj in ('merc', 'latlon'):
+        break
         file = 'coastline-good-%s.tar.bz2' % prj
         href = urljoin(base_url, file)
 
@@ -283,13 +292,14 @@ if __name__ == '__main__':
                 shape_file, shape_size, shape_href = files[slug]['imposm shapefiles']
                 list += '<li class="file"><a href="%s">%s imposm shapefiles</a></li>' % (shape_href, nice_size(shape_size))
 
+            preview = files[slug]['preview'][-1]
             center = mmap.pointLocation(Point(dimensions.x/2, dimensions.y/2))
             zoom = mmap.coordinate.zoom
             href = 'http://www.openstreetmap.org/?lat=%.3f&amp;lon=%.3f&amp;zoom=%d&amp;layers=M' % (center.lat, center.lon, zoom)
 
             print >> index, """
                 <li class="city">
-                    <a name="%(slug)s" href="%(href)s"><img src="previews/%(slug)s.jpg"></a>
+                    <a name="%(slug)s" href="%(href)s"><img src="%(preview)s"></a>
                     <h3>%(name)s</h3>
                     <ul>%(list)s</ul>
                 </li>""" % locals()
