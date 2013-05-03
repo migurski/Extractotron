@@ -31,13 +31,17 @@ bash 'create tablespace' do
     CREATE
 end
 
+#
+# Use createdb -T template0 because imposm will fail with default ASCII encoding:
+# http://askubuntu.com/questions/20880/how-do-i-create-a-unicode-databases-in-postgresql-8-4
+#
 bash "create database" do
 	not_if("psql -U postgres -c '\\l' | egrep '^\s*#{database}\s'")
 
 	user 'postgres'
 	code <<-CREATE
 		createuser -lSRD #{username}
-		createdb -D work -O #{username} #{database}
+		createdb -D work -E utf-8 -O #{username} -T template0 #{database}
 
 		psql -f /usr/share/postgresql/9.1/contrib/postgis-1.5/postgis.sql #{database}
 		psql -f /usr/share/postgresql/9.1/contrib/postgis-1.5/spatial_ref_sys.sql #{database}
