@@ -19,7 +19,7 @@
   "user": "ubuntu",
   "workdir": "/usr/local/work",
   "bucket": "osm-extracted-metros-dev",
-  "planet": "http://osm-extracted-metros.s3.amazonaws.com/sf-bay-area.osm.pbf",
+  "planet": "http://planet.openstreetmap.org/pbf/planet-latest.osm.pbf",
   "postgis":
   {
     "username": "osm",
