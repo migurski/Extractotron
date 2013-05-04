@@ -191,7 +191,8 @@ if __name__ == '__main__':
                     'area': nice_area(*[float(city[k]) for k in 'top left bottom right'.split()]),
                     'bounds': '%(left)s %(bottom)s %(right)s %(top)s' % city,
                     'osm_size': nice_size(files[city['slug']]['bz2'][1]),
-                    'pbf_size': nice_size(files[city['slug']]['pbf'][1])
+                    'pbf_size': nice_size(files[city['slug']]['pbf'][1]),
+                    'src': files[city['slug']]['preview'][2]
                   }
                   for city
                   in cities

@@ -29,7 +29,7 @@ function makeBbMap()
             city.osm_size + " bzip’ed XML OSM data<br>",
             city.pbf_size + " binary PBF OSM data<br>",
             '<p>',
-            '<a href="#' + city.slug + '"><img src="previews/' + city.slug + '.jpg" width="155" height="100"></a>',
+            '<a href="#' + city.slug + '"><img src="' + city.src + '" width="155" height="100"></a>',
         ];
         polygon.bindPopup(popupData.join(''));
         polygon.addTo(map);
