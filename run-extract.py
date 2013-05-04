@@ -42,7 +42,7 @@ if __name__ == '__main__':
         history_dir = join(role['workdir'], 'history')
     
     with open(cities_path) as cities_file:
-        cities = [dict(slug=row['slug'], name=row['name'],
+        cities = [dict(slug=row['slug'], name=row['name'].decode('utf8'),
                        top=max(float(row['top']), float(row['bottom'])),
                        left=min(float(row['left']), float(row['right'])),
                        bottom=min(float(row['top']), float(row['bottom'])),
