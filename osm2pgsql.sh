@@ -457,6 +457,9 @@ wait
 osm2pgsql_shapefiles detroit &
 imposm_shapefiles detroit &
 wait
+osm2pgsql_shapefiles edmonton &
+imposm_shapefiles edmonton &
+wait
 osm2pgsql_shapefiles evansville &
 imposm_shapefiles evansville &
 wait
