@@ -81,7 +81,7 @@ package_coast lisbon 39.150 -9.634 38.358 -8.458
 package_coast lyon 46.191 4.136 45.305 5.517
 package_coast london 51.984 -1.115 50.941 0.895
 package_coast lviv 50.148 23.587 49.573 24.433
-package_coast madrid 40.839 -4.293 39.889 -3.057
+package_coast madrid 41.030 -4.293 39.800 -3.057
 package_coast manchester 53.672 -2.588 53.237 -1.877
 package_coast marseille 43.554 4.905 43.038 5.776
 package_coast milan 45.694 8.860 45.246 9.470

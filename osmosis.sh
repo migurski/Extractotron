@@ -143,7 +143,7 @@ bzcat planet-latest.osm.bz2 | bin/osmosis --rx file=- \
     --tee outputCount=2 --wx file=ex/london.osm.bz2 --wb file=ex/london.osm.pbf \
     --bb top=50.148 left=23.587 bottom=49.573 right=24.433 \
     --tee outputCount=2 --wx file=ex/lviv.osm.bz2 --wb file=ex/lviv.osm.pbf \
-    --bb top=40.839 left=-4.293 bottom=39.889 right=-3.057 \
+    --bb top=41.030 left=-4.293 bottom=39.800 right=-3.057 \
     --tee outputCount=2 --wx file=ex/madrid.osm.bz2 --wb file=ex/madrid.osm.pbf \
     --bb top=53.672 left=-2.588 bottom=53.237 right=-1.877 \
     --tee outputCount=2 --wx file=ex/manchester.osm.bz2 --wb file=ex/manchester.osm.pbf \
