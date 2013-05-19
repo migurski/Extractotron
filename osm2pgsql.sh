@@ -466,6 +466,9 @@ wait
 osm2pgsql_shapefiles evansville &
 imposm_shapefiles evansville &
 wait
+osm2pgsql_shapefiles grand-rapids-holland-muskegon &
+imposm_shapefiles grand-rapids-holland-muskegon &
+wait
 osm2pgsql_shapefiles grassvalley &
 imposm_shapefiles grassvalley &
 wait

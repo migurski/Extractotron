@@ -222,7 +222,7 @@ bzcat planet-latest.osm.bz2 | bin/osmosis --rx file=- \
     --bb top=40.617 left=43.907 bottom=39.693 right=45.276 \
     --tee outputCount=2 --wx file=ex/yerevan.osm.bz2 --wb file=ex/yerevan.osm.pbf \
   --bb top=54.213 left=-158.350 bottom=18.314 right=-69.620 \
-  --b --tee outputCount=58 \
+  --b --tee outputCount=59 \
     --bb top=34.090 left=-84.857 bottom=33.414 right=-83.890 \
     --tee outputCount=2 --wx file=ex/atlanta.osm.bz2 --wb file=ex/atlanta.osm.pbf \
     --bb top=30.670 left=-98.212 bottom=29.931 right=-97.234 \
@@ -253,6 +253,8 @@ bzcat planet-latest.osm.bz2 | bin/osmosis --rx file=- \
     --tee outputCount=2 --wx file=ex/edmonton.osm.bz2 --wb file=ex/edmonton.osm.pbf \
     --bb top=38.177 left=-87.747 bottom=37.759 right=-87.237 \
     --tee outputCount=2 --wx file=ex/evansville.osm.bz2 --wb file=ex/evansville.osm.pbf \
+    --bb top=43.330 left=-86.410 bottom=42.610 right=-85.300 \
+    --tee outputCount=2 --wx file=ex/grand-rapids-holland-muskegon.osm.bz2 --wb file=ex/grand-rapids-holland-muskegon.osm.pbf \
     --bb top=39.320 left=-121.300 bottom=39.080 right=-120.880 \
     --tee outputCount=2 --wx file=ex/grassvalley.osm.bz2 --wb file=ex/grassvalley.osm.pbf \
     --bb top=21.781 left=-158.350 bottom=21.192 right=-157.592 \

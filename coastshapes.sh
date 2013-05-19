@@ -134,6 +134,7 @@ package_coast denver-boulder 40.313 -105.746 39.323 -104.334
 package_coast detroit 42.811 -83.875 41.836 -82.375
 package_coast edmonton 54.213 -114.529 52.941 -112.430
 package_coast evansville 38.177 -87.747 37.759 -87.237
+package_coast grand-rapids-holland-muskegon 43.33 -86.41 42.61 -85.30
 package_coast grassvalley 39.32 -121.30 39.08 -120.88
 package_coast honolulu 21.781 -158.35 21.192 -157.592
 package_coast houston 30.261 -96.064 28.856 -94.378
