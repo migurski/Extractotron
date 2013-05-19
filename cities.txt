@@ -46,7 +46,7 @@ Europe	3078610	49.357	16.268	48.951	16.940	brno	Brno
 Europe	2800866	51.053	3.981	50.645	4.761	brussels	Brussels
 Europe	3054643	47.861	18.347	47.025	19.780	budapest	Budapest
 Europe	3336898	43.523	-4.859	42.753	-3.134	cantabria	Cantabria, Spain
-Europe  2654675;2656749;3333134;2641598;2653822;3333241;2656173 51.630  -3.318  51.296  -2.189 cardiff-newport-bristol-bath Cardiff, Newport, Bristol, Bath
+Europe	2654675;2656749;3333134;2641598;2653822;3333241;2656173	51.730	-3.618	51.236	-2.189	cardiff-newport-bristol-bath	Cardiff, Newport, Bristol, Bath
 Europe	2618425	55.950	11.894	55.491	13.147	copenhagen	Copenhagen
 Europe	2652618	52.031	0.609	51.743	1.188	colchester	Colchester
 Europe	2650225	56.132	-3.585	55.783	-2.835	edinburgh	Edinburgh

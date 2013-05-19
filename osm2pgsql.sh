@@ -244,6 +244,9 @@ wait
 osm2pgsql_shapefiles cantabria &
 imposm_shapefiles cantabria &
 wait
+osm2pgsql_shapefiles cardiff-newport-bristol-bath &
+imposm_shapefiles cardiff-newport-bristol-bath &
+wait
 osm2pgsql_shapefiles copenhagen &
 imposm_shapefiles copenhagen &
 wait

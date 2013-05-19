@@ -80,7 +80,7 @@ bzcat planet-latest.osm.bz2 | bin/osmosis --rx file=- \
     --bb top=36.558 left=138.779 bottom=34.867 right=141.152 \
     --tee outputCount=2 --wx file=ex/tokyo.osm.bz2 --wb file=ex/tokyo.osm.pbf \
   --bb top=64.297 left=-22.826 bottom=37.514 right=38.430 \
-  --b --tee outputCount=60 \
+  --b --tee outputCount=61 \
     --bb top=52.629 left=4.465 bottom=52.163 right=5.347 \
     --tee outputCount=2 --wx file=ex/amsterdam.osm.bz2 --wb file=ex/amsterdam.osm.pbf \
     --bb top=38.365 left=22.949 bottom=37.514 right=24.421 \
@@ -101,6 +101,8 @@ bzcat planet-latest.osm.bz2 | bin/osmosis --rx file=- \
     --tee outputCount=2 --wx file=ex/budapest.osm.bz2 --wb file=ex/budapest.osm.pbf \
     --bb top=43.523 left=-4.859 bottom=42.753 right=-3.134 \
     --tee outputCount=2 --wx file=ex/cantabria.osm.bz2 --wb file=ex/cantabria.osm.pbf \
+    --bb top=51.730 left=-3.618 bottom=51.236 right=-2.189 \
+    --tee outputCount=2 --wx file=ex/cardiff-newport-bristol-bath.osm.bz2 --wb file=ex/cardiff-newport-bristol-bath.osm.pbf \
     --bb top=55.950 left=11.894 bottom=55.491 right=13.147 \
     --tee outputCount=2 --wx file=ex/copenhagen.osm.bz2 --wb file=ex/copenhagen.osm.pbf \
     --bb top=52.031 left=0.609 bottom=51.743 right=1.188 \
