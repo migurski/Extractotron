@@ -180,6 +180,7 @@ package_coast victoria 48.871 -124.063 48.054 -122.568
 package_coast dc-baltimore 39.631 -77.599 38.539 -76.058
 package_coast auckland -36.410 174.223 -37.348 175.314
 package_coast jakarta -5.881 106.435 -6.615 107.160
+package_coast canberra -34.906 148.564 -35.568 149.721
 package_coast melbourne -37.365 144.266 -38.552 145.810
 package_coast sydney -33.637 150.628 -34.189 151.647
 package_coast bogota 5.022 -74.421 4.291 -73.767

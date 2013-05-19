@@ -604,6 +604,9 @@ wait
 osm2pgsql_shapefiles jakarta &
 imposm_shapefiles jakarta &
 wait
+osm2pgsql_shapefiles canberra &
+imposm_shapefiles canberra &
+wait
 osm2pgsql_shapefiles melbourne &
 imposm_shapefiles melbourne &
 wait

@@ -166,6 +166,7 @@ North America	6174041	48.871	-124.063	48.054	-122.568	victoria	Victoria
 North America	4140963;4347778	39.631	-77.599	38.539	-76.058	dc-baltimore	Washington D.C., Baltimore
 Oceania	2193733	-36.410	174.223	-37.348	175.314	auckland	Auckland
 Oceania	1642911	-5.881	106.435	-6.615	107.160	jakarta	Jakarta
+Oceania	2077456	-34.906	148.564	-35.568	149.721	canberra	Canberra
 Oceania	2158177	-37.365	144.266	-38.552	145.810	melbourne	Melbourne
 Oceania	2147714	-33.637	150.628	-34.189	151.647	sydney	Sydney
 South America	3688689	5.022	-74.421	4.291	-73.767	bogota	Bogota

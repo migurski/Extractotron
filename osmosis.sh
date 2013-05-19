@@ -342,11 +342,13 @@ bzcat planet-latest.osm.bz2 | bin/osmosis --rx file=- \
     --bb top=39.631 left=-77.599 bottom=38.539 right=-76.058 \
     --tee outputCount=2 --wx file=ex/dc-baltimore.osm.bz2 --wb file=ex/dc-baltimore.osm.pbf \
   --bb top=-5.881 left=106.435 bottom=-38.552 right=175.314 \
-  --b --tee outputCount=4 \
+  --b --tee outputCount=5 \
     --bb top=-36.410 left=174.223 bottom=-37.348 right=175.314 \
     --tee outputCount=2 --wx file=ex/auckland.osm.bz2 --wb file=ex/auckland.osm.pbf \
     --bb top=-5.881 left=106.435 bottom=-6.615 right=107.160 \
     --tee outputCount=2 --wx file=ex/jakarta.osm.bz2 --wb file=ex/jakarta.osm.pbf \
+    --bb top=-34.906 left=148.564 bottom=-35.568 right=149.721 \
+    --tee outputCount=2 --wx file=ex/canberra.osm.bz2 --wb file=ex/canberra.osm.pbf \
     --bb top=-37.365 left=144.266 bottom=-38.552 right=145.810 \
     --tee outputCount=2 --wx file=ex/melbourne.osm.bz2 --wb file=ex/melbourne.osm.pbf \
     --bb top=-33.637 left=150.628 bottom=-34.189 right=151.647 \
