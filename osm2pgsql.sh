@@ -193,6 +193,9 @@ wait
 osm2pgsql_shapefiles osaka &
 imposm_shapefiles osaka &
 wait
+osm2pgsql_shapefiles samarkand &
+imposm_shapefiles samarkand &
+wait
 osm2pgsql_shapefiles seoul &
 imposm_shapefiles seoul &
 wait
@@ -381,6 +384,9 @@ imposm_shapefiles st-petersburg &
 wait
 osm2pgsql_shapefiles toulouse &
 imposm_shapefiles toulouse &
+wait
+osm2pgsql_shapefiles samara-tolyatti &
+imposm_shapefiles samara-tolyatti &
 wait
 osm2pgsql_shapefiles vienna &
 imposm_shapefiles vienna &

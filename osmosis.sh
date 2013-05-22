@@ -26,7 +26,7 @@ bzcat planet-latest.osm.bz2 | bin/osmosis --rx file=- \
     --bb top=-1.698 left=29.910 bottom=-2.126 right=30.288 \
     --tee outputCount=2 --wx file=ex/kigali.osm.bz2 --wb file=ex/kigali.osm.pbf \
   --bb top=43.549 left=32.105 bottom=0.807 right=141.152 \
-  --b --tee outputCount=26 \
+  --b --tee outputCount=27 \
     --bb top=43.549 left=76.575 bottom=43.057 right=77.223 \
     --tee outputCount=2 --wx file=ex/almaty.osm.bz2 --wb file=ex/almaty.osm.pbf \
     --bb top=40.372 left=32.105 bottom=39.439 right=33.509 \
@@ -65,6 +65,8 @@ bzcat planet-latest.osm.bz2 | bin/osmosis --rx file=- \
     --tee outputCount=2 --wx file=ex/new-delhi.osm.bz2 --wb file=ex/new-delhi.osm.pbf \
     --bb top=35.031 left=135.057 bottom=34.355 right=135.892 \
     --tee outputCount=2 --wx file=ex/osaka.osm.bz2 --wb file=ex/osaka.osm.pbf \
+    --bb top=40.067 left=66.339 bottom=39.230 right=67.844 \
+    --tee outputCount=2 --wx file=ex/samarkand.osm.bz2 --wb file=ex/samarkand.osm.pbf \
     --bb top=37.980 left=126.064 bottom=37.019 right=127.525 \
     --tee outputCount=2 --wx file=ex/seoul.osm.bz2 --wb file=ex/seoul.osm.pbf \
     --bb top=13.735 left=103.543 bottom=12.932 right=104.479 \
@@ -79,8 +81,8 @@ bzcat planet-latest.osm.bz2 | bin/osmosis --rx file=- \
     --tee outputCount=2 --wx file=ex/tehran.osm.bz2 --wb file=ex/tehran.osm.pbf \
     --bb top=36.558 left=138.779 bottom=34.867 right=141.152 \
     --tee outputCount=2 --wx file=ex/tokyo.osm.bz2 --wb file=ex/tokyo.osm.pbf \
-  --bb top=64.297 left=-22.826 bottom=37.514 right=38.430 \
-  --b --tee outputCount=61 \
+  --bb top=64.297 left=-22.826 bottom=37.514 right=51.918 \
+  --b --tee outputCount=62 \
     --bb top=52.629 left=4.465 bottom=52.163 right=5.347 \
     --tee outputCount=2 --wx file=ex/amsterdam.osm.bz2 --wb file=ex/amsterdam.osm.pbf \
     --bb top=38.365 left=22.949 bottom=37.514 right=24.421 \
@@ -193,6 +195,8 @@ bzcat planet-latest.osm.bz2 | bin/osmosis --rx file=- \
     --tee outputCount=2 --wx file=ex/st-petersburg.osm.bz2 --wb file=ex/st-petersburg.osm.pbf \
     --bb top=43.838 left=1.062 bottom=43.327 right=1.779 \
     --tee outputCount=2 --wx file=ex/toulouse.osm.bz2 --wb file=ex/toulouse.osm.pbf \
+    --bb top=54.037 left=48.500 bottom=52.400 right=51.918 \
+    --tee outputCount=2 --wx file=ex/samara-tolyatti.osm.bz2 --wb file=ex/samara-tolyatti.osm.pbf \
     --bb top=48.505 left=15.899 bottom=47.885 right=16.834 \
     --tee outputCount=2 --wx file=ex/vienna.osm.bz2 --wb file=ex/vienna.osm.pbf \
     --bb top=48.609 left=15.763 bottom=47.496 right=17.841 \

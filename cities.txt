@@ -29,6 +29,7 @@ Asia	1701668	14.900	120.885	14.327	121.200	manila	Manila
 Asia	1275339	19.500	72.415	18.466	73.516	mumbai	Mumbai
 Asia	1261481	28.969	76.692	28.183	77.733	new-delhi	New Delhi
 Asia	1853909	35.031	135.057	34.355	135.892	osaka	Osaka
+Asia	1216265	40.067	66.339	39.230	67.844	samarkand	Samarkand, Uzbekistan
 Asia	1835848	37.980	126.064	37.019	127.525	seoul	Seoul
 Asia	6301065	13.735	103.543	12.932	104.479	siem-reap	Siem Reap
 Asia	1796236	32.472	118.887	29.477	123.787	shanghai	Shanghai
@@ -92,6 +93,7 @@ Europe	2673730	59.908	17.061	58.850	19.055	stockholm	Stockholm
 Europe	2973783	48.722	7.449	48.371	8.078	strasbourg	Strasbourg
 Europe	498817	60.345	29.168	59.556	31.173	st-petersburg	Saint Petersburg
 Europe	2972315	43.838	1.062	43.327	1.779	toulouse	Toulouse
+Europe	499099;482283	54.037	48.500	52.400	51.918	samara-tolyatti	Samara and Tolyatti, Russia
 Europe	2761369	48.505	15.899	47.885	16.834	vienna	Vienna
 Europe	2761369;3060972;3052009;2780190	48.609	15.763	47.496	17.841	vienna-bratislava	Vienna, Bratislava, Győr, Eisenstadt
 Europe	3164603	45.811	11.629	45.123	12.735	venice	Venice

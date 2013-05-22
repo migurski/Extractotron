@@ -43,6 +43,7 @@ package_coast manila 14.900 120.885 14.327 121.200
 package_coast mumbai 19.500 72.415 18.466 73.516
 package_coast new-delhi 28.969 76.692 28.183 77.733
 package_coast osaka 35.031 135.057 34.355 135.892
+package_coast samarkand 40.067 66.339 39.230 67.844
 package_coast seoul 37.980 126.064 37.019 127.525
 package_coast siem-reap 13.735 103.543 12.932 104.479
 package_coast shanghai 32.472 118.887 29.477 123.787
@@ -106,6 +107,7 @@ package_coast stockholm 59.908 17.061 58.850 19.055
 package_coast strasbourg 48.722 7.449 48.371 8.078
 package_coast st-petersburg 60.345 29.168 59.556 31.173
 package_coast toulouse 43.838 1.062 43.327 1.779
+package_coast samara-tolyatti 54.037 48.500 52.400 51.918
 package_coast vienna 48.505 15.899 47.885 16.834
 package_coast vienna-bratislava 48.609 15.763 47.496 17.841
 package_coast venice 45.811 11.629 45.123 12.735
