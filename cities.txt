@@ -157,7 +157,7 @@ North America	5391959	37.955	-122.737	37.449	-122.011	san-francisco	San Francisc
 North America		38.719	-123.640	36.791	-121.025	sf-bay-area	San Francisco Bay Area
 North America	5392952	34.764	-120.712	33.872	-119.080	santa-barbara	Santa Barbara
 North America	3492908	18.685	-70.203	18.314	-69.620	santo-domingo	Santo Domingo
-North America	5809844	47.843	-122.860	47.380	-121.868	seattle	Seattle
+North America	5809844	48.528	-122.731	46.608	-121.335	seattle	Seattle
 North America	5213681	41.106	-78.280	40.572	-77.302	state-college-pa	State College, PA
 North America	4174757	28.376	-82.935	27.279	-82.012	tampa	Tampa
 North America	7164249	39.578	-87.508	39.367	-87.280	terre-haute	Terre Haute
