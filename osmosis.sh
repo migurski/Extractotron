@@ -327,7 +327,7 @@ bzcat planet-latest.osm.bz2 | bin/osmosis --rx file=- \
     --tee outputCount=2 --wx file=ex/santa-barbara.osm.bz2 --wb file=ex/santa-barbara.osm.pbf \
     --bb top=18.685 left=-70.203 bottom=18.314 right=-69.620 \
     --tee outputCount=2 --wx file=ex/santo-domingo.osm.bz2 --wb file=ex/santo-domingo.osm.pbf \
-    --bb top=47.843 left=-122.860 bottom=47.380 right=-121.868 \
+    --bb top=48.528 left=-123.931 bottom=46.608 right=-121.335 \
     --tee outputCount=2 --wx file=ex/seattle.osm.bz2 --wb file=ex/seattle.osm.pbf \
     --bb top=41.106 left=-78.280 bottom=40.572 right=-77.302 \
     --tee outputCount=2 --wx file=ex/state-college-pa.osm.bz2 --wb file=ex/state-college-pa.osm.pbf \

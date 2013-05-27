@@ -171,7 +171,7 @@ package_coast san-francisco 37.955 -122.737 37.449 -122.011
 package_coast sf-bay-area 38.719 -123.640 36.791 -121.025
 package_coast santa-barbara 34.764 -120.712 33.872 -119.080
 package_coast santo-domingo 18.685 -70.203 18.314 -69.620
-package_coast seattle 47.843 -122.860 47.380 -121.868
+package_coast seattle 48.528 -123.931 46.608 -121.335
 package_coast state-college-pa 41.106 -78.280 40.572 -77.302
 package_coast tampa 28.376 -82.935 27.279 -82.012
 package_coast terre-haute 39.578 -87.508 39.367 -87.280
