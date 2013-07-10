@@ -91,9 +91,11 @@ package_coast monaco 43.770 7.349 43.710 7.491
 package_coast montpellier 43.910 4.488 43.241 3.381
 package_coast moscow 56.200 36.870 55.285 38.430
 package_coast munich 48.523 10.799 47.717 12.178
+package_coast nantes 47.035 -1.866 47.407 -1.191
 package_coast newcastle 55.163 -2.027 54.744 -1.261
 package_coast nuremberg 49.757 10.697 49.219 11.339
 package_coast odessa 46.227 30.154 46.731 30.935
+package_coast oslo 58.938 9.691 60.424 11.493
 package_coast paris 49.178 1.851 48.531 2.911
 package_coast porto 41.399 -8.795 40.981 -8.358
 package_coast prague 50.408 13.842 49.763 15.012

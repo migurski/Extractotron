@@ -82,7 +82,7 @@ bzcat planet-latest.osm.bz2 | bin/osmosis --rx file=- \
     --bb top=36.558 left=138.779 bottom=34.867 right=141.152 \
     --tee outputCount=2 --wx file=ex/tokyo.osm.bz2 --wb file=ex/tokyo.osm.pbf \
   --bb top=64.297 left=-22.826 bottom=37.514 right=51.918 \
-  --b --tee outputCount=62 \
+  --b --tee outputCount=63 \
     --bb top=52.629 left=4.465 bottom=52.163 right=5.347 \
     --tee outputCount=2 --wx file=ex/amsterdam.osm.bz2 --wb file=ex/amsterdam.osm.pbf \
     --bb top=38.365 left=22.949 bottom=37.514 right=24.421 \
@@ -163,12 +163,16 @@ bzcat planet-latest.osm.bz2 | bin/osmosis --rx file=- \
     --tee outputCount=2 --wx file=ex/moscow.osm.bz2 --wb file=ex/moscow.osm.pbf \
     --bb top=48.523 left=10.799 bottom=47.717 right=12.178 \
     --tee outputCount=2 --wx file=ex/munich.osm.bz2 --wb file=ex/munich.osm.pbf \
+    --bb top=47.407 left=-1.866 bottom=47.035 right=-1.191 \
+    --tee outputCount=2 --wx file=ex/nantes.osm.bz2 --wb file=ex/nantes.osm.pbf \
     --bb top=55.163 left=-2.027 bottom=54.744 right=-1.261 \
     --tee outputCount=2 --wx file=ex/newcastle.osm.bz2 --wb file=ex/newcastle.osm.pbf \
     --bb top=49.757 left=10.697 bottom=49.219 right=11.339 \
     --tee outputCount=2 --wx file=ex/nuremberg.osm.bz2 --wb file=ex/nuremberg.osm.pbf \
     --bb top=46.731 left=30.154 bottom=46.227 right=30.935 \
     --tee outputCount=2 --wx file=ex/odessa.osm.bz2 --wb file=ex/odessa.osm.pbf \
+    --bb top=60.424 left=9.691 bottom=58.938 right=11.493 \
+    --tee outputCount=2 --wx file=ex/oslo.osm.bz2 --wb file=ex/oslo.osm.pbf \
     --bb top=49.178 left=1.851 bottom=48.531 right=2.911 \
     --tee outputCount=2 --wx file=ex/paris.osm.bz2 --wb file=ex/paris.osm.pbf \
     --bb top=41.399 left=-8.795 bottom=40.981 right=-8.358 \

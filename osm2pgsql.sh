@@ -337,6 +337,9 @@ wait
 osm2pgsql_shapefiles munich &
 imposm_shapefiles munich &
 wait
+osm2pgsql_shapefiles nantes &
+imposm_shapefiles nantes &
+wait
 osm2pgsql_shapefiles newcastle &
 imposm_shapefiles newcastle &
 wait
@@ -345,6 +348,9 @@ imposm_shapefiles nuremberg &
 wait
 osm2pgsql_shapefiles odessa &
 imposm_shapefiles odessa &
+wait
+osm2pgsql_shapefiles oslo &
+imposm_shapefiles oslo &
 wait
 osm2pgsql_shapefiles paris &
 imposm_shapefiles paris &
