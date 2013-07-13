@@ -41,7 +41,7 @@ Europe	2759794	52.629	4.465	52.163	5.347	amsterdam	Amsterdam
 Europe	2759794	38.365	22.949	37.514	24.421	athens	Athens
 Europe	3128760	41.687	1.734	41.075	2.496	barcelona	Barcelona
 Europe	2950159	52.994	12.260	51.849	14.699	berlin	Berlin
-Europe	2655603	43.313	-3.01	43.212	-2.850	bilbao	Bilbao, Spain
+Europe	3128026	43.341	-3.036	43.182	-2.815	bilbao	Bilbao, Spain
 Europe	2655603	52.794	-2.536	52.214	-1.267	birmingham	Birmingham
 Europe	3031582	45.065	-0.900	44.569	-0.162	bordeaux	Bordeaux
 Europe	3078610	49.357	16.268	48.951	16.940	brno	Brno
