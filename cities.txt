@@ -13,6 +13,7 @@ Africa	202061	-1.6978	29.9105	-2.1255	30.2883	kigali	Kigali
 Asia	1526384	43.549	76.575	43.057	77.223	almaty	Almaty, Kazakhstan
 Asia	323786	40.372	32.105	39.439	33.509	ankara	Ankara
 Asia	1609350	15.019	99.569	12.661	101.337	bangkok	Bangkok
+Asia  1227603 7.7748 81.6238 7.6748 81.7443 batticaloa Batticaloa
 Asia	1816670	40.426	115.686	39.414	117.119	beijing	Beijing
 Asia	1277333	13.23	77.35	12.75	77.85	bengaluru	Bengaluru
 Asia	1815286	30.987	103.564	30.363	104.555	chengdu	Chengdu
