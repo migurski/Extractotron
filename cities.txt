@@ -15,6 +15,7 @@ Asia	323786	40.372	32.105	39.439	33.509	ankara	Ankara
 Asia	1609350	15.019	99.569	12.661	101.337	bangkok	Bangkok
 Asia	1816670	40.426	115.686	39.414	117.119	beijing	Beijing
 Asia	1277333	13.23	77.35	12.75	77.85	bengaluru	Bengaluru
+Asia    1508291;1502603;1502536;1486039;1485634 55.39   61      54.35   61.83   chelyabinsk     Chelyabinsk, Russia
 Asia	1815286	30.987	103.564	30.363	104.555	chengdu	Chengdu
 Asia	1264527	13.3	79.9	12.7	80.4	chennai	Chennai
 Asia	1814905	32.217	105.283	28.167	110.183	chongqing	Chongqing
