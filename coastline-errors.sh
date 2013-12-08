@@ -9,8 +9,8 @@
 
 createdb coast > postgis.txt 2>&1
 createlang plpgsql coast >> postgis.txt 2>&1
-psql -f /usr/share/postgresql/8.4/contrib/postgis-1.5/postgis.sql coast >> postgis.txt 2>&1
-psql -f /usr/share/postgresql/8.4/contrib/postgis-1.5/spatial_ref_sys.sql coast >> postgis.txt 2>&1
+psql -f /usr/share/postgresql/8.4/contrib/postgis.sql coast >> postgis.txt 2>&1
+psql -f /usr/share/postgresql/8.4/contrib/spatial_ref_sys.sql coast >> postgis.txt 2>&1
 
 shp2pgsql -dID -s 900913 coast/processed_p.shp coast | psql coast >> postgis.txt 2>&1
 psql -c "DELETE FROM coast WHERE ST_IsValid(the_geom)" coast >> postgis.txt 2>&1
