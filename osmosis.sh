@@ -82,7 +82,7 @@ bzcat planet-latest.osm.bz2 | bin/osmosis --rx file=- \
     --bb top=36.558 left=138.779 bottom=34.867 right=141.152 \
     --tee outputCount=2 --wx file=ex/tokyo.osm.bz2 --wb file=ex/tokyo.osm.pbf \
   --bb top=64.297 left=-22.826 bottom=37.514 right=51.918 \
-  --b --tee outputCount=63 \
+  --b --tee outputCount=64 \
     --bb top=52.629 left=4.465 bottom=52.163 right=5.347 \
     --tee outputCount=2 --wx file=ex/amsterdam.osm.bz2 --wb file=ex/amsterdam.osm.pbf \
     --bb top=38.365 left=22.949 bottom=37.514 right=24.421 \
