@@ -394,6 +394,9 @@ wait
 osm2pgsql_shapefiles st-petersburg &
 imposm_shapefiles st-petersburg &
 wait
+osm2pgsql_shapefiles tampere &
+imposm_shapefiles tampere &
+wait
 osm2pgsql_shapefiles toulouse &
 imposm_shapefiles toulouse &
 wait

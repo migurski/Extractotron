@@ -110,6 +110,7 @@ package_coast sofia 43.040 22.870 42.380 23.830
 package_coast stockholm 59.908 17.061 58.850 19.055
 package_coast strasbourg 48.722 7.449 48.371 8.078
 package_coast st-petersburg 60.345 29.168 59.556 31.173
+package_coast tampere 61.674 23.214 61.325 24.310
 package_coast toulouse 43.838 1.062 43.327 1.779
 package_coast samara-tolyatti 54.037 48.500 52.400 51.918
 package_coast vienna 48.505 15.899 47.885 16.834
