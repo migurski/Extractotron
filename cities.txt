@@ -42,7 +42,6 @@ Asia	1880252	1.823	103.062	0.807	104.545	singapore	Singapore
 Asia	1668341	25.386	120.995	24.779	122.025	taipei	Taipei
 Asia	112931	35.917	50.87	35.383	51.648	tehran	Tehran
 Asia	1850147	36.558	138.779	34.867	141.152	tokyo	Tokyo
-Europe  3119226 43.5942 -5.7618 43.4818 -5.5847 Gijon Gijon 
 Europe	2759794	52.629	4.465	52.163	5.347	amsterdam	Amsterdam
 Europe	2759794	38.365	22.949	37.514	24.421	athens	Athens
 Europe	3128760	41.687	1.734	41.075	2.496	barcelona	Barcelona
@@ -62,6 +61,7 @@ Europe	3176959	43.983	10.982	43.601	11.504	florence	Florence
 Europe	2925533	50.447	7.811	49.632	9.442	frankfurt	Frankfurt
 Europe	3099434	54.870	18.174	54.007	19.113	gdansk	Gdansk
 Europe	3176219	44.561	8.444	44.291	9.114	genoa	Genoa
+Europe	3119226	43.800	-6.481	43.054	-4.987	gijon	Gijon, Spain
 Europe	2648579	56.034	-4.613	55.668	-3.935	glasgow	Glasgow
 Europe	2911298	53.833	9.376	53.159	10.678	hamburg	Hamburg
 Europe	658225	60.357	24.428	60.052	25.381	helsinki	Helsinki

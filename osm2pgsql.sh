@@ -289,6 +289,9 @@ wait
 osm2pgsql_shapefiles genoa &
 imposm_shapefiles genoa &
 wait
+osm2pgsql_shapefiles gijon &
+imposm_shapefiles gijon &
+wait
 osm2pgsql_shapefiles glasgow &
 imposm_shapefiles glasgow &
 wait

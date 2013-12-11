@@ -75,6 +75,7 @@ package_coast florence 43.983 10.982 43.601 11.504
 package_coast frankfurt 50.447 7.811 49.632 9.442
 package_coast gdansk 54.870 18.174 54.007 19.113
 package_coast genoa 44.561 8.444 44.291 9.114
+package_coast gijon 43.800 -6.481 43.054 -4.987
 package_coast glasgow 56.034 -4.613 55.668 -3.935
 package_coast hamburg 53.833 9.376 53.159 10.678
 package_coast helsinki 60.357 24.428 60.052 25.381
