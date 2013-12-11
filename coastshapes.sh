@@ -55,6 +55,7 @@ package_coast amsterdam 52.629 4.465 52.163 5.347
 package_coast athens 38.365 22.949 37.514 24.421
 package_coast barcelona 41.687 1.734 41.075 2.496
 package_coast berlin 52.994 12.260 51.849 14.699
+package_coast bilbao 43.500 -3.363 43.043 -2.555
 package_coast birmingham 52.794 -2.536 52.214 -1.267
 package_coast bordeaux 45.065 -0.900 44.569 -0.162
 package_coast brno 49.357 16.268 48.951 16.940

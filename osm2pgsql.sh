@@ -229,6 +229,9 @@ wait
 osm2pgsql_shapefiles berlin &
 imposm_shapefiles berlin &
 wait
+osm2pgsql_shapefiles bilbao &
+imposm_shapefiles bilbao &
+wait
 osm2pgsql_shapefiles birmingham &
 imposm_shapefiles birmingham &
 wait
