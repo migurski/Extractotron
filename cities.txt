@@ -91,6 +91,7 @@ Europe	2641673	55.163	-2.027	54.744	-1.261	newcastle	Newcastle upon Tyne
 Europe	2861650	49.757	10.697	49.219	11.339	nuremberg	Nuremberg
 Europe	698740	46.227	30.154	46.731	30.935	odessa	Odessa
 Europe	3143244	58.938	9.691	60.424	11.493	oslo	Oslo
+Europe	2523920	38.226	13.238	38.049	13.444	palermo	Palermo
 Europe	2988507	49.178	1.851	48.531	2.911	paris	Paris
 Europe	2735943	41.399	-8.795	40.981	-8.358	porto	Porto
 Europe	3067696	50.408	13.842	49.763	15.012	prague	Prague
