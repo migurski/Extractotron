@@ -92,6 +92,7 @@ Europe	456172	57.300	23.469	56.579	24.789	riga	Riga
 Europe	3169070	42.130	12.109	41.578	12.845	rome	Rome
 Europe	2747891	52.109	3.911	51.737	4.784	rotterdam	Rotterdam
 Europe	3191281	43.987	18.115	43.702	18.631	sarajevo	Sarajevo
+Europe  491422  43.686  39.603  43.515  39.798  sochi Sochi
 Europe	727011	43.040	22.870	42.380	23.830	sofia	Sofia
 Europe	2673730	59.908	17.061	58.850	19.055	stockholm	Stockholm
 Europe	2973783	48.722	7.449	48.371	8.078	strasbourg	Strasbourg
