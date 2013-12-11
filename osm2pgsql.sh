@@ -154,6 +154,9 @@ wait
 osm2pgsql_shapefiles bengaluru &
 imposm_shapefiles bengaluru &
 wait
+osm2pgsql_shapefiles chelyabinsk &
+imposm_shapefiles chelyabinsk &
+wait
 osm2pgsql_shapefiles chengdu &
 imposm_shapefiles chengdu &
 wait

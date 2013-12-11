@@ -30,6 +30,7 @@ package_coast bangkok 15.019 99.569 12.661 101.337
 package_coast batticaloa 7.994 81.344 7.226 81.981
 package_coast beijing 40.426 115.686 39.414 117.119
 package_coast bengaluru 13.23 77.35 12.75 77.85
+package_coast chelyabinsk 54.886 60.714 55.438 62.070
 package_coast chengdu 30.987 103.564 30.363 104.555
 package_coast chennai 13.3 79.9 12.7 80.4
 package_coast chongqing 32.217 105.283 28.167 110.183
