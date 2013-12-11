@@ -190,6 +190,9 @@ wait
 osm2pgsql_shapefiles karachi &
 imposm_shapefiles karachi &
 wait
+osm2pgsql_shapefiles kolkata &
+imposm_shapefiles kolkata &
+wait
 osm2pgsql_shapefiles lahore &
 imposm_shapefiles lahore &
 wait

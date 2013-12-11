@@ -28,7 +28,7 @@ Asia	1819729	23.488	112.780	21.591	115.125	hong-kong	Hong Kong
 Asia	1176615	34.347	72.286	33.092	73.822	islamabad	Islamabad
 Asia	1283240	27.938	85.019	27.437	85.678	kathmandu	Kathmandu
 Asia	1174872	25.593	66.401	23.958	68.576	karachi	Karachi, Pakistan
-Asia          22.7537 88.1982 22.4529 88.6092 kolkata, Kolkata, India
+Asia	1275004	22.117	87.751	23.106	89.119	kolkata	Kolkata, India
 Asia	1172451	32.201	73.381	30.796	75.425	lahore	Lahore, Pakistan 
 Asia	294098	32.895	35.077	32.502	35.497	nazareth	Nazareth
 Asia	1701668	14.900	120.885	14.327	121.200	manila	Manila

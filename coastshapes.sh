@@ -42,6 +42,7 @@ package_coast hong-kong 23.488 112.780 21.591 115.125
 package_coast islamabad 34.347 72.286 33.092 73.822
 package_coast kathmandu 27.938 85.019 27.437 85.678
 package_coast karachi 25.593 66.401 23.958 68.576
+package_coast kolkata 22.117 87.751 23.106 89.119
 package_coast lahore 32.201 73.381 30.796 75.425
 package_coast nazareth 32.895 35.077 32.502 35.497
 package_coast manila 14.900 120.885 14.327 121.200
