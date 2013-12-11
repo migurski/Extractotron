@@ -27,12 +27,15 @@ package_coast kigali -1.6978 29.9105 -2.1255 30.2883
 package_coast almaty 43.549 76.575 43.057 77.223
 package_coast ankara 40.372 32.105 39.439 33.509
 package_coast bangkok 15.019 99.569 12.661 101.337
+package_coast batticaloa 7.994 81.344 7.226 81.981
 package_coast beijing 40.426 115.686 39.414 117.119
 package_coast bengaluru 13.23 77.35 12.75 77.85
 package_coast chengdu 30.987 103.564 30.363 104.555
 package_coast chennai 13.3 79.9 12.7 80.4
 package_coast chongqing 32.217 105.283 28.167 110.183
 package_coast dharamshala 32.3 76.123 31.97 76.701
+package_coast colombo 6.737 79.756 7.236 80.385
+package_coast dhaka 23.435 89.998 24.006 90.838
 package_coast dushanbe 38.829 68.244 38.244 69.134
 package_coast hong-kong 23.488 112.780 21.591 115.125
 package_coast islamabad 34.347 72.286 33.092 73.822

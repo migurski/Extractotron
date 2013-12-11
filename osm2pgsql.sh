@@ -145,6 +145,9 @@ wait
 osm2pgsql_shapefiles bangkok &
 imposm_shapefiles bangkok &
 wait
+osm2pgsql_shapefiles batticaloa &
+imposm_shapefiles batticaloa &
+wait
 osm2pgsql_shapefiles beijing &
 imposm_shapefiles beijing &
 wait
@@ -162,6 +165,12 @@ imposm_shapefiles chongqing &
 wait
 osm2pgsql_shapefiles dharamshala &
 imposm_shapefiles dharamshala &
+wait
+osm2pgsql_shapefiles colombo &
+imposm_shapefiles colombo &
+wait
+osm2pgsql_shapefiles dhaka &
+imposm_shapefiles dhaka &
 wait
 osm2pgsql_shapefiles dushanbe &
 imposm_shapefiles dushanbe &
