@@ -208,8 +208,8 @@ wait
 osm2pgsql_shapefiles new-delhi &
 imposm_shapefiles new-delhi &
 wait
-osm2pgsql_shapefiles osaka &
-imposm_shapefiles osaka &
+osm2pgsql_shapefiles osaka-kyoto &
+imposm_shapefiles osaka-kyoto &
 wait
 osm2pgsql_shapefiles pyongyang &
 imposm_shapefiles pyongyang &

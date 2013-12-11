@@ -75,8 +75,8 @@ bzcat planet-latest.osm.bz2 | bin/osmosis --rx file=- \
     --tee outputCount=2 --wx file=ex/mumbai.osm.bz2 --wb file=ex/mumbai.osm.pbf \
     --bb top=28.969 left=76.692 bottom=28.183 right=77.733 \
     --tee outputCount=2 --wx file=ex/new-delhi.osm.bz2 --wb file=ex/new-delhi.osm.pbf \
-    --bb top=35.031 left=135.057 bottom=34.355 right=135.892 \
-    --tee outputCount=2 --wx file=ex/osaka.osm.bz2 --wb file=ex/osaka.osm.pbf \
+    --bb top=35.194 left=135.057 bottom=34.355 right=136.015 \
+    --tee outputCount=2 --wx file=ex/osaka-kyoto.osm.bz2 --wb file=ex/osaka-kyoto.osm.pbf \
     --bb top=39.254 left=125.412 bottom=38.855 right=126.142 \
     --tee outputCount=2 --wx file=ex/pyongyang.osm.bz2 --wb file=ex/pyongyang.osm.pbf \
     --bb top=40.067 left=66.339 bottom=39.230 right=67.844 \
