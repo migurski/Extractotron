@@ -67,6 +67,7 @@ package_coast birmingham 52.794 -2.536 52.214 -1.267
 package_coast bordeaux 45.065 -0.900 44.569 -0.162
 package_coast brno 49.357 16.268 48.951 16.940
 package_coast brussels 51.053 3.981 50.645 4.761
+package_coast bucharest 44.729 25.542 44.141 26.756
 package_coast budapest 47.861 18.347 47.025 19.780
 package_coast cantabria 43.523 -4.859 42.753 -3.134
 package_coast cardiff-newport-bristol-bath 51.730 -3.618 51.236 -2.189

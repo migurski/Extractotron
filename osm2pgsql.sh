@@ -265,6 +265,9 @@ wait
 osm2pgsql_shapefiles brussels &
 imposm_shapefiles brussels &
 wait
+osm2pgsql_shapefiles bucharest &
+imposm_shapefiles bucharest &
+wait
 osm2pgsql_shapefiles budapest &
 imposm_shapefiles budapest &
 wait
