@@ -212,3 +212,4 @@ package_coast quito-ecuador 0.109 -78.853 -0.550 -78.100
 package_coast rio-de-janeiro -22.510 -43.553 -23.231 -42.850
 package_coast sao-paulo -23.125 -47.357 -24.317 -45.863
 package_coast santiago -33.151 -71.043 -33.824 -70.353
+package_coast trinidad-tobago 11.442 -63.136 9.443 -60.224

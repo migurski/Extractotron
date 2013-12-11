@@ -700,3 +700,6 @@ wait
 osm2pgsql_shapefiles santiago &
 imposm_shapefiles santiago &
 wait
+osm2pgsql_shapefiles trinidad-tobago &
+imposm_shapefiles trinidad-tobago &
+wait

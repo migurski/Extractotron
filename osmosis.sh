@@ -387,8 +387,8 @@ bzcat planet-latest.osm.bz2 | bin/osmosis --rx file=- \
     --tee outputCount=2 --wx file=ex/melbourne.osm.bz2 --wb file=ex/melbourne.osm.pbf \
     --bb top=-33.637 left=150.628 bottom=-34.189 right=151.647 \
     --tee outputCount=2 --wx file=ex/sydney.osm.bz2 --wb file=ex/sydney.osm.pbf \
-  --bb top=10.572 left=-78.853 bottom=-34.966 right=-42.850 \
-  --b --tee outputCount=12 \
+  --bb top=11.442 left=-78.853 bottom=-34.966 right=-42.850 \
+  --b --tee outputCount=13 \
     --bb top=5.022 left=-74.421 bottom=4.291 right=-73.767 \
     --tee outputCount=2 --wx file=ex/bogota.osm.bz2 --wb file=ex/bogota.osm.pbf \
     --bb top=-15.360 left=-48.501 bottom=-16.317 right=-47.378 \
@@ -412,4 +412,6 @@ bzcat planet-latest.osm.bz2 | bin/osmosis --rx file=- \
     --bb top=-23.125 left=-47.357 bottom=-24.317 right=-45.863 \
     --tee outputCount=2 --wx file=ex/sao-paulo.osm.bz2 --wb file=ex/sao-paulo.osm.pbf \
     --bb top=-33.151 left=-71.043 bottom=-33.824 right=-70.353 \
-    --tee outputCount=2 --wx file=ex/santiago.osm.bz2 --wb file=ex/santiago.osm.pbf;
+    --tee outputCount=2 --wx file=ex/santiago.osm.bz2 --wb file=ex/santiago.osm.pbf \
+    --bb top=11.442 left=-63.136 bottom=9.443 right=-60.224 \
+    --tee outputCount=2 --wx file=ex/trinidad-tobago.osm.bz2 --wb file=ex/trinidad-tobago.osm.pbf;
