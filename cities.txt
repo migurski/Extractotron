@@ -198,3 +198,4 @@ South America	3652462	0.109	-78.853	-0.550	-78.100	quito-ecuador	Quito
 South America	3451190	-22.510	-43.553	-23.231	-42.850	rio-de-janeiro	Rio de Janeiro
 South America	3448439	-23.125	-47.357	-24.317	-45.863	sao-paulo	Sao Paulo
 South America	3871336	-33.151	-71.043	-33.824	-70.353	santiago	Santiago
+Caribbean        3573591        -61.9238        10.0361        -60.4896        11.3504        trinidad-tobago        Trinidad and Tobago
