@@ -164,6 +164,7 @@ package_coast milwaukee 43.389 -88.511 42.656 -87.522
 package_coast mpls-stpaul 45.4148 -94.0125 44.4711 -92.543
 package_coast mobile-al 30.883 -88.363 30.496 -87.832
 package_coast montreal 46.057 -74.734 44.968 -72.723
+package_coast nashville 36.652 -87.743 35.408 -85.778
 package_coast new-orleans 30.510 -90.653 28.887 -89.110
 package_coast new-york 41.097 -74.501 40.345 -73.226
 package_coast philadelphia 40.308 -75.572 39.641 -74.641

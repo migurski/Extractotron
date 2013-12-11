@@ -556,6 +556,9 @@ wait
 osm2pgsql_shapefiles montreal &
 imposm_shapefiles montreal &
 wait
+osm2pgsql_shapefiles nashville &
+imposm_shapefiles nashville &
+wait
 osm2pgsql_shapefiles new-orleans &
 imposm_shapefiles new-orleans &
 wait
