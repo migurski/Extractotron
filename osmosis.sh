@@ -26,7 +26,7 @@ bzcat planet-latest.osm.bz2 | bin/osmosis --rx file=- \
     --bb top=-1.698 left=29.910 bottom=-2.126 right=30.288 \
     --tee outputCount=2 --wx file=ex/kigali.osm.bz2 --wb file=ex/kigali.osm.pbf \
   --bb top=55.438 left=32.105 bottom=0.807 right=141.152 \
-  --b --tee outputCount=33 \
+  --b --tee outputCount=34 \
     --bb top=43.549 left=76.575 bottom=43.057 right=77.223 \
     --tee outputCount=2 --wx file=ex/almaty.osm.bz2 --wb file=ex/almaty.osm.pbf \
     --bb top=40.372 left=32.105 bottom=39.439 right=33.509 \
@@ -77,6 +77,8 @@ bzcat planet-latest.osm.bz2 | bin/osmosis --rx file=- \
     --tee outputCount=2 --wx file=ex/new-delhi.osm.bz2 --wb file=ex/new-delhi.osm.pbf \
     --bb top=35.031 left=135.057 bottom=34.355 right=135.892 \
     --tee outputCount=2 --wx file=ex/osaka.osm.bz2 --wb file=ex/osaka.osm.pbf \
+    --bb top=39.254 left=125.412 bottom=38.855 right=126.142 \
+    --tee outputCount=2 --wx file=ex/pyongyang.osm.bz2 --wb file=ex/pyongyang.osm.pbf \
     --bb top=40.067 left=66.339 bottom=39.230 right=67.844 \
     --tee outputCount=2 --wx file=ex/samarkand.osm.bz2 --wb file=ex/samarkand.osm.pbf \
     --bb top=37.980 left=126.064 bottom=37.019 right=127.525 \

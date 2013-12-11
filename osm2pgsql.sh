@@ -211,6 +211,9 @@ wait
 osm2pgsql_shapefiles osaka &
 imposm_shapefiles osaka &
 wait
+osm2pgsql_shapefiles pyongyang &
+imposm_shapefiles pyongyang &
+wait
 osm2pgsql_shapefiles samarkand &
 imposm_shapefiles samarkand &
 wait

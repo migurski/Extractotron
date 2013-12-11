@@ -49,6 +49,7 @@ package_coast manila 14.900 120.885 14.327 121.200
 package_coast mumbai 19.500 72.415 18.466 73.516
 package_coast new-delhi 28.969 76.692 28.183 77.733
 package_coast osaka 35.031 135.057 34.355 135.892
+package_coast pyongyang 39.254 126.142 38.855 125.412
 package_coast samarkand 40.067 66.339 39.230 67.844
 package_coast seoul 37.980 126.064 37.019 127.525
 package_coast siem-reap 13.735 103.543 12.932 104.479
