@@ -379,6 +379,9 @@ wait
 osm2pgsql_shapefiles oslo &
 imposm_shapefiles oslo &
 wait
+osm2pgsql_shapefiles palermo &
+imposm_shapefiles palermo &
+wait
 osm2pgsql_shapefiles paris &
 imposm_shapefiles paris &
 wait

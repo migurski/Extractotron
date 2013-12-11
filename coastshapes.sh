@@ -105,6 +105,7 @@ package_coast newcastle 55.163 -2.027 54.744 -1.261
 package_coast nuremberg 49.757 10.697 49.219 11.339
 package_coast odessa 46.227 30.154 46.731 30.935
 package_coast oslo 58.938 9.691 60.424 11.493
+package_coast palermo 38.295 12.912 37.771 13.845
 package_coast paris 49.178 1.851 48.531 2.911
 package_coast porto 41.399 -8.795 40.981 -8.358
 package_coast prague 50.408 13.842 49.763 15.012
