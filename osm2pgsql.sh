@@ -382,6 +382,9 @@ wait
 osm2pgsql_shapefiles sarajevo &
 imposm_shapefiles sarajevo &
 wait
+osm2pgsql_shapefiles sochi &
+imposm_shapefiles sochi &
+wait
 osm2pgsql_shapefiles sofia &
 imposm_shapefiles sofia &
 wait

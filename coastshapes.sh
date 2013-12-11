@@ -106,6 +106,7 @@ package_coast riga 57.300 23.469 56.579 24.789
 package_coast rome 42.130 12.109 41.578 12.845
 package_coast rotterdam 52.109 3.911 51.737 4.784
 package_coast sarajevo 43.987 18.115 43.702 18.631
+package_coast sochi 43.713 39.548 43.314 40.178
 package_coast sofia 43.040 22.870 42.380 23.830
 package_coast stockholm 59.908 17.061 58.850 19.055
 package_coast strasbourg 48.722 7.449 48.371 8.078
