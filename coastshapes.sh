@@ -32,6 +32,7 @@ package_coast bengaluru 13.23 77.35 12.75 77.85
 package_coast chengdu 30.987 103.564 30.363 104.555
 package_coast chennai 13.3 79.9 12.7 80.4
 package_coast chongqing 32.217 105.283 28.167 110.183
+package_coast dharamshala 32.3 76.123 31.97 76.701
 package_coast dushanbe 38.829 68.244 38.244 69.134
 package_coast hong-kong 23.488 112.780 21.591 115.125
 package_coast islamabad 34.347 72.286 33.092 73.822

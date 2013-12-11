@@ -18,7 +18,7 @@ Asia	1277333	13.23	77.35	12.75	77.85	bengaluru	Bengaluru
 Asia	1815286	30.987	103.564	30.363	104.555	chengdu	Chengdu
 Asia	1264527	13.3	79.9	12.7	80.4	chennai	Chennai
 Asia	1814905	32.217	105.283	28.167	110.183	chongqing	Chongqing
-Asia  1272832	32.3	76.123	31.97	76.701	dharamshala	Dharamshala, Kangra Valley
+Asia	1272832	32.3	76.123	31.97	76.701	dharamshala	Dharamshala, Kangra Valley
 Asia	1221874	38.829	68.244	38.244	69.134	dushanbe	Dushanbe, Tajikistan
 Asia	1819729	23.488	112.780	21.591	115.125	hong-kong	Hong Kong
 Asia	1176615	34.347	72.286	33.092	73.822	islamabad	Islamabad

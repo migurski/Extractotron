@@ -160,6 +160,9 @@ wait
 osm2pgsql_shapefiles chongqing &
 imposm_shapefiles chongqing &
 wait
+osm2pgsql_shapefiles dharamshala &
+imposm_shapefiles dharamshala &
+wait
 osm2pgsql_shapefiles dushanbe &
 imposm_shapefiles dushanbe &
 wait

@@ -26,7 +26,7 @@ bzcat planet-latest.osm.bz2 | bin/osmosis --rx file=- \
     --bb top=-1.698 left=29.910 bottom=-2.126 right=30.288 \
     --tee outputCount=2 --wx file=ex/kigali.osm.bz2 --wb file=ex/kigali.osm.pbf \
   --bb top=43.549 left=32.105 bottom=0.807 right=141.152 \
-  --b --tee outputCount=27 \
+  --b --tee outputCount=28 \
     --bb top=43.549 left=76.575 bottom=43.057 right=77.223 \
     --tee outputCount=2 --wx file=ex/almaty.osm.bz2 --wb file=ex/almaty.osm.pbf \
     --bb top=40.372 left=32.105 bottom=39.439 right=33.509 \
@@ -43,6 +43,8 @@ bzcat planet-latest.osm.bz2 | bin/osmosis --rx file=- \
     --tee outputCount=2 --wx file=ex/chennai.osm.bz2 --wb file=ex/chennai.osm.pbf \
     --bb top=32.217 left=105.283 bottom=28.167 right=110.183 \
     --tee outputCount=2 --wx file=ex/chongqing.osm.bz2 --wb file=ex/chongqing.osm.pbf \
+    --bb top=32.300 left=76.123 bottom=31.970 right=76.701 \
+    --tee outputCount=2 --wx file=ex/dharamshala.osm.bz2 --wb file=ex/dharamshala.osm.pbf \
     --bb top=38.829 left=68.244 bottom=38.244 right=69.134 \
     --tee outputCount=2 --wx file=ex/dushanbe.osm.bz2 --wb file=ex/dushanbe.osm.pbf \
     --bb top=23.488 left=112.780 bottom=21.591 right=115.125 \
