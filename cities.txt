@@ -35,6 +35,7 @@ Asia	1701668	14.900	120.885	14.327	121.200	manila	Manila
 Asia	1275339	19.500	72.415	18.466	73.516	mumbai	Mumbai
 Asia	1261481	28.969	76.692	28.183	77.733	new-delhi	New Delhi
 Asia	1853909	35.031	135.057	34.355	135.892	osaka	Osaka
+Asia  1871859 39.277  125.468 38.819  126.065 pyongyang Pyongyang, DPRK 
 Asia	1216265	40.067	66.339	39.230	67.844	samarkand	Samarkand, Uzbekistan
 Asia	1835848	37.980	126.064	37.019	127.525	seoul	Seoul
 Asia	6301065	13.735	103.543	12.932	104.479	siem-reap	Siem Reap
