@@ -148,6 +148,7 @@ North America	5506956	36.615	-115.581	35.757	-114.211	las-vegas	Las Vegas
 North America	4393217;4274277;4280539	39.419	-95.946	38.599	-94.048	kansas-city-lawrence-topeka	Kansas City, Lawrence, Topeka
 North America	4297983	38.255	-84.809	37.799	-84.232	lexington	Lexington
 North America	5368361	34.583	-119.437	33.298	-116.724	los-angeles	Los Angeles
+North America	4299276	38.374596	-85.95104	37.9971	-85.4051	louisville	Louisville, KY
 North America	4207400	32.969	-83.907	32.660	-83.482	macon-ga	Macon, GA
 North America	5261457	43.343	-89.854	42.801	-88.992	madison	Madison
 North America	3530597	19.921	-99.597	18.992	-98.606	mexico-city	Mexico City
