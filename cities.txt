@@ -109,6 +109,7 @@ Europe	498817	60.345	29.168	59.556	31.173	st-petersburg	Saint Petersburg
 Europe	634963	61.674	23.214	61.325	24.310	tampere	Tampere, Finland
 Europe	2972315	43.838	1.062	43.327	1.779	toulouse	Toulouse
 Europe	499099;482283	54.037	48.500	52.400	51.918	samara-tolyatti	Samara and Tolyatti, Russia
+Europe	582432	54.953 52.230 54.855 52.400	almetyevsk Al’met’yevsk, Russia
 Europe	2761369	48.505	15.899	47.885	16.834	vienna	Vienna
 Europe	2761369;3060972;3052009;2780190	48.609	15.763	47.496	17.841	vienna-bratislava	Vienna, Bratislava, Győr, Eisenstadt
 Europe	3164603	45.811	11.629	45.123	12.735	venice	Venice
