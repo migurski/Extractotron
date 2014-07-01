@@ -82,6 +82,16 @@ li.file
     list-style-type: none;
 }
 
+#mapzen-note
+{
+    background-color: #67301D;
+    border: 1px solid #fff;
+    padding: .5em;
+    border-radius: 3px;
+}
+
+#mapzen-note, #mapzen-note a { color: #fff }
+
 #archive-note
 {
     background-color: #ffd652;
