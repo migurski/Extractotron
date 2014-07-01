@@ -9,6 +9,11 @@ and EC2 to do the extracting. ```extract.sh``` is a script that performs the
 actual work with [Osmosis](http://wiki.openstreetmap.org/wiki/Osmosis) and
 terminates its host machine upon completion.
 
+This collection is no longer maintained.
+----------------------------------------
+
+The fine folks at Mapzen have built a newer and more up-to-date version of Metro Extracts. Get data from [mapzen.com/metro-extracts](https://mapzen.com/metro-extracts/) and suggest changes at [mapzen/metroextractor-cities](https://github.com/mapzen/metroextractor-cities/).
+
 Adding New Cities
 -----------------
 
