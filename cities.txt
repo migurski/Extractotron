@@ -192,11 +192,14 @@ South America	3469058	-15.360	-48.501	-16.317	-47.378	brasilia-brazil	Brasília
 South America	3435910	-34.293	-58.899	-34.966	-57.992	buenos-aires	Buenos Aires
 South America	3467747	-20.352	-54.902	-20.670	-54.445	campo-grande	Campo Grande
 South America	3687238	10.572	-75.627	10.251	-75.337	cartagena	Cartagena de Indias
+South America	3919968	-17.2694	-66.4158	-17.5197	-65.9475	cochabamba-bo	Cochabamba, Bolivia
 South America	3464975	-25.071	-49.703	-25.799	-48.799	curitiba-brazil	Curitiba, Brazil
+South America	3911925	-16.4364	-68.3120	-16.6345	-68.0133	la-paz-bo	La Paz, Bolivia
 South America	3936456	-11.644	-77.294	-12.358	-76.701	lima	Lima
 South America	3452925	-29.471	-52.159	-30.638	-50.371	porto-alegre	Porto Alegre
 South America	3652462	0.109	-78.853	-0.550	-78.100	quito-ecuador	Quito
 South America	3451190	-22.510	-43.553	-23.231	-42.850	rio-de-janeiro	Rio de Janeiro
 South America	3448439	-23.125	-47.357	-24.317	-45.863	sao-paulo	Sao Paulo
+South America	3904906	-17.6257	-63.3427	-17.9046	-62.9733	santa-cruz-bo	Santa Cruz, Bolivia
 South America	3871336	-33.151	-71.043	-33.824	-70.353	santiago	Santiago
 South America	3573591	11.442	-63.136	9.443	-60.224	trinidad-tobago	Trinidad and Tobago
