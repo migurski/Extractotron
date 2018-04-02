@@ -1,6 +1,8 @@
 Extractotron
 ============
 
+⚠️ This archived project is no longer active ⚠️
+
 In one of my [SotM 2011](http://stateofthemap.org) talks, I suggested that OSM
 should have regular extracts of metropolitan areas for major world cities and
 their surrounding areas, regardless of state or country. This is a repository
